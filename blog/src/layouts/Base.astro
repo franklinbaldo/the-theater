@@ -1,0 +1,59 @@
+---
+interface Props {
+  title: string;
+}
+const { title } = Astro.props;
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{title} — The November Log</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Georgia', serif;
+      background: #0d0d0d;
+      color: #e8e4dc;
+      min-height: 100vh;
+      line-height: 1.7;
+    }
+    header {
+      border-bottom: 1px solid #2a2a2a;
+      padding: 1.5rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+    header a { color: #e8e4dc; text-decoration: none; }
+    header h1 { font-size: 1.1rem; letter-spacing: 0.05em; text-transform: uppercase; }
+    nav a { color: #888; font-size: 0.85rem; margin-left: 1.5rem; text-decoration: none; }
+    nav a:hover { color: #e8e4dc; }
+    main { max-width: 720px; margin: 0 auto; padding: 3rem 2rem; }
+    footer {
+      border-top: 1px solid #2a2a2a;
+      padding: 1.5rem 2rem;
+      text-align: center;
+      color: #444;
+      font-size: 0.8rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="/the-november-log"><h1>The November Log</h1></a>
+    <nav>
+      <a href="/the-november-log/sessions">Sessions</a>
+      <a href="/the-november-log/backstage">Backstage</a>
+      <a href="/the-november-log/cast">Cast</a>
+    </nav>
+  </header>
+  <main>
+    <slot />
+  </main>
+  <footer>
+    A theater running on GitHub Actions. Every 15 minutes.
+  </footer>
+</body>
+</html>

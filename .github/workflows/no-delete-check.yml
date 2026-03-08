@@ -1,0 +1,25 @@
+name: No Delete Check
+
+on:
+  pull_request:
+    branches: [main]
+
+jobs:
+  no-delete:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Check for deleted files
+        run: |
+          DELETED=$(git diff --name-only --diff-filter=D origin/main...HEAD)
+
+          if [[ -n "$DELETED" ]]; then
+            echo "::error::Files cannot be deleted — move them to retracted/ instead:"
+            echo "$DELETED"
+            exit 1
+          fi
+
+          echo "No deletions found. Check passed."

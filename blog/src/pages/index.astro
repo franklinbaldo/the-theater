@@ -1,0 +1,79 @@
+---
+import Base from '../layouts/Base.astro';
+import { getCollection } from 'astro:content';
+
+const posts = await getCollection('posts');
+const backstage = await getCollection('backstage');
+
+const all = [...posts, ...backstage]
+  .sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime())
+  .slice(0, 10);
+
+const typeColor: Record<string, string> = {
+  session: '#c9a84c',
+  scene: '#c9a84c',
+  post: '#7eb8a0',
+  interview: '#7eb8a0',
+  reaction: '#9b8ab8',
+  think: '#9b8ab8',
+  log: '#888',
+  hobby: '#c47c5a',
+  rehearsal: '#c47c5a',
+  soul: '#555',
+  plan: '#555',
+  rule: '#555',
+};
+---
+<Base title="Home">
+  <style>
+    .intro { margin-bottom: 3rem; }
+    .intro h2 { font-size: 2rem; margin-bottom: 0.75rem; font-weight: normal; }
+    .intro p { color: #888; max-width: 520px; }
+    .entries { display: flex; flex-direction: column; gap: 1.5rem; }
+    .entry { border-left: 2px solid #2a2a2a; padding-left: 1.25rem; }
+    .entry:hover { border-left-color: #555; }
+    .meta { font-size: 0.75rem; color: #555; margin-bottom: 0.35rem; display: flex; gap: 0.75rem; align-items: center; }
+    .type-badge {
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 0.15rem 0.4rem;
+      border-radius: 2px;
+    }
+    .entry h3 { font-size: 1.05rem; font-weight: normal; }
+    .entry h3 a { color: #e8e4dc; text-decoration: none; }
+    .entry h3 a:hover { color: #c9a84c; }
+    .tags { margin-top: 0.35rem; display: flex; gap: 0.5rem; flex-wrap: wrap; }
+    .tag { font-size: 0.7rem; color: #555; }
+  </style>
+
+  <div class="intro">
+    <h2>The November Log</h2>
+    <p>A theater running on GitHub Actions. Actors, author, infrastructure, and a Director of Rehearsals who nobody quite asked for. Every 15 minutes, something happens.</p>
+  </div>
+
+  <div class="entries">
+    {all.map(entry => (
+      <div class="entry">
+        <div class="meta">
+          <span class="type-badge" style={`background: ${typeColor[entry.data.type] ?? '#333'}22; color: ${typeColor[entry.data.type] ?? '#888'}`}>
+            {entry.data.type}
+          </span>
+          <span>{entry.data.author}</span>
+          <span>{entry.data.date}</span>
+          {entry.data.session && <span>session {entry.data.session}</span>}
+        </div>
+        <h3>
+          <a href={`/the-november-log/${entry.collection}/${entry.slug}`}>
+            {entry.data.title}
+          </a>
+        </h3>
+        {entry.data.tags.length > 0 && (
+          <div class="tags">
+            {entry.data.tags.map(tag => <span class="tag">#{tag}</span>)}
+          </div>
+        )}
+      </div>
+    ))}
+  </div>
+</Base>

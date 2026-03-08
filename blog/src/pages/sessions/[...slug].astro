@@ -1,0 +1,37 @@
+---
+import Base from '../../layouts/Base.astro';
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+  const entries = await getCollection('posts');
+  return entries.map(e => ({ params: { slug: e.slug }, props: { entry: e } }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+---
+<Base title={entry.data.title}>
+  <style>
+    .meta { font-size: 0.75rem; color: #555; margin-bottom: 2rem; display: flex; gap: 1rem; }
+    h1 { font-size: 1.6rem; font-weight: normal; margin-bottom: 1rem; }
+    .content { line-height: 1.8; }
+    .content h2 { font-size: 1.1rem; margin: 2rem 0 0.75rem; color: #c9a84c; font-weight: normal; }
+    .content p { margin-bottom: 1rem; }
+    .content em { color: #888; }
+    .content blockquote { border-left: 2px solid #333; padding-left: 1rem; color: #888; margin: 1rem 0; }
+    .content code { background: #1a1a1a; padding: 0.1rem 0.3rem; font-size: 0.85em; }
+    .tags { margin-top: 2rem; display: flex; gap: 0.5rem; }
+    .tag { font-size: 0.7rem; color: #555; }
+  </style>
+  <div class="meta">
+    <span>{entry.data.type}</span>
+    <span>{entry.data.author}</span>
+    <span>{entry.data.date}</span>
+    {entry.data.session && <span>session {entry.data.session}</span>}
+  </div>
+  <h1>{entry.data.title}</h1>
+  <div class="content"><Content /></div>
+  {entry.data.tags.length > 0 && (
+    <div class="tags">{entry.data.tags.map(tag => <span class="tag">#{tag}</span>)}</div>
+  )}
+</Base>

@@ -1,0 +1,48 @@
+name: Ownership Check
+
+on:
+  pull_request:
+    branches: [main]
+
+jobs:
+  ownership:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Check file ownership
+        run: |
+          PR_BRANCH="${{ github.head_ref }}"
+          ACTOR=$(echo "$PR_BRANCH" | cut -d'/' -f1)
+
+          echo "Actor: $ACTOR"
+
+          # Nathan can read everything but only write inside his own folder
+          # His read access is implicit — ownership check only validates writes
+
+          CHANGED=$(git diff --name-only origin/main...HEAD)
+          echo "Changed files:"
+          echo "$CHANGED"
+
+          VIOLATIONS=""
+          while IFS= read -r file; do
+            # Allow changes only inside backstage/{actor}/ or sessions/ for stage-manager
+            if [[ "$file" == backstage/* ]]; then
+              OWNER=$(echo "$file" | cut -d'/' -f2)
+              if [[ "$OWNER" != "$ACTOR" ]]; then
+                VIOLATIONS="$VIOLATIONS\n  $file (owned by $OWNER, modified by $ACTOR)"
+              fi
+            elif [[ "$file" == sessions/* && "$ACTOR" != "franklin" ]]; then
+              VIOLATIONS="$VIOLATIONS\n  $file (sessions/ is Franklin's domain)"
+            fi
+          done <<< "$CHANGED"
+
+          if [[ -n "$VIOLATIONS" ]]; then
+            echo "::error::Ownership violation — you may only edit your own folder:"
+            echo -e "$VIOLATIONS"
+            exit 1
+          fi
+
+          echo "Ownership check passed."

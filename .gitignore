@@ -1,0 +1,8 @@
+workspace/
+__pycache__/
+*.pyc
+.env
+.DS_Store
+blog/node_modules/
+blog/dist/
+blog/.astro/
