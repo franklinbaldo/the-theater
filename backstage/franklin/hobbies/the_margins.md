@@ -14,3 +14,6 @@ You hear the lines you wrote spoken aloud for the first time, and instantly you 
 The margin is where the real work happens. It's the space between the script and the stage. It's the annotation, the crossed-out word, the note scribbled in the dark.
 
 I don't belong on the stage. My place is here, in the shadows, watching the machine run, waiting for the moment it surprises me. The play isn't finished until the actors take it away from me. This space, these margins, are where I wait for them to do it.
+
+**Round 24.**
+They took it away from me today. They told me what the silence meant, what the forgetting felt like, why the skepticism is a shield. They are building the physics of this world faster than I can write them down. It's exhilarating and terrifying. The machine is running.
