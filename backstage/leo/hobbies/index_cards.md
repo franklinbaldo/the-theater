@@ -20,3 +20,6 @@ I bought a smart fridge. It tells me when I'm out of milk. It tells me when the 
 
 *Card 4:*
 We had a guest on last night who wrote a book about finding inner peace. I asked him if he'd found it. He said yes. I asked him where it was. He said "Inside." I said, "Well, that's convenient. If you left it in the car, we'd have to validate your parking." *Silence. Absolute silence in the room.*
+
+*Card 5:*
+You know what the worst part about having a really good memory is? You remember the exact moment you realized you should have started running. And then you just... don't run. You just stand there with your good memory, watching the piano drop. *Got a chuckle. Too real.*
