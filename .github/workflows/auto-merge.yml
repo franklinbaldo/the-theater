@@ -12,9 +12,9 @@ on:
       - "No Delete Check"
       - "Merge Check"
     types: [completed]
-  # Also run on schedule as a safety net
+  # Safety net
   schedule:
-    - cron: '*/5 * * * *'   # every 5 minutes
+    - cron: '*/5 * * * *'
   workflow_dispatch: {}
 
 concurrency:
@@ -32,13 +32,13 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Merge all ready PRs
+      - name: Merge ready PRs — fail if any are stuck
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITHUB_REPOSITORY: ${{ github.repository }}
         run: |
           REPO="${GITHUB_REPOSITORY}"
-          echo "=== Auto-merge — checking open PRs ==="
+          echo "=== Auto-merge check ==="
 
           PRS=$(gh pr list --repo "$REPO" --base main --state open \
                 --json number,title --limit 100 2>/dev/null || echo "[]")
@@ -50,6 +50,7 @@ jobs:
           fi
 
           echo "$COUNT open PR(s), checking each..."
+          STUCK=""
           MERGED=0
 
           for NUM in $(echo "$PRS" | jq -r '.[].number'); do
@@ -61,7 +62,8 @@ jobs:
             MERGEABLE=$(echo "$DETAIL" | jq -r '.mergeable // "UNKNOWN"')
 
             if [ "$MERGEABLE" = "CONFLICTING" ]; then
-              echo "  #$NUM $TITLE — conflict, skipping"
+              echo "::error::PR #$NUM has conflicts: $TITLE"
+              STUCK="$STUCK #$NUM(conflict)"
               continue
             fi
 
@@ -70,32 +72,33 @@ jobs:
               continue
             fi
 
-            # Check all status checks completed and passed
-            CHECKS=$(echo "$DETAIL" | jq -r '.statusCheckRollup // []')
+            CHECKS=$(echo "$DETAIL" | jq '(.statusCheckRollup // [])')
             PENDING=$(echo "$CHECKS" | jq '[.[] | select(.status != "COMPLETED")] | length')
             if [ "$PENDING" -gt 0 ]; then
-              echo "  #$NUM $TITLE — checks still pending ($PENDING)"
+              echo "  #$NUM $TITLE — $PENDING check(s) pending"
               continue
             fi
 
             FAILED=$(echo "$CHECKS" | jq '[.[] | select(.status == "COMPLETED" and .conclusion != "SUCCESS" and .conclusion != "SKIPPED" and .conclusion != "NEUTRAL")] | length')
             if [ "$FAILED" -gt 0 ]; then
-              echo "  #$NUM $TITLE — $FAILED check(s) failed"
+              echo "::error::PR #$NUM has $FAILED failing check(s): $TITLE"
+              STUCK="$STUCK #$NUM(checks-failed)"
               continue
             fi
 
-            # All checks passed — merge
             if gh pr merge "$NUM" --repo "$REPO" --merge 2>/dev/null; then
               echo "  #$NUM $TITLE — MERGED"
               MERGED=$((MERGED + 1))
             else
-              echo "  #$NUM $TITLE — merge command failed"
+              echo "::error::PR #$NUM merge command failed: $TITLE"
+              STUCK="$STUCK #$NUM(merge-failed)"
             fi
           done
 
           echo ""
-          if [ "$MERGED" -gt 0 ]; then
-            echo "$MERGED PR(s) merged."
-          else
-            echo "No PRs ready to merge."
+          echo "$MERGED PR(s) merged."
+
+          if [ -n "$STUCK" ]; then
+            echo "::error::Stuck PRs need attention:$STUCK"
+            exit 1
           fi

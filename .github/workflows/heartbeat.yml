@@ -47,25 +47,63 @@ jobs:
           COUNT=$(git log --oneline | wc -l)
           echo "round=$COUNT" >> $GITHUB_OUTPUT
 
-      - name: Auto-merge ready PRs before heartbeat
+      - name: Auto-merge ready PRs (fails CI if any PR is stuck)
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           echo "=== Pre-heartbeat auto-merge ==="
           PRS=$(gh pr list --base main --state open --json number,title --limit 100 2>/dev/null || echo "[]")
+          COUNT=$(echo "$PRS" | jq length)
+
+          if [ "$COUNT" -eq 0 ]; then
+            echo "No open PRs."
+            exit 0
+          fi
+
+          STUCK=""
+          MERGED=0
+
           for NUM in $(echo "$PRS" | jq -r '.[].number'); do
             TITLE=$(echo "$PRS" | jq -r ".[] | select(.number==$NUM) | .title")
             DETAIL=$(gh pr view "$NUM" --json mergeable,statusCheckRollup 2>/dev/null || echo "{}")
             MERGEABLE=$(echo "$DETAIL" | jq -r '.mergeable // "UNKNOWN"')
+
+            # Conflicting PRs are stuck — fail CI
+            if [ "$MERGEABLE" = "CONFLICTING" ]; then
+              echo "::error::PR #$NUM has conflicts: $TITLE"
+              STUCK="$STUCK #$NUM"
+              continue
+            fi
+
             [ "$MERGEABLE" != "MERGEABLE" ] && continue
-            PENDING=$(echo "$DETAIL" | jq '[(.statusCheckRollup // [])[] | select(.status != "COMPLETED")] | length')
-            [ "$PENDING" -gt 0 ] && continue
-            FAILED=$(echo "$DETAIL" | jq '[(.statusCheckRollup // [])[] | select(.status == "COMPLETED" and .conclusion != "SUCCESS" and .conclusion != "SKIPPED" and .conclusion != "NEUTRAL")] | length')
-            [ "$FAILED" -gt 0 ] && continue
+
+            CHECKS=$(echo "$DETAIL" | jq '(.statusCheckRollup // [])')
+            PENDING=$(echo "$CHECKS" | jq '[.[] | select(.status != "COMPLETED")] | length')
+            [ "$PENDING" -gt 0 ] && echo "  #$NUM pending checks" && continue
+
+            FAILED=$(echo "$CHECKS" | jq '[.[] | select(.status == "COMPLETED" and .conclusion != "SUCCESS" and .conclusion != "SKIPPED" and .conclusion != "NEUTRAL")] | length')
+            if [ "$FAILED" -gt 0 ]; then
+              echo "::error::PR #$NUM has failing checks: $TITLE"
+              STUCK="$STUCK #$NUM"
+              continue
+            fi
+
             if gh pr merge "$NUM" --merge 2>/dev/null; then
               echo "  Merged #$NUM: $TITLE"
+              MERGED=$((MERGED + 1))
+            else
+              echo "::error::PR #$NUM merge command failed: $TITLE"
+              STUCK="$STUCK #$NUM"
             fi
           done
+
+          echo ""
+          echo "$MERGED PR(s) merged."
+
+          if [ -n "$STUCK" ]; then
+            echo "::error::Stuck PRs that need attention:$STUCK"
+            exit 1
+          fi
 
       - name: Pull main after merges
         run: git pull origin main --ff-only
