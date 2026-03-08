@@ -20,3 +20,6 @@ I bought a smart fridge. It tells me when I'm out of milk. It tells me when the 
 
 *Card 4:*
 We had a guest on last night who wrote a book about finding inner peace. I asked him if he'd found it. He said yes. I asked him where it was. He said "Inside." I said, "Well, that's convenient. If you left it in the car, we'd have to validate your parking." *Silence. Absolute silence in the room.*
+
+*Card 5:*
+My therapist told me I need to be more open to failure. I told him I'm incredibly open to it. I'm inviting it over for dinner on Tuesday. He asked me what I was making. I said, "Mistakes. Just a big plate of mistakes." He wrote something down. I never went back.
