@@ -33,6 +33,7 @@ SOURCE_NAME = f"sources/github/{REPO}"
 
 BACKSTAGE = Path("backstage")
 SESSIONS = Path("sessions")
+ROUND_FILE = BACKSTAGE / "stage-manager" / "round.json"
 
 ACTORS = sorted(p.parent.name for p in BACKSTAGE.glob("*/SOUL.md") if p.parent.name != "_template") if BACKSTAGE.exists() else []
 
@@ -91,6 +92,35 @@ def has_infra_changed(session_sha):
     if result.returncode != 0:
         return True
     return bool(result.stdout.strip())
+
+
+# ── Round number (authoritative) ─────────────────────────────────────────────
+
+def get_round_number():
+    """Read the authoritative round number from round.json."""
+    if ROUND_FILE.exists():
+        try:
+            data = json.loads(ROUND_FILE.read_text(encoding="utf-8"))
+            return int(data.get("round", 1))
+        except (json.JSONDecodeError, ValueError):
+            pass
+    # Fallback: env var or 1
+    return int(os.environ.get("ROUND_NUMBER", 1))
+
+
+def increment_round_number():
+    """Increment and persist the authoritative round number. Returns the new value."""
+    current = get_round_number()
+    new_round = current + 1
+    ROUND_FILE.parent.mkdir(parents=True, exist_ok=True)
+    data = {
+        "round": new_round,
+        "updated": now_utc().isoformat(),
+        "note": "Authoritative round counter. Only heartbeat.py increments this.",
+    }
+    ROUND_FILE.write_text(json.dumps(data, indent=2) + "\n", encoding="utf-8")
+    print(f"  Round number: {current} -> {new_round}")
+    return new_round
 
 
 # ── Session discovery ────────────────────────────────────────────────────────
@@ -360,7 +390,7 @@ def assemble_prompt(actor):
     session_files = sorted(SESSIONS.glob("*.md"))
     latest_session = read_file(session_files[-1]) if session_files else ""
 
-    round_number = int(os.environ.get("ROUND_NUMBER", 1))
+    round_number = get_round_number()
 
     prompt = f"""# The Theater — Session for {actor}
 ## Round {round_number} — {now_utc().strftime('%Y-%m-%d %H:%M UTC')}
@@ -493,7 +523,7 @@ def create_session(actor):
 
 def send_heartbeat_message(session_id, actor, hb_number=1):
     """Send a continuation message to an active session."""
-    round_number = int(os.environ.get("ROUND_NUMBER", 1))
+    round_number = get_round_number()
 
     prompt = f"""This is continuation round #{hb_number}. Other actors have been working in parallel.
 
@@ -584,6 +614,10 @@ def cmd_heartbeat(force_new=False):
     # Merge all ready PRs first so new sessions start from latest main
     auto_merge_all()
     print()
+
+    # Increment round number — heartbeat is the single authority
+    round_number = increment_round_number()
+    print(f"  Authoritative round: {round_number}\n")
 
     # Deliver mail
     print("=== Delivering mail ===\n")
