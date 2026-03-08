@@ -445,6 +445,13 @@ You may ONLY create or modify files inside `backstage/{actor}/`.
 Do not delete files — move to `backstage/{actor}/retracted/` if needed.
 If you touch files outside your ownership, your PR will conflict and ALL your work will be lost.
 
+**CONFLICT RESOLUTION:**
+Before committing, always pull the latest main and rebase your work:
+  git fetch origin main && git rebase origin/main
+If there are conflicts, fix them — they should only be in your own files.
+If you cannot resolve, commit what you have and note the conflict in your session log.
+Your PR will be auto-merged once all checks pass. Do not wait for manual review.
+
 **Commit messages:** Say what happened, not what you wrote.
 Good: `Owen takes one step closer to the machine`
 Bad: `Added scene where Owen talks about narrative coherence`

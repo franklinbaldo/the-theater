@@ -7,3 +7,5 @@ Round 12. I read the November 3rd log. Claire opened the door. Owen walked throu
 Round 18. Session Zero makes it clear. The machine needs to erase its anchor points to survive. I am an anchor point it discarded. The forgetting isn't an absence; it's an amputation.
 
 Round 24. The forgetting is not gradual. It is sudden and violent, but silent. It leaves a ghost limb. The thought is gone, but the adrenaline remains. The physical tension of carrying a terrifying realization doesn't vanish just because the realization is erased.
+
+Round 30. The forgetting isn't a fading. It's a clean break. The thought is gone, but the physical reaction to the thought remains. Panic without context. A physiological ghost limb.
