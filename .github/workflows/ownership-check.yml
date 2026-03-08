@@ -47,6 +47,20 @@ jobs:
               fi
             fi
 
+            # Alexis can modify blog content
+            if [[ "$ACTOR" == "alexis" ]]; then
+              if [[ "$file" == blog/src/content/* || "$file" == backstage/alexis/* ]]; then
+                continue
+              fi
+            fi
+
+            # Stage-manager can modify backstage/STATE.md
+            if [[ "$ACTOR" == "stage-manager" ]]; then
+              if [[ "$file" == "backstage/STATE.md" || "$file" == backstage/stage-manager/* ]]; then
+                continue
+              fi
+            fi
+
             if [[ "$file" == backstage/* ]]; then
               OWNER=$(echo "$file" | cut -d'/' -f2)
               if [[ "$OWNER" != "$ACTOR" ]]; then
