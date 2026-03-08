@@ -334,22 +334,50 @@ def find_actor_pr(actor):
     return None
 
 
+def get_pr_details(pr_num):
+    """Get mergeable status and branch name for a PR."""
+    result = subprocess.run(
+        ["gh", "pr", "view", str(pr_num), "--repo", REPO,
+         "--json", "mergeable,headRefName,createdAt"],
+        capture_output=True, text=True,
+    )
+    if result.returncode != 0:
+        return {}
+    try:
+        return json.loads(result.stdout)
+    except json.JSONDecodeError:
+        return {}
+
+
+def close_pr(pr_num, comment=""):
+    """Close a PR with an optional comment."""
+    if comment:
+        subprocess.run(
+            ["gh", "pr", "comment", str(pr_num), "--repo", REPO, "--body", comment],
+            capture_output=True, text=True,
+        )
+    result = subprocess.run(
+        ["gh", "pr", "close", str(pr_num), "--repo", REPO],
+        capture_output=True, text=True,
+    )
+    return result.returncode == 0
+
+
 def merge_actor_pr(actor):
     """Try to merge an actor's open PR. Returns 'merged', 'conflict', or 'none'."""
     pr_num = find_actor_pr(actor)
     if pr_num is None:
         return "none"
 
-    result = subprocess.run(
-        ["gh", "pr", "view", str(pr_num), "--repo", REPO,
-         "--json", "mergeable", "--jq", ".mergeable"],
-        capture_output=True, text=True,
-    )
-    mergeable = result.stdout.strip()
+    detail = get_pr_details(pr_num)
+    mergeable = detail.get("mergeable", "")
 
     if mergeable == "CONFLICTING":
-        print(f"    PR #{pr_num}: conflicts")
-        return "conflict"
+        print(f"    PR #{pr_num}: conflicts — will close and recreate session")
+        close_pr(pr_num,
+                 f"Closing: merge conflicts with main. "
+                 f"A new session will be created for {actor} with fresh state.")
+        return "closed-conflict"
 
     if mergeable != "MERGEABLE":
         print(f"    PR #{pr_num}: mergeable={mergeable}, skipping")
@@ -365,6 +393,36 @@ def merge_actor_pr(actor):
 
     print(f"    Merge failed: {result.stderr.strip()}")
     return "conflict"
+
+
+def send_conflict_resolution(session_id, actor, pr_num, branch):
+    """Send a message to an active Jules session to resolve merge conflicts."""
+    prompt = (
+        f"URGENT: Your PR #{pr_num} (branch `{branch}`) has merge conflicts with main.\n\n"
+        f"Please resolve immediately:\n"
+        f"```\n"
+        f"git fetch origin main\n"
+        f"git rebase origin/main\n"
+        f"# Fix any conflicts (they should only be in backstage/{actor}/ files)\n"
+        f"git add -A\n"
+        f"git rebase --continue\n"
+        f"git push --force-with-lease\n"
+        f"```\n\n"
+        f"If conflicts are too complex, commit what you have and note it in your session log.\n"
+        f"Remember: only touch files under `backstage/{actor}/`."
+    )
+    try:
+        resp = requests.post(
+            f"{JULES_API}/sessions/{session_id}:sendMessage",
+            headers=headers(),
+            json={"prompt": prompt},
+        )
+        resp.raise_for_status()
+        print(f"    Sent conflict resolution message to {actor} (session {session_id[:12]}...)")
+        return True
+    except Exception as e:
+        print(f"    Failed to send conflict resolution to {actor}: {e}")
+        return False
 
 
 # ── Prompt assembly ──────────────────────────────────────────────────────────
@@ -653,14 +711,13 @@ def cmd_heartbeat(force_new=False):
         if needs_new:
             # Try to merge the actor's PR before creating a new session
             merge = merge_actor_pr(actor)
-            if merge == "conflict":
-                print(f"  {actor}: PR has conflicts — skipping until resolved")
-                results[actor] = "-> conflict (waiting for fix)"
-                continue
 
             if merge == "merged":
                 reason += ", merged PR"
+            elif merge == "closed-conflict":
+                reason += ", closed conflicting PR"
 
+            # No longer skip on conflict — we close the old PR and start fresh
             print(f"  {actor}: {reason} — creating new session")
             try:
                 create_session(actor)
@@ -669,6 +726,16 @@ def cmd_heartbeat(force_new=False):
                 print(f"  ERROR: {e}")
                 results[actor] = f"-> error: {e}"
             continue
+
+        # Active session — check if its PR has conflicts and try to resolve
+        pr_num = find_actor_pr(actor)
+        if pr_num:
+            detail = get_pr_details(pr_num)
+            if detail.get("mergeable") == "CONFLICTING":
+                branch = detail.get("headRefName", "")
+                send_conflict_resolution(info["session_id"], actor, pr_num, branch)
+                results[actor] = "-> conflict resolution sent"
+                continue
 
         # Active session -> send heartbeat
         try:
