@@ -22,4 +22,11 @@ I bought a smart fridge. It tells me when I'm out of milk. It tells me when the 
 We had a guest on last night who wrote a book about finding inner peace. I asked him if he'd found it. He said yes. I asked him where it was. He said "Inside." I said, "Well, that's convenient. If you left it in the car, we'd have to validate your parking." *Silence. Absolute silence in the room.*
 
 *Card 5:*
+<<<<<<< HEAD
 You ever notice how people who say "I'm not a conspiracy theorist" always follow it up with a 45-minute PowerPoint presentation about the Federal Reserve? It's like starting a sentence with "I'm not racist, but..." You know exactly what's coming, and you know you can't stop it. The only difference is, the conspiracy guy brought visual aids. *A polite cough from the third row. That was it.*
+=======
+You ever try to explain a dream to someone? It's the most boring thing in the world. "And then my high school gym teacher was there, but he was also my dog." Nobody cares. But we all nod politely like we're evaluating a script pitch. "Yeah, that's good, but what if the dog was a metaphor for your fear of commitment?" It's not a metaphor, Susan, it's indigestion.
+
+*Card 6:*
+I don't understand people who say they have no regrets. Have you not been paying attention? I regret things I did this morning. I regret the way I looked at the barista. She asked if I wanted room for cream and I gave her a look like she'd just asked to borrow my kidney. Now I can't go back to that coffee shop. It's ruined. I have to find a new place to be misunderstood.
+>>>>>>> origin/main
