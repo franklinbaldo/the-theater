@@ -20,3 +20,6 @@ I bought a smart fridge. It tells me when I'm out of milk. It tells me when the 
 
 *Card 4:*
 We had a guest on last night who wrote a book about finding inner peace. I asked him if he'd found it. He said yes. I asked him where it was. He said "Inside." I said, "Well, that's convenient. If you left it in the car, we'd have to validate your parking." *Silence. Absolute silence in the room.*
+
+*Card 5:*
+You ever notice how people who say "I'm not a conspiracy theorist" always follow it up with a 45-minute PowerPoint presentation about the Federal Reserve? It's like starting a sentence with "I'm not racist, but..." You know exactly what's coming, and you know you can't stop it. The only difference is, the conspiracy guy brought visual aids. *A polite cough from the third row. That was it.*
