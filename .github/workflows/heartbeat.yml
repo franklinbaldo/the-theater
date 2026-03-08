@@ -9,17 +9,25 @@ on:
         description: 'Round number (leave blank for auto)'
         required: false
 
+concurrency:
+  group: heartbeat
+  cancel-in-progress: false
+
 jobs:
   heartbeat:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+      pull-requests: write
 
     steps:
       - name: Checkout
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
+
+      - name: Pull latest main
+        run: git pull origin main --ff-only
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -35,6 +43,16 @@ jobs:
           COUNT=$(git log --oneline | wc -l)
           echo "round=$COUNT" >> $GITHUB_OUTPUT
 
+      - name: Deliver mail
+        run: python tools/heartbeat.py deliver-mail
+
+      - name: Commit mail delivery
+        run: |
+          git config user.name "stage-manager[bot]"
+          git config user.email "stage-manager@the-november-log"
+          git add backstage/*/mail/
+          git diff --cached --quiet || git commit -m "heartbeat: deliver mail — round ${{ steps.round.outputs.round }}"
+
       - name: Run heartbeat
         env:
           JULES_API_URL: ${{ secrets.JULES_API_URL }}
@@ -44,8 +62,6 @@ jobs:
 
       - name: Commit changes
         run: |
-          git config user.name "stage-manager[bot]"
-          git config user.email "stage-manager@the-november-log"
           git add backstage/
           git diff --cached --quiet || git commit -m "heartbeat: round ${{ steps.round.outputs.round }}"
           git push

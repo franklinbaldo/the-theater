@@ -173,4 +173,10 @@ def run_heartbeat():
 
 
 if __name__ == "__main__":
-    run_heartbeat()
+    import sys
+    if len(sys.argv) > 1 and sys.argv[1] == "deliver-mail":
+        print("[heartbeat] Delivering mail...")
+        deliver_mail()
+        print("[heartbeat] Mail delivery done.")
+    else:
+        run_heartbeat()

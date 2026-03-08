@@ -23,8 +23,11 @@ jobs:
 
           VIOLATIONS=""
           while IFS= read -r file; do
-            # Skip non-content files
-            if [[ "$file" == "README.md" || "$file" == "PROMPTBOOK.md" || "$file" == "JULES.md" ]]; then
+            # Skip non-content files and structural files
+            BASENAME=$(basename "$file")
+            if [[ "$BASENAME" == "README.md" || "$BASENAME" == "PROMPTBOOK.md" || "$BASENAME" == "JULES.md" \
+               || "$BASENAME" == "SOUL.md" || "$BASENAME" == "EXPERIENCE.md" \
+               || "$BASENAME" == "PLAN.md" || "$BASENAME" == "STATE.md" ]]; then
               continue
             fi
 
