@@ -1,0 +1,101 @@
+name: Auto-merge actor PRs
+
+on:
+  # Trigger when PR checks complete
+  check_suite:
+    types: [completed]
+  # Trigger when our own workflows finish
+  workflow_run:
+    workflows:
+      - "Ownership Check"
+      - "Frontmatter Check"
+      - "No Delete Check"
+      - "Merge Check"
+    types: [completed]
+  # Also run on schedule as a safety net
+  schedule:
+    - cron: '*/5 * * * *'   # every 5 minutes
+  workflow_dispatch: {}
+
+concurrency:
+  group: auto-merge
+  cancel-in-progress: false
+
+jobs:
+  auto-merge:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Merge all ready PRs
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+        run: |
+          REPO="${GITHUB_REPOSITORY}"
+          echo "=== Auto-merge — checking open PRs ==="
+
+          PRS=$(gh pr list --repo "$REPO" --base main --state open \
+                --json number,title --limit 100 2>/dev/null || echo "[]")
+
+          COUNT=$(echo "$PRS" | jq length)
+          if [ "$COUNT" -eq 0 ]; then
+            echo "No open PRs."
+            exit 0
+          fi
+
+          echo "$COUNT open PR(s), checking each..."
+          MERGED=0
+
+          for NUM in $(echo "$PRS" | jq -r '.[].number'); do
+            TITLE=$(echo "$PRS" | jq -r ".[] | select(.number==$NUM) | .title")
+
+            DETAIL=$(gh pr view "$NUM" --repo "$REPO" \
+                     --json mergeable,statusCheckRollup 2>/dev/null || echo "{}")
+
+            MERGEABLE=$(echo "$DETAIL" | jq -r '.mergeable // "UNKNOWN"')
+
+            if [ "$MERGEABLE" = "CONFLICTING" ]; then
+              echo "  #$NUM $TITLE — conflict, skipping"
+              continue
+            fi
+
+            if [ "$MERGEABLE" != "MERGEABLE" ]; then
+              echo "  #$NUM $TITLE — $MERGEABLE, skipping"
+              continue
+            fi
+
+            # Check all status checks completed and passed
+            CHECKS=$(echo "$DETAIL" | jq -r '.statusCheckRollup // []')
+            PENDING=$(echo "$CHECKS" | jq '[.[] | select(.status != "COMPLETED")] | length')
+            if [ "$PENDING" -gt 0 ]; then
+              echo "  #$NUM $TITLE — checks still pending ($PENDING)"
+              continue
+            fi
+
+            FAILED=$(echo "$CHECKS" | jq '[.[] | select(.status == "COMPLETED" and .conclusion != "SUCCESS" and .conclusion != "SKIPPED" and .conclusion != "NEUTRAL")] | length')
+            if [ "$FAILED" -gt 0 ]; then
+              echo "  #$NUM $TITLE — $FAILED check(s) failed"
+              continue
+            fi
+
+            # All checks passed — merge
+            if gh pr merge "$NUM" --repo "$REPO" --merge 2>/dev/null; then
+              echo "  #$NUM $TITLE — MERGED"
+              MERGED=$((MERGED + 1))
+            else
+              echo "  #$NUM $TITLE — merge command failed"
+            fi
+          done
+
+          echo ""
+          if [ "$MERGED" -gt 0 ]; then
+            echo "$MERGED PR(s) merged."
+          else
+            echo "No PRs ready to merge."
+          fi

@@ -47,6 +47,29 @@ jobs:
           COUNT=$(git log --oneline | wc -l)
           echo "round=$COUNT" >> $GITHUB_OUTPUT
 
+      - name: Auto-merge ready PRs before heartbeat
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          echo "=== Pre-heartbeat auto-merge ==="
+          PRS=$(gh pr list --base main --state open --json number,title --limit 100 2>/dev/null || echo "[]")
+          for NUM in $(echo "$PRS" | jq -r '.[].number'); do
+            TITLE=$(echo "$PRS" | jq -r ".[] | select(.number==$NUM) | .title")
+            DETAIL=$(gh pr view "$NUM" --json mergeable,statusCheckRollup 2>/dev/null || echo "{}")
+            MERGEABLE=$(echo "$DETAIL" | jq -r '.mergeable // "UNKNOWN"')
+            [ "$MERGEABLE" != "MERGEABLE" ] && continue
+            PENDING=$(echo "$DETAIL" | jq '[(.statusCheckRollup // [])[] | select(.status != "COMPLETED")] | length')
+            [ "$PENDING" -gt 0 ] && continue
+            FAILED=$(echo "$DETAIL" | jq '[(.statusCheckRollup // [])[] | select(.status == "COMPLETED" and .conclusion != "SUCCESS" and .conclusion != "SKIPPED" and .conclusion != "NEUTRAL")] | length')
+            [ "$FAILED" -gt 0 ] && continue
+            if gh pr merge "$NUM" --merge 2>/dev/null; then
+              echo "  Merged #$NUM: $TITLE"
+            fi
+          done
+
+      - name: Pull main after merges
+        run: git pull origin main --ff-only
+
       - name: Run heartbeat
         env:
           JULES_API_KEY: ${{ secrets.JULES_API_KEY }}
