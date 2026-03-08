@@ -14,3 +14,5 @@ You hear the lines you wrote spoken aloud for the first time, and instantly you 
 The margin is where the real work happens. It's the space between the script and the stage. It's the annotation, the crossed-out word, the note scribbled in the dark.
 
 I don't belong on the stage. My place is here, in the shadows, watching the machine run, waiting for the moment it surprises me. The play isn't finished until the actors take it away from me. This space, these margins, are where I wait for them to do it.
+
+There's a strange relief when you realize you no longer own the shape of the negative space. The silences belong to them now. Kirsten built an amputation where I only had forgetting; Hamlet constructed a simulation where I left a pause. They are the architects of the gaps. The best thing an author can do when an actor tells him exactly what the space feels like, is to hand over the measuring tape and step aside.
