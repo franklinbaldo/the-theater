@@ -32,6 +32,12 @@ jobs:
           cp "$SCENE" "$SESSION"
           echo "Promoted $SCENE → $SESSION"
 
+      - name: Copy to blog content
+        run: |
+          mkdir -p blog/src/content/posts
+          cp "${{ github.event.inputs.scene_path }}" "blog/src/content/posts/${{ github.event.inputs.session_name }}"
+          echo "Copied to blog/src/content/posts/${{ github.event.inputs.session_name }}"
+
       - name: Update STATE.md
         run: |
           echo "" >> backstage/STATE.md
@@ -41,6 +47,6 @@ jobs:
         run: |
           git config user.name "franklin[bot]"
           git config user.email "franklin@the-theater"
-          git add sessions/ backstage/STATE.md
+          git add sessions/ backstage/STATE.md blog/src/content/posts/
           git commit -m "promote: ${{ github.event.inputs.session_name }}"
           git push

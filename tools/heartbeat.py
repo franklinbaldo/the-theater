@@ -34,7 +34,7 @@ SOURCE_NAME = f"sources/github/{REPO}"
 BACKSTAGE = Path("backstage")
 SESSIONS = Path("sessions")
 
-ACTORS = sorted(p.parent.name for p in BACKSTAGE.glob("*/SOUL.md")) if BACKSTAGE.exists() else []
+ACTORS = sorted(p.parent.name for p in BACKSTAGE.glob("*/SOUL.md") if p.parent.name != "_template") if BACKSTAGE.exists() else []
 
 TITLE_PREFIX = "TheTheater"
 SESSION_TTL = timedelta(hours=24)
