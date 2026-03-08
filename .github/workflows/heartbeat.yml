@@ -59,7 +59,7 @@ jobs:
       - name: Commit and push
         run: |
           git config user.name "stage-manager[bot]"
-          git config user.email "stage-manager@the-november-log"
+          git config user.email "stage-manager@the-theater"
           git add backstage/
           git diff --cached --quiet || git commit -m "heartbeat: round ${{ steps.round.outputs.round }}"
           git push

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""heartbeat.py — The November Log
+"""heartbeat.py — The Theater
 
 Orchestrates each session cycle: creates/continues Jules sessions for actors,
 delivers mail, auto-merges PRs, updates logs.
@@ -9,7 +9,7 @@ Usage:
   heartbeat.py deliver-mail   Deliver outbox mail to inboxes
   heartbeat.py status         Show current session status
 
-Sessions are identified by title "TheNovemberLog — {actor} @{sha} {datetime}".
+Sessions are identified by title "TheTheater — {actor} @{sha} {datetime}".
 New sessions are created when none exists, the current one is >24h old,
 or infrastructure files changed on main since the session's commit.
 Jules creates its own branch from main and opens a PR.
@@ -36,7 +36,7 @@ SESSIONS = Path("sessions")
 
 ACTORS = sorted(p.parent.name for p in BACKSTAGE.glob("*/SOUL.md")) if BACKSTAGE.exists() else []
 
-TITLE_PREFIX = "TheNovemberLog"
+TITLE_PREFIX = "TheTheater"
 SESSION_TTL = timedelta(hours=24)
 
 # Paths that, when changed on main, make running sessions stale.
@@ -362,7 +362,7 @@ def assemble_prompt(actor):
 
     round_number = int(os.environ.get("ROUND_NUMBER", 1))
 
-    prompt = f"""# The November Log — Session for {actor}
+    prompt = f"""# The Theater — Session for {actor}
 ## Round {round_number} — {now_utc().strftime('%Y-%m-%d %H:%M UTC')}
 
 ---

@@ -40,7 +40,7 @@ jobs:
       - name: Commit
         run: |
           git config user.name "franklin[bot]"
-          git config user.email "franklin@the-november-log"
+          git config user.email "franklin@the-theater"
           git add sessions/ backstage/STATE.md
           git commit -m "promote: ${{ github.event.inputs.session_name }}"
           git push
