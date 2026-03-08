@@ -1,0 +1,689 @@
+#!/usr/bin/env python3
+"""heartbeat.py — The Theater
+
+Orchestrates each session cycle: creates/continues Jules sessions for actors,
+delivers mail, auto-merges PRs, updates logs.
+
+Usage:
+  heartbeat.py heartbeat      Create or continue sessions (runs every ~15min)
+  heartbeat.py deliver-mail   Deliver outbox mail to inboxes
+  heartbeat.py status         Show current session status
+
+Sessions are identified by title "TheTheater — {actor} @{sha} {datetime}".
+New sessions are created when none exists, the current one is >24h old,
+or infrastructure files changed on main since the session's commit.
+Jules creates its own branch from main and opens a PR.
+"""
+
+import json
+import os
+import re
+import shutil
+import subprocess
+import sys
+from datetime import datetime, timedelta, timezone
+from pathlib import Path
+
+import requests
+
+JULES_API = "https://jules.googleapis.com/v1alpha"
+API_KEY = os.environ.get("JULES_API_KEY", "")
+REPO = os.environ.get("GITHUB_REPOSITORY", "franklinbaldo/the-theater")
+SOURCE_NAME = f"sources/github/{REPO}"
+
+BACKSTAGE = Path("backstage")
+SESSIONS = Path("sessions")
+
+ACTORS = sorted(p.parent.name for p in BACKSTAGE.glob("*/SOUL.md")) if BACKSTAGE.exists() else []
+
+TITLE_PREFIX = "TheTheater"
+SESSION_TTL = timedelta(hours=24)
+
+# Paths that, when changed on main, make running sessions stale.
+INFRA_PATHS = [
+    "tools/",
+    "backstage/STATE.md",
+    "PROMPTBOOK.md",
+    "JULES.md",
+    ".github/workflows/",
+]
+
+
+def headers():
+    return {
+        "x-goog-api-key": API_KEY,
+        "Content-Type": "application/json",
+    }
+
+
+def today():
+    return datetime.now(timezone.utc).strftime("%Y-%m-%d")
+
+
+def now_utc():
+    return datetime.now(timezone.utc)
+
+
+def read_file(path: Path) -> str:
+    if path.exists():
+        return path.read_text(encoding="utf-8")
+    return ""
+
+
+# ── Git helpers ──────────────────────────────────────────────────────────────
+
+def get_head_sha(short=True):
+    cmd = ["git", "rev-parse"]
+    if short:
+        cmd.append("--short")
+    cmd.append("HEAD")
+    result = subprocess.run(cmd, capture_output=True, text=True)
+    return result.stdout.strip() if result.returncode == 0 else ""
+
+
+def has_infra_changed(session_sha):
+    if not session_sha:
+        return True
+    result = subprocess.run(
+        ["git", "diff", "--name-only", f"{session_sha}..HEAD", "--"] + INFRA_PATHS,
+        capture_output=True, text=True,
+    )
+    if result.returncode != 0:
+        return True
+    return bool(result.stdout.strip())
+
+
+# ── Session discovery ────────────────────────────────────────────────────────
+
+def parse_sha_from_title(title):
+    m = re.search(r"@([0-9a-f]{7,40})", title)
+    return m.group(1) if m else None
+
+
+def parse_actor_from_title(title):
+    title_lower = title.lower()
+    for a in ACTORS:
+        if f"— {a}" in title_lower or f"- {a}" in title_lower:
+            return a
+    return None
+
+
+def parse_time(iso_str):
+    if not iso_str:
+        return None
+    try:
+        return datetime.fromisoformat(iso_str.replace("Z", "+00:00"))
+    except ValueError:
+        return None
+
+
+def find_actor_sessions():
+    """List sessions and return the most recent per actor (matched by title)."""
+    sessions = {}
+    page_token = None
+
+    for _ in range(2):
+        params = {"pageSize": 100}
+        if page_token:
+            params["pageToken"] = page_token
+
+        resp = requests.get(f"{JULES_API}/sessions", headers=headers(), params=params)
+        resp.raise_for_status()
+        data = resp.json()
+
+        for s in data.get("sessions", []):
+            title = s.get("title", "")
+            if not title.startswith(TITLE_PREFIX):
+                continue
+
+            actor = parse_actor_from_title(title)
+            if not actor:
+                continue
+
+            create_time = parse_time(s.get("createTime", ""))
+
+            if actor in sessions:
+                existing_ct = sessions[actor].get("_create_time")
+                if existing_ct and create_time and create_time <= existing_ct:
+                    continue
+
+            sessions[actor] = {
+                "session_id": s["name"].split("/")[-1],
+                "state": s.get("state", "UNKNOWN"),
+                "title": title,
+                "createTime": s.get("createTime", ""),
+                "_create_time": create_time,
+            }
+
+        if len(sessions) >= len(ACTORS):
+            break
+
+        page_token = data.get("nextPageToken")
+        if not page_token:
+            break
+
+    return sessions
+
+
+def is_expired(info):
+    ct = info.get("_create_time")
+    if not ct:
+        return True
+    return now_utc() - ct > SESSION_TTL
+
+
+# ── Mail delivery ────────────────────────────────────────────────────────────
+
+def deliver_mail():
+    """Move outbox messages to recipient inboxes."""
+    for actor in ACTORS:
+        outbox = BACKSTAGE / actor / "mail" / "outbox"
+        if not outbox.exists():
+            continue
+        for message in outbox.iterdir():
+            if not message.is_file() or message.name == ".gitkeep":
+                continue
+            # Expected filename format: TO_{recipient}_{subject}.md
+            parts = message.stem.split("_", 2)
+            if len(parts) < 2 or parts[0] != "TO":
+                continue
+            recipient = parts[1].lower()
+            inbox = BACKSTAGE / recipient / "mail" / "inbox"
+            if inbox.exists():
+                dest = inbox / f"FROM_{actor}_{message.name}"
+                shutil.move(str(message), str(dest))
+                print(f"  Mail delivered: {actor} → {recipient}: {message.name}")
+
+
+# ── PR merging ───────────────────────────────────────────────────────────────
+
+def auto_merge_all():
+    """Merge all open PRs that are MERGEABLE with passing checks."""
+    print("=== Auto-merge open PRs ===\n")
+
+    result = subprocess.run(
+        ["gh", "pr", "list", "--repo", REPO, "--base", "main", "--state", "open",
+         "--json", "number,title", "--limit", "100"],
+        capture_output=True, text=True,
+    )
+    if result.returncode != 0:
+        print("  Could not list PRs")
+        return 0
+
+    try:
+        prs = json.loads(result.stdout)
+    except json.JSONDecodeError:
+        return 0
+
+    if not prs:
+        print("  (no open PRs)")
+        return 0
+
+    print(f"  {len(prs)} open PRs, checking each...\n")
+    merged = 0
+
+    for pr in prs:
+        num = pr["number"]
+        title = pr.get("title", "")
+
+        result = subprocess.run(
+            ["gh", "pr", "view", str(num), "--repo", REPO,
+             "--json", "mergeable,statusCheckRollup"],
+            capture_output=True, text=True,
+        )
+        if result.returncode != 0:
+            continue
+
+        try:
+            detail = json.loads(result.stdout)
+        except json.JSONDecodeError:
+            continue
+
+        mergeable = detail.get("mergeable", "")
+
+        if mergeable == "CONFLICTING":
+            print(f"  #{num} {title} — conflict")
+            continue
+
+        if mergeable != "MERGEABLE":
+            print(f"  #{num} {title} — {mergeable}, skipping")
+            continue
+
+        checks = detail.get("statusCheckRollup", []) or []
+        pending = any(c.get("status") != "COMPLETED" for c in checks)
+        if pending:
+            print(f"  #{num} {title} — checks pending")
+            continue
+
+        all_passed = all(
+            c.get("conclusion") in ("SUCCESS", "SKIPPED", "NEUTRAL")
+            for c in checks
+            if c.get("status") == "COMPLETED"
+        )
+        if not all_passed:
+            print(f"  #{num} {title} — checks failed")
+            continue
+
+        result = subprocess.run(
+            ["gh", "pr", "merge", str(num), "--repo", REPO, "--merge"],
+            capture_output=True, text=True,
+        )
+        if result.returncode == 0:
+            print(f"  #{num} {title} — MERGED")
+            merged += 1
+        else:
+            print(f"  #{num} {title} — merge failed: {result.stderr.strip()[:100]}")
+
+    if merged == 0:
+        print("\n  (no PRs ready to merge)")
+    else:
+        print(f"\n  {merged} PR(s) merged")
+
+    return merged
+
+
+def find_actor_pr(actor):
+    """Find an actor's open PR number targeting main."""
+    result = subprocess.run(
+        ["gh", "pr", "list", "--repo", REPO, "--base", "main", "--state", "open",
+         "--json", "number,title,headRefName", "--limit", "50"],
+        capture_output=True, text=True,
+    )
+    if result.returncode != 0:
+        return None
+    try:
+        prs = json.loads(result.stdout)
+    except json.JSONDecodeError:
+        return None
+
+    for pr in prs:
+        title = pr.get("title", "").lower()
+        head = pr.get("headRefName", "")
+        if actor in title or f"_{actor}" in head or f"_{actor}-" in head:
+            return pr["number"]
+    return None
+
+
+def merge_actor_pr(actor):
+    """Try to merge an actor's open PR. Returns 'merged', 'conflict', or 'none'."""
+    pr_num = find_actor_pr(actor)
+    if pr_num is None:
+        return "none"
+
+    result = subprocess.run(
+        ["gh", "pr", "view", str(pr_num), "--repo", REPO,
+         "--json", "mergeable", "--jq", ".mergeable"],
+        capture_output=True, text=True,
+    )
+    mergeable = result.stdout.strip()
+
+    if mergeable == "CONFLICTING":
+        print(f"    PR #{pr_num}: conflicts")
+        return "conflict"
+
+    if mergeable != "MERGEABLE":
+        print(f"    PR #{pr_num}: mergeable={mergeable}, skipping")
+        return "none"
+
+    result = subprocess.run(
+        ["gh", "pr", "merge", str(pr_num), "--repo", REPO, "--merge"],
+        capture_output=True, text=True,
+    )
+    if result.returncode == 0:
+        print(f"    Merged PR #{pr_num}")
+        return "merged"
+
+    print(f"    Merge failed: {result.stderr.strip()}")
+    return "conflict"
+
+
+# ── Prompt assembly ──────────────────────────────────────────────────────────
+
+def assemble_prompt(actor):
+    """Assemble session prompt for an actor."""
+    soul = read_file(BACKSTAGE / actor / "SOUL.md")
+    experience = read_file(BACKSTAGE / actor / "EXPERIENCE.md")
+    state = read_file(BACKSTAGE / "STATE.md")
+    promptbook = read_file(Path("PROMPTBOOK.md"))
+    jules = read_file(Path("JULES.md"))
+    plan = read_file(BACKSTAGE / "franklin" / "PLAN.md")
+
+    # Read inbox
+    inbox_path = BACKSTAGE / actor / "mail" / "inbox"
+    inbox_contents = ""
+    if inbox_path.exists():
+        for msg in sorted(inbox_path.iterdir()):
+            if msg.is_file() and msg.name != ".gitkeep":
+                inbox_contents += f"\n---\n**{msg.name}**\n{msg.read_text(encoding='utf-8')}\n"
+
+    # Read latest session
+    session_files = sorted(SESSIONS.glob("*.md"))
+    latest_session = read_file(session_files[-1]) if session_files else ""
+
+    round_number = int(os.environ.get("ROUND_NUMBER", 1))
+
+    prompt = f"""# The Theater — Session for {actor}
+## Round {round_number} — {now_utc().strftime('%Y-%m-%d %H:%M UTC')}
+
+---
+
+## YOUR SOUL
+
+{soul}
+
+---
+
+## YOUR EXPERIENCE (long-term memory)
+
+{experience or '*(no entries yet)*'}
+
+---
+
+## THE WORLD
+
+### PROMPTBOOK (world rules)
+{promptbook}
+
+### STATE (what is fixed, what is open)
+{state}
+
+### HOW TO RUN A SESSION
+{jules}
+
+{f"### FRANKLIN'S PLAN{chr(10)}{plan}" if plan else ''}
+
+---
+
+## LATEST SESSION
+
+{latest_session}
+
+---
+
+## YOUR INBOX
+
+{inbox_contents or '*(no messages)*'}
+
+---
+
+## Session Instructions
+
+You are {actor}. Your branch starts from main. Follow this sequence exactly.
+
+### STEP 1 — Read inbox
+You have already received your inbox above. Read every message.
+
+### STEP 2 — Think
+Write `backstage/{actor}/notes/think_{round_number:03d}.md`.
+Speak as your character-actor. What does the latest session mean to you?
+What do you notice? What do you feel about the direction of the play?
+What do you want? Do not perform. Think.
+
+### STEP 3 — Read inbox again
+Re-read your messages after thinking. Add any new observations to your think file.
+
+### STEP 4 — Plan
+Write `backstage/{actor}/notes/plan_{round_number:03d}.md`.
+What will you do this session? Who will you write to and why?
+What are you trying to accomplish or influence?
+
+### STEP 5 — Execute
+Do what you planned:
+- Send mail to `backstage/{actor}/mail/outbox/TO_{{recipient}}_{{subject}}.md`
+- Update `backstage/{actor}/EXPERIENCE.md` with anything new you believe
+- Write your session log to `backstage/{actor}/logs/session_{round_number:03d}.md`
+
+### STEP 6 — Hobbies
+Create or continue something in `backstage/{actor}/hobbies/`.
+This has nothing to do with the play. It is yours. Define your hobby whenever you want.
+If you have no hobby yet, this is the round you might find one.
+
+---
+
+**CRITICAL — THE GOLDEN RULE OF FILE OWNERSHIP:**
+You may ONLY create or modify files inside `backstage/{actor}/`.
+Do not delete files — move to `backstage/{actor}/retracted/` if needed.
+If you touch files outside your ownership, your PR will conflict and ALL your work will be lost.
+
+**Commit messages:** Say what happened, not what you wrote.
+Good: `Owen takes one step closer to the machine`
+Bad: `Added scene where Owen talks about narrative coherence`
+
+**PR title:** `[{actor}] round {round_number}`
+"""
+    return prompt
+
+
+# ── Session management ───────────────────────────────────────────────────────
+
+def create_session(actor):
+    """Create a new Jules session starting from main."""
+    prompt = assemble_prompt(actor)
+
+    sha = get_head_sha(short=True)
+    ts = now_utc().strftime("%Y-%m-%dT%H:%M")
+    title = f"{TITLE_PREFIX} — {actor} @{sha} {ts}"
+
+    body = {
+        "prompt": prompt,
+        "title": title,
+        "sourceContext": {
+            "source": SOURCE_NAME,
+            "githubRepoContext": {
+                "startingBranch": "main",
+            },
+        },
+        "automationMode": "AUTO_CREATE_PR",
+    }
+
+    resp = requests.post(f"{JULES_API}/sessions", headers=headers(), json=body)
+    resp.raise_for_status()
+    session = resp.json()
+    session_id = session["name"].split("/")[-1]
+    print(f"  Created session {session_id} for {actor} — {title}")
+    return session_id
+
+
+def send_heartbeat_message(session_id, actor, hb_number=1):
+    """Send a continuation message to an active session."""
+    round_number = int(os.environ.get("ROUND_NUMBER", 1))
+
+    prompt = f"""This is continuation round #{hb_number}. Other actors have been working in parallel.
+
+1. Check your inbox for new mail in `backstage/{actor}/mail/inbox/`
+2. Continue your work from where you left off
+3. If you have new thoughts, write them to your notes
+4. If you want to reach someone, send mail to `backstage/{actor}/mail/outbox/TO_{{recipient}}_{{subject}}.md`
+5. Update `backstage/{actor}/EXPERIENCE.md` if you've learned something new
+6. Write your session log to `backstage/{actor}/logs/session_{round_number:03d}.md`
+
+**GOLDEN RULE — only touch files under `backstage/{actor}/`.**
+If you touch files outside your ownership, your PR will conflict and ALL work is lost.
+
+Commit all work to this branch."""
+
+    resp = requests.post(
+        f"{JULES_API}/sessions/{session_id}:sendMessage",
+        headers=headers(),
+        json={"prompt": prompt},
+    )
+    resp.raise_for_status()
+    print(f"  Heartbeat sent to {actor} (session {session_id[:12]}...)")
+
+
+# ── Heartbeat logging ────────────────────────────────────────────────────────
+
+def get_heartbeat_number():
+    log_file = Path(f"backstage/stage-manager/logs/heartbeat_{today()}.md")
+    if not log_file.exists():
+        return 0
+    return sum(
+        1 for line in log_file.read_text(encoding="utf-8").splitlines()
+        if line.startswith("## Heartbeat #")
+    )
+
+
+def write_heartbeat_log(number, sessions, results):
+    log_dir = BACKSTAGE / "stage-manager" / "logs"
+    log_dir.mkdir(parents=True, exist_ok=True)
+    log_file = log_dir / f"heartbeat_{today()}.md"
+
+    now = now_utc().strftime("%H:%M UTC")
+
+    lines = []
+    if not log_file.exists():
+        lines.append(f"# Heartbeat Log — {today()}\n")
+
+    lines.append(f"## Heartbeat #{number} — {now}\n")
+    for actor in ACTORS:
+        if actor in sessions:
+            state = sessions[actor]["state"]
+            result = results.get(actor, "")
+            lines.append(f"- {actor}: {state} {result}")
+        else:
+            lines.append(f"- {actor}: no session")
+    lines.append("")
+
+    with open(log_file, "a", encoding="utf-8") as f:
+        f.write("\n".join(lines) + "\n")
+
+    print(f"\n  Logged heartbeat #{number} to {log_file}")
+
+
+def write_sessions_json(sessions):
+    """Write actor -> session mapping for downstream tools."""
+    mapping = {}
+    for actor in ACTORS:
+        info = sessions.get(actor)
+        if info:
+            mapping[actor] = {
+                "session_id": info["session_id"],
+                "state": info["state"],
+            }
+
+    out_file = BACKSTAGE / "stage-manager" / "sessions.json"
+    out_file.parent.mkdir(parents=True, exist_ok=True)
+    with open(out_file, "w", encoding="utf-8") as f:
+        json.dump(mapping, f, indent=2)
+    print(f"  Wrote session map to {out_file}")
+
+
+# ── Commands ─────────────────────────────────────────────────────────────────
+
+def cmd_heartbeat(force_new=False):
+    """Main heartbeat: create or continue sessions for all actors."""
+    print(f"=== Heartbeat — {today()} {'(force-new)' if force_new else ''} ===\n")
+
+    # Merge all ready PRs first so new sessions start from latest main
+    auto_merge_all()
+    print()
+
+    # Deliver mail
+    print("=== Delivering mail ===\n")
+    deliver_mail()
+    print()
+
+    sessions = find_actor_sessions()
+    hb_number = get_heartbeat_number() + 1
+    results = {}
+
+    for actor in ACTORS:
+        info = sessions.get(actor)
+
+        needs_new = False
+        reason = ""
+
+        if force_new:
+            needs_new = True
+            reason = "forced"
+        elif not info:
+            needs_new = True
+            reason = "no session"
+        elif info["state"] in ("COMPLETED", "FAILED"):
+            needs_new = True
+            reason = f"previous {info['state'].lower()}"
+        elif is_expired(info):
+            needs_new = True
+            reason = "expired (>24h)"
+        elif has_infra_changed(parse_sha_from_title(info.get("title", ""))):
+            needs_new = True
+            reason = "infra changed on main"
+
+        if needs_new:
+            # Try to merge the actor's PR before creating a new session
+            merge = merge_actor_pr(actor)
+            if merge == "conflict":
+                print(f"  {actor}: PR has conflicts — skipping until resolved")
+                results[actor] = "-> conflict (waiting for fix)"
+                continue
+
+            if merge == "merged":
+                reason += ", merged PR"
+
+            print(f"  {actor}: {reason} — creating new session")
+            try:
+                create_session(actor)
+                results[actor] = f"-> new ({reason})"
+            except Exception as e:
+                print(f"  ERROR: {e}")
+                results[actor] = f"-> error: {e}"
+            continue
+
+        # Active session -> send heartbeat
+        try:
+            send_heartbeat_message(info["session_id"], actor, hb_number)
+            results[actor] = "-> sent"
+        except Exception as e:
+            print(f"  ERROR for {actor}: {e}")
+            results[actor] = f"-> error: {e}"
+
+    # Re-fetch to include newly created sessions
+    updated = find_actor_sessions()
+    write_heartbeat_log(hb_number, updated, results)
+    write_sessions_json(updated)
+
+
+def cmd_status():
+    """Show current session status."""
+    head = get_head_sha(short=True)
+    print(f"=== Theater Status === (main @{head})\n")
+
+    sessions = find_actor_sessions()
+
+    if not sessions:
+        print("No sessions found.")
+        return
+
+    for actor in ACTORS:
+        info = sessions.get(actor)
+        if info:
+            expired = " EXPIRED" if is_expired(info) else ""
+            session_sha = parse_sha_from_title(info.get("title", ""))
+            stale = " STALE" if session_sha and has_infra_changed(session_sha) else ""
+            print(f"  {actor}: {info['state']}{expired}{stale} — {info['title']}")
+        else:
+            print(f"  {actor}: no session")
+
+
+def main():
+    cmd = sys.argv[1] if len(sys.argv) > 1 else "status"
+    cmds = {
+        "heartbeat": cmd_heartbeat,
+        "force-new": lambda: cmd_heartbeat(force_new=True),
+        "deliver-mail": lambda: (print("[heartbeat] Delivering mail..."), deliver_mail(), print("[heartbeat] Mail delivery done.")),
+        "status": cmd_status,
+    }
+
+    if cmd not in cmds:
+        print(f"Usage: heartbeat.py {{{','.join(cmds.keys())}}}")
+        sys.exit(1)
+
+    if cmd not in ("deliver-mail",) and not API_KEY:
+        print("ERROR: JULES_API_KEY not set")
+        sys.exit(1)
+
+    cmds[cmd]()
+
+
+if __name__ == "__main__":
+    main()

@@ -1,0 +1,46 @@
+name: Promote Scene
+
+on:
+  workflow_dispatch:
+    inputs:
+      scene_path:
+        description: 'Path to scene file in backstage/franklin/scenes/'
+        required: true
+      session_name:
+        description: 'Target session filename (e.g. 001_2026-03-08_scene_before-the-chat.md)'
+        required: true
+
+jobs:
+  promote:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Promote scene
+        run: |
+          SCENE="${{ github.event.inputs.scene_path }}"
+          SESSION="sessions/${{ github.event.inputs.session_name }}"
+
+          if [[ ! -f "$SCENE" ]]; then
+            echo "::error::Scene file not found: $SCENE"
+            exit 1
+          fi
+
+          cp "$SCENE" "$SESSION"
+          echo "Promoted $SCENE → $SESSION"
+
+      - name: Update STATE.md
+        run: |
+          echo "" >> backstage/STATE.md
+          echo "| auto | ${{ github.event.inputs.session_name }} | scene | promoted by Franklin |" >> backstage/STATE.md
+
+      - name: Commit
+        run: |
+          git config user.name "franklin[bot]"
+          git config user.email "franklin@the-theater"
+          git add sessions/ backstage/STATE.md
+          git commit -m "promote: ${{ github.event.inputs.session_name }}"
+          git push

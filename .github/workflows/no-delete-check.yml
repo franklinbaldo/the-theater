@@ -1,0 +1,42 @@
+name: No Delete Check
+
+on:
+  pull_request:
+    branches: [main]
+
+jobs:
+  no-delete:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Check for deleted files
+        run: |
+          DELETED=$(git diff --name-only --diff-filter=D origin/main...HEAD || true)
+          ADDED=$(git diff --name-only --diff-filter=A origin/main...HEAD || true)
+
+          if [[ -z "$DELETED" ]]; then
+            echo "No deletions found. Check passed."
+            exit 0
+          fi
+
+          VIOLATIONS=""
+          while IFS= read -r file; do
+            BASENAME=$(basename "$file")
+            # Allow if the file was moved to retracted/
+            if echo "$ADDED" | grep -q "retracted/.*$BASENAME"; then
+              echo "OK: $file moved to retracted/"
+            else
+              VIOLATIONS="$VIOLATIONS\n  $file"
+            fi
+          done <<< "$DELETED"
+
+          if [[ -n "$VIOLATIONS" ]]; then
+            echo "::error::Files cannot be deleted — move them to backstage/{actor}/retracted/ instead:"
+            echo -e "$VIOLATIONS"
+            exit 1
+          fi
+
+          echo "All deletions have matching retracted/ moves. Check passed."

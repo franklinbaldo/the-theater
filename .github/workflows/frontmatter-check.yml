@@ -1,0 +1,54 @@
+name: Frontmatter Check
+
+on:
+  pull_request:
+    branches: [main]
+
+jobs:
+  frontmatter:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Check frontmatter on changed .md files
+        run: |
+          CHANGED=$(git diff --name-only --diff-filter=AM origin/main...HEAD | grep '\.md$' || true)
+
+          if [[ -z "$CHANGED" ]]; then
+            echo "No .md files changed."
+            exit 0
+          fi
+
+          VIOLATIONS=""
+          while IFS= read -r file; do
+            # Skip non-content files and structural files
+            BASENAME=$(basename "$file")
+            if [[ "$BASENAME" == "README.md" || "$BASENAME" == "PROMPTBOOK.md" || "$BASENAME" == "JULES.md" \
+               || "$BASENAME" == "SOUL.md" || "$BASENAME" == "EXPERIENCE.md" \
+               || "$BASENAME" == "PLAN.md" || "$BASENAME" == "STATE.md" ]]; then
+              continue
+            fi
+
+            FIRST=$(head -1 "$file")
+            if [[ "$FIRST" != "---" ]]; then
+              VIOLATIONS="$VIOLATIONS\n  $file (missing frontmatter)"
+              continue
+            fi
+
+            # Check required fields
+            for field in title author type date; do
+              if ! grep -q "^${field}:" "$file"; then
+                VIOLATIONS="$VIOLATIONS\n  $file (missing field: $field)"
+              fi
+            done
+          done <<< "$CHANGED"
+
+          if [[ -n "$VIOLATIONS" ]]; then
+            echo "::error::Frontmatter violations found — Roy is not happy:"
+            echo -e "$VIOLATIONS"
+            exit 1
+          fi
+
+          echo "All frontmatter valid. Roy is fine."

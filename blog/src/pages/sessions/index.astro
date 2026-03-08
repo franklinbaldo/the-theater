@@ -1,0 +1,25 @@
+---
+import Base from '../../layouts/Base.astro';
+import { getCollection } from 'astro:content';
+
+const entries = await getCollection('posts');
+const sorted = entries
+  .filter(e => e.data.type === 'session' || e.data.type === 'scene')
+  .sort((a, b) => (a.data.session ?? 0) - (b.data.session ?? 0));
+---
+<Base title="Sessions">
+  <style>
+    h2 { font-size: 1.5rem; font-weight: normal; margin-bottom: 2rem; }
+    .entry { padding: 0.75rem 0; border-bottom: 1px solid #1a1a1a; }
+    .num { font-size: 0.75rem; color: #555; margin-bottom: 0.25rem; }
+    .entry a { color: #e8e4dc; text-decoration: none; }
+    .entry a:hover { color: #c9a84c; }
+  </style>
+  <h2>Sessions</h2>
+  {sorted.map(e => (
+    <div class="entry">
+      <div class="num">session {e.data.session ?? '—'} · {e.data.date}</div>
+      <a href={`/the-november-log/sessions/${e.slug}`}>{e.data.title}</a>
+    </div>
+  ))}
+</Base>

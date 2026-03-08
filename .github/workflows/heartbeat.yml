@@ -1,0 +1,65 @@
+name: Heartbeat
+
+on:
+  schedule:
+    - cron: '*/15 * * * *'   # every 15 minutes
+  workflow_dispatch:
+    inputs:
+      round_number:
+        description: 'Round number (leave blank for auto)'
+        required: false
+      force_new:
+        description: 'Force new sessions for all actors'
+        type: boolean
+        default: false
+
+concurrency:
+  group: heartbeat
+  cancel-in-progress: false
+
+jobs:
+  heartbeat:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Pull latest main
+        run: git pull origin main --ff-only
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Determine round number
+        id: round
+        run: |
+          COUNT=$(git log --oneline | wc -l)
+          echo "round=$COUNT" >> $GITHUB_OUTPUT
+
+      - name: Run heartbeat
+        env:
+          JULES_API_KEY: ${{ secrets.JULES_API_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ROUND_NUMBER: ${{ github.event.inputs.round_number || steps.round.outputs.round }}
+        run: |
+          MODE=${{ github.event.inputs.force_new == 'true' && 'force-new' || 'heartbeat' }}
+          python tools/heartbeat.py "$MODE"
+
+      - name: Commit and push
+        run: |
+          git config user.name "stage-manager[bot]"
+          git config user.email "stage-manager@the-theater"
+          git add backstage/
+          git diff --cached --quiet || git commit -m "heartbeat: round ${{ steps.round.outputs.round }}"
+          git push

@@ -1,0 +1,68 @@
+name: Ownership Check
+
+on:
+  pull_request:
+    branches: [main]
+
+jobs:
+  ownership:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Check file ownership
+        env:
+          PR_TITLE: ${{ github.event.pull_request.title }}
+        run: |
+          PR_BRANCH="${{ github.head_ref }}"
+
+          # Extract actor from branch name (actor/description) or PR title ([actor] ...)
+          ACTOR=$(echo "$PR_BRANCH" | cut -d'/' -f1)
+          if [[ -n "$PR_TITLE" ]]; then
+            TITLE_ACTOR=$(echo "$PR_TITLE" | grep -oP '^\[([a-z-]+)\]' | tr -d '[]' || true)
+            if [[ -n "$TITLE_ACTOR" ]]; then
+              ACTOR="$TITLE_ACTOR"
+            fi
+          fi
+          ACTOR=$(echo "$ACTOR" | tr '[:upper:]' '[:lower:]')
+
+          echo "Actor: $ACTOR"
+
+          # Roy is infrastructure — he can touch workflows, tools, and STATE.md
+          # Franklin can touch sessions/ and his own backstage folder
+          # Nathan can read everything but only write inside his own folder
+
+          CHANGED=$(git diff --name-only origin/main...HEAD)
+          echo "Changed files:"
+          echo "$CHANGED"
+
+          VIOLATIONS=""
+          while IFS= read -r file; do
+            # Roy can modify tools/, .github/, and backstage/STATE.md
+            if [[ "$ACTOR" == "roy" ]]; then
+              if [[ "$file" == tools/* || "$file" == .github/* || "$file" == "backstage/STATE.md" || "$file" == backstage/roy/* ]]; then
+                continue
+              fi
+            fi
+
+            if [[ "$file" == backstage/* ]]; then
+              OWNER=$(echo "$file" | cut -d'/' -f2)
+              if [[ "$OWNER" != "$ACTOR" ]]; then
+                VIOLATIONS="$VIOLATIONS\n  $file (owned by $OWNER, modified by $ACTOR)"
+              fi
+            elif [[ "$file" == sessions/* && "$ACTOR" != "franklin" ]]; then
+              VIOLATIONS="$VIOLATIONS\n  $file (sessions/ is Franklin's domain)"
+            elif [[ "$file" == tools/* && "$ACTOR" != "roy" ]]; then
+              VIOLATIONS="$VIOLATIONS\n  $file (tools/ is Roy's domain)"
+            fi
+          done <<< "$CHANGED"
+
+          if [[ -n "$VIOLATIONS" ]]; then
+            echo "::error::Ownership violation — you may only edit your own folder:"
+            echo -e "$VIOLATIONS"
+            exit 1
+          fi
+
+          echo "Ownership check passed."
