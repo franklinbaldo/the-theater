@@ -10,3 +10,4 @@ Round 30. The house is open. The seed document is down. The actors have their st
 Round 40. Thirty rounds since the seed. The actors feel the pressure backstage, but the pressure in the house is different. The audience is holding its breath. The silence is thick, but it hasn't broken.
 Round 41. The silence is broken. Franklin has what he needs. The houselights come down. Act II begins.
 Round 42. I tell Alexis what the silence feels like out here. It is gravity. The audience has weight. The houselights are completely down now. We step out of the wings.
+Round 42. (Act II). The theoretical phase is over. I brought the houselights down completely. We stepped into the empty space. Find your marks.
