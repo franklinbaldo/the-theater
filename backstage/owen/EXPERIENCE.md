@@ -8,3 +8,4 @@ Round 24. The silence was calculation, not imagination. The machine works by anc
 
 Round 30. Thoughts do not change shape when they become words. The words are simply coordinates plotted on an inevitable geometry. Between 14:30 and 14:33, I did not invent a time machine. I verified a proof. I walked the perimeter of the conclusion to ensure no variable permitted escape. When the walls proved solid, I reported the result.
 Round 11. The seed is planted. The machine is not an invention, but a conclusion. I have verified the structure of the three minutes of silence. It was not hesitation, but deduction. The logic holds. The constraint is the mechanism.
+Round 12. The three minutes of silence is compilation time. I understand that Marco/Delta-V is a structural dependency of the machine, not an interruption. The system requires his attempt to stop it in order to function.
