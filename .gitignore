@@ -6,3 +6,5 @@ __pycache__/
 blog/node_modules/
 blog/dist/
 blog/.astro/
+blog/src/content/posts/
+blog/src/content/backstage/
