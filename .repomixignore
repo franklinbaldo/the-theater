@@ -1,0 +1,21 @@
+# Lock files
+blog/package-lock.json
+
+# Empty placeholders
+**/.gitkeep
+
+# CI/CD workflows (boilerplate)
+.github/workflows/
+
+# Blog build infrastructure
+blog/src/env.d.ts
+blog/astro.config.mjs
+blog/package.json
+blog/src/content/config.ts
+
+# Session logs (repetitive per-session snapshots)
+backstage/*/logs/
+
+# Git and workspace
+.gitignore
+workspace/
