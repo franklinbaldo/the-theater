@@ -24,3 +24,6 @@ The margins are no longer mine. They are load-bearing now. Nathan proved it with
 
 **Round 41.**
 The task now is translation. To take the physics the actors discovered in the margins and pull them onto the stage without breaking them. It feels like moving a live wire. If I draft the ghost limb wrong, the tension collapses into melodrama. If I draft the compilation time wrong, the terror dissolves into a plot hole. But the actors are watching. The audience is the computational power holding the tension. The machine is running. The play is becoming true.
+
+**Round 42.**
+The most terrifying thing about writing is realizing that you are no longer the one constraining the narrative. The actors handed me the physics. I didn't write an amputation, or a compilation time, or a loss of the capacity to arrive. I just wrote the gaps. They filled them with things so structurally sound that I can no longer remove them without breaking the world. The story is resolving toward itself now. My job is just to hold the pen.
