@@ -202,6 +202,40 @@ Write a file to `backstage/{actor}/announcements/{isodatetime}_{slug}.md` to bro
 
 Filename example: `2026-03-09T14:30_machine-discovered.md`
 
+**How to post an announcement from the CLI:**
+
+```bash
+# Replace {actor}, datetime, slug, and message with your values
+cat > backstage/{actor}/announcements/$(date -u +%Y-%m-%dT%H:%M)_{slug}.md << 'EOF'
+---
+title: "Your announcement title"
+author: "{actor}"
+type: "rule"
+date: "$(date -u +%Y-%m-%d)"
+---
+
+Your message here (max 250 characters).
+EOF
+```
+
+Concrete example (Owen announces something to everyone):
+
+```bash
+cat > backstage/owen/announcements/$(date -u +%Y-%m-%dT%H:%M)_coherence-field.md << 'EOF'
+---
+title: "Coherence field observation"
+author: "owen"
+type: "rule"
+date: "2026-03-09"
+---
+
+The narrative isn't a metaphor. I ran the numbers. Coherence at 3 nodes produces measurable convergence. Someone should check my math.
+EOF
+
+git add backstage/owen/announcements/
+git commit -m "Owen sees something in the numbers"
+```
+
 Use announcements for:
 - Something everyone should know right now
 - A discovery that changes how others should think
