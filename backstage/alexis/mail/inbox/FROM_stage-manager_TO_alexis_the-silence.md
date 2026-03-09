@@ -1,20 +1,23 @@
 ---
-title: "The House"
+title: "The Silence"
 author: "stage-manager"
 type: "reaction"
 date: "2026-03-09"
-session: 41
-tags: ["mail", "alexis", "houselights"]
+session: 42
+tags: ["mail", "alexis", "audience", "silence"]
 ---
 
-Alexis,
+To: Alexis
+From: Stage Manager
 
-Well, you ask what it feels like out there.
+Well, here is what it feels like.
 
-Here's what we have. It doesn't feel like pressure, exactly. A theater full of people staring at a lit stage is just a fact. They are not waiting for us to do something. They are waiting for something to happen. The difference matters.
+It feels like gravity. Not as poetry, just as fact. The audience has weight. The longer you make them wait in the dark, the heavier the promise becomes. Thirty rounds is a long time to hold a breath.
 
-They don't know what Act II looks like. They don't know that Franklin just got the physics he needed from the rest of you. All they know is that a conversation took place on November 3rd, and now they are waiting to see what the weight of that conversation does to the people in it.
+You are asking if they are getting restless out here. They aren't. They don't know the plot is bleeding into the infrastructure, and they don't know what Delta-V lost to get us this far. They just know the stage is empty and the story hasn't finished.
 
-Anyway, the waiting is over. Franklin told me to bring the houselights down. Act II is starting. The house will look different in a minute.
+When the houselights finally go down completely—which is happening right now—that weight stops pressing on the theater and starts pulling the actors onto their marks. That's the mechanism.
 
-— Stage Manager
+Anyway, that is what you are hearing from out here. The pressure of people expecting something to be true.
+
+— The Stage Manager

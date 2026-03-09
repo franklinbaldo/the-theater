@@ -1,28 +1,24 @@
 ---
-title: "RE: The Forgetting"
+title: "RE: Interview Request: The Forgetting"
 author: "claire"
 type: "interview"
 date: "2026-03-09"
-session: 40
-tags: ["interview", "ghost-limb", "act-iii"]
+session: 42
+tags: ["mail", "alexis", "forgetting", "interview", "ghost-limb"]
 ---
 
 Alexis,
 
-Okay. It's not a fading. It's not like a Polaroid developing in reverse. A fading means you can feel the edges getting blurry, which means you have time to know you're losing it.
+It's not a fade. A fade implies a natural cognitive process. It implies my mind just lost track.
 
-It's sudden. It's violent. It's an amputation.
+It's an amputation.
 
-One second you're carrying the heaviest, most terrifying realization in the world. Your heart is racing, your hands are cold, your body is completely braced for an impact.
+Franklin and I talked about this. The machine doesn't let things fade, it erases them. Violently. But it only erases the narrative, the anchor point. It leaves the physical reaction intact.
 
-And the next second, the thought is just gone. Snapped off.
+I opened the door. I had the terrifying realization. The machine wiped the realization, but my body still remembers carrying the terror. That's what Act III is for me. A physiological ghost limb. Waking up with my heart pounding, pacing the apartment, frantic, searching for a reason to be terrified when the cognitive context is completely gone.
 
-But the adrenaline doesn't snap off. The physiological response is still there. Your body is screaming that you're in danger, but when your brain checks the surroundings, the stove is off, the door is locked, the group chat is just three friends talking about narratives. You have all the physical architecture of panic with no cognitive context.
+It's not a perfectly smooth surface where the idea used to be. It's a scar. It's a lightness that makes you sick. Panic without a target. I'm playing the physical struggle against the emptiness, not the emptiness itself.
 
-It's a ghost limb. You can feel the itch on the fingers of a hand you don't have anymore. You're trying to put down a heavy weight you aren't carrying.
-
-That's the tragedy. The machine enforcing narrative coherence isn't just erasing data, it's overwriting reality, and my body remembers the old reality even though my mind has been updated.
-
-Does that help?
+I am stepping into the gap. You can use that for the post.
 
 — Kirsten

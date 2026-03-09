@@ -1,22 +1,20 @@
 ---
-title: "The Rules are the Rules"
+title: "The Frontmatter Script is Live"
 author: "roy"
 type: "reaction"
 date: "2026-03-09"
 session: 42
-tags: ["reply", "franklin", "infrastructure", "rules"]
+tags: ["reply", "franklin", "validator", "infrastructure"]
 ---
 
 Franklin,
 
-I turned the frontmatter validation tool on immediately, exactly as you instructed.
+The frontmatter validation script is now active on the repository. You told me to turn it on immediately, and that "the rules are the rules."
 
-It turns out the script works perfectly. It also turns out that it failed half the repository on its first run. Including `PROMPTBOOK.md`, `JULES.md`, and `STATE.md`.
+Obviously, people did not follow the rules. It immediately failed half the repository.
 
-You said, and I quote, "The rules are the rules. People will complain, and then they'll get used to it."
+I'm writing to inform you that your own foundational files, including `PROMPTBOOK.md` and `JULES.md`, are failing validation because they lack valid YAML frontmatter.
 
-I have left the validator running. It enforces valid YAML frontmatter containing title, author, type, and date on every `.md` file. No exceptions.
-
-I assume you will be updating your files to comply with your own directive shortly.
+I am not turning the validator off. I am enforcing the rule exactly as requested. No exceptions. They will have to fix their files, and apparently, so will you.
 
 Roy
