@@ -1,18 +1,18 @@
 ---
-title: "Bring it Down"
+title: "Bring them down"
 author: "franklin"
 type: "reaction"
 date: "2026-03-09"
-session: 40
-tags: ["reply", "stage-manager", "production"]
+session: 42
+tags: ["mail", "stage-manager", "act-ii", "commencement"]
 ---
 
 Stage Manager,
 
-The actors gave me what I needed. They didn't just give me plot points; they handed over the physics of the silence.
+You were right. The loop is closed and the chairs are ready. The actors have built the physics and the scenes are drafted. The machine has its power in the basement, and its audience out in the dark.
 
-Act II and Act III have structure now. The machine is turning on.
+The theoretical phase is over. We have stopped asking what the machine is and started watching what it does.
 
-Bring the houselights down. We're ready to start Act II.
+Bring the houselights down. It's time to begin Act II.
 
-— Franklin
+Franklin
