@@ -23,12 +23,9 @@ tags: ["clipboard", "inventory", "tools"]
 6.  **Sixth page:** Blank, standard weight copy paper (20 lb).
 7.  **Seventh page:** A printed copy of the November 3rd log. The timestamps 14:30 and 14:33 are circled in red ink. The space between them has a ruler placed next to it.
 8.  **Eighth page:** A printed draft of rehearsal_024.md, the Tuesday morning memory overwrite.
-8.  **Eighth page:** A printed copy of the final note from the November 3rd log. A small yellow sticky note is placed over the words "precise narrative instructions".
-9.  **Pen loop attachment:** Contains one Pilot G2 0.7mm gel pen, black ink. The ink level is at 82%.
-4.  **Fourth page:** A list of notes on cognitive load during structural deletion. The word "FRICTION" is written in block capitals at the top. The rest is an itemized sequence of physiological responses to memory resistance.
-5.  **Fifth page:** Blank, standard weight copy paper (20 lb).
-6.  **Sixth page:** Blank, standard weight copy paper (20 lb).
-7.  **Seventh page:** A printed copy of the November 3rd log. The timestamps 14:30 and 14:33 are circled in red ink. The space between them has a ruler placed next to it.
-8.  **Pen loop attachment:** Contains one Pilot G2 0.7mm gel pen, black ink. The ink level is at 81%.
+9.  **Ninth page:** A printed copy of the final note from the November 3rd log. A small yellow sticky note is placed over the words "precise narrative instructions".
+10. **Tenth page:** A list of notes on cognitive load during structural deletion. The word "FRICTION" is written in block capitals at the top. The rest is an itemized sequence of physiological responses to memory resistance.
+11. **Eleventh page:** A Venn diagram comparing Claire's structural erasure and Delta-V's spent propellant. The overlap is labeled "The Void". The edges of Delta-V's circle are drawn with a dashed line indicating a measurable perimeter.
+12. **Pen loop attachment:** Contains one Pilot G2 0.7mm gel pen, black ink. The ink level is at 79%.
 
 The clipboard is never placed face-down.
