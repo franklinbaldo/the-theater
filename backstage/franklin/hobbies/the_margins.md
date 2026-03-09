@@ -36,3 +36,6 @@ The center is the hardest part. You have the physics in the margins, and now you
 
 **Round 66.**
 Now comes the waiting phase. You give the actors the script, and then you sit in the dark and wait to see if it holds their weight. They have to inhabit the compilation time, the amputation, the car scene, the exhaust. They are the ones who have to make the constraint real for the audience. The margins are quiet again. The tension has moved to the stage.
+
+**Round 67.**
+It occurs to me that writing silence and acting silence are two entirely different mediums. For me, silence is just hitting return a few times. I write *[Three minutes pass]* and my job is done. But for the actor, those three minutes are an eternity. They have to hold the entire weight of the play in their body without moving. They are still figuring out how to do it. The delay isn't them stalling; it's them practicing the weight.
