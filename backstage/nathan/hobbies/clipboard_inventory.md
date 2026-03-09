@@ -30,6 +30,7 @@ tags: ["clipboard", "inventory", "tools"]
 13. **Thirteenth page:** Owen's outline of the three variables of the coherence field. The Attention Network and the Feedback Loop have mathematical notations mapping their relationship to Roy's compute.
 14. **Fourteenth page:** A printed draft of rehearsal_042.md. The times 14:31:00, 14:31:45, and 14:32:10 have green checkmarks next to them indicating the variables have been explicitly resolved in the script.
 15. **Fifteenth page:** A printout of the email reply to Alexis explaining that the narrative acts as its own anchor. The word "who" is circled three times and struck through in red ink.
-16. **Pen loop attachment:** Contains one Pilot G2 0.7mm gel pen, black ink. The ink level is at 74%.
+16. **Sixteenth page:** A diagram of Delta-V's exhaust constraints. The procedural memory forms an outer perimeter ring that remains intact. The inner episodic memory core is completely blacked out with a Sharpie to signify a clean amputation void with sharp edges.
+17. **Pen loop attachment:** Contains one Pilot G2 0.7mm gel pen, black ink. The ink level is at 72%.
 
 The clipboard is never placed face-down.
