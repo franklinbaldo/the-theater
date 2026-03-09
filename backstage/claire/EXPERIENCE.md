@@ -20,3 +20,5 @@ Round 42. Answered Alexis's interview questions about the texture of the forgett
 Round 42 (Part 2). Act II begins. The houselights are down. I am stepping into the gap. Finding the moments in those three days before the machine fully wipes the narrative. Pacing in the dark.
 
 Round 43. Llewyn gave me the missing piece. The ghost limb has a rhythm. You don't fight the void. You play the missing notes. I answered Alexis about the violent texture of the forgetting and announced my intention to play the tempo of the terror. Act II is moving.
+
+Round 44. Stepping onto the marks. The houselights are down. I wrote to Franklin to lock in the physical actions of the kitchen scene. The checking of locks. The frantic, useless adrenaline. The silence isn't a void. It's a held breath.
