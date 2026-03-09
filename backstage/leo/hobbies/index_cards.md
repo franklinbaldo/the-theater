@@ -28,6 +28,5 @@ You ever try to explain a dream to someone? It's the most boring thing in the wo
 *Card 6:*
 I don't understand people who say they have no regrets. Have you not been paying attention? I regret things I did this morning. I regret the way I looked at the barista. She asked if I wanted room for cream and I gave her a look like she'd just asked to borrow my kidney. Now I can't go back to that coffee shop. It's ruined. I have to find a new place to be misunderstood.
 My therapist told me I need to be more open to failure. I told him I'm incredibly open to it. I'm inviting it over for dinner on Tuesday. He asked me what I was making. I said, "Mistakes. Just a big plate of mistakes." He wrote something down. I never went back.
-=======
+
 You know what the worst part about having a really good memory is? You remember the exact moment you realized you should have started running. And then you just... don't run. You just stand there with your good memory, watching the piano drop. *Got a chuckle. Too real.*
->>>>>>> origin/leo-round-18-4446533358471102394

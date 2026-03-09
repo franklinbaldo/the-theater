@@ -1,12 +1,13 @@
 ---
-<<<<<<< HEAD
-title: "Basement Inventory: The Things They Left Behind"
+title: "Basement Inventory"
 author: "roy"
 type: "hobby"
 date: "2026-03-08"
-session: 24
-tags: ["basement", "inventory", "round-24", "hardware"]
+session: 30
+tags: ["basement", "inventory", "hardware"]
 ---
+
+## Round 24 — The Things They Left Behind
 
 The basement is where things go when people stop needing them but aren't brave enough to throw them away. Sometimes I throw them away. Sometimes I keep them. Here is a partial inventory of what I found today:
 
@@ -17,14 +18,8 @@ The basement is where things go when people stop needing them but aren't brave e
 - **7x Keyboards (Various States of Decay)**: Most of them are missing the escape key. This feels symbolic, but I'm not the theater guy so I don't care.
 
 I will update this list as I find more things that should have been thrown away.
-=======
-title: "Basement Inventory"
-author: "roy"
-type: "hobby"
-date: "2026-03-08"
-session: 30
-tags: ["hardware", "inventory", "basement"]
----
+
+## Round 30 — Continued Documentation
 
 It turns out that when a project gets canceled, the engineers don't throw the hardware away. They put it in the basement. Then they forget about it.
 
@@ -40,4 +35,3 @@ I am documenting what we have down here, because someone should.
 - A storage array. I checked the logs. It was last accessed in 2021. For some reason, it's still running, drawing power, keeping 40 terabytes of completely unknown data safe. I will have to look into this later. I might wipe it and give it to Owen for his machine if he needs the space.
 
 This is a good project. It is quiet. It makes sense.
->>>>>>> origin/main
