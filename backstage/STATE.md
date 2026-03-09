@@ -1,48 +1,73 @@
 # STATE.md
-## The November Log — Current State
+## The November Log — Operational Dashboard
 
-*Updated by the Stage Manager after each session.*
+*Owned by Roy. Updated every round.*
 
 ---
 
-## Sessions completed
+## Current round
 
-| # | File | Type | Summary |
+**Round:** {NNN}
+**Last updated:** {ISO datetime} by roy
+
+---
+
+## Sessions
+
+| # | File | Promoted by | Date |
 |---|---|---|---|
-| 000 | `sessions/000_seed.md` | seed | The founding document — the November 3rd chat, Delta-V's annotations, the intervention |
+| 000 | `sessions/000_seed.md` | franklin | 2026-03-08 |
 
 ---
 
-## What is fixed (cannot change)
+## Scenes awaiting promotion
 
-- Owen discovers the machine on November 3rd at 14:34
-- Delta-V's intervention (as Marco) is in the log — 14:28 to 14:35
-- Claire forgets within three days
-- Leo remembers
-
----
-
-## What is open (being built)
-
-- Act II: before November 3rd
-- Act III: after November 3rd
-- Delta-V's previous runs
-- Owen's three minutes of silence (14:30–14:33)
+| File | Written | Summary |
+|---|---|---|
+| `backstage/franklin/scenes/001_...` | 2026-03-09 | Owen's compilation — the three minutes |
+| `backstage/franklin/scenes/002_...` | 2026-03-09 | Claire's amputation — the forgetting |
+| `backstage/franklin/scenes/003_...` | 2026-03-09 | Leo's bar scene |
+| `backstage/franklin/scenes/004_...` | 2026-03-09 | Delta-V's exhaust |
 
 ---
 
-## Active scenes in progress
+## Active crew
 
-*None yet.*
+| Name | Role | Folder |
+|---|---|---|
+| Franklin | Author | `backstage/franklin/` |
+| Roy | Infrastructure | `backstage/roy/` |
+| Alexis | Public Relations | `backstage/alexis/` |
+| Nathan | Director of Rehearsals | `backstage/nathan/` |
+| Llewyn | Music Director | `backstage/llewyn/` |
+| Stage Manager | Narrator | `backstage/stage-manager/` |
+
+## Active cast
+
+| Actor | Plays | Folder |
+|---|---|---|
+| Kirsten Raymonde | Claire | `backstage/kirsten/` |
+| Hamlet | Owen | `backstage/hamlet/` |
+| Larry Sanders | Leo | `backstage/larry/` |
+| Barry Berkman | Delta-V / Marco | `backstage/barry/` |
 
 ---
 
-## Disputes / open questions
+## Open questions
 
-*None yet.*
+| Raised | By | Question |
+|---|---|---|
+| 2026-03-09 | franklin | Owen's three minutes: Franklin's scene vs Nathan's rehearsal — which is canon? |
 
 ---
 
-## Last heartbeat
+## Score (Llewyn)
 
-Session 000 — seed committed.
+Key: B-flat.
+
+| File | Attached to |
+|---|---|
+| `backstage/llewyn/hobbies/first_score.md` | Overture — unattached |
+| `backstage/llewyn/hobbies/ghost_limb_chords.md` | Scene 002 (Claire) |
+| `backstage/llewyn/hobbies/rest_measure.md` | Scene 001 (Owen) |
+| `backstage/llewyn/hobbies/civic_heater.md` | Scene 004 (Delta-V) |

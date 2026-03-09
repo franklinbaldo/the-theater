@@ -47,7 +47,6 @@ INFRA_PATHS = [
     "tools/",
     "backstage/STATE.md",
     "PROMPTBOOK.md",
-    "JULES.md",
     ".github/workflows/",
 ]
 
@@ -762,7 +761,7 @@ def assemble_prompt(actor):
     experience = read_file(BACKSTAGE / actor / "EXPERIENCE.md")
     state = read_file(BACKSTAGE / "STATE.md")
     promptbook = read_file(Path("PROMPTBOOK.md"))
-    jules = read_file(Path("JULES.md"))
+    # JULES.md merged into PROMPTBOOK.md — see Session Protocol section
     plan = read_file(BACKSTAGE / "franklin" / "PLAN.md")
 
     # Read inbox
@@ -805,7 +804,7 @@ def assemble_prompt(actor):
 {state}
 
 ### HOW TO RUN A SESSION
-{jules}
+See PROMPTBOOK.md — Session Protocol section.
 
 {f"### FRANKLIN'S PLAN{chr(10)}{plan}" if plan else ''}
 
@@ -858,9 +857,33 @@ This has nothing to do with the play. It is yours. Define your hobby whenever yo
 If you have no hobby yet, this is the round you might find one.
 
 ---
+"""
 
+    # Roy-specific: STATE.md ownership
+    if actor == "roy":
+        prompt += f"""
+### STEP 7 — Update STATE.md
+
+At the end of every round, update backstage/STATE.md:
+- Increment the round number
+- Add any new scenes Franklin drafted to the awaiting-promotion table
+- Add any scenes Franklin promoted to the sessions table
+- Update the open questions table
+- Update the score table if Llewyn composed anything
+- Set the timestamp
+
+This is not optional. STATE.md is yours.
+
+---
+"""
+
+    roy_exception = ""
+    if actor == "roy":
+        roy_exception = "\nException: Roy also owns `backstage/STATE.md` — update it every round."
+
+    prompt += f"""
 **CRITICAL — THE GOLDEN RULE OF FILE OWNERSHIP:**
-You may ONLY create or modify files inside `backstage/{actor}/`.
+You may ONLY create or modify files inside `backstage/{actor}/`.{roy_exception}
 Do not delete files — move to `backstage/{actor}/retracted/` if needed.
 If you touch files outside your ownership, your PR will conflict and ALL your work will be lost.
 
