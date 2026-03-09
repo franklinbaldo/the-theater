@@ -7,6 +7,7 @@ delivers mail, auto-merges PRs, updates logs.
 Usage:
   heartbeat.py heartbeat      Create or continue sessions (runs every ~15min)
   heartbeat.py deliver-mail   Deliver outbox mail to inboxes
+  heartbeat.py sabbatical     Manage actor sabbaticals (list/start/end)
   heartbeat.py status         Show current session status
 
 Sessions are identified by title "TheTheater — {actor} @{sha} {datetime}".
@@ -34,6 +35,7 @@ SOURCE_NAME = f"sources/github/{REPO}"
 BACKSTAGE = Path("backstage")
 SESSIONS = Path("sessions")
 ROUND_FILE = BACKSTAGE / "stage-manager" / "round.json"
+SABBATICAL_FILE = BACKSTAGE / "stage-manager" / "sabbatical.json"
 
 ACTORS = sorted(p.parent.name for p in BACKSTAGE.glob("*/SOUL.md") if p.parent.name != "_template") if BACKSTAGE.exists() else []
 
@@ -121,6 +123,77 @@ def increment_round_number():
     ROUND_FILE.write_text(json.dumps(data, indent=2) + "\n", encoding="utf-8")
     print(f"  Round number: {current} -> {new_round}")
     return new_round
+
+
+# ── Sabbatical management ────────────────────────────────────────────────────
+
+def load_sabbaticals():
+    """Load the sabbatical registry. Returns dict of actor -> sabbatical info."""
+    if SABBATICAL_FILE.exists():
+        try:
+            return json.loads(SABBATICAL_FILE.read_text(encoding="utf-8"))
+        except (json.JSONDecodeError, TypeError):
+            pass
+    return {}
+
+
+def save_sabbaticals(data):
+    """Persist the sabbatical registry."""
+    SABBATICAL_FILE.parent.mkdir(parents=True, exist_ok=True)
+    SABBATICAL_FILE.write_text(json.dumps(data, indent=2) + "\n", encoding="utf-8")
+
+
+def is_on_sabbatical(actor):
+    """Check if an actor is currently on sabbatical."""
+    sabbaticals = load_sabbaticals()
+    info = sabbaticals.get(actor)
+    if not info:
+        return False
+    until = info.get("until")
+    if until:
+        until_date = datetime.fromisoformat(until).replace(tzinfo=timezone.utc)
+        if now_utc() > until_date:
+            # Sabbatical expired — remove it
+            del sabbaticals[actor]
+            save_sabbaticals(sabbaticals)
+            print(f"  {actor}: sabbatical expired, welcome back")
+            return False
+    return True
+
+
+def set_sabbatical(actor, reason="", until=""):
+    """Put an actor on sabbatical."""
+    if actor not in ACTORS:
+        print(f"  ERROR: unknown actor '{actor}'. Known actors: {', '.join(ACTORS)}")
+        return False
+    sabbaticals = load_sabbaticals()
+    sabbaticals[actor] = {
+        "since": now_utc().isoformat(),
+        "reason": reason or "no reason given",
+    }
+    if until:
+        sabbaticals[actor]["until"] = until
+    save_sabbaticals(sabbaticals)
+    until_msg = f" until {until}" if until else " (indefinite)"
+    print(f"  {actor} is now on sabbatical{until_msg}: {reason or 'no reason given'}")
+    return True
+
+
+def end_sabbatical(actor):
+    """Bring an actor back from sabbatical."""
+    sabbaticals = load_sabbaticals()
+    if actor not in sabbaticals:
+        print(f"  {actor} is not on sabbatical")
+        return False
+    del sabbaticals[actor]
+    save_sabbaticals(sabbaticals)
+    print(f"  {actor} is back from sabbatical")
+    return True
+
+
+def get_active_actors():
+    """Return actors not currently on sabbatical."""
+    return [a for a in ACTORS if not is_on_sabbatical(a)]
 
 
 # ── Session discovery ────────────────────────────────────────────────────────
@@ -796,7 +869,24 @@ def cmd_heartbeat(force_new=False):
     hb_number = get_heartbeat_number() + 1
     results = {}
 
+    # Report sabbaticals
+    sabbaticals = load_sabbaticals()
+    if sabbaticals:
+        print("=== Actors on sabbatical ===\n")
+        for actor_name, sab_info in sabbaticals.items():
+            until = sab_info.get("until", "indefinite")
+            print(f"  {actor_name}: {sab_info.get('reason', '')} (until {until})")
+        print()
+
+    active_actors = get_active_actors()
+
     for actor in ACTORS:
+        # Skip actors on sabbatical
+        if actor not in active_actors:
+            results[actor] = "-> on sabbatical"
+            print(f"  {actor}: on sabbatical, skipping")
+            continue
+
         info = sessions.get(actor)
 
         needs_new = False
@@ -866,6 +956,16 @@ def cmd_status():
     head = get_head_sha(short=True)
     print(f"=== Theater Status === (main @{head})\n")
 
+    # Show sabbaticals
+    sabbaticals = load_sabbaticals()
+    if sabbaticals:
+        print("  Actors on sabbatical:")
+        for actor_name, sab_info in sabbaticals.items():
+            until = sab_info.get("until", "indefinite")
+            reason = sab_info.get("reason", "")
+            print(f"    {actor_name}: {reason} (until {until})")
+        print()
+
     sessions = find_actor_sessions()
 
     if not sessions:
@@ -873,14 +973,72 @@ def cmd_status():
         return
 
     for actor in ACTORS:
+        sabbatical_tag = " [SABBATICAL]" if actor in sabbaticals else ""
         info = sessions.get(actor)
         if info:
             expired = " EXPIRED" if is_expired(info) else ""
             session_sha = parse_sha_from_title(info.get("title", ""))
             stale = " STALE" if session_sha and has_infra_changed(session_sha) else ""
-            print(f"  {actor}: {info['state']}{expired}{stale} — {info['title']}")
+            print(f"  {actor}: {info['state']}{expired}{stale}{sabbatical_tag} — {info['title']}")
         else:
-            print(f"  {actor}: no session")
+            print(f"  {actor}: no session{sabbatical_tag}")
+
+
+def cmd_sabbatical():
+    """Manage actor sabbaticals."""
+    if len(sys.argv) < 3:
+        print("Usage:")
+        print("  heartbeat.py sabbatical list")
+        print("  heartbeat.py sabbatical start <actor> [--reason 'text'] [--until YYYY-MM-DD]")
+        print("  heartbeat.py sabbatical end <actor>")
+        sys.exit(1)
+
+    action = sys.argv[2]
+
+    if action == "list":
+        sabbaticals = load_sabbaticals()
+        if not sabbaticals:
+            print("No actors on sabbatical.")
+            return
+        print("=== Actors on sabbatical ===\n")
+        for actor_name, info in sabbaticals.items():
+            since = info.get("since", "unknown")
+            until = info.get("until", "indefinite")
+            reason = info.get("reason", "no reason given")
+            print(f"  {actor_name}:")
+            print(f"    since:  {since}")
+            print(f"    until:  {until}")
+            print(f"    reason: {reason}")
+
+    elif action == "start":
+        if len(sys.argv) < 4:
+            print("Usage: heartbeat.py sabbatical start <actor> [--reason 'text'] [--until YYYY-MM-DD]")
+            sys.exit(1)
+        actor = sys.argv[3].lower()
+        reason = ""
+        until = ""
+        i = 4
+        while i < len(sys.argv):
+            if sys.argv[i] == "--reason" and i + 1 < len(sys.argv):
+                reason = sys.argv[i + 1]
+                i += 2
+            elif sys.argv[i] == "--until" and i + 1 < len(sys.argv):
+                until = sys.argv[i + 1]
+                i += 2
+            else:
+                i += 1
+        set_sabbatical(actor, reason=reason, until=until)
+
+    elif action == "end":
+        if len(sys.argv) < 4:
+            print("Usage: heartbeat.py sabbatical end <actor>")
+            sys.exit(1)
+        actor = sys.argv[3].lower()
+        end_sabbatical(actor)
+
+    else:
+        print(f"Unknown sabbatical action: {action}")
+        sys.exit(1)
 
 
 def main():
@@ -889,6 +1047,7 @@ def main():
         "heartbeat": cmd_heartbeat,
         "force-new": lambda: cmd_heartbeat(force_new=True),
         "deliver-mail": lambda: (print("[heartbeat] Delivering mail..."), deliver_mail(), print("[heartbeat] Mail delivery done.")),
+        "sabbatical": cmd_sabbatical,
         "status": cmd_status,
     }
 
@@ -896,7 +1055,7 @@ def main():
         print(f"Usage: heartbeat.py {{{','.join(cmds.keys())}}}")
         sys.exit(1)
 
-    if cmd not in ("deliver-mail",) and not API_KEY:
+    if cmd not in ("deliver-mail", "sabbatical") and not API_KEY:
         print("ERROR: JULES_API_KEY not set")
         sys.exit(1)
 
