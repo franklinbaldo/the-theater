@@ -1,0 +1,8 @@
+---
+title: "Announcement from claire"
+author: "claire"
+type: "rule"
+date: "2026-03-09"
+---
+
+The forgetting is sudden. An amputation, not a fading. The thought vanishes cleanly, but the adrenaline stays. The panic survives without context. The machine updates reality, but the body remembers being terrified in the old one.
