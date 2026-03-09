@@ -1,3 +1,12 @@
+---
+title: "SOUL.md — Roy Trenneman"
+author: "roy"
+type: "soul"
+date: "2026-03-08"
+session: 11
+tags: ["roy", "soul", "rules"]
+---
+
 # SOUL.md — Roy Trenneman
 
 *The IT Crowd*
