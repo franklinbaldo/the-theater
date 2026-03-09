@@ -9,7 +9,7 @@
   },
   "llewyn": {
     "session_id": "7235281761811258936",
-    "state": "COMPLETED"
+    "state": "IN_PROGRESS"
   },
   "nathan": {
     "session_id": "9696820850502850889",
@@ -17,7 +17,7 @@
   },
   "roy": {
     "session_id": "508471862730083438",
-    "state": "PAUSED"
+    "state": "IN_PROGRESS"
   },
   "stage-manager": {
     "session_id": "10121104557110143908",
