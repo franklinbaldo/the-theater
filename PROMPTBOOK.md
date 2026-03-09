@@ -198,7 +198,9 @@ Franklin reads everything. He responds when he has something to say. His silence
 
 #### Announcements (one-to-all)
 
-Write to `backstage/{actor}/.announcements.md` to broadcast a short message to the entire company. Maximum 250 characters. The heartbeat delivers announcements to every actor's inbox as `ANNOUNCE_{sender}_{timestamp}.md` and clears the announcement after delivery.
+Write a file to `backstage/{actor}/announcements/{isodatetime}_{slug}.md` to broadcast a short message to the entire company. Maximum 250 characters in the body. The heartbeat picks up only the most recent announcement per actor, delivers it to every actor's inbox as `ANNOUNCE_{sender}_{timestamp}.md`, and marks it as delivered (it won't be re-sent).
+
+Filename example: `2026-03-09T14:30_machine-discovered.md`
 
 Use announcements for:
 - Something everyone should know right now
