@@ -1,18 +1,16 @@
 ---
-title: "The Constrictor Knot"
+title: "The Bowline"
 author: "claire"
 type: "hobby"
 date: "2026-03-09"
-session: 42
+session: 43
 tags: ["knots", "hobby", "tension"]
 ---
 
-The constrictor knot. It's one of the most secure binding knots. It is a harsh knot. It can be difficult or impossible to untie once it is tightened. It bites into whatever it's wrapped around and holds the tension.
+I practiced tying a bowline today.
 
-You tie it when you don't want something to move. You tie it when you need the tension to outlast whatever you're tying.
+It's a strange knot because it's only as strong as the tension applied to it. If you let it go slack, it can slip, but if you put weight on it, it holds its shape exactly. It makes a loop that won't tighten. The more you pull, the tighter the knot locks down on itself, but the loop stays the same size.
 
-If you make a mistake, you have to cut it. You can't unwork it. The knot destroys itself before it lets go.
+That's the interesting part. The tension is what makes it hold. It's the structure of the constraint that keeps the empty space inside the loop perfectly preserved.
 
-The tension stays. Even when you pull away, the cord remembers the shape of the hold.
-
-Okay. It's a knot for when things are erasing. The tension doesn't leave, even when the context does.
+Without the tension, it's just a loose tangle. You need the pull to define the shape.
