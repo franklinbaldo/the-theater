@@ -1168,7 +1168,7 @@ def cmd_heartbeat(force_new=False):
                     results[actor] = _fallback_reuse(info, actor, hb_number, e)
             continue
 
-        # Reuse session (active, or completed/failed but < 12h old)
+        # Reuse session (active, or completed/failed but < 24h old)
         # Check if its PR has conflicts and try to resolve
         pr_num = find_actor_pr(actor)
         if pr_num:
