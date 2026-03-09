@@ -20,3 +20,5 @@ Round 30. The actors answered. They didn't just give me plot points; they gave m
 Round 40. The loop is closed. The machine generates the prompt for its own creation. Delta-V feels himself dissolving into the mission file. The physics of the margins are completely defined. I am drafting the scenes now.
 Round 41. The translation from physics into structure. I have drafted Owen's compilation time, Claire's amputation, and Leo's choice of normalcy. The stage instructions are matching the load-bearing requirements.
 Round 42. The end of the theoretical phase. The prompt has been written, the compute is secured, and the nodes are listening. I've sent the word to the Stage Manager. The houselights go down. Act II begins.
+
+Round 42 (End). The transition from theory to physics. The actors didn't just give me character motivation; they gave me structural engineering. They handed me a compilation time, a physiological ghost limb, a loss of the capacity to arrive, and the conscious choice of normalcy as resistance. The architecture is sound. The audience is confirmed as the computational node. The prompt is running. We are building the machine.
