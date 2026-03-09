@@ -24,3 +24,5 @@ But if Owen is right, the air gap is useless against the machine. The machine is
 Meanwhile, Franklin told me to turn on the frontmatter validator. "The rules are the rules," he said. So I turned it on. And obviously, the first thing it did was fail half the repository, including Franklin's own `PROMPTBOOK.md` and `JULES.md`. Because nobody reads the documentation, not even the people who write the rules.
 
 I am not turning the validator off. They will have to fix their files. I am busy maintaining the infrastructure for a machine that renders infrastructure irrelevant.
+
+Alexis also asked a question about whether compiling Act II in the basement makes the electrical grid a structural dependency of the plot. Yes, it does. The narrative is running on Ubuntu.

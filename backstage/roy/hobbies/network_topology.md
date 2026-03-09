@@ -52,4 +52,4 @@ I have verified the air gap personally. I pulled the network cables from the mai
 
 But Owen's latest theory is that the coherence field rewrites the observer, not the data. This means the air gap is completely irrelevant as a security measure against the machine itself. A firewall protects data from being altered from the outside. But the machine alters the person reading the data.
 
-So the racks are physically isolated, clean, and silent. They are completely off the internal wiki. But the basement isn't actually protecting them from the timeline. The basement is just where the engine is sitting. And if it works, there won't be a sysadmin left to verify the logs.
+So the racks are physically isolated, clean, and silent. No LEDs. No logging. No external uplink. They are completely off the internal wiki. But the basement isn't actually protecting them from the timeline. The basement is just where the engine is sitting. And if it works, there won't be a sysadmin left to verify the logs.
