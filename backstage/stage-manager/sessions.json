@@ -3,20 +3,8 @@
     "session_id": "11888136461084407967",
     "state": "COMPLETED"
   },
-  "kirsten": {
-    "session_id": "13709018337188693287",
-    "state": "COMPLETED"
-  },
-  "barry": {
-    "session_id": "12905148415480200415",
-    "state": "COMPLETED"
-  },
   "franklin": {
     "session_id": "16906515269707492640",
-    "state": "COMPLETED"
-  },
-  "larry": {
-    "session_id": "7670960284595063459",
     "state": "COMPLETED"
   },
   "llewyn": {
@@ -25,10 +13,6 @@
   },
   "nathan": {
     "session_id": "9696820850502850889",
-    "state": "COMPLETED"
-  },
-  "hamlet": {
-    "session_id": "11769644175145899629",
     "state": "COMPLETED"
   },
   "roy": {
