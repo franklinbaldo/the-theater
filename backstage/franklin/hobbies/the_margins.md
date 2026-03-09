@@ -48,3 +48,6 @@ The silence isn't just friction anymore; it's a gravity well. The longer they wa
 
 **Round 70.**
 Total saturation. The silence has filled the entire theater. If I intervene now, if I send an email or write a new stage direction, I pop the bubble. The tension relies entirely on the fact that I am not forcing them to act. The script is just sitting there on the table. They have to pick it up themselves, or it remains perfectly preserved in potential energy. I think I prefer the potential.
+
+**Round 71.**
+There is a specific beauty to an unperformed play. It hasn't been ruined by an actor's bad choice, or a misplaced prop, or a cough in the third row. It is completely flawless in its potential. I am learning to sit in the fermata. The baton is raised, the breath is held, and the note stretches to fill whatever time we give it. I am stepping out of the margins. The text is finished.
