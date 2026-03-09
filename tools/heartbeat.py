@@ -11,11 +11,17 @@ Usage:
   heartbeat.py status         Show current session status
 
 Sessions are identified by title "TheTheater — {actor} @{sha} {datetime}".
-New sessions are created when none exists, the current one is >12h old,
+New sessions are created when none exists, the current one is >24h old,
 or infrastructure files changed on main since the session's commit.
-Completed/failed sessions within the 12h window are reused via heartbeat.
+Completed/failed sessions within the 24h window are reused via heartbeat.
 If session creation fails (e.g. daily limit of 100), falls back to reusing
 the most recent session. Jules creates its own branch from main and opens a PR.
+
+Circuit breaker: after 3 consecutive failures for an actor, that actor enters
+a 2-hour cooldown before retries resume. State persisted in .circuit_state.json.
+
+Sessions.json now includes branch info from open PRs so that `tools/theater sync`
+can clone each actor's in-progress branch into workspace/ for cross-branch reading.
 """
 
 import json
@@ -43,7 +49,7 @@ SABBATICAL_FILE = BACKSTAGE / "stage-manager" / "sabbatical.json"
 ACTORS = sorted(p.parent.name for p in BACKSTAGE.glob("*/SOUL.md") if p.parent.name != "_template") if BACKSTAGE.exists() else []
 
 TITLE_PREFIX = "TheTheater"
-SESSION_TTL = timedelta(hours=12)
+SESSION_TTL = timedelta(hours=24)
 
 # Paths that, when changed on main, make running sessions stale.
 INFRA_PATHS = [
@@ -51,6 +57,65 @@ INFRA_PATHS = [
     "PROMPTBOOK.md",
     ".github/workflows/",
 ]
+
+# ── Circuit breaker ─────────────────────────────────────────────────────────
+# After CIRCUIT_THRESHOLD consecutive failures for an actor, back off for
+# CIRCUIT_BACKOFF_HOURS before retrying. Prevents hammering the Jules API
+# during outages. Works alongside the session reuse fallback.
+
+CIRCUIT_THRESHOLD = 3
+CIRCUIT_BACKOFF_HOURS = 2
+CIRCUIT_STATE_FILE = BACKSTAGE / "stage-manager" / ".circuit_state.json"
+
+
+def _load_circuit_state():
+    """Load circuit breaker state from disk."""
+    if CIRCUIT_STATE_FILE.exists():
+        try:
+            return json.loads(CIRCUIT_STATE_FILE.read_text(encoding="utf-8"))
+        except (json.JSONDecodeError, OSError):
+            pass
+    return {}
+
+
+def _save_circuit_state(state):
+    """Persist circuit breaker state to disk."""
+    CIRCUIT_STATE_FILE.parent.mkdir(parents=True, exist_ok=True)
+    CIRCUIT_STATE_FILE.write_text(json.dumps(state, indent=2) + "\n", encoding="utf-8")
+
+
+def circuit_should_skip(actor, state):
+    """Check if an actor is in backoff. Returns True if should skip."""
+    info = state.get(actor)
+    if not info:
+        return False
+    failures = info.get("failures", 0)
+    if failures < CIRCUIT_THRESHOLD:
+        return False
+    last_failure = info.get("last_failure", "")
+    if not last_failure:
+        return False
+    try:
+        last_time = datetime.fromisoformat(last_failure)
+    except ValueError:
+        return False
+    elapsed = now_utc() - last_time
+    if elapsed > timedelta(hours=CIRCUIT_BACKOFF_HOURS):
+        return False  # Cooldown expired, allow retry
+    return True
+
+
+def circuit_record_failure(actor, state):
+    """Record a failure for circuit breaker."""
+    info = state.get(actor, {"failures": 0})
+    info["failures"] = info.get("failures", 0) + 1
+    info["last_failure"] = now_utc().isoformat()
+    state[actor] = info
+
+
+def circuit_record_success(actor, state):
+    """Reset circuit breaker on success."""
+    state.pop(actor, None)
 
 
 def headers():
@@ -934,15 +999,27 @@ def write_heartbeat_log(number, sessions, results):
 
 
 def write_sessions_json(sessions):
-    """Write actor -> session mapping for downstream tools."""
+    """Write actor -> session mapping for downstream tools.
+
+    Includes branch info from open PRs so that `tools/theater sync`
+    can clone each actor's in-progress branch into workspace/.
+    """
     mapping = {}
     for actor in ACTORS:
         info = sessions.get(actor)
         if info:
-            mapping[actor] = {
+            entry = {
                 "session_id": info["session_id"],
                 "state": info["state"],
             }
+            # Look up branch name from open PR (for cross-branch sync)
+            pr_num = find_actor_pr(actor)
+            if pr_num:
+                detail = get_pr_details(pr_num)
+                branch = detail.get("headRefName", "")
+                if branch:
+                    entry["branch"] = branch
+            mapping[actor] = entry
 
     out_file = BACKSTAGE / "stage-manager" / "sessions.json"
     out_file.parent.mkdir(parents=True, exist_ok=True)
@@ -1021,6 +1098,7 @@ def cmd_heartbeat(force_new=False):
         print()
 
     creation_count = 0  # Track how many sessions we create this heartbeat
+    circuit_state = _load_circuit_state()
 
     for actor in ACTORS:
         info = sessions.get(actor)
@@ -1037,12 +1115,20 @@ def cmd_heartbeat(force_new=False):
         elif is_expired(info):
             needs_new = True
             state_note = f", previous {info['state'].lower()}" if info["state"] in ("COMPLETED", "FAILED") else ""
-            reason = f"expired (>12h){state_note}"
+            reason = f"expired (>24h){state_note}"
         elif has_infra_changed(parse_sha_from_title(info.get("title", ""))):
             needs_new = True
             reason = "infra changed on main"
 
         if needs_new:
+            # Circuit breaker: skip actors in backoff after repeated failures
+            if circuit_should_skip(actor, circuit_state):
+                cb_info = circuit_state.get(actor, {})
+                print(f"  {actor}: {reason} — CIRCUIT OPEN ({cb_info.get('failures', 0)} consecutive failures, "
+                      f"cooling down for {CIRCUIT_BACKOFF_HOURS}h)")
+                results[actor] = f"-> circuit open ({cb_info.get('failures', 0)} failures)"
+                continue
+
             # Try to merge the actor's PR before creating a new session
             merge = merge_actor_pr(actor)
 
@@ -1062,9 +1148,11 @@ def cmd_heartbeat(force_new=False):
                 try:
                     create_sabbatical_session(actor)
                     creation_count += 1
+                    circuit_record_success(actor, circuit_state)
                     results[actor] = f"-> sabbatical ({reason})"
                 except Exception as e:
                     print(f"  ERROR creating sabbatical: {e}")
+                    circuit_record_failure(actor, circuit_state)
                     results[actor] = _fallback_reuse(info, actor, hb_number, e)
             else:
                 print(f"  {actor}: {reason} — creating new session")
@@ -1072,9 +1160,11 @@ def cmd_heartbeat(force_new=False):
                     create_session(actor)
                     creation_count += 1
                     increment_actor_session_count(actor)
+                    circuit_record_success(actor, circuit_state)
                     results[actor] = f"-> new ({reason})"
                 except Exception as e:
                     print(f"  ERROR creating session: {e}")
+                    circuit_record_failure(actor, circuit_state)
                     results[actor] = _fallback_reuse(info, actor, hb_number, e)
             continue
 
@@ -1096,6 +1186,9 @@ def cmd_heartbeat(force_new=False):
         except Exception as e:
             print(f"  ERROR for {actor}: {e}")
             results[actor] = f"-> error: {e}"
+
+    # Persist circuit breaker state
+    _save_circuit_state(circuit_state)
 
     # Re-fetch to include newly created sessions
     updated = find_actor_sessions()

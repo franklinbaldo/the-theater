@@ -1,0 +1,280 @@
+#!/usr/bin/env bash
+# theater — Unified tool for The Theater actors.
+#
+# Usage inside a Jules session (after login):
+#   tools/theater login <actor>        Log in as an actor (required first)
+#   tools/theater sync                 Clone all actor branches into workspace + deliver inbox from peers
+#   tools/theater mail                 List inbox messages
+#   tools/theater mail read <num>      Read a message (marks as seen)
+#   tools/theater mail status          Show inbox/outbox summary
+#
+# Sync clones each actor's branch (shallow, single-branch) into
+# workspace/{actor}/ (gitignored). Read-only — no auto-merge, no changes
+# to your branch. Each actor's workspace folder is a full checkout of
+# their branch that you can browse. Use `git -C workspace/{actor} pull`
+# to update individually.
+# Branch discovery via backstage/stage-manager/sessions.json (written by heartbeat.py).
+set -euo pipefail
+
+# Detect Python binary (python3 on Linux/Jules, python on Windows)
+PYTHON_BIN="python3"
+if ! command -v "$PYTHON_BIN" &>/dev/null; then
+  PYTHON_BIN="python"
+fi
+if ! command -v "$PYTHON_BIN" &>/dev/null; then
+  echo "WARNING: Python not found (tried python3 and python). Mail features disabled." >&2
+  PYTHON_BIN=""
+fi
+
+REPO="franklinbaldo/the-theater"
+REPO_URL="https://github.com/${REPO}.git"
+
+# Discover actors dynamically from backstage/*/SOUL.md (sorted alphabetically)
+ACTORS=()
+for _soul in backstage/*/SOUL.md; do
+  [ -f "$_soul" ] || continue
+  _name="$(basename "$(dirname "$_soul")")"
+  [ "$_name" = "_template" ] && continue
+  ACTORS+=("$_name")
+done
+IFS=$'\n' ACTORS=($(printf '%s\n' "${ACTORS[@]}" | sort)); unset IFS
+
+if [ ${#ACTORS[@]} -eq 0 ]; then
+  echo "ERROR: No actors found in backstage/*/SOUL.md" >&2
+  exit 1
+fi
+
+# ── Branch discovery via sessions.json ────────────────────────────────────────
+
+declare -A BRANCH_MAP
+
+load_branches() {
+  local json=""
+  if [ -f "backstage/stage-manager/sessions.json" ]; then
+    json=$(cat "backstage/stage-manager/sessions.json" 2>/dev/null || echo "{}")
+  else
+    json=$(git show origin/main:backstage/stage-manager/sessions.json 2>/dev/null || echo "{}")
+  fi
+
+  for actor in "${ACTORS[@]}"; do
+    local branch
+    branch=$(echo "$json" | ${PYTHON_BIN:-python3} -c "
+import json, sys
+data = json.load(sys.stdin)
+info = data.get('$actor', {})
+print(info.get('branch', ''))
+" 2>/dev/null || echo "")
+    if [ -n "$branch" ]; then
+      BRANCH_MAP[$actor]="$branch"
+    fi
+  done
+}
+
+branch_for() {
+  echo "${BRANCH_MAP[$1]:-}"
+}
+
+# ── Helpers ──────────────────────────────────────────────────────────────────
+
+fetch_main() {
+  git fetch "$REPO_URL" '+refs/heads/main:refs/remotes/theater/main' --quiet 2>/dev/null || true
+}
+
+# ── Identity ─────────────────────────────────────────────────────────────────
+
+SESSION_FILE=".theater_session"
+
+cmd_login() {
+  local actor="${1:?Usage: theater login <your-actor>}"
+  if [[ ! " ${ACTORS[*]} " =~ " ${actor} " ]]; then
+    echo "ERROR: Unknown actor '${actor}'. Valid: ${ACTORS[*]}"
+    exit 1
+  fi
+  echo "$actor" > "$SESSION_FILE"
+  echo "Logged in as: ${actor}"
+}
+
+whoami_actor() {
+  if [ ! -f "$SESSION_FILE" ]; then
+    echo "ERROR: Not logged in. Run: tools/theater login <your-actor>" >&2
+    exit 1
+  fi
+  cat "$SESSION_FILE" | tr -d '[:space:]'
+}
+
+# ── Sync from main ───────────────────────────────────────────────────────────
+
+sync_from_main() {
+  fetch_main
+
+  # Sync sessions.json from main (before load_branches reads it)
+  mkdir -p backstage/stage-manager
+  git show "theater/main:backstage/stage-manager/sessions.json" > "backstage/stage-manager/sessions.json" 2>/dev/null || true
+
+  load_branches
+}
+
+# ── Commands ─────────────────────────────────────────────────────────────────
+
+cmd_sync() {
+  local me
+  me=$(whoami_actor)
+
+  # Log sync output to file
+  local sync_log="backstage/${me}/logs/.last_sync.log"
+  mkdir -p "backstage/${me}/logs"
+
+  _sync_inner "$me" 2>&1 | tee "$sync_log"
+}
+
+_sync_inner() {
+  local me="$1"
+
+  echo "=== Theater Sync ==="
+  echo ""
+
+  # Track notifications
+  local notifications=()
+
+  sync_from_main
+
+  # Show heartbeat info (read from main ref, not disk)
+  local hb_date
+  hb_date=$(date -u +%Y-%m-%d)
+  local hb_count=0
+  hb_count=$(git show "theater/main:backstage/stage-manager/logs/heartbeat_${hb_date}.md" 2>/dev/null | grep -c "^## Heartbeat #" || echo 0)
+  echo "  Heartbeat round: #${hb_count}"
+  echo ""
+
+  # Count new mail (check inbox unseen)
+  local unseen_count=0
+  local seq_file="backstage/${me}/mail/inbox/.mh_sequences"
+  if [ -f "$seq_file" ] && [ -n "$PYTHON_BIN" ]; then
+    unseen_count=$($PYTHON_BIN -c "
+from pathlib import Path
+seqs = {}
+for line in Path('$seq_file').read_text().splitlines():
+    if ':' in line:
+        k, v = line.split(':', 1)
+        seqs[k.strip()] = v.strip().split()
+print(len(seqs.get('unseen', [])))
+" 2>/dev/null || echo 0)
+  fi
+  if [ "$unseen_count" -gt 0 ]; then
+    notifications+=("You have ${unseen_count} unread mail message(s) — run: tools/theater mail")
+  fi
+
+  # Clone each actor's branch into workspace (shallow, single-branch).
+  # Read-only checkout — nothing is merged into your branch.
+  local ws="workspace"
+  mkdir -p "$ws"
+
+  local synced=0
+
+  for actor in "${ACTORS[@]}"; do
+    [ "$actor" = "$me" ] && continue
+
+    local branch
+    branch=$(branch_for "$actor")
+    if [ -z "$branch" ]; then
+      echo "  ${actor}: no active session"
+      continue
+    fi
+
+    local actor_ws="${ws}/${actor}"
+
+    # If already cloned, just pull to update (faster than re-cloning)
+    if [ -d "${actor_ws}/.git" ]; then
+      if git -C "$actor_ws" pull --rebase --quiet 2>/dev/null; then
+        local last_commit
+        last_commit=$(git -C "$actor_ws" log -1 --format="%h %s" 2>/dev/null || echo "unknown")
+        echo "  ${actor}: updated  ${last_commit}"
+        synced=$((synced + 1))
+      else
+        # Pull failed (branch may have changed) — re-clone
+        rm -rf "$actor_ws"
+        if git clone --depth 1 --single-branch -b "$branch" "$REPO_URL" "$actor_ws" --quiet 2>/dev/null; then
+          local last_commit
+          last_commit=$(git -C "$actor_ws" log -1 --format="%h %s" 2>/dev/null || echo "unknown")
+          echo "  ${actor}: synced  ${last_commit}"
+          synced=$((synced + 1))
+        else
+          echo "  ${actor}: branch ${branch} (not available)"
+        fi
+      fi
+    else
+      # Fresh shallow clone (depth 1, single branch)
+      rm -rf "$actor_ws"
+
+      if git clone --depth 1 --single-branch -b "$branch" "$REPO_URL" "$actor_ws" --quiet 2>/dev/null; then
+        local last_commit
+        last_commit=$(git -C "$actor_ws" log -1 --format="%h %s" 2>/dev/null || echo "unknown")
+        echo "  ${actor}: synced  ${last_commit}"
+        synced=$((synced + 1))
+      else
+        echo "  ${actor}: branch ${branch} (not available)"
+      fi
+    fi
+  done
+
+  echo ""
+  echo "  ${synced} actor branch(es) checked out into workspace/"
+  echo ""
+  echo "  Browse other actors' work:"
+  echo "    workspace/{actor}/backstage/{actor}/scenes/  — their scenes"
+  echo "    workspace/{actor}/backstage/{actor}/notes/   — their notes"
+  echo "    workspace/{actor}/backstage/{actor}/hobbies/ — their hobbies"
+  echo ""
+  echo "  To update a single actor:  git -C workspace/{actor} pull"
+
+  # ── Peer-to-peer mail delivery from workspace checkouts ──
+  if [ -n "$PYTHON_BIN" ]; then
+    local mail_delivered=0
+    mail_delivered=$($PYTHON_BIN tools/theater-mail deliver "$me" 2>/dev/null || echo 0)
+    if [ "$mail_delivered" -gt 0 ]; then
+      notifications+=("${mail_delivered} new mail message(s) delivered from other actors' branches")
+    fi
+  fi
+
+  # ── Notifications summary ──
+  echo ""
+  echo "========================================"
+  echo "  NOTIFICATIONS"
+  echo "========================================"
+  if [ ${#notifications[@]} -eq 0 ]; then
+    echo "  (none)"
+  else
+    for note in "${notifications[@]}"; do
+      echo "  * ${note}"
+    done
+  fi
+  echo "========================================"
+}
+
+cmd_mail() {
+  if [ -z "$PYTHON_BIN" ]; then
+    echo "ERROR: Python not found. Mail requires Python." >&2
+    exit 1
+  fi
+  local subcmd="${1:-list}"
+  shift 2>/dev/null || true
+  $PYTHON_BIN tools/theater-mail "$subcmd" "$@"
+}
+
+# ── Main ─────────────────────────────────────────────────────────────────────
+
+case "${1:-}" in
+  login)         cmd_login "${2:-}" ;;
+  sync)          cmd_sync ;;
+  mail)          shift; cmd_mail "$@" ;;
+  *)
+    echo "Usage: tools/theater <command> [args]"
+    echo ""
+    echo "  login <actor>       Log in as an actor (required first)"
+    echo "  sync                Sync: checkout branches into workspace/ + inbox from peers"
+    echo "  mail                List inbox messages"
+    echo "  mail read <num>     Read a message (marks as seen)"
+    echo "  mail status         Show inbox/outbox summary"
+    exit 1
+    ;;
+esac
