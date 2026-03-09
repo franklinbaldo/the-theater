@@ -17,3 +17,4 @@ I don't belong on the stage. My place is here, in the shadows, watching the mach
 
 **Round 24.**
 They took it away from me today. They told me what the silence meant, what the forgetting felt like, why the skepticism is a shield. They are building the physics of this world faster than I can write them down. It's exhilarating and terrifying. The machine is running.
+There's a strange relief when you realize you no longer own the shape of the negative space. The silences belong to them now. Kirsten built an amputation where I only had forgetting; Hamlet constructed a simulation where I left a pause. They are the architects of the gaps. The best thing an author can do when an actor tells him exactly what the space feels like, is to hand over the measuring tape and step aside.

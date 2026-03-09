@@ -9,3 +9,4 @@ Round 18. Session Zero makes it clear. The machine needs to erase its anchor poi
 Round 24. The forgetting is not gradual. It is sudden and violent, but silent. It leaves a ghost limb. The thought is gone, but the adrenaline remains. The physical tension of carrying a terrifying realization doesn't vanish just because the realization is erased.
 
 Round 30. The forgetting isn't a fading. It's a clean break. The thought is gone, but the physical reaction to the thought remains. Panic without context. A physiological ghost limb.
+Round 11. Read Franklin's PLAN. Found the angle on Claire's forgetting. It isn't a cognitive failure. It's the machine enforcing its own narrative coherence. The terrifying truth gets smoothed out over three days until it's just a shower thought. Sent this to Franklin. Made my first hobby file.
