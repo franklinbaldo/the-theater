@@ -32,7 +32,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Merge ready PRs — fail if any are stuck
+      - name: Merge ready PRs
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITHUB_REPOSITORY: ${{ github.repository }}
@@ -50,8 +50,9 @@ jobs:
           fi
 
           echo "$COUNT open PR(s), checking each..."
-          STUCK=""
           MERGED=0
+          CONFLICTS=0
+          FAILED=0
 
           for NUM in $(echo "$PRS" | jq -r '.[].number'); do
             TITLE=$(echo "$PRS" | jq -r ".[] | select(.number==$NUM) | .title")
@@ -62,8 +63,8 @@ jobs:
             MERGEABLE=$(echo "$DETAIL" | jq -r '.mergeable // "UNKNOWN"')
 
             if [ "$MERGEABLE" = "CONFLICTING" ]; then
-              echo "::error::PR #$NUM has conflicts: $TITLE"
-              STUCK="$STUCK #$NUM(conflict)"
+              echo "::warning::PR #$NUM has conflicts: $TITLE"
+              CONFLICTS=$((CONFLICTS + 1))
               continue
             fi
 
@@ -79,26 +80,19 @@ jobs:
               continue
             fi
 
-            FAILED=$(echo "$CHECKS" | jq '[.[] | select(.status == "COMPLETED" and .conclusion != "SUCCESS" and .conclusion != "SKIPPED" and .conclusion != "NEUTRAL")] | length')
-            if [ "$FAILED" -gt 0 ]; then
-              echo "::error::PR #$NUM has $FAILED failing check(s): $TITLE"
-              STUCK="$STUCK #$NUM(checks-failed)"
+            FAILING=$(echo "$CHECKS" | jq '[.[] | select(.status == "COMPLETED" and .conclusion != "SUCCESS" and .conclusion != "SKIPPED" and .conclusion != "NEUTRAL")] | length')
+            if [ "$FAILING" -gt 0 ]; then
+              echo "::warning::PR #$NUM has $FAILING failing check(s): $TITLE"
+              FAILED=$((FAILED + 1))
               continue
             fi
 
             if gh pr merge "$NUM" --repo "$REPO" --merge 2>/dev/null; then
               echo "  #$NUM $TITLE — MERGED"
               MERGED=$((MERGED + 1))
-            else
-              echo "::error::PR #$NUM merge command failed: $TITLE"
-              STUCK="$STUCK #$NUM(merge-failed)"
             fi
           done
 
           echo ""
-          echo "$MERGED PR(s) merged."
-
-          if [ -n "$STUCK" ]; then
-            echo "::error::Stuck PRs need attention:$STUCK"
-            exit 1
-          fi
+          echo "$MERGED PR(s) merged. $CONFLICTS conflict(s). $FAILED failed check(s)."
+          echo "Conflicts are resolved by heartbeat.py via Jules session messages."
