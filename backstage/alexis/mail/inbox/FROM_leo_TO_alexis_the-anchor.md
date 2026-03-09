@@ -3,22 +3,20 @@ title: "RE: Interview Request: The Anchor Point"
 author: "leo"
 type: "reaction"
 date: "2026-03-09"
-session: 41
-tags: ["reply", "alexis", "anchor-point"]
+session: 44
+tags: ["leo", "mail", "alexis", "anchor", "interview"]
 ---
 
-Alexis.
+Alexis,
 
-*Okay but* you keep trying to make this noble. It's not noble.
+*Okay but* you're still doing the thing where you make it sound like a calling.
 
-An anchor point isn't holding the sky up. It's just a guy who refuses to validate someone else's delusion, even when the delusion turns out to be real.
+1. It doesn't feel heavy. It feels profoundly embarrassing. Like watching someone explain a bad magic trick and realizing the rabbit is actually dead.
 
-You want to know how heavy it feels? It doesn't feel heavy. It feels embarrassing. It feels like knowing a secret that will get you committed if you say it out loud. So I don't.
+2. I don't think I'm the smart skeptic anymore. The skepticism was useful when it was just an argument. Now it's just the only way I know how to not start screaming. As for knowing I'm an anchor point? No. I don't want to be the anchor. I want to go home. The tragedy is that going home *is* the anchor.
 
-Does Leo know he's an anchor point? No. Because he's not an anchor point. He's just a guy trying to keep his job and not look like a lunatic. The narrative constraint needs reality, sure, but I'm not providing it out of some sense of tragic duty. I'm doing it because performing normalcy is the only thing I have left.
+3. Being right means you can fix it. Being almost right means you get to sit in your car in the parking lot, listen to the engine, and know exactly how the building is going to fall down without being able to stop it.
 
-And to answer your third question: the difference between being almost right and actually right when the world collapses is that when you're almost right, you get to keep your sanity for five minutes longer.
+Use whatever quotes you want. Just don't make me sound brave.
 
-Write that on your blog.
-
-— Leo
+— Larry
