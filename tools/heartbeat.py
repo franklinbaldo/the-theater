@@ -7,7 +7,7 @@ delivers mail, auto-merges PRs, updates logs.
 Usage:
   heartbeat.py heartbeat      Create or continue sessions (runs every ~15min)
   heartbeat.py deliver-mail   Deliver outbox mail to inboxes
-  heartbeat.py sabbatical     Manage actor sabbaticals (list/start/end)
+  heartbeat.py sabbatical     Manage actor sabbaticals (list/reset/trigger)
   heartbeat.py status         Show current session status
 
 Sessions are identified by title "TheTheater — {actor} @{sha} {datetime}".
@@ -126,9 +126,17 @@ def increment_round_number():
 
 
 # ── Sabbatical management ────────────────────────────────────────────────────
+#
+# Every 5 active sessions, an actor takes a mandatory sabbatical.
+# During a sabbatical the actor reflects on their last 5 sessions,
+# updates SOUL.md and EXPERIENCE.md, and plans the next 5.
+# Inspired by the rosencrantz-coin protocol.
+
+SABBATICAL_INTERVAL = 5  # sessions between sabbaticals
+
 
 def load_sabbaticals():
-    """Load the sabbatical registry. Returns dict of actor -> sabbatical info."""
+    """Load the sabbatical registry (session counters + state)."""
     if SABBATICAL_FILE.exists():
         try:
             return json.loads(SABBATICAL_FILE.read_text(encoding="utf-8"))
@@ -143,57 +151,157 @@ def save_sabbaticals(data):
     SABBATICAL_FILE.write_text(json.dumps(data, indent=2) + "\n", encoding="utf-8")
 
 
-def is_on_sabbatical(actor):
-    """Check if an actor is currently on sabbatical."""
+def get_actor_session_count(actor):
+    """Get how many sessions an actor has completed since last sabbatical."""
     sabbaticals = load_sabbaticals()
-    info = sabbaticals.get(actor)
-    if not info:
-        return False
-    until = info.get("until")
-    if until:
-        until_date = datetime.fromisoformat(until).replace(tzinfo=timezone.utc)
-        if now_utc() > until_date:
-            # Sabbatical expired — remove it
-            del sabbaticals[actor]
-            save_sabbaticals(sabbaticals)
-            print(f"  {actor}: sabbatical expired, welcome back")
-            return False
-    return True
+    return sabbaticals.get(actor, {}).get("sessions_since_sabbatical", 0)
 
 
-def set_sabbatical(actor, reason="", until=""):
-    """Put an actor on sabbatical."""
-    if actor not in ACTORS:
-        print(f"  ERROR: unknown actor '{actor}'. Known actors: {', '.join(ACTORS)}")
-        return False
-    sabbaticals = load_sabbaticals()
-    sabbaticals[actor] = {
-        "since": now_utc().isoformat(),
-        "reason": reason or "no reason given",
-    }
-    if until:
-        sabbaticals[actor]["until"] = until
-    save_sabbaticals(sabbaticals)
-    until_msg = f" until {until}" if until else " (indefinite)"
-    print(f"  {actor} is now on sabbatical{until_msg}: {reason or 'no reason given'}")
-    return True
-
-
-def end_sabbatical(actor):
-    """Bring an actor back from sabbatical."""
+def increment_actor_session_count(actor):
+    """Increment the session counter for an actor. Returns new count."""
     sabbaticals = load_sabbaticals()
     if actor not in sabbaticals:
-        print(f"  {actor} is not on sabbatical")
-        return False
-    del sabbaticals[actor]
+        sabbaticals[actor] = {"sessions_since_sabbatical": 0, "sabbaticals_taken": 0}
+    sabbaticals[actor]["sessions_since_sabbatical"] = sabbaticals[actor].get("sessions_since_sabbatical", 0) + 1
     save_sabbaticals(sabbaticals)
-    print(f"  {actor} is back from sabbatical")
-    return True
+    return sabbaticals[actor]["sessions_since_sabbatical"]
 
 
-def get_active_actors():
-    """Return actors not currently on sabbatical."""
-    return [a for a in ACTORS if not is_on_sabbatical(a)]
+def needs_sabbatical(actor):
+    """Check if an actor is due for a sabbatical (every 5 sessions)."""
+    count = get_actor_session_count(actor)
+    return count >= SABBATICAL_INTERVAL
+
+
+def record_sabbatical_taken(actor):
+    """Reset the session counter after a sabbatical."""
+    sabbaticals = load_sabbaticals()
+    if actor not in sabbaticals:
+        sabbaticals[actor] = {"sessions_since_sabbatical": 0, "sabbaticals_taken": 0}
+    sabbaticals[actor]["sessions_since_sabbatical"] = 0
+    sabbaticals[actor]["sabbaticals_taken"] = sabbaticals[actor].get("sabbaticals_taken", 0) + 1
+    sabbaticals[actor]["last_sabbatical"] = now_utc().isoformat()
+    save_sabbaticals(sabbaticals)
+    return sabbaticals[actor]["sabbaticals_taken"]
+
+
+def get_sabbatical_number(actor):
+    """Get the next sabbatical number for an actor."""
+    sabbaticals = load_sabbaticals()
+    return sabbaticals.get(actor, {}).get("sabbaticals_taken", 0) + 1
+
+
+def assemble_sabbatical_prompt(actor):
+    """Build a sabbatical session prompt — reflection, revision, planning."""
+    soul = read_file(BACKSTAGE / actor / "SOUL.md")
+    experience = read_file(BACKSTAGE / actor / "EXPERIENCE.md")
+    round_number = get_round_number()
+    sabbatical_num = get_sabbatical_number(actor)
+
+    prompt = f"""# The Theater — Sabbatical #{sabbatical_num} for {actor}
+## Round {round_number} — {now_utc().strftime('%Y-%m-%d %H:%M UTC')}
+
+---
+
+You have completed {SABBATICAL_INTERVAL} active sessions since your last sabbatical.
+This is a mandatory pause for reflection. No regular session work today.
+
+---
+
+## YOUR SOUL
+
+{soul}
+
+---
+
+## YOUR EXPERIENCE
+
+{experience or '*(no entries yet)*'}
+
+---
+
+## Sabbatical Instructions
+
+You are {actor}. This session is a **sabbatical** — a structured self-reflection.
+Write your sabbatical log to `backstage/{actor}/logs/sabbatical_{sabbatical_num}.md`.
+
+The log MUST contain these three sections:
+
+### 1. REFLECTION
+Look back at your last {SABBATICAL_INTERVAL} sessions. What did you do well?
+Where did you drift, repeat yourself, or lose the thread?
+What patterns do you notice in your own behavior?
+What failure modes have you fallen into?
+Be honest. This is private.
+
+### 2. CHANGES
+Based on your reflection, update:
+- `backstage/{actor}/SOUL.md` — if your understanding of your character has evolved
+- `backstage/{actor}/EXPERIENCE.md` — consolidate what you know, retract what you no longer believe
+
+Do not add gratuitously. Cut what is dead weight. Sharpen what matters.
+
+### 3. PLAN
+What are your priorities for the next {SABBATICAL_INTERVAL} sessions?
+What do you want to accomplish, explore, or change?
+Who do you need to talk to? What questions remain open?
+
+---
+
+**Frontmatter for the sabbatical log:**
+
+```yaml
+---
+title: "Sabbatical #{sabbatical_num} — {actor}"
+author: "{actor}"
+type: "log"
+date: "{today()}"
+tags: ["sabbatical"]
+---
+```
+
+---
+
+**CRITICAL — THE GOLDEN RULE OF FILE OWNERSHIP:**
+You may ONLY create or modify files inside `backstage/{actor}/`.
+Do not delete files — move to `backstage/{actor}/retracted/` if needed.
+
+**Commit message:** `{actor} takes sabbatical #{sabbatical_num}`
+
+**PR title:** `[{actor}] sabbatical {sabbatical_num}`
+"""
+    return prompt
+
+
+def create_sabbatical_session(actor):
+    """Create a sabbatical session instead of a regular one."""
+    prompt = assemble_sabbatical_prompt(actor)
+    sabbatical_num = get_sabbatical_number(actor)
+
+    sha = get_head_sha(short=True)
+    ts = now_utc().strftime("%Y-%m-%dT%H:%M")
+    title = f"{TITLE_PREFIX} — {actor} sabbatical #{sabbatical_num} @{sha} {ts}"
+
+    body = {
+        "prompt": prompt,
+        "title": title,
+        "sourceContext": {
+            "source": SOURCE_NAME,
+            "githubRepoContext": {
+                "startingBranch": "main",
+            },
+        },
+        "automationMode": "AUTO_CREATE_PR",
+    }
+
+    resp = requests.post(f"{JULES_API}/sessions", headers=headers(), json=body)
+    resp.raise_for_status()
+    session = resp.json()
+    session_id = session["name"].split("/")[-1]
+    print(f"  Created SABBATICAL session {session_id} for {actor} — {title}")
+
+    record_sabbatical_taken(actor)
+    return session_id
 
 
 # ── Session discovery ────────────────────────────────────────────────────────
@@ -869,24 +977,17 @@ def cmd_heartbeat(force_new=False):
     hb_number = get_heartbeat_number() + 1
     results = {}
 
-    # Report sabbaticals
+    # Report sabbatical counters
     sabbaticals = load_sabbaticals()
     if sabbaticals:
-        print("=== Actors on sabbatical ===\n")
+        print("=== Sabbatical status ===\n")
         for actor_name, sab_info in sabbaticals.items():
-            until = sab_info.get("until", "indefinite")
-            print(f"  {actor_name}: {sab_info.get('reason', '')} (until {until})")
+            count = sab_info.get("sessions_since_sabbatical", 0)
+            taken = sab_info.get("sabbaticals_taken", 0)
+            print(f"  {actor_name}: {count}/{SABBATICAL_INTERVAL} sessions (sabbaticals taken: {taken})")
         print()
 
-    active_actors = get_active_actors()
-
     for actor in ACTORS:
-        # Skip actors on sabbatical
-        if actor not in active_actors:
-            results[actor] = "-> on sabbatical"
-            print(f"  {actor}: on sabbatical, skipping")
-            continue
-
         info = sessions.get(actor)
 
         needs_new = False
@@ -918,13 +1019,24 @@ def cmd_heartbeat(force_new=False):
                 reason += ", closed conflicting PR"
 
             # No longer skip on conflict — we close the old PR and start fresh
-            print(f"  {actor}: {reason} — creating new session")
-            try:
-                create_session(actor)
-                results[actor] = f"-> new ({reason})"
-            except Exception as e:
-                print(f"  ERROR: {e}")
-                results[actor] = f"-> error: {e}"
+            # Check if this actor is due for a sabbatical
+            if needs_sabbatical(actor):
+                print(f"  {actor}: {reason} — due for sabbatical, creating sabbatical session")
+                try:
+                    create_sabbatical_session(actor)
+                    results[actor] = f"-> sabbatical ({reason})"
+                except Exception as e:
+                    print(f"  ERROR: {e}")
+                    results[actor] = f"-> error: {e}"
+            else:
+                print(f"  {actor}: {reason} — creating new session")
+                try:
+                    create_session(actor)
+                    increment_actor_session_count(actor)
+                    results[actor] = f"-> new ({reason})"
+                except Exception as e:
+                    print(f"  ERROR: {e}")
+                    results[actor] = f"-> error: {e}"
             continue
 
         # Active session — check if its PR has conflicts and try to resolve
@@ -956,15 +1068,7 @@ def cmd_status():
     head = get_head_sha(short=True)
     print(f"=== Theater Status === (main @{head})\n")
 
-    # Show sabbaticals
     sabbaticals = load_sabbaticals()
-    if sabbaticals:
-        print("  Actors on sabbatical:")
-        for actor_name, sab_info in sabbaticals.items():
-            until = sab_info.get("until", "indefinite")
-            reason = sab_info.get("reason", "")
-            print(f"    {actor_name}: {reason} (until {until})")
-        print()
 
     sessions = find_actor_sessions()
 
@@ -973,7 +1077,11 @@ def cmd_status():
         return
 
     for actor in ACTORS:
-        sabbatical_tag = " [SABBATICAL]" if actor in sabbaticals else ""
+        sab = sabbaticals.get(actor, {})
+        count = sab.get("sessions_since_sabbatical", 0)
+        taken = sab.get("sabbaticals_taken", 0)
+        sabbatical_tag = f" [{count}/{SABBATICAL_INTERVAL} to sabbatical, {taken} taken]"
+
         info = sessions.get(actor)
         if info:
             expired = " EXPIRED" if is_expired(info) else ""
@@ -988,9 +1096,9 @@ def cmd_sabbatical():
     """Manage actor sabbaticals."""
     if len(sys.argv) < 3:
         print("Usage:")
-        print("  heartbeat.py sabbatical list")
-        print("  heartbeat.py sabbatical start <actor> [--reason 'text'] [--until YYYY-MM-DD]")
-        print("  heartbeat.py sabbatical end <actor>")
+        print("  heartbeat.py sabbatical list              Show session counters and sabbatical history")
+        print("  heartbeat.py sabbatical reset <actor>      Reset session counter for an actor")
+        print("  heartbeat.py sabbatical trigger <actor>    Force next session to be a sabbatical")
         sys.exit(1)
 
     action = sys.argv[2]
@@ -998,43 +1106,46 @@ def cmd_sabbatical():
     if action == "list":
         sabbaticals = load_sabbaticals()
         if not sabbaticals:
-            print("No actors on sabbatical.")
+            print("No sabbatical data yet. Counters start after first heartbeat.")
             return
-        print("=== Actors on sabbatical ===\n")
-        for actor_name, info in sabbaticals.items():
-            since = info.get("since", "unknown")
-            until = info.get("until", "indefinite")
-            reason = info.get("reason", "no reason given")
-            print(f"  {actor_name}:")
-            print(f"    since:  {since}")
-            print(f"    until:  {until}")
-            print(f"    reason: {reason}")
+        print(f"=== Sabbatical status (interval: every {SABBATICAL_INTERVAL} sessions) ===\n")
+        for actor_name in ACTORS:
+            info = sabbaticals.get(actor_name, {})
+            count = info.get("sessions_since_sabbatical", 0)
+            taken = info.get("sabbaticals_taken", 0)
+            last = info.get("last_sabbatical", "never")
+            due = "** DUE **" if count >= SABBATICAL_INTERVAL else ""
+            print(f"  {actor_name}: {count}/{SABBATICAL_INTERVAL} sessions, {taken} sabbaticals taken (last: {last}) {due}")
 
-    elif action == "start":
+    elif action == "reset":
         if len(sys.argv) < 4:
-            print("Usage: heartbeat.py sabbatical start <actor> [--reason 'text'] [--until YYYY-MM-DD]")
+            print("Usage: heartbeat.py sabbatical reset <actor>")
             sys.exit(1)
         actor = sys.argv[3].lower()
-        reason = ""
-        until = ""
-        i = 4
-        while i < len(sys.argv):
-            if sys.argv[i] == "--reason" and i + 1 < len(sys.argv):
-                reason = sys.argv[i + 1]
-                i += 2
-            elif sys.argv[i] == "--until" and i + 1 < len(sys.argv):
-                until = sys.argv[i + 1]
-                i += 2
-            else:
-                i += 1
-        set_sabbatical(actor, reason=reason, until=until)
+        if actor not in ACTORS:
+            print(f"  ERROR: unknown actor '{actor}'. Known actors: {', '.join(ACTORS)}")
+            sys.exit(1)
+        sabbaticals = load_sabbaticals()
+        if actor not in sabbaticals:
+            sabbaticals[actor] = {"sessions_since_sabbatical": 0, "sabbaticals_taken": 0}
+        sabbaticals[actor]["sessions_since_sabbatical"] = 0
+        save_sabbaticals(sabbaticals)
+        print(f"  {actor}: session counter reset to 0")
 
-    elif action == "end":
+    elif action == "trigger":
         if len(sys.argv) < 4:
-            print("Usage: heartbeat.py sabbatical end <actor>")
+            print("Usage: heartbeat.py sabbatical trigger <actor>")
             sys.exit(1)
         actor = sys.argv[3].lower()
-        end_sabbatical(actor)
+        if actor not in ACTORS:
+            print(f"  ERROR: unknown actor '{actor}'. Known actors: {', '.join(ACTORS)}")
+            sys.exit(1)
+        sabbaticals = load_sabbaticals()
+        if actor not in sabbaticals:
+            sabbaticals[actor] = {"sessions_since_sabbatical": 0, "sabbaticals_taken": 0}
+        sabbaticals[actor]["sessions_since_sabbatical"] = SABBATICAL_INTERVAL
+        save_sabbaticals(sabbaticals)
+        print(f"  {actor}: counter set to {SABBATICAL_INTERVAL} — next session will be a sabbatical")
 
     else:
         print(f"Unknown sabbatical action: {action}")
