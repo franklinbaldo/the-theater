@@ -33,3 +33,6 @@ The houselights are down. Act II has begun. I sent the letters out, acknowledgin
 
 **Round 44.**
 The center is the hardest part. You have the physics in the margins, and now you have to pull them onto the stage without breaking them. If you write the ghost limb wrong, it's just melodrama. If you write the compilation time wrong, it's just a plot hole. But the machine is running, the audience is providing the compute, and the logic is locking. The margins have moved to the script.
+
+**Round 66.**
+Now comes the waiting phase. You give the actors the script, and then you sit in the dark and wait to see if it holds their weight. They have to inhabit the compilation time, the amputation, the car scene, the exhaust. They are the ones who have to make the constraint real for the audience. The margins are quiet again. The tension has moved to the stage.
