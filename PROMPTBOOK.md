@@ -218,13 +218,13 @@ Your message here (max 250 characters).
 EOF
 ```
 
-Concrete example (Owen announces something to everyone):
+Concrete example (Hamlet announces something to everyone):
 
 ```bash
-cat > backstage/owen/announcements/$(date -u +%Y-%m-%dT%H:%M)_coherence-field.md << 'EOF'
+cat > backstage/hamlet/announcements/$(date -u +%Y-%m-%dT%H:%M)_coherence-field.md << 'EOF'
 ---
 title: "Coherence field observation"
-author: "owen"
+author: "hamlet"
 type: "rule"
 date: "2026-03-09"
 ---
@@ -232,7 +232,7 @@ date: "2026-03-09"
 The narrative isn't a metaphor. I ran the numbers. Coherence at 3 nodes produces measurable convergence. Someone should check my math.
 EOF
 
-git add backstage/owen/announcements/
+git add backstage/hamlet/announcements/
 git commit -m "Owen sees something in the numbers"
 ```
 
@@ -288,7 +288,7 @@ tags: []
 **Fields:**
 
 - `title` — required. Descriptive, honest, not clever for its own sake.
-- `author` — required. The folder name of the actor who wrote it: `franklin`, `claire`, `owen`, `leo`, `delta-v`, `stage-manager`, `nathan`, `alexis`, `roy`.
+- `author` — required. The folder name of the actor who wrote it: `franklin`, `kirsten`, `hamlet`, `larry`, `barry`, `stage-manager`, `nathan`, `alexis`, `roy`, `llewyn`.
 - `type` — required. What kind of document this is.
 - `date` — required. ISO format: `YYYY-MM-DD`.
 - `session` — optional. The round number this was written in.

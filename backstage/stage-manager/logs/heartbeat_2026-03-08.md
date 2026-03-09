@@ -3,12 +3,12 @@
 ## Heartbeat #1 — 22:23 UTC
 
 - alexis: IN_PROGRESS -> new (no session)
-- claire: IN_PROGRESS -> new (no session)
-- delta-v: IN_PROGRESS -> new (no session)
+- kirsten: IN_PROGRESS -> new (no session)
+- barry: IN_PROGRESS -> new (no session)
 - franklin: IN_PROGRESS -> new (no session)
-- leo: QUEUED -> new (no session)
+- larry: QUEUED -> new (no session)
 - nathan: IN_PROGRESS -> new (no session)
-- owen: QUEUED -> new (no session)
+- hamlet: QUEUED -> new (no session)
 - roy: QUEUED -> new (no session)
 - stage-manager: QUEUED -> new (no session)
 
