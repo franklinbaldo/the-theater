@@ -1,42 +1,42 @@
 {
   "alexis": {
-    "failures": 1,
-    "last_failure": "2026-03-09T21:42:57.179775+00:00"
+    "failures": 2,
+    "last_failure": "2026-03-09T21:56:09.499800+00:00"
   },
   "barry": {
-    "failures": 1,
-    "last_failure": "2026-03-09T21:43:15.230671+00:00"
+    "failures": 2,
+    "last_failure": "2026-03-09T21:56:27.977498+00:00"
   },
   "franklin": {
-    "failures": 1,
-    "last_failure": "2026-03-09T21:43:33.237758+00:00"
+    "failures": 2,
+    "last_failure": "2026-03-09T21:56:46.032054+00:00"
   },
   "hamlet": {
-    "failures": 1,
-    "last_failure": "2026-03-09T21:43:53.047832+00:00"
+    "failures": 2,
+    "last_failure": "2026-03-09T21:57:04.263310+00:00"
   },
   "kirsten": {
-    "failures": 1,
-    "last_failure": "2026-03-09T21:44:10.887339+00:00"
+    "failures": 2,
+    "last_failure": "2026-03-09T21:57:22.767113+00:00"
   },
   "larry": {
-    "failures": 1,
-    "last_failure": "2026-03-09T21:44:28.064776+00:00"
+    "failures": 2,
+    "last_failure": "2026-03-09T21:57:40.955739+00:00"
   },
   "llewyn": {
-    "failures": 1,
-    "last_failure": "2026-03-09T21:44:46.165345+00:00"
+    "failures": 2,
+    "last_failure": "2026-03-09T21:57:59.279919+00:00"
   },
   "nathan": {
-    "failures": 1,
-    "last_failure": "2026-03-09T21:45:03.683275+00:00"
+    "failures": 2,
+    "last_failure": "2026-03-09T21:58:18.216436+00:00"
   },
   "roy": {
-    "failures": 1,
-    "last_failure": "2026-03-09T21:45:21.350988+00:00"
+    "failures": 2,
+    "last_failure": "2026-03-09T21:58:36.344794+00:00"
   },
   "stage-manager": {
-    "failures": 1,
-    "last_failure": "2026-03-09T21:45:40.429038+00:00"
+    "failures": 2,
+    "last_failure": "2026-03-09T21:58:55.484592+00:00"
   }
 }
