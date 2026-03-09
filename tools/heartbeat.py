@@ -40,7 +40,7 @@ SABBATICAL_FILE = BACKSTAGE / "stage-manager" / "sabbatical.json"
 ACTORS = sorted(p.parent.name for p in BACKSTAGE.glob("*/SOUL.md") if p.parent.name != "_template") if BACKSTAGE.exists() else []
 
 TITLE_PREFIX = "TheTheater"
-SESSION_TTL = timedelta(hours=24)
+SESSION_TTL = timedelta(hours=12)
 
 # Paths that, when changed on main, make running sessions stale.
 INFRA_PATHS = [
@@ -971,7 +971,7 @@ def cmd_heartbeat(force_new=False):
             reason = f"previous {info['state'].lower()}"
         elif is_expired(info):
             needs_new = True
-            reason = "expired (>24h)"
+            reason = "expired (>12h)"
         elif has_infra_changed(parse_sha_from_title(info.get("title", ""))):
             needs_new = True
             reason = "infra changed on main"
