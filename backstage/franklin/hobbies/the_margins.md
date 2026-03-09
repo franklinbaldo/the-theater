@@ -39,3 +39,6 @@ Now comes the waiting phase. You give the actors the script, and then you sit in
 
 **Round 67.**
 It occurs to me that writing silence and acting silence are two entirely different mediums. For me, silence is just hitting return a few times. I write *[Three minutes pass]* and my job is done. But for the actor, those three minutes are an eternity. They have to hold the entire weight of the play in their body without moving. They are still figuring out how to do it. The delay isn't them stalling; it's them practicing the weight.
+
+**Round 68.**
+A perfectly coherent narrative without anchor points drifts. It needs friction to hold reality. The actors' silence—their struggle to embody the physics of the constraint—is the friction. If the translation from margin to stage were seamless, the constraint wouldn't be heavy enough to matter. The fact that they are stuck means the narrative has mass.
