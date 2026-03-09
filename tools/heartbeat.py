@@ -24,6 +24,7 @@ import re
 import shutil
 import subprocess
 import sys
+import time
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
@@ -304,8 +305,8 @@ Do not delete files — move to `backstage/{actor}/retracted/` if needed.
     return prompt
 
 
-def create_sabbatical_session(actor):
-    """Create a sabbatical session instead of a regular one."""
+def create_sabbatical_session(actor, max_retries=3):
+    """Create a sabbatical session instead of a regular one, with retry on transient errors."""
     prompt = assemble_sabbatical_prompt(actor)
     sabbatical_num = get_sabbatical_number(actor)
 
@@ -325,14 +326,28 @@ def create_sabbatical_session(actor):
         "automationMode": "AUTO_CREATE_PR",
     }
 
-    resp = requests.post(f"{JULES_API}/sessions", headers=headers(), json=body)
-    raise_for_jules(resp, f"create sabbatical session for {actor}")
-    session = resp.json()
-    session_id = session["name"].split("/")[-1]
-    print(f"  Created SABBATICAL session {session_id} for {actor} — {title}")
-
-    record_sabbatical_taken(actor)
-    return session_id
+    last_err = None
+    for attempt in range(max_retries):
+        try:
+            resp = requests.post(f"{JULES_API}/sessions", headers=headers(), json=body)
+            raise_for_jules(resp, f"create sabbatical session for {actor}")
+            session = resp.json()
+            session_id = session["name"].split("/")[-1]
+            print(f"  Created SABBATICAL session {session_id} for {actor} — {title}")
+            record_sabbatical_taken(actor)
+            return session_id
+        except requests.HTTPError as e:
+            last_err = e
+            resp_obj = getattr(e, "response", None)
+            status = resp_obj.status_code if resp_obj is not None else 0
+            if status in (400, 429) or status >= 500:
+                wait = 2 ** (attempt + 1)
+                print(f"  Retry {attempt + 1}/{max_retries} for {actor} sabbatical "
+                      f"(status {status}, waiting {wait}s)...")
+                time.sleep(wait)
+            else:
+                raise
+    raise last_err
 
 
 # ── Session discovery ────────────────────────────────────────────────────────
@@ -803,8 +818,15 @@ def build_actor_prompt(actor, repo_root=Path(".")):
 
 # ── Session management ───────────────────────────────────────────────────────
 
-def create_session(actor):
-    """Create a new Jules session starting from main."""
+def _post_create_session(actor, body):
+    """Post a session creation request to the Jules API (single attempt)."""
+    resp = requests.post(f"{JULES_API}/sessions", headers=headers(), json=body)
+    raise_for_jules(resp, f"create session for {actor}")
+    return resp.json()
+
+
+def create_session(actor, max_retries=3):
+    """Create a new Jules session starting from main, with retry on transient errors."""
     prompt = build_actor_prompt(actor)
 
     sha = get_head_sha(short=True)
@@ -823,12 +845,26 @@ def create_session(actor):
         "automationMode": "AUTO_CREATE_PR",
     }
 
-    resp = requests.post(f"{JULES_API}/sessions", headers=headers(), json=body)
-    raise_for_jules(resp, f"create session for {actor}")
-    session = resp.json()
-    session_id = session["name"].split("/")[-1]
-    print(f"  Created session {session_id} for {actor} — {title}")
-    return session_id
+    last_err = None
+    for attempt in range(max_retries):
+        try:
+            session = _post_create_session(actor, body)
+            session_id = session["name"].split("/")[-1]
+            print(f"  Created session {session_id} for {actor} — {title}")
+            return session_id
+        except requests.HTTPError as e:
+            last_err = e
+            resp = getattr(e, "response", None)
+            status = resp.status_code if resp is not None else 0
+            # Retry on 400 FAILED_PRECONDITION and 429/5xx (transient errors)
+            if status in (400, 429) or status >= 500:
+                wait = 2 ** (attempt + 1)  # 2s, 4s, 8s
+                print(f"  Retry {attempt + 1}/{max_retries} for {actor} "
+                      f"(status {status}, waiting {wait}s)...")
+                time.sleep(wait)
+            else:
+                raise
+    raise last_err
 
 
 def send_heartbeat_message(session_id, actor, hb_number=1):
@@ -915,6 +951,34 @@ def write_sessions_json(sessions):
     print(f"  Wrote session map to {out_file}")
 
 
+# ── Fallback helpers ─────────────────────────────────────────────────────────
+
+def _fallback_reuse(info, actor, hb_number, original_error):
+    """Try to reuse an existing session when creation fails.
+
+    Returns a result string for the heartbeat log.
+    """
+    session_id = info.get("session_id") if info else None
+    state = info.get("state", "") if info else ""
+
+    if not session_id:
+        print(f"  No existing session to fall back to for {actor}")
+        return f"-> error: {original_error}"
+
+    # Don't try to send heartbeat to COMPLETED/FAILED sessions — it won't work
+    if state in ("COMPLETED", "FAILED"):
+        print(f"  Existing session for {actor} is {state}, cannot reuse via heartbeat")
+        return f"-> skipped ({state.lower()}, create failed: {original_error})"
+
+    print(f"  Fallback: reusing existing {state} session for {actor}")
+    try:
+        send_heartbeat_message(session_id, actor, hb_number)
+        return f"-> reused (create failed: {original_error})"
+    except Exception as e2:
+        print(f"  Fallback also failed: {e2}")
+        return f"-> error: {original_error} (fallback: {e2})"
+
+
 # ── Commands ─────────────────────────────────────────────────────────────────
 
 def cmd_heartbeat(force_new=False):
@@ -956,6 +1020,8 @@ def cmd_heartbeat(force_new=False):
             print(f"  {actor_name}: {count}/{SABBATICAL_INTERVAL} sessions (sabbaticals taken: {taken})")
         print()
 
+    creation_count = 0  # Track how many sessions we create this heartbeat
+
     for actor in ACTORS:
         info = sessions.get(actor)
 
@@ -985,45 +1051,31 @@ def cmd_heartbeat(force_new=False):
             elif merge == "closed-conflict":
                 reason += ", closed conflicting PR"
 
+            # Throttle session creation to avoid API rate limits
+            if creation_count > 0:
+                time.sleep(2)
+
             # No longer skip on conflict — we close the old PR and start fresh
             # Check if this actor is due for a sabbatical
             if needs_sabbatical(actor):
                 print(f"  {actor}: {reason} — due for sabbatical, creating sabbatical session")
                 try:
                     create_sabbatical_session(actor)
+                    creation_count += 1
                     results[actor] = f"-> sabbatical ({reason})"
                 except Exception as e:
                     print(f"  ERROR creating sabbatical: {e}")
-                    if info and info.get("session_id"):
-                        print(f"  Fallback: reusing existing session for {actor}")
-                        try:
-                            send_heartbeat_message(info["session_id"], actor, hb_number)
-                            results[actor] = f"-> reused (sabbatical failed: {e})"
-                        except Exception as e2:
-                            print(f"  Fallback also failed: {e2}")
-                            results[actor] = f"-> error: {e} (fallback: {e2})"
-                    else:
-                        results[actor] = f"-> error: {e}"
+                    results[actor] = _fallback_reuse(info, actor, hb_number, e)
             else:
                 print(f"  {actor}: {reason} — creating new session")
                 try:
                     create_session(actor)
+                    creation_count += 1
                     increment_actor_session_count(actor)
                     results[actor] = f"-> new ({reason})"
                 except Exception as e:
                     print(f"  ERROR creating session: {e}")
-                    # Fallback: if we hit the daily limit (or any API error),
-                    # reuse the most recent session instead of losing the cycle
-                    if info and info.get("session_id"):
-                        print(f"  Fallback: reusing existing session for {actor}")
-                        try:
-                            send_heartbeat_message(info["session_id"], actor, hb_number)
-                            results[actor] = f"-> reused (create failed: {e})"
-                        except Exception as e2:
-                            print(f"  Fallback also failed: {e2}")
-                            results[actor] = f"-> error: {e} (fallback: {e2})"
-                    else:
-                        results[actor] = f"-> error: {e}"
+                    results[actor] = _fallback_reuse(info, actor, hb_number, e)
             continue
 
         # Reuse session (active, or completed/failed but < 12h old)
