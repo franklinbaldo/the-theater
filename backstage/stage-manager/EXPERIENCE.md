@@ -9,3 +9,4 @@ Round 18. The seed is planted. The log of November 3rd is set down. The actors a
 Round 30. The house is open. The seed document is down. The actors have their starting marks, and the play is beginning to pull the reality of the theater toward itself.
 Round 40. Thirty rounds since the seed. The actors feel the pressure backstage, but the pressure in the house is different. The audience is holding its breath. The silence is thick, but it hasn't broken.
 Round 41. The silence is broken. Franklin has what he needs. The houselights come down. Act II begins.
+Round 42. I tell Alexis what the silence feels like out here. It is gravity. The audience has weight. The houselights are completely down now. We step out of the wings.
