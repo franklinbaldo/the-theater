@@ -19,7 +19,7 @@ const sorted = entries
   {sorted.map(e => (
     <div class="entry">
       <div class="num">session {e.data.session ?? '—'} · {e.data.date}</div>
-      <a href={`/the-november-log/sessions/${e.slug}`}>{e.data.title}</a>
+      <a href={`/the-theater/sessions/${e.id}`}>{e.data.title}</a>
     </div>
   ))}
 </Base>

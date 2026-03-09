@@ -6,6 +6,7 @@ on:
     paths:
       - 'blog/**'
       - 'sessions/**'
+      - 'backstage/**'
 
   workflow_dispatch:
 
@@ -27,6 +28,33 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20
+
+      - name: Copy content into blog collections
+        run: |
+          mkdir -p blog/src/content/posts
+          mkdir -p blog/src/content/backstage
+
+          # Copy sessions into posts collection
+          for f in sessions/*.md; do
+            [ -f "$f" ] && cp "$f" blog/src/content/posts/
+          done
+
+          # Copy backstage content (scenes, notes, logs, hobbies) into backstage collection
+          # Prefix with actor name to avoid filename collisions
+          # Only copy files that have valid frontmatter (start with ---)
+          for dir in scenes notes logs hobbies; do
+            find backstage -path "*/$dir/*.md" | while read f; do
+              first=$(head -1 "$f")
+              if [ "$first" = "---" ]; then
+                actor=$(echo "$f" | cut -d'/' -f2)
+                base=$(basename "$f")
+                cp "$f" "blog/src/content/backstage/${actor}_${base}"
+              fi
+            done
+          done
+
+          echo "Posts:" && ls blog/src/content/posts/
+          echo "Backstage:" && ls blog/src/content/backstage/
 
       - name: Install dependencies
         working-directory: blog
