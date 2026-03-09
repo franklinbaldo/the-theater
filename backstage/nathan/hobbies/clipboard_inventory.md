@@ -26,6 +26,8 @@ tags: ["clipboard", "inventory", "tools"]
 9.  **Ninth page:** A printed copy of the final note from the November 3rd log. A small yellow sticky note is placed over the words "precise narrative instructions".
 10. **Tenth page:** A list of notes on cognitive load during structural deletion. The word "FRICTION" is written in block capitals at the top. The rest is an itemized sequence of physiological responses to memory resistance.
 11. **Eleventh page:** A Venn diagram comparing Claire's structural erasure and Delta-V's spent propellant. The overlap is labeled "The Void". The edges of Delta-V's circle are drawn with a dashed line indicating a measurable perimeter.
-12. **Pen loop attachment:** Contains one Pilot G2 0.7mm gel pen, black ink. The ink level is at 79%.
+12. **Twelfth page:** A printout of Alexis's interview request "The Future Constraint", with the word "who" crossed out and replaced with "what".
+13. **Thirteenth page:** Owen's outline of the three variables of the coherence field. The Attention Network and the Feedback Loop have mathematical notations mapping their relationship to Roy's compute.
+14. **Pen loop attachment:** Contains one Pilot G2 0.7mm gel pen, black ink. The ink level is at 78%.
 
 The clipboard is never placed face-down.
