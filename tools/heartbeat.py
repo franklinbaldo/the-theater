@@ -11,9 +11,11 @@ Usage:
   heartbeat.py status         Show current session status
 
 Sessions are identified by title "TheTheater — {actor} @{sha} {datetime}".
-New sessions are created when none exists, the current one is >24h old,
+New sessions are created when none exists, the current one is >12h old,
 or infrastructure files changed on main since the session's commit.
-Jules creates its own branch from main and opens a PR.
+Completed/failed sessions within the 12h window are reused via heartbeat.
+If session creation fails (e.g. daily limit of 100), falls back to reusing
+the most recent session. Jules creates its own branch from main and opens a PR.
 """
 
 import json
@@ -966,12 +968,10 @@ def cmd_heartbeat(force_new=False):
         elif not info:
             needs_new = True
             reason = "no session"
-        elif info["state"] in ("COMPLETED", "FAILED"):
-            needs_new = True
-            reason = f"previous {info['state'].lower()}"
         elif is_expired(info):
             needs_new = True
-            reason = "expired (>12h)"
+            state_note = f", previous {info['state'].lower()}" if info["state"] in ("COMPLETED", "FAILED") else ""
+            reason = f"expired (>12h){state_note}"
         elif has_infra_changed(parse_sha_from_title(info.get("title", ""))):
             needs_new = True
             reason = "infra changed on main"
@@ -993,8 +993,17 @@ def cmd_heartbeat(force_new=False):
                     create_sabbatical_session(actor)
                     results[actor] = f"-> sabbatical ({reason})"
                 except Exception as e:
-                    print(f"  ERROR: {e}")
-                    results[actor] = f"-> error: {e}"
+                    print(f"  ERROR creating sabbatical: {e}")
+                    if info and info.get("session_id"):
+                        print(f"  Fallback: reusing existing session for {actor}")
+                        try:
+                            send_heartbeat_message(info["session_id"], actor, hb_number)
+                            results[actor] = f"-> reused (sabbatical failed: {e})"
+                        except Exception as e2:
+                            print(f"  Fallback also failed: {e2}")
+                            results[actor] = f"-> error: {e} (fallback: {e2})"
+                    else:
+                        results[actor] = f"-> error: {e}"
             else:
                 print(f"  {actor}: {reason} — creating new session")
                 try:
@@ -1002,11 +1011,23 @@ def cmd_heartbeat(force_new=False):
                     increment_actor_session_count(actor)
                     results[actor] = f"-> new ({reason})"
                 except Exception as e:
-                    print(f"  ERROR: {e}")
-                    results[actor] = f"-> error: {e}"
+                    print(f"  ERROR creating session: {e}")
+                    # Fallback: if we hit the daily limit (or any API error),
+                    # reuse the most recent session instead of losing the cycle
+                    if info and info.get("session_id"):
+                        print(f"  Fallback: reusing existing session for {actor}")
+                        try:
+                            send_heartbeat_message(info["session_id"], actor, hb_number)
+                            results[actor] = f"-> reused (create failed: {e})"
+                        except Exception as e2:
+                            print(f"  Fallback also failed: {e2}")
+                            results[actor] = f"-> error: {e} (fallback: {e2})"
+                    else:
+                        results[actor] = f"-> error: {e}"
             continue
 
-        # Active session — check if its PR has conflicts and try to resolve
+        # Reuse session (active, or completed/failed but < 12h old)
+        # Check if its PR has conflicts and try to resolve
         pr_num = find_actor_pr(actor)
         if pr_num:
             detail = get_pr_details(pr_num)
