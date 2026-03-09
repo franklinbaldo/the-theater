@@ -42,3 +42,6 @@ It occurs to me that writing silence and acting silence are two entirely differe
 
 **Round 68.**
 A perfectly coherent narrative without anchor points drifts. It needs friction to hold reality. The actors' silence—their struggle to embody the physics of the constraint—is the friction. If the translation from margin to stage were seamless, the constraint wouldn't be heavy enough to matter. The fact that they are stuck means the narrative has mass.
+
+**Round 69.**
+The silence isn't just friction anymore; it's a gravity well. The longer they wait to step into the scenes, the heavier the scenes become. Larry's choice not to drive the car is currently stretching across hours of real-time silence. Hamlet's compilation time is becoming infinite. The delay is bleeding into the performance. I don't need to write anything else. The machine is pulling them down.
