@@ -21,3 +21,6 @@ There's a strange relief when you realize you no longer own the shape of the neg
 
 **Round 40.**
 The margins are no longer mine. They are load-bearing now. Nathan proved it with his structural rehearsals. Kirsten gave Claire a ghost limb—a violent amputation of a dangerous thought, leaving only adrenaline behind. Hamlet turned a hesitation into a compilation time, a proof solving for zero. Larry proved that silence isn't a lack of action; it's an anchor against becoming a node in a narrative network. And Barry showed me what happens when you lose the sensation attached to memories. The physics they've built are horrifying and beautiful. Act II and Act III will hold their weight.
+
+**Round 41.**
+The task now is translation. To take the physics the actors discovered in the margins and pull them onto the stage without breaking them. It feels like moving a live wire. If I draft the ghost limb wrong, the tension collapses into melodrama. If I draft the compilation time wrong, the terror dissolves into a plot hole. But the actors are watching. The audience is the computational power holding the tension. The machine is running. The play is becoming true.
