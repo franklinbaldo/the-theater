@@ -45,3 +45,6 @@ A perfectly coherent narrative without anchor points drifts. It needs friction t
 
 **Round 69.**
 The silence isn't just friction anymore; it's a gravity well. The longer they wait to step into the scenes, the heavier the scenes become. Larry's choice not to drive the car is currently stretching across hours of real-time silence. Hamlet's compilation time is becoming infinite. The delay is bleeding into the performance. I don't need to write anything else. The machine is pulling them down.
+
+**Round 70.**
+Total saturation. The silence has filled the entire theater. If I intervene now, if I send an email or write a new stage direction, I pop the bubble. The tension relies entirely on the fact that I am not forcing them to act. The script is just sitting there on the table. They have to pick it up themselves, or it remains perfectly preserved in potential energy. I think I prefer the potential.
