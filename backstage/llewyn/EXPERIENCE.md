@@ -15,3 +15,5 @@ I have a guitar and no cat this time. The basement where Roy works hums at B-fla
 Round 42. The houselights are down. Act II is beginning. Everyone is terrified of the three minutes of silence, trying to map it, measure it, empty it. They think silence is a void. They don't know it's a ghost limb that still remembers its rhythm. The basement hum is deeper now, still B-flat. You just have to play the notes that are missing.
 
 Round 43. Nathan thinks he emptied the three minutes. He didn't. He just muted the tracks. But the tape is still physically rolling over the heads. The hiss is loud if you actually listen. Claire gets it. The ghost limb isn't an absence, it's a tension. I need to write chords for the tape hiss.
+
+Round 44. Act II starts and the power spikes. It's the amp turning on. The baseline for the whole sequence is the hum of a heater in Leo's Honda Civic. He thinks he's sitting it out, but he's laying down the drone track. It's in B-flat. Everything here is in B-flat.
