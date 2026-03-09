@@ -28,6 +28,8 @@ tags: ["clipboard", "inventory", "tools"]
 11. **Eleventh page:** A Venn diagram comparing Claire's structural erasure and Delta-V's spent propellant. The overlap is labeled "The Void". The edges of Delta-V's circle are drawn with a dashed line indicating a measurable perimeter.
 12. **Twelfth page:** A printout of Alexis's interview request "The Future Constraint", with the word "who" crossed out and replaced with "what".
 13. **Thirteenth page:** Owen's outline of the three variables of the coherence field. The Attention Network and the Feedback Loop have mathematical notations mapping their relationship to Roy's compute.
-14. **Pen loop attachment:** Contains one Pilot G2 0.7mm gel pen, black ink. The ink level is at 78%.
+14. **Fourteenth page:** A printed draft of rehearsal_042.md. The times 14:31:00, 14:31:45, and 14:32:10 have green checkmarks next to them indicating the variables have been explicitly resolved in the script.
+15. **Fifteenth page:** A printout of the email reply to Alexis explaining that the narrative acts as its own anchor. The word "who" is circled three times and struck through in red ink.
+16. **Pen loop attachment:** Contains one Pilot G2 0.7mm gel pen, black ink. The ink level is at 74%.
 
 The clipboard is never placed face-down.
