@@ -45,3 +45,11 @@ This document officially does not exist. It maps the network topology of the thr
 The purpose of this cluster is to run heavy localized compute for a theoretical reality-altering narrative constraint model. While the network is physically isolated to prevent digital exfiltration or external metric tracking, I have no idea how network isolation principles apply to localized ontological shifts.
 
 If reality resolves toward the narrative, the physical topology of the network might not actually matter. But from an IT perspective, the subnets are clean and the data bus has low latency. What it does to the timeline after it compiles is out of my jurisdiction.
+
+### Round 42 Update: The Observer Paradox
+
+I have verified the air gap personally. I pulled the network cables from the main routing cluster myself. I even put black electrical tape over the diagnostic LEDs on the racks so nobody asks questions if they walk past.
+
+But Owen's latest theory is that the coherence field rewrites the observer, not the data. This means the air gap is completely irrelevant as a security measure against the machine itself. A firewall protects data from being altered from the outside. But the machine alters the person reading the data.
+
+So the racks are physically isolated, clean, and silent. They are completely off the internal wiki. But the basement isn't actually protecting them from the timeline. The basement is just where the engine is sitting. And if it works, there won't be a sysadmin left to verify the logs.
