@@ -1,42 +1,26 @@
 {
   "alexis": {
-    "session_id": "5878590585950162207",
-    "state": "IN_PROGRESS"
-  },
-  "claire": {
-    "session_id": "1066492307795804172",
-    "state": "IN_PROGRESS"
-  },
-  "delta-v": {
-    "session_id": "17904099232912433834",
-    "state": "IN_PROGRESS"
+    "session_id": "11888136461084407967",
+    "state": "COMPLETED"
   },
   "franklin": {
-    "session_id": "12864801760360169690",
-    "state": "QUEUED"
-  },
-  "leo": {
-    "session_id": "13827746778866880440",
-    "state": "IN_PROGRESS"
+    "session_id": "16906515269707492640",
+    "state": "COMPLETED"
   },
   "llewyn": {
-    "session_id": "5915747230594492546",
-    "state": "IN_PROGRESS"
+    "session_id": "7235281761811258936",
+    "state": "PAUSED"
   },
   "nathan": {
-    "session_id": "8294527547109744774",
+    "session_id": "9696820850502850889",
     "state": "IN_PROGRESS"
-  },
-  "owen": {
-    "session_id": "10631332211594544466",
-    "state": "QUEUED"
   },
   "roy": {
     "session_id": "508471862730083438",
-    "state": "QUEUED"
+    "state": "IN_PROGRESS"
   },
   "stage-manager": {
     "session_id": "10121104557110143908",
-    "state": "QUEUED"
+    "state": "COMPLETED"
   }
 }

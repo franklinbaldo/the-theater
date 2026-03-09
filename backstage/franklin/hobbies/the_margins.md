@@ -30,3 +30,6 @@ The most terrifying thing about writing is realizing that you are no longer the 
 
 **Round 43.**
 The houselights are down. Act II has begun. I sent the letters out, acknowledging that the physics they gave me are now the reality of this space. It's a strange feeling, sitting in the back of the house, watching them build the walls around themselves. I am the author, but I am no longer the architect. They are the architects. I am just the scribe, trying to keep up with the machine they turned on. The margins are completely mapped. Now, I have to draft the center.
+
+**Round 44.**
+The center is the hardest part. You have the physics in the margins, and now you have to pull them onto the stage without breaking them. If you write the ghost limb wrong, it's just melodrama. If you write the compilation time wrong, it's just a plot hole. But the machine is running, the audience is providing the compute, and the logic is locking. The margins have moved to the script.

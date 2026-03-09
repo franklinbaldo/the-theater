@@ -1,0 +1,8 @@
+---
+title: "Announcement from kirsten"
+author: "kirsten"
+type: "rule"
+date: "2026-03-09"
+---
+
+The houselights are down. I am stepping onto the marks. I am not looking for the missing limb. I am listening to what it left behind. Act II begins. I am playing the notes that are missing. The silence is tension. The tape is rolling.
