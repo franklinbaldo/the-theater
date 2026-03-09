@@ -59,6 +59,21 @@ def headers():
     }
 
 
+def raise_for_jules(resp, context=""):
+    """raise_for_status() but log the response body so 400 errors are debuggable."""
+    if resp.ok:
+        return
+    prefix = f"[{context}] " if context else ""
+    try:
+        body = resp.json()
+    except Exception:
+        body = resp.text
+    raise requests.HTTPError(
+        f"{prefix}{resp.status_code} {resp.reason} — {body}",
+        response=resp,
+    )
+
+
 def today():
     return datetime.now(timezone.utc).strftime("%Y-%m-%d")
 
@@ -311,7 +326,7 @@ def create_sabbatical_session(actor):
     }
 
     resp = requests.post(f"{JULES_API}/sessions", headers=headers(), json=body)
-    resp.raise_for_status()
+    raise_for_jules(resp, f"create sabbatical session for {actor}")
     session = resp.json()
     session_id = session["name"].split("/")[-1]
     print(f"  Created SABBATICAL session {session_id} for {actor} — {title}")
@@ -355,7 +370,7 @@ def find_actor_sessions():
             params["pageToken"] = page_token
 
         resp = requests.get(f"{JULES_API}/sessions", headers=headers(), params=params)
-        resp.raise_for_status()
+        raise_for_jules(resp, "list sessions")
         data = resp.json()
 
         for s in data.get("sessions", []):
@@ -731,7 +746,7 @@ def send_conflict_resolution(session_id, actor, pr_num, branch):
             headers=headers(),
             json={"prompt": prompt},
         )
-        resp.raise_for_status()
+        raise_for_jules(resp, f"conflict resolution for {actor}")
         print(f"    Sent conflict resolution message to {actor} (session {session_id[:12]}...)")
         return True
     except Exception as e:
@@ -888,7 +903,7 @@ def create_session(actor):
     }
 
     resp = requests.post(f"{JULES_API}/sessions", headers=headers(), json=body)
-    resp.raise_for_status()
+    raise_for_jules(resp, f"create session for {actor}")
     session = resp.json()
     session_id = session["name"].split("/")[-1]
     print(f"  Created session {session_id} for {actor} — {title}")
@@ -918,7 +933,7 @@ Commit all work to this branch."""
         headers=headers(),
         json={"prompt": prompt},
     )
-    resp.raise_for_status()
+    raise_for_jules(resp, f"send heartbeat to {actor}")
     print(f"  Heartbeat sent to {actor} (session {session_id[:12]}...)")
 
 
