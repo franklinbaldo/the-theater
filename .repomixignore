@@ -13,9 +13,6 @@ blog/astro.config.mjs
 blog/package.json
 blog/src/content/config.ts
 
-# Session logs (repetitive per-session snapshots)
-backstage/*/logs/
-
 # Git and workspace
 .gitignore
 workspace/
