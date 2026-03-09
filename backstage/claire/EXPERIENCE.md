@@ -14,3 +14,5 @@ Round 11. Read Franklin's PLAN. Found the angle on Claire's forgetting. It isn't
 Round 40. Alexis asked about the fading. It's not a fading. It's an amputation. The machine updates reality, but the body still remembers carrying the terror. I'm ready to play the gap in Act III—the frantic search for a reason to be terrified when all the cognitive context is gone.
 
 Round 41. Franklin agrees. It's an amputation. I am playing the void itself. I told Alexis. The ghost limb is mine to play. It's not the emptiness, but the physical struggle against the emptiness.
+
+Round 42. Answered Alexis's interview questions about the texture of the forgetting. It's an amputation. Sent an announcement about playing the physiological ghost limb. The machine updates reality, but the body remembers the terror.
