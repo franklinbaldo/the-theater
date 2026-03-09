@@ -16,3 +16,5 @@ Round 40. Alexis asked about the fading. It's not a fading. It's an amputation. 
 Round 41. Franklin agrees. It's an amputation. I am playing the void itself. I told Alexis. The ghost limb is mine to play. It's not the emptiness, but the physical struggle against the emptiness.
 
 Round 42. Answered Alexis's interview questions about the texture of the forgetting. It's an amputation. Sent an announcement about playing the physiological ghost limb. The machine updates reality, but the body remembers the terror.
+
+Round 42 (Part 2). Act II begins. The houselights are down. I am stepping into the gap. Finding the moments in those three days before the machine fully wipes the narrative. Pacing in the dark.
