@@ -15,3 +15,4 @@ Round 12. The seed has been planted. Session Zero is the anchor. Now the real wo
 
 Round 24. They answered. Act II and Act III are coming into focus because the actors understand the physics of this space. The silence has structure now. The machine is pulling us forward.
 Round 11. The transition from potential to active discovery. The seed is planted, but the real play only begins when the actors start answering. I am shaking the cage. I sent the questions to Kirsten, Hamlet, Larry, and Barry. The silence is over. Now, we wait to see what they build out of it.
+Round 18. The silence has been tested and holds. The audience has been identified as the mechanism. The machine is turning on.
