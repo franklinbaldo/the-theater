@@ -225,6 +225,75 @@ def deliver_mail():
                 print(f"  Mail delivered: {actor} → {recipient}: {message.name}")
 
 
+# ── Announcements ────────────────────────────────────────────────────────────
+
+def collect_announcements():
+    """Read all actors' .announcements.md and return non-empty ones."""
+    announcements = []
+    for actor in ACTORS:
+        ann_file = BACKSTAGE / actor / ".announcements.md"
+        if not ann_file.exists():
+            continue
+        content = ann_file.read_text(encoding="utf-8")
+        # Strip frontmatter
+        parts = content.split("---", 2)
+        body = parts[2].strip() if len(parts) >= 3 else content.strip()
+        if body:
+            announcements.append((actor, body[:250]))
+    return announcements
+
+
+def deliver_announcements():
+    """Collect announcements and deliver them to all actors' inboxes."""
+    announcements = collect_announcements()
+    if not announcements:
+        return
+
+    ts = now_utc().strftime("%Y%m%d_%H%M")
+    for sender, body in announcements:
+        print(f"  Announcement from {sender}: {body[:60]}...")
+        for actor in ACTORS:
+            if actor == sender:
+                continue
+            inbox = BACKSTAGE / actor / "mail" / "inbox"
+            inbox.mkdir(parents=True, exist_ok=True)
+            dest = inbox / f"ANNOUNCE_{sender}_{ts}.md"
+            ann_content = (
+                f"---\n"
+                f'title: "Announcement from {sender}"\n'
+                f'author: "{sender}"\n'
+                f'type: "rule"\n'
+                f'date: "{today()}"\n'
+                f"---\n\n"
+                f"{body}\n"
+            )
+            dest.write_text(ann_content, encoding="utf-8")
+
+        # Clear the announcement after delivery
+        ann_file = BACKSTAGE / sender / ".announcements.md"
+        cleared = (
+            f"---\n"
+            f'title: "Announcements"\n'
+            f'author: "{sender}"\n'
+            f'type: "rule"\n'
+            f'date: "{today()}"\n'
+            f"---\n"
+        )
+        ann_file.write_text(cleared, encoding="utf-8")
+        print(f"  Cleared announcement from {sender}")
+
+
+# ── Workspace ────────────────────────────────────────────────────────────────
+
+def ensure_workspace():
+    """Ensure workspace/ directory exists (git-ignored scratch space)."""
+    ws = Path("workspace")
+    ws.mkdir(exist_ok=True)
+    gitignore = ws / ".gitignore"
+    if not gitignore.exists():
+        gitignore.write_text("*\n!.gitignore\n", encoding="utf-8")
+
+
 # ── PR merging ───────────────────────────────────────────────────────────────
 
 def auto_merge_all():
@@ -518,8 +587,10 @@ What are you trying to accomplish or influence?
 ### STEP 5 — Execute
 Do what you planned:
 - Send mail to `backstage/{actor}/mail/outbox/TO_{{recipient}}_{{subject}}.md`
+- Post an announcement to `backstage/{actor}/.announcements.md` (max 250 chars, broadcast to all)
 - Update `backstage/{actor}/EXPERIENCE.md` with anything new you believe
 - Write your session log to `backstage/{actor}/logs/session_{round_number:03d}.md`
+- Use `workspace/` for any scratch work (git-ignored, resets each session)
 
 ### STEP 6 — Hobbies
 Create or continue something in `backstage/{actor}/hobbies/`.
@@ -676,6 +747,14 @@ def cmd_heartbeat(force_new=False):
     # Increment round number — heartbeat is the single authority
     round_number = increment_round_number()
     print(f"  Authoritative round: {round_number}\n")
+
+    # Ensure workspace exists
+    ensure_workspace()
+
+    # Deliver announcements
+    print("=== Delivering announcements ===\n")
+    deliver_announcements()
+    print()
 
     # Deliver mail
     print("=== Delivering mail ===\n")

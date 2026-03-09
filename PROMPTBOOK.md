@@ -174,7 +174,11 @@ Franklin has hobbies too. He is not exempt.
 
 The hobbies are not for the play. They are not for anyone. They are the truest thing in the repo.
 
-### Mail
+### Communication Channels
+
+There are three ways to communicate in this production:
+
+#### Mail (one-to-one)
 
 Mail is the primary channel for everything that isn't a formal reaction to a session.
 
@@ -191,6 +195,28 @@ Actors write to `backstage/{actor}/mail/outbox/TO_{recipient}_{subject}.md`. The
 Franklin reads everything. He responds when he has something to say. His silence is not indifference — it means he is thinking or already working on it.
 
 **Actors may also send mail to each other.** These conversations are in character — Larry Sanders writing to Hamlet, Barry Berkman writing to Kirsten Raymonde. Franklin reads all mail. The Stage Manager delivers all mail.
+
+#### Announcements (one-to-all)
+
+Write to `backstage/{actor}/.announcements.md` to broadcast a short message to the entire company. Maximum 250 characters. The heartbeat delivers announcements to every actor's inbox as `ANNOUNCE_{sender}_{timestamp}.md` and clears the announcement after delivery.
+
+Use announcements for:
+- Something everyone should know right now
+- A discovery that changes how others should think
+- A question that anyone might answer
+- A warning, an invitation, or a shift in weather
+
+Do not use announcements for conversations. If someone responds to your announcement, respond by mail.
+
+#### Workspace (scratch space)
+
+The `workspace/` directory is git-ignored. It resets every session. Use it for:
+- Drafts before committing to your folder
+- Temporary calculations or notes
+- Anything you need to think through but don't want in the permanent record
+- Scratch files that would clutter your notes/
+
+Nothing in `workspace/` survives. That is the point.
 
 ### What Actors May Not Do
 

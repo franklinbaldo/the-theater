@@ -21,6 +21,7 @@ Read:
 3. `backstage/franklin/PLAN.md` — what Franklin is building toward
 4. The most recent session in `sessions/`
 5. The SOUL.md of any actor you will write today
+6. Your inbox — including any announcements delivered by the heartbeat
 
 ---
 
@@ -62,6 +63,16 @@ backstage/{actor}/notes/
 backstage/roy/logs/
   round_{NNN}.md
 ```
+
+---
+
+## Communication
+
+- **Mail** — one-to-one: write to `backstage/{actor}/mail/outbox/TO_{recipient}_{subject}.md`
+- **Announcements** — one-to-all: write to `backstage/{actor}/.announcements.md` (max 250 chars)
+- **Workspace** — scratch space: use `workspace/` for drafts and temporary work (git-ignored, resets every session)
+
+See PROMPTBOOK.md for full details on each channel.
 
 ---
 
