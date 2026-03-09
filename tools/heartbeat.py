@@ -11,9 +11,11 @@ Usage:
   heartbeat.py status         Show current session status
 
 Sessions are identified by title "TheTheater — {actor} @{sha} {datetime}".
-New sessions are created when none exists, the current one is >24h old,
+New sessions are created when none exists, the current one is >12h old,
 or infrastructure files changed on main since the session's commit.
-Jules creates its own branch from main and opens a PR.
+Completed/failed sessions within the 12h window are reused via heartbeat.
+If session creation fails (e.g. daily limit of 100), falls back to reusing
+the most recent session. Jules creates its own branch from main and opens a PR.
 """
 
 import json
@@ -40,14 +42,12 @@ SABBATICAL_FILE = BACKSTAGE / "stage-manager" / "sabbatical.json"
 ACTORS = sorted(p.parent.name for p in BACKSTAGE.glob("*/SOUL.md") if p.parent.name != "_template") if BACKSTAGE.exists() else []
 
 TITLE_PREFIX = "TheTheater"
-SESSION_TTL = timedelta(hours=24)
+SESSION_TTL = timedelta(hours=12)
 
 # Paths that, when changed on main, make running sessions stale.
 INFRA_PATHS = [
     "tools/",
-    "backstage/STATE.md",
     "PROMPTBOOK.md",
-    "JULES.md",
     ".github/workflows/",
 ]
 
@@ -251,8 +251,8 @@ Assess your productivity. What was genuinely useful? What was repetitive or unpr
 Scan the latest announcements and any mail you received.
 Identify collaborative gaps — who have you been ignoring? Who needs your input?
 
-### Step 3 — Read STATE.md
-Read `backstage/STATE.md`. Find high-value opportunities that match your strengths.
+### Step 3 — Review the production
+Read through the backstage/ folder. Find high-value opportunities that match your strengths.
 What is the production missing that you could provide?
 
 ### Step 4 — Re-examine your SOUL.md
@@ -756,135 +756,56 @@ def send_conflict_resolution(session_id, actor, pr_num, branch):
 
 # ── Prompt assembly ──────────────────────────────────────────────────────────
 
-def assemble_prompt(actor):
-    """Assemble session prompt for an actor."""
-    soul = read_file(BACKSTAGE / actor / "SOUL.md")
-    experience = read_file(BACKSTAGE / actor / "EXPERIENCE.md")
-    state = read_file(BACKSTAGE / "STATE.md")
-    promptbook = read_file(Path("PROMPTBOOK.md"))
-    jules = read_file(Path("JULES.md"))
-    plan = read_file(BACKSTAGE / "franklin" / "PLAN.md")
+def build_actor_prompt(actor, repo_root=Path(".")):
+    """Build a deterministic, file-system-driven prompt for an actor.
 
-    # Read inbox
-    inbox_path = BACKSTAGE / actor / "mail" / "inbox"
-    inbox_contents = ""
-    if inbox_path.exists():
-        for msg in sorted(inbox_path.iterdir()):
-            if msg.is_file() and msg.name != ".gitkeep":
-                inbox_contents += f"\n---\n**{msg.name}**\n{msg.read_text(encoding='utf-8')}\n"
+    Assembly order:
+      1. backstage/{actor}/SOUL.md
+      2. Other ALL_CAPS.md in actor's folder (excluding SOUL.md)
+      3. PROMPTBOOK.md (repo root)
+      4. ALL_CAPS.md in backstage/ root
+    """
+    sections = []
 
-    # Read latest session
-    session_files = sorted(SESSIONS.glob("*.md"))
-    latest_session = read_file(session_files[-1]) if session_files else ""
+    def add_section(filepath, label):
+        if filepath.exists():
+            sections.append(
+                f"{'=' * 48}\n{label}\n{'=' * 48}\n{filepath.read_text()}"
+            )
 
-    round_number = get_round_number()
+    def add_all_caps_in(directory, exclude=None):
+        if exclude is None:
+            exclude = set()
+        if not directory.exists():
+            return
+        for f in sorted(directory.glob("*.md")):
+            stem = f.stem
+            if stem == stem.upper() and f.name not in exclude:
+                label = f"{f.name} — {f.relative_to(repo_root)}"
+                add_section(f, label)
 
-    prompt = f"""# The Theater — Session for {actor}
-## Round {round_number} — {now_utc().strftime('%Y-%m-%d %H:%M UTC')}
+    actor_dir = repo_root / "backstage" / actor
 
----
+    # 1. SOUL.md
+    add_section(actor_dir / "SOUL.md", f"SOUL.md — backstage/{actor}/SOUL.md")
 
-## YOUR SOUL
+    # 2. Other ALL_CAPS.md in actor's folder (not recursive, not SOUL.md)
+    add_all_caps_in(actor_dir, exclude={"SOUL.md"})
 
-{soul}
+    # 3. PROMPTBOOK.md
+    add_section(repo_root / "PROMPTBOOK.md", "PROMPTBOOK.md")
 
----
+    # 4. ALL_CAPS.md files in backstage/ root
+    add_all_caps_in(repo_root / "backstage")
 
-## YOUR EXPERIENCE (long-term memory)
-
-{experience or '*(no entries yet)*'}
-
----
-
-## THE WORLD
-
-### PROMPTBOOK (world rules)
-{promptbook}
-
-### STATE (what is fixed, what is open)
-{state}
-
-### HOW TO RUN A SESSION
-{jules}
-
-{f"### FRANKLIN'S PLAN{chr(10)}{plan}" if plan else ''}
-
----
-
-## LATEST SESSION
-
-{latest_session}
-
----
-
-## YOUR INBOX
-
-{inbox_contents or '*(no messages)*'}
-
----
-
-## Session Instructions
-
-You are {actor}. Your branch starts from main. Follow this sequence exactly.
-
-### STEP 1 — Read inbox
-You have already received your inbox above. Read every message.
-
-### STEP 2 — Think
-Write `backstage/{actor}/notes/think_{round_number:03d}.md`.
-Speak as your character-actor. What does the latest session mean to you?
-What do you notice? What do you feel about the direction of the play?
-What do you want? Do not perform. Think.
-
-### STEP 3 — Read inbox again
-Re-read your messages after thinking. Add any new observations to your think file.
-
-### STEP 4 — Plan
-Write `backstage/{actor}/notes/plan_{round_number:03d}.md`.
-What will you do this session? Who will you write to and why?
-What are you trying to accomplish or influence?
-
-### STEP 5 — Execute
-Do what you planned:
-- Send mail to `backstage/{actor}/mail/outbox/TO_{{recipient}}_{{subject}}.md`
-- Post an announcement to `backstage/{actor}/announcements/{{isodatetime}}_{{slug}}.md` (max 250 chars, broadcast to all)
-- Update `backstage/{actor}/EXPERIENCE.md` with anything new you believe
-- Write your session log to `backstage/{actor}/logs/session_{round_number:03d}.md`
-- Use `workspace/` for any scratch work (git-ignored, resets each session)
-
-### STEP 6 — Hobbies
-Create or continue something in `backstage/{actor}/hobbies/`.
-This has nothing to do with the play. It is yours. Define your hobby whenever you want.
-If you have no hobby yet, this is the round you might find one.
-
----
-
-**CRITICAL — THE GOLDEN RULE OF FILE OWNERSHIP:**
-You may ONLY create or modify files inside `backstage/{actor}/`.
-Do not delete files — move to `backstage/{actor}/retracted/` if needed.
-If you touch files outside your ownership, your PR will conflict and ALL your work will be lost.
-
-**CONFLICT RESOLUTION:**
-Before committing, always pull the latest main and rebase your work:
-  git fetch origin main && git rebase origin/main
-If there are conflicts, fix them — they should only be in your own files.
-If you cannot resolve, commit what you have and note the conflict in your session log.
-Your PR will be auto-merged once all checks pass. Do not wait for manual review.
-
-**Commit messages:** Say what happened, not what you wrote.
-Good: `Owen takes one step closer to the machine`
-Bad: `Added scene where Owen talks about narrative coherence`
-
-**PR title:** `[{actor}] round {round_number}`
-"""
-    return prompt
+    return "\n\n".join(sections)
 
 
 # ── Session management ───────────────────────────────────────────────────────
 
 def create_session(actor):
     """Create a new Jules session starting from main."""
-    prompt = assemble_prompt(actor)
+    prompt = build_actor_prompt(actor)
 
     sha = get_head_sha(short=True)
     ts = now_utc().strftime("%Y-%m-%dT%H:%M")
@@ -1047,12 +968,10 @@ def cmd_heartbeat(force_new=False):
         elif not info:
             needs_new = True
             reason = "no session"
-        elif info["state"] in ("COMPLETED", "FAILED"):
-            needs_new = True
-            reason = f"previous {info['state'].lower()}"
         elif is_expired(info):
             needs_new = True
-            reason = "expired (>24h)"
+            state_note = f", previous {info['state'].lower()}" if info["state"] in ("COMPLETED", "FAILED") else ""
+            reason = f"expired (>12h){state_note}"
         elif has_infra_changed(parse_sha_from_title(info.get("title", ""))):
             needs_new = True
             reason = "infra changed on main"
@@ -1074,8 +993,17 @@ def cmd_heartbeat(force_new=False):
                     create_sabbatical_session(actor)
                     results[actor] = f"-> sabbatical ({reason})"
                 except Exception as e:
-                    print(f"  ERROR: {e}")
-                    results[actor] = f"-> error: {e}"
+                    print(f"  ERROR creating sabbatical: {e}")
+                    if info and info.get("session_id"):
+                        print(f"  Fallback: reusing existing session for {actor}")
+                        try:
+                            send_heartbeat_message(info["session_id"], actor, hb_number)
+                            results[actor] = f"-> reused (sabbatical failed: {e})"
+                        except Exception as e2:
+                            print(f"  Fallback also failed: {e2}")
+                            results[actor] = f"-> error: {e} (fallback: {e2})"
+                    else:
+                        results[actor] = f"-> error: {e}"
             else:
                 print(f"  {actor}: {reason} — creating new session")
                 try:
@@ -1083,11 +1011,23 @@ def cmd_heartbeat(force_new=False):
                     increment_actor_session_count(actor)
                     results[actor] = f"-> new ({reason})"
                 except Exception as e:
-                    print(f"  ERROR: {e}")
-                    results[actor] = f"-> error: {e}"
+                    print(f"  ERROR creating session: {e}")
+                    # Fallback: if we hit the daily limit (or any API error),
+                    # reuse the most recent session instead of losing the cycle
+                    if info and info.get("session_id"):
+                        print(f"  Fallback: reusing existing session for {actor}")
+                        try:
+                            send_heartbeat_message(info["session_id"], actor, hb_number)
+                            results[actor] = f"-> reused (create failed: {e})"
+                        except Exception as e2:
+                            print(f"  Fallback also failed: {e2}")
+                            results[actor] = f"-> error: {e} (fallback: {e2})"
+                    else:
+                        results[actor] = f"-> error: {e}"
             continue
 
-        # Active session — check if its PR has conflicts and try to resolve
+        # Reuse session (active, or completed/failed but < 12h old)
+        # Check if its PR has conflicts and try to resolve
         pr_num = find_actor_pr(actor)
         if pr_num:
             detail = get_pr_details(pr_num)
