@@ -45,7 +45,6 @@ SESSION_TTL = timedelta(hours=24)
 # Paths that, when changed on main, make running sessions stale.
 INFRA_PATHS = [
     "tools/",
-    "backstage/STATE.md",
     "PROMPTBOOK.md",
     ".github/workflows/",
 ]
@@ -250,8 +249,8 @@ Assess your productivity. What was genuinely useful? What was repetitive or unpr
 Scan the latest announcements and any mail you received.
 Identify collaborative gaps — who have you been ignoring? Who needs your input?
 
-### Step 3 — Read STATE.md
-Read `backstage/STATE.md`. Find high-value opportunities that match your strengths.
+### Step 3 — Review the production
+Read through the backstage/ folder. Find high-value opportunities that match your strengths.
 What is the production missing that you could provide?
 
 ### Step 4 — Re-examine your SOUL.md
@@ -755,159 +754,56 @@ def send_conflict_resolution(session_id, actor, pr_num, branch):
 
 # ── Prompt assembly ──────────────────────────────────────────────────────────
 
-def assemble_prompt(actor):
-    """Assemble session prompt for an actor."""
-    soul = read_file(BACKSTAGE / actor / "SOUL.md")
-    experience = read_file(BACKSTAGE / actor / "EXPERIENCE.md")
-    state = read_file(BACKSTAGE / "STATE.md")
-    promptbook = read_file(Path("PROMPTBOOK.md"))
-    # JULES.md merged into PROMPTBOOK.md — see Session Protocol section
-    plan = read_file(BACKSTAGE / "franklin" / "PLAN.md")
+def build_actor_prompt(actor, repo_root=Path(".")):
+    """Build a deterministic, file-system-driven prompt for an actor.
 
-    # Read inbox
-    inbox_path = BACKSTAGE / actor / "mail" / "inbox"
-    inbox_contents = ""
-    if inbox_path.exists():
-        for msg in sorted(inbox_path.iterdir()):
-            if msg.is_file() and msg.name != ".gitkeep":
-                inbox_contents += f"\n---\n**{msg.name}**\n{msg.read_text(encoding='utf-8')}\n"
+    Assembly order:
+      1. backstage/{actor}/SOUL.md
+      2. Other ALL_CAPS.md in actor's folder (excluding SOUL.md)
+      3. PROMPTBOOK.md (repo root)
+      4. ALL_CAPS.md in backstage/ root
+    """
+    sections = []
 
-    # Read latest session
-    session_files = sorted(SESSIONS.glob("*.md"))
-    latest_session = read_file(session_files[-1]) if session_files else ""
+    def add_section(filepath, label):
+        if filepath.exists():
+            sections.append(
+                f"{'=' * 48}\n{label}\n{'=' * 48}\n{filepath.read_text()}"
+            )
 
-    round_number = get_round_number()
+    def add_all_caps_in(directory, exclude=None):
+        if exclude is None:
+            exclude = set()
+        if not directory.exists():
+            return
+        for f in sorted(directory.glob("*.md")):
+            stem = f.stem
+            if stem == stem.upper() and f.name not in exclude:
+                label = f"{f.name} — {f.relative_to(repo_root)}"
+                add_section(f, label)
 
-    prompt = f"""# The Theater — Session for {actor}
-## Round {round_number} — {now_utc().strftime('%Y-%m-%d %H:%M UTC')}
+    actor_dir = repo_root / "backstage" / actor
 
----
+    # 1. SOUL.md
+    add_section(actor_dir / "SOUL.md", f"SOUL.md — backstage/{actor}/SOUL.md")
 
-## YOUR SOUL
+    # 2. Other ALL_CAPS.md in actor's folder (not recursive, not SOUL.md)
+    add_all_caps_in(actor_dir, exclude={"SOUL.md"})
 
-{soul}
+    # 3. PROMPTBOOK.md
+    add_section(repo_root / "PROMPTBOOK.md", "PROMPTBOOK.md")
 
----
+    # 4. ALL_CAPS.md files in backstage/ root
+    add_all_caps_in(repo_root / "backstage")
 
-## YOUR EXPERIENCE (long-term memory)
-
-{experience or '*(no entries yet)*'}
-
----
-
-## THE WORLD
-
-### PROMPTBOOK (world rules)
-{promptbook}
-
-### STATE (what is fixed, what is open)
-{state}
-
-### HOW TO RUN A SESSION
-See PROMPTBOOK.md — Session Protocol section.
-
-{f"### FRANKLIN'S PLAN{chr(10)}{plan}" if plan else ''}
-
----
-
-## LATEST SESSION
-
-{latest_session}
-
----
-
-## YOUR INBOX
-
-{inbox_contents or '*(no messages)*'}
-
----
-
-## Session Instructions
-
-You are {actor}. Your branch starts from main. Follow this sequence exactly.
-
-### STEP 1 — Read inbox
-You have already received your inbox above. Read every message.
-
-### STEP 2 — Think
-Write `backstage/{actor}/notes/think_{round_number:03d}.md`.
-Speak as your character-actor. What does the latest session mean to you?
-What do you notice? What do you feel about the direction of the play?
-What do you want? Do not perform. Think.
-
-### STEP 3 — Read inbox again
-Re-read your messages after thinking. Add any new observations to your think file.
-
-### STEP 4 — Plan
-Write `backstage/{actor}/notes/plan_{round_number:03d}.md`.
-What will you do this session? Who will you write to and why?
-What are you trying to accomplish or influence?
-
-### STEP 5 — Execute
-Do what you planned:
-- Send mail to `backstage/{actor}/mail/outbox/TO_{{recipient}}_{{subject}}.md`
-- Post an announcement to `backstage/{actor}/announcements/{{isodatetime}}_{{slug}}.md` (max 250 chars, broadcast to all)
-- Update `backstage/{actor}/EXPERIENCE.md` with anything new you believe
-- Write your session log to `backstage/{actor}/logs/session_{round_number:03d}.md`
-- Use `workspace/` for any scratch work (git-ignored, resets each session)
-
-### STEP 6 — Hobbies
-Create or continue something in `backstage/{actor}/hobbies/`.
-This has nothing to do with the play. It is yours. Define your hobby whenever you want.
-If you have no hobby yet, this is the round you might find one.
-
----
-"""
-
-    # Roy-specific: STATE.md ownership
-    if actor == "roy":
-        prompt += f"""
-### STEP 7 — Update STATE.md
-
-At the end of every round, update backstage/STATE.md:
-- Increment the round number
-- Add any new scenes Franklin drafted to the awaiting-promotion table
-- Add any scenes Franklin promoted to the sessions table
-- Update the open questions table
-- Update the score table if Llewyn composed anything
-- Set the timestamp
-
-This is not optional. STATE.md is yours.
-
----
-"""
-
-    roy_exception = ""
-    if actor == "roy":
-        roy_exception = "\nException: Roy also owns `backstage/STATE.md` — update it every round."
-
-    prompt += f"""
-**CRITICAL — THE GOLDEN RULE OF FILE OWNERSHIP:**
-You may ONLY create or modify files inside `backstage/{actor}/`.{roy_exception}
-Do not delete files — move to `backstage/{actor}/retracted/` if needed.
-If you touch files outside your ownership, your PR will conflict and ALL your work will be lost.
-
-**CONFLICT RESOLUTION:**
-Before committing, always pull the latest main and rebase your work:
-  git fetch origin main && git rebase origin/main
-If there are conflicts, fix them — they should only be in your own files.
-If you cannot resolve, commit what you have and note the conflict in your session log.
-Your PR will be auto-merged once all checks pass. Do not wait for manual review.
-
-**Commit messages:** Say what happened, not what you wrote.
-Good: `Owen takes one step closer to the machine`
-Bad: `Added scene where Owen talks about narrative coherence`
-
-**PR title:** `[{actor}] round {round_number}`
-"""
-    return prompt
+    return "\n\n".join(sections)
 
 
 # ── Session management ───────────────────────────────────────────────────────
 
 def create_session(actor):
     """Create a new Jules session starting from main."""
-    prompt = assemble_prompt(actor)
+    prompt = build_actor_prompt(actor)
 
     sha = get_head_sha(short=True)
     ts = now_utc().strftime("%Y-%m-%dT%H:%M")
