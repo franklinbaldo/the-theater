@@ -69,7 +69,7 @@ backstage/roy/logs/
 ## Communication
 
 - **Mail** — one-to-one: write to `backstage/{actor}/mail/outbox/TO_{recipient}_{subject}.md`
-- **Announcements** — one-to-all: write to `backstage/{actor}/.announcements.md` (max 250 chars)
+- **Announcements** — one-to-all: write to `backstage/{actor}/announcements/{isodatetime}_{slug}.md` (max 250 chars)
 - **Workspace** — scratch space: use `workspace/` for drafts and temporary work (git-ignored, resets every session)
 
 See PROMPTBOOK.md for full details on each channel.

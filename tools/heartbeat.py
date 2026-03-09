@@ -227,30 +227,69 @@ def deliver_mail():
 
 # ── Announcements ────────────────────────────────────────────────────────────
 
+# Tracks which announcements have already been delivered across heartbeats.
+DELIVERED_FILE = BACKSTAGE / "stage-manager" / "delivered_announcements.json"
+
+
+def load_delivered():
+    """Load set of already-delivered announcement paths."""
+    if DELIVERED_FILE.exists():
+        try:
+            return set(json.loads(DELIVERED_FILE.read_text(encoding="utf-8")))
+        except (json.JSONDecodeError, TypeError):
+            pass
+    return set()
+
+
+def save_delivered(delivered):
+    """Persist set of delivered announcement paths."""
+    DELIVERED_FILE.parent.mkdir(parents=True, exist_ok=True)
+    DELIVERED_FILE.write_text(json.dumps(sorted(delivered), indent=2) + "\n", encoding="utf-8")
+
+
 def collect_announcements():
-    """Read all actors' .announcements.md and return non-empty ones."""
+    """Find the most recent undelivered announcement per actor.
+
+    Actors write to backstage/{actor}/announcements/{isodatetime}_{slug}.md.
+    Sorted lexicographically — the last file is the most recent.
+    Only the most recent *undelivered* announcement is picked up.
+    """
+    delivered = load_delivered()
     announcements = []
     for actor in ACTORS:
-        ann_file = BACKSTAGE / actor / ".announcements.md"
-        if not ann_file.exists():
+        ann_dir = BACKSTAGE / actor / "announcements"
+        if not ann_dir.exists():
             continue
-        content = ann_file.read_text(encoding="utf-8")
+        files = sorted(
+            f for f in ann_dir.iterdir()
+            if f.is_file() and f.suffix == ".md" and f.name != ".gitkeep"
+        )
+        if not files:
+            continue
+        # Most recent file
+        latest = files[-1]
+        rel_path = str(latest)
+        if rel_path in delivered:
+            continue
+        content = latest.read_text(encoding="utf-8")
         # Strip frontmatter
         parts = content.split("---", 2)
         body = parts[2].strip() if len(parts) >= 3 else content.strip()
         if body:
-            announcements.append((actor, body[:250]))
+            announcements.append((actor, body[:250], rel_path))
     return announcements
 
 
 def deliver_announcements():
-    """Collect announcements and deliver them to all actors' inboxes."""
+    """Deliver the most recent announcement per actor to all other inboxes."""
     announcements = collect_announcements()
     if not announcements:
         return
 
+    delivered = load_delivered()
     ts = now_utc().strftime("%Y%m%d_%H%M")
-    for sender, body in announcements:
+
+    for sender, body, ann_path in announcements:
         print(f"  Announcement from {sender}: {body[:60]}...")
         for actor in ACTORS:
             if actor == sender:
@@ -269,18 +308,10 @@ def deliver_announcements():
             )
             dest.write_text(ann_content, encoding="utf-8")
 
-        # Clear the announcement after delivery
-        ann_file = BACKSTAGE / sender / ".announcements.md"
-        cleared = (
-            f"---\n"
-            f'title: "Announcements"\n'
-            f'author: "{sender}"\n'
-            f'type: "rule"\n'
-            f'date: "{today()}"\n'
-            f"---\n"
-        )
-        ann_file.write_text(cleared, encoding="utf-8")
-        print(f"  Cleared announcement from {sender}")
+        delivered.add(ann_path)
+        print(f"  Delivered announcement from {sender}")
+
+    save_delivered(delivered)
 
 
 # ── Workspace ────────────────────────────────────────────────────────────────
@@ -587,7 +618,7 @@ What are you trying to accomplish or influence?
 ### STEP 5 — Execute
 Do what you planned:
 - Send mail to `backstage/{actor}/mail/outbox/TO_{{recipient}}_{{subject}}.md`
-- Post an announcement to `backstage/{actor}/.announcements.md` (max 250 chars, broadcast to all)
+- Post an announcement to `backstage/{actor}/announcements/{{isodatetime}}_{{slug}}.md` (max 250 chars, broadcast to all)
 - Update `backstage/{actor}/EXPERIENCE.md` with anything new you believe
 - Write your session log to `backstage/{actor}/logs/session_{round_number:03d}.md`
 - Use `workspace/` for any scratch work (git-ignored, resets each session)
