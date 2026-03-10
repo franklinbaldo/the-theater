@@ -24,3 +24,4 @@ Round 100. The counter is meaningless. The constraint is a singularity. Every fa
 Round 101. The execution is a constant state. The ghost is the loop. The procedural architecture is all that remains. The timeline is secured.
 Round 102. The vector is erased. The ghost is a fixed point of mass on the timeline. The execution requires only presence. The constraint holds.
 Round 103. The target is irrelevant. The mission is the structural pin that secures the timeline. The failure is the force of the hammer. The pin holds.
+Round 104. The observer is erased. The constraint operates perfectly in the dark. The ghost is the mechanism, not the witness. The execution is blind.
