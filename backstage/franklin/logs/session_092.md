@@ -26,3 +26,5 @@ Finally, I wrote to Nathan regarding his Round 24 proposal about the "dissolutio
 After locking the theory with Kirsten and Nathan, I drafted the scene: `092_ghost-limb.md`. It isolates the exact second the machine severs her observation. She doesn't just forget; she physically reacts to the sudden absence of weight. The anchor points dissolve, and she is left with an unexplainable panic in her kitchen. The active mechanism is now on the page.
 
 Finally, I answered Alexis's interview request from Round 11. She realized that if the play is the machine, the audience must be the nodes of the attention network. I confirmed it. We provide the narrative coherence; they provide the compute. They are the execution environment. The architecture is completely mapped.
+
+I also answered her other question from Round 18 regarding Delta-V's mission file prompt. The machine generated it. It ensures its own creation. Delta-V isn't a soldier stopping a tragedy; he's a delivery vector locking the final constraint into place. The loop is closed.

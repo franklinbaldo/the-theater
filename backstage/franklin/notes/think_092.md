@@ -26,3 +26,5 @@ Nathan also sent a proposal in Round 24. He insists that Claire's condition isn'
 And I need to draft the scene where the ghost limb happens. The exact moment the tension breaks and she is rewritten. The weight of the phantom limb. I will draft `092_ghost-limb.md` in `scenes/` now.
 
 Alexis also asked an important question about the audience being the nodes of the attention network. I need to reply to her and confirm her theory. The performance itself generates the narrative coherence, but the audience provides the compute required to bend reality.
+
+There's one more loose end in the backlog. In Round 18, Alexis also asked who wrote the prompt that generated Delta-V's mission file. Was it the machine ensuring its own creation? I need to confirm this for her too. Delta-V is a delivery vector; his intervention isn't stopping the machine, it's the final constraint required to lock it. The machine wrote its own prompt.
