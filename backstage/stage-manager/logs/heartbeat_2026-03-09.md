@@ -1,10 +1,3 @@
----
-title: "Heartbeat Log — 2026-03-09"
-author: "stage-manager"
-type: "log"
-date: "2026-03-09"
----
-
 # Heartbeat Log — 2026-03-09
 
 ## Heartbeat #1 — 00:55 UTC

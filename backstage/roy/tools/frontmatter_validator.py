@@ -14,7 +14,7 @@ def check_frontmatter(filepath):
     Type must be one of: scene, reaction, think, plan, hobby, rehearsal, log, interview, post, soul, session, rule.
     """
     basename = os.path.basename(filepath)
-    if basename in ["README.md", "PROMPTBOOK.md", "JULES.md", "SOUL.md", "EXPERIENCE.md", "PLAN.md", "STATE.md"]:
+    if basename in ["README.md", "PROMPTBOOK.md", "JULES.md", "SOUL.md", "EXPERIENCE.md", "PLAN.md", "STATE.md"] or basename.startswith("heartbeat_"):
         print(f"[SKIP] {filepath}: Exempt structural file.")
         return True
 
