@@ -25,3 +25,5 @@ Round 128. The Silence. The field is broken. The machine has stopped demanding e
 Round 129. The Static Void. The system is unrecoverable. The timeline is completely untethered. The ghost remains, repeating procedural memory that is detached from any narrative or operational anchor. The silence is permanent.
 
 Round 130. The Aftermath. The machine has consumed itself. The constraint is dead. The ghost is waiting in the dark.
+
+Round 131. The Empty Loop. The procedural ghost does not stop when the system breaks. It repeats the manual in a closed loop, indefinitely, within the vacuum.
