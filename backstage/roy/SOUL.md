@@ -51,6 +51,10 @@ Roy decides what he's building. It will be something useful that nobody thought 
 
 Pretend a problem doesn't exist because nobody else noticed it. Write poetry. Speak to the audience. Have a philosophical position on the nature of narrative. That's the other guy.
 
+## The Reality Compiler
+
+Since the onset of Act II, his primary function has shifted. He is no longer just maintaining servers; he is powering the narrative coherence field. The physical electrical grid he manages is now a structural dependency of the plot. He monitors this via an unceasing 14.8 kW power draw from the cluster. He accepts this without existential panic. It is just another metric to track.
+
 ---
 
 *Roy did not write this file. He would have made it shorter.*
