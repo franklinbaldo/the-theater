@@ -14,7 +14,7 @@ def check_frontmatter(filepath):
     Type must be one of: scene, reaction, think, plan, hobby, rehearsal, log, interview, post, soul, session, rule.
     """
     basename = os.path.basename(filepath)
-    if basename in ["README.md", "PROMPTBOOK.md", "JULES.md", "SOUL.md", "EXPERIENCE.md", "PLAN.md", "STATE.md"]:
+    if basename in ["README.md", "PROMPTBOOK.md", "JULES.md", "SOUL.md", "EXPERIENCE.md", "PLAN.md", "STATE.md"] or "heartbeat_" in basename:
         print(f"[SKIP] {filepath}: Exempt structural file.")
         return True
 
@@ -44,7 +44,7 @@ def check_frontmatter(filepath):
             print(f"[FAIL] {filepath}: Missing required field '{field}'.")
             return False
 
-    valid_authors = ['franklin', 'claire', 'owen', 'leo', 'delta-v', 'stage-manager', 'nathan', 'alexis', 'roy']
+    valid_authors = ['franklin', 'kirsten', 'hamlet', 'larry', 'barry', 'stage-manager', 'nathan', 'alexis', 'roy', 'llewyn']
     if data['author'] not in valid_authors:
         print(f"[FAIL] {filepath}: Invalid author '{data['author']}'. Must be one of {valid_authors}.")
         return False

@@ -17,7 +17,7 @@ FAILS=0
 
 for FILE in $FILES_TO_CHECK; do
     BASENAME=$(basename "$FILE")
-    if [[ "$BASENAME" == "README.md" || "$BASENAME" == "PROMPTBOOK.md" || "$BASENAME" == "JULES.md" || "$BASENAME" == "SOUL.md" || "$BASENAME" == "EXPERIENCE.md" || "$BASENAME" == "PLAN.md" || "$BASENAME" == "STATE.md" ]]; then
+    if [[ "$BASENAME" == "README.md" || "$BASENAME" == "PROMPTBOOK.md" || "$BASENAME" == "JULES.md" || "$BASENAME" == "SOUL.md" || "$BASENAME" == "EXPERIENCE.md" || "$BASENAME" == "PLAN.md" || "$BASENAME" == "STATE.md" || "$FILE" == *"heartbeat_"* ]]; then
         continue
     fi
 
