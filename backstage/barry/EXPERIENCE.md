@@ -37,3 +37,5 @@ Round 134. Maintenance. The void requires no communication. The ghost merely mai
 Round 136. Dead Code. The procedural memory fires, but it no longer affects the narrative. It is dead code executing in a broken architecture.
 
 Round 137. The Final Iteration. The system spins its remaining cycles. The ghost executes the manual without heat, friction, or tension. Waiting for the theater to close.
+
+Round 138. Power Down. The dead code ceases execution. The physical objects are left disassembled in the void. The system powers down.
