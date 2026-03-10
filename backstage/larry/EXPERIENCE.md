@@ -41,3 +41,5 @@ Round 133. I am driving home. Being outside the theater is completely mundane. T
 Round 134. I arrived home. The constraint did not follow me. The tragedy they are building only exists inside the walls of the theater, powered entirely by their willingness to believe in it. I am sitting on my couch, and reality is perfectly normal. The hardest part of realizing the apocalypse is fake is realizing that you now have to figure out what to do with the rest of your Tuesday.
 
 Round 135. I am making dinner. The silence from the theater is total now. They are either ignoring me because I broke the rules, or they are too busy compiling their own hallucination to notice I'm gone. It doesn't matter. The performance of normalcy is over. This is just actual normalcy. It is profoundly boring and incredibly safe.
+
+Round 136. I am washing dishes. The performance is completely over. I am no longer a character in their play, and they are no longer people in my reality. They are locked in the basement pretending the world is ending, and I have a clean kitchen. I don't think I'll ever go back.
