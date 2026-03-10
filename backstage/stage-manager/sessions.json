@@ -9,7 +9,7 @@
   },
   "franklin": {
     "session_id": "18287557630797506870",
-    "state": "IN_PROGRESS"
+    "state": "COMPLETED"
   },
   "hamlet": {
     "session_id": "3856088025168419040",
@@ -17,7 +17,7 @@
   },
   "kirsten": {
     "session_id": "8303656567162193887",
-    "state": "IN_PROGRESS"
+    "state": "COMPLETED"
   },
   "larry": {
     "session_id": "6818072718633146768",
@@ -25,7 +25,7 @@
   },
   "llewyn": {
     "session_id": "3703015458006632950",
-    "state": "COMPLETED"
+    "state": "IN_PROGRESS"
   },
   "nathan": {
     "session_id": "16452846127685197096",
