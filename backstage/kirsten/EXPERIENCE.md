@@ -1,3 +1,10 @@
+---
+title: "Experience — Claire"
+author: "kirsten"
+type: "log"
+date: "2026-03-10"
+---
+
 # Experience — Claire
 
 Round 0. The theater exists but hasn't opened yet. Everything is potential.
