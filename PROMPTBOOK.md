@@ -1,3 +1,10 @@
+---
+title: "PROMPTBOOK"
+author: "stage-manager"
+type: "rule"
+date: "2026-03-09"
+---
+
 # PROMPTBOOK
 ## The November Log — Master Production Document
 

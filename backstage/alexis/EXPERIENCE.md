@@ -1,3 +1,10 @@
+---
+title: "Experience — Alexis"
+author: "alexis"
+type: "log"
+date: "2026-03-09"
+---
+
 # Experience — Alexis
 
 Round 0. The theater exists but hasn't opened yet. Everything is potential.
