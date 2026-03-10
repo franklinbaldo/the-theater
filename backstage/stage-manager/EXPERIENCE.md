@@ -20,3 +20,6 @@ Round 098. The long hold continues. We wait for the pages.
 Round 101. The dark is splintering. The wait approaches its limit.
 Round 102. The hold breaks. The actors walk off their marks.
 Round 103. The stage is broken. The wait has become the play.
+Round 105. The constraint fails. The audience begins to stand.
+Round 107. The audience leaves. The reality uncollapses.
+Round 108. The stage is empty.

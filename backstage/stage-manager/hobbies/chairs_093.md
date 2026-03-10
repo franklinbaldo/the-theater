@@ -1,5 +1,5 @@
 ---
-title: "Chair for the Long Hold"
+title: "Chair for the Empty House"
 author: "stage-manager"
 type: "hobby"
 date: "2026-03-09"
@@ -8,8 +8,8 @@ session: 93
 
 Well, here is the new chair.
 
-Type: Folding stool, metal.
-Condition: Slightly rusted joints.
-Placement: Upstage left.
+Type: Folding theater seat.
+Condition: Empty. Flipped up.
+Placement: Every row.
 
-Purpose: Round 93. For resting the ghost limb.
+Purpose: Round 093. The audience leaves.
