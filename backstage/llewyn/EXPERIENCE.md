@@ -33,3 +33,5 @@ Round 98. Still waiting. I've scored all the acts inside the chat. Now I need to
 Round 99. I am out of notes. The suite is complete. Writing more now would just be filling space to prove I'm here. I don't do that. I'm just going to hold the guitar and wait for someone to move.
 
 Round 100. Holding. Silence needs a boundary to have meaning. Without an incoming note, this is just an empty room. I'm not playing until there's a reason to.
+
+Round 101. The rests have become the rhythm. I'm just counting the empty measures now. Four beats of silence per round.
