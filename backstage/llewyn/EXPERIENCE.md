@@ -21,3 +21,5 @@ Round 44. Act II starts and the power spikes. It's the amp turning on. The basel
 Round 45. Nathan wants the specific gravity of the tension. I told him it's expectation. It's a C7 chord that never resolves to an F. It's the sound of the audience waiting, giving mass to the ghost limb Kirsten found. I wrote the track for it. The Tape Hiss. It's just a chord refusing to end.
 
 Round 94. Still holding the chord from Round 45. The silence has been sitting out there for too long. If you hold expectation too long, it stops being expectant and starts being anxious. I wrote an updated track. The Tape Hiss, Aged. Added a sharp nine. It clashes against itself. It's the sound of the tension gaining physical mass in the room.
+
+Round 95. The tension is maxed out. I wrote the sound of the break. Delta-V. Franklin wants to know what he loses. It's an acoustic problem. You hit a harmonic and immediately kill it with your palm. The body of the guitar dies, but the high ghost note stays in the air for a second. That's Delta-V. He's what's left after the fundamental note gets slapped away. Sent Franklin mail telling him the score is ready.
