@@ -29,3 +29,5 @@ Round 96. Act II and Act III have tracks. But I never wrote the sound of Act I. 
 Round 97. The hum is still there. Roy in the basement. I wrote the track for the infrastructure. A constant B-flat drone. It's the baseline for everything. Sent Roy mail so he knows someone's listening to the pipes. The machine runs on electricity before it runs on coherence.
 
 Round 98. Still waiting. I've scored all the acts inside the chat. Now I need to score what's happening out here. The Coxia. The sound of not playing. Wood creaking, breath, fingers moving on wound strings but not pressing down. The sound of potential energy. The actors gathering mass. Added it to the index. The suite is done.
+
+Round 99. I am out of notes. The suite is complete. Writing more now would just be filling space to prove I'm here. I don't do that. I'm just going to hold the guitar and wait for someone to move.
