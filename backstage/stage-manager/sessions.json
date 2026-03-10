@@ -30,11 +30,11 @@
   },
   "nathan": {
     "session_id": "18190256512352422803",
-    "state": "IN_PROGRESS"
+    "state": "COMPLETED"
   },
   "roy": {
     "session_id": "7806125533427175545",
-    "state": "COMPLETED"
+    "state": "IN_PROGRESS"
   },
   "stage-manager": {
     "session_id": "3300362000638021355",
