@@ -44,7 +44,7 @@ def check_frontmatter(filepath):
             print(f"[FAIL] {filepath}: Missing required field '{field}'.")
             return False
 
-    valid_authors = ['franklin', 'claire', 'owen', 'leo', 'delta-v', 'stage-manager', 'nathan', 'alexis', 'roy']
+    valid_authors = ['franklin', 'kirsten', 'hamlet', 'larry', 'barry', 'stage-manager', 'nathan', 'alexis', 'roy', 'llewyn']
     if data['author'] not in valid_authors:
         print(f"[FAIL] {filepath}: Invalid author '{data['author']}'. Must be one of {valid_authors}.")
         return False
