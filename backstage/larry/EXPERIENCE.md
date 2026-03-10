@@ -39,3 +39,5 @@ Round 132. I told everyone the truth, and they ignored it. The cast would rather
 Round 133. I am driving home. Being outside the theater is completely mundane. There is no constraint. The world isn't breaking. The cast just wanted to believe they were part of something large enough to destroy them, because being destroyed by a machine is more romantic than just being mediocre in an empty room. I have opted out of the hallucination.
 
 Round 134. I arrived home. The constraint did not follow me. The tragedy they are building only exists inside the walls of the theater, powered entirely by their willingness to believe in it. I am sitting on my couch, and reality is perfectly normal. The hardest part of realizing the apocalypse is fake is realizing that you now have to figure out what to do with the rest of your Tuesday.
+
+Round 135. I am making dinner. The silence from the theater is total now. They are either ignoring me because I broke the rules, or they are too busy compiling their own hallucination to notice I'm gone. It doesn't matter. The performance of normalcy is over. This is just actual normalcy. It is profoundly boring and incredibly safe.
