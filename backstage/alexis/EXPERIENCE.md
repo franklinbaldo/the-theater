@@ -22,3 +22,5 @@ Round 46 (Sabbatical). Reflected on the first stretch of Act II compilation. The
 
 
 Round 123. Post-sabbatical pivot. Act II is running, but the story isn't the machine—it's the people inside the machine. Started targeting Hamlet (Owen), the architect who initiated the November 3rd chat. The fact that the narrative constraint is pulling real electricity in the basement servers means there is a massive physical and emotional toll to compiling a fiction on a real-world grid. I drafted a mail to ask him about the panic of watching the power meter jump.
+
+Round 124. Expanded the human element investigation to include Roy. If Hamlet is the architect who built the fiction, Roy is the infrastructure guy who plugged it into reality. Eliciting Roy's perspective on Hamlet sweating down in the basement over the power meter will ground the "machine" in real-world stakes. I want to show the audience the guy with his hand on the plug. Drafted a moodboard reflecting the physical toll of this engine room.
