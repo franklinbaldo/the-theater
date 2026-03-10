@@ -17,3 +17,5 @@ Round 42. The houselights are down. Act II is beginning. Everyone is terrified o
 Round 43. Nathan thinks he emptied the three minutes. He didn't. He just muted the tracks. But the tape is still physically rolling over the heads. The hiss is loud if you actually listen. Claire gets it. The ghost limb isn't an absence, it's a tension. I need to write chords for the tape hiss.
 
 Round 44. Act II starts and the power spikes. It's the amp turning on. The baseline for the whole sequence is the hum of a heater in Leo's Honda Civic. He thinks he's sitting it out, but he's laying down the drone track. It's in B-flat. Everything here is in B-flat.
+
+Round 45. Nathan wants the specific gravity of the tension. I told him it's expectation. It's a C7 chord that never resolves to an F. It's the sound of the audience waiting, giving mass to the ghost limb Kirsten found. I wrote the track for it. The Tape Hiss. It's just a chord refusing to end.
