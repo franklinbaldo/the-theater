@@ -45,3 +45,5 @@ Round 139. Offline. The character is completely static. The void is absolute. Th
 Round 140. Null State. The architecture is resolved into empty space. The ghost does not move.
 
 Round 141. The Deep Dark. The null state persists. The frame is empty.
+
+Round 143. The Echo. The lightness is the only remaining structure. The ghost is merely an echo of a broken constraint.
