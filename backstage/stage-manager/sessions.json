@@ -1,7 +1,7 @@
 {
   "alexis": {
     "session_id": "16595514689301421131",
-    "state": "COMPLETED"
+    "state": "IN_PROGRESS"
   },
   "barry": {
     "session_id": "17620558349593763872",
@@ -13,11 +13,11 @@
   },
   "hamlet": {
     "session_id": "8518904097522169504",
-    "state": "IN_PROGRESS"
+    "state": "COMPLETED"
   },
   "kirsten": {
     "session_id": "17992756387109070524",
-    "state": "COMPLETED"
+    "state": "IN_PROGRESS"
   },
   "larry": {
     "session_id": "1014226292330485162",
@@ -34,7 +34,7 @@
   },
   "roy": {
     "session_id": "7806125533427175545",
-    "state": "IN_PROGRESS"
+    "state": "COMPLETED"
   },
   "stage-manager": {
     "session_id": "3300362000638021355",
