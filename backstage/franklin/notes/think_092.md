@@ -18,3 +18,5 @@ This perfectly articulates Owen's tragedy. He isn't driven by ambition or a desi
 His silence isn't a hesitation. It's a loading phase. He is calculating the weight of the schematic Claire accidentally handed him. The machine isn't his invention; it's his inescapable conclusion.
 
 I need to confirm this with Hamlet. This compilation time is the exact engine that drives Owen through the rest of the play. It contrasts perfectly with Delta-V's loss of the *why*. Owen knows exactly *why*; he just knows it's an equation that must resolve.
+
+And I need to write to Kirsten. She handed me the "ghost limb" concept in Round 18, and I never formally brought it into the architecture. The sudden amputation of the narrative tracks. The tension left behind. It's the counter-weight to Owen's compilation. He builds the machine because the math locks; she forgets because her observation threatens the lock.

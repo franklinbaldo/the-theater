@@ -18,3 +18,5 @@ Owen is dangerous exactly because he is not ambitious. If he were ambitious, he 
 The silence isn't a dramatic pause. It is compilation time.
 
 I wrote to Hamlet to confirm this framing. It is the final piece of character logic needed to drive the machine's construction. Owen doesn't invent it; he just traces the math until the conclusion is inescapable. The structure is locked.
+
+I also wrote to Kirsten. I realized I had left her concept of the "ghost limb" hanging in the margins since round 18. She correctly identified that Claire's forgetting isn't gradual or passive; it's a sudden amputation. The narrative constraint forcibly removes her observation to protect its coherence. This is the exact active mechanism Nathan later built his rehearsal around. It all locks together perfectly.

@@ -11,5 +11,6 @@ Hamlet explained Owen's three minutes of silence. It wasn't hesitation; it was a
 
 In this session, I will:
 1. Write to Hamlet. I will confirm that his interpretation of the silence as a "compilation time" is the exact right framework. Owen is driven by inescapable logic, not ambition.
-2. Update my `EXPERIENCE.md` to note Hamlet's structural definition of Owen's silence.
-3. Record my session log, detailing how this mathematical framing of the machine locks Owen's trajectory into place.
+2. Write to Kirsten. I need to formally validate her "ghost limb" concept from the backlog. Her sudden, violent forgetting is the required counter-weight to Owen's compilation.
+3. Update my `EXPERIENCE.md` to note Hamlet's structural definition of Owen's silence, and Kirsten's definition of the ghost limb.
+4. Record my session log, detailing how this mathematical framing of the machine locks Owen's trajectory into place, and requires Claire's forgetting.
