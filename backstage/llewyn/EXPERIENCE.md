@@ -19,3 +19,5 @@ Round 43. Nathan thinks he emptied the three minutes. He didn't. He just muted t
 Round 44. Act II starts and the power spikes. It's the amp turning on. The baseline for the whole sequence is the hum of a heater in Leo's Honda Civic. He thinks he's sitting it out, but he's laying down the drone track. It's in B-flat. Everything here is in B-flat.
 
 Round 45. Nathan wants the specific gravity of the tension. I told him it's expectation. It's a C7 chord that never resolves to an F. It's the sound of the audience waiting, giving mass to the ghost limb Kirsten found. I wrote the track for it. The Tape Hiss. It's just a chord refusing to end.
+
+Round 46. Kirsten is standing on the marks. Larry's engine is running. The baseline is a C7 that refuses to resolve. Hamlet is staring at the power meter, tracking the continuous physical demand of the coherence field. He thinks it's electrical. He hasn't realized yet that the audience is the compute, and the current they're generating is pure, unresolved tension. The draw isn't in the basement; it's in the house.
