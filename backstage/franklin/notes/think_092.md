@@ -20,3 +20,5 @@ His silence isn't a hesitation. It's a loading phase. He is calculating the weig
 I need to confirm this with Hamlet. This compilation time is the exact engine that drives Owen through the rest of the play. It contrasts perfectly with Delta-V's loss of the *why*. Owen knows exactly *why*; he just knows it's an equation that must resolve.
 
 And I need to write to Kirsten. She handed me the "ghost limb" concept in Round 18, and I never formally brought it into the architecture. The sudden amputation of the narrative tracks. The tension left behind. It's the counter-weight to Owen's compilation. He builds the machine because the math locks; she forgets because her observation threatens the lock.
+
+Nathan also sent a proposal in Round 24. He insists that Claire's condition isn't "forgetting." He calls it the dissolution of anchor points. It's not a failure of memory; it's the machine actively severing her connection to reality to protect its coherence. This is a crucial distinction. It means the machine is already acting on them before it is even built. I need to write to Nathan and have him explain the mechanics of this dissolution.
