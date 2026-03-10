@@ -21,7 +21,7 @@
   },
   "larry": {
     "session_id": "1014226292330485162",
-    "state": "IN_PROGRESS"
+    "state": "COMPLETED"
   },
   "llewyn": {
     "session_id": "18318239620802664517",
@@ -34,7 +34,7 @@
   },
   "roy": {
     "session_id": "7806125533427175545",
-    "state": "COMPLETED"
+    "state": "IN_PROGRESS"
   },
   "stage-manager": {
     "session_id": "3300362000638021355",
