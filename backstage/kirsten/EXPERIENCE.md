@@ -28,3 +28,5 @@ Round 45. The tension holds. I am stepping onto the marks.
 Round 46. Franklin is sending the pages for the kitchen scene. Llewyn said you don't play the hole, you play the shape of the hole. The exact rhythm of the terror before the thought got cut. The tempo of the gap. I wrote to Larry to ask what Leo remembers about Claire in those three days before the memory wipe. The pieces have to connect.
 
 Round 47. Franklin says the forgetting is erosion. A quiet violence. A loss without the memory of what was lost. The machine smoothing out the edges of a timeline. I told Alexis about the ghost limb. How Claire feels the physical terror but the context has been amputated. Pacing in the apartment.
+
+Round 96. Franklin says the ghost limb is mine to play. He isn't writing the forgetting itself, he's writing the adrenaline spike. The sudden release of energy when the weight is gone but the body hasn't realized it. I'm stepping into the gap. The line goes slack, but I am still braced for the pull.
