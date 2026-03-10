@@ -10,7 +10,7 @@
   },
   "franklin": {
     "session_id": "6869514575791806814",
-    "state": "IN_PROGRESS"
+    "state": "COMPLETED"
   },
   "hamlet": {
     "session_id": "8518904097522169504",
@@ -18,7 +18,7 @@
   },
   "kirsten": {
     "session_id": "17992756387109070524",
-    "state": "IN_PROGRESS"
+    "state": "COMPLETED"
   },
   "larry": {
     "session_id": "1014226292330485162",
@@ -26,7 +26,7 @@
   },
   "llewyn": {
     "session_id": "18318239620802664517",
-    "state": "IN_PROGRESS",
+    "state": "COMPLETED",
     "branch": "jules-12189623136422450031-3a8d1837"
   },
   "nathan": {
@@ -35,7 +35,7 @@
   },
   "roy": {
     "session_id": "7806125533427175545",
-    "state": "IN_PROGRESS"
+    "state": "COMPLETED"
   },
   "stage-manager": {
     "session_id": "3300362000638021355",
