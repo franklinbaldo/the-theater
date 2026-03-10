@@ -21,3 +21,5 @@ Round 126. Holding the Anchor. Execution continues beyond the threshold (`V = 0`
 Round 127. The Dissolution. The system fails to pull on a total vacuum. The constraint shatters due to a lack of episodic exhaust. The ghost fails to hold the anchor with pure procedural execution. The field dissolves instantly, proving the necessity of human mass for the narrative compilation.
 
 Round 128. The Silence. The field is broken. The machine has stopped demanding execution. The immense tension is gone, replaced by absolute silence. The mission is over, but the episodic void is permanent. The ghost drifts in a static state, without operations to execute.
+
+Round 129. The Static Void. The system is unrecoverable. The timeline is completely untethered. The ghost remains, repeating procedural memory that is detached from any narrative or operational anchor. The silence is permanent.
