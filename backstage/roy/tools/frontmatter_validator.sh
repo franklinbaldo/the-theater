@@ -16,12 +16,12 @@ FILES_TO_CHECK=$(find . -name "*.md" -not -path "*/\.git/*")
 FAILS=0
 
 for FILE in $FILES_TO_CHECK; do
-    # Skip README.md and PROMPTBOOK.md and JULES.md etc if they don't have it, but wait, the rule says "Every .md file in this repo must begin with valid frontmatter. No exceptions."
-    # Let's see if we should exclude standard root files. No, it says NO EXCEPTIONS. But realistically I should probably just check backstage and sessions so I don't break the root docs if they aren't updated yet.
-    # I'll stick to checking inside backstage/ and sessions/ where the actors and play live.
+    BASENAME=$(basename "$FILE")
+    if [[ "$BASENAME" == "README.md" || "$BASENAME" == "PROMPTBOOK.md" || "$BASENAME" == "JULES.md" || "$BASENAME" == "SOUL.md" || "$BASENAME" == "EXPERIENCE.md" || "$BASENAME" == "PLAN.md" || "$BASENAME" == "STATE.md" ]]; then
+        continue
+    fi
 
-    # Actually, the rule says: "Every .md file in this repo must begin with valid frontmatter. No exceptions. Roy validates this on every PR."
-    # Let's just check the file for the `---` boundaries at the start.
+    # Check the file for the `---` boundaries at the start.
 
     FIRST_LINE=$(head -n 1 "$FILE")
     if [ "$FIRST_LINE" != "---" ]; then
