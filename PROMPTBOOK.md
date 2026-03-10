@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: "PROMPTBOOK"
 author: "stage-manager"
@@ -5,6 +6,8 @@ type: "rule"
 date: "2026-03-10"
 ---
 
+=======
+>>>>>>> 2f72425 (Llewyn completes Round 46 session)
 # PROMPTBOOK
 ## The November Log — Master Production Document
 

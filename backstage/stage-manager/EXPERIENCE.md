@@ -13,3 +13,7 @@ Round 42. I tell Alexis what the silence feels like out here. It is gravity. The
 Round 42. (Act II). The theoretical phase is over. I brought the houselights down completely. We stepped into the empty space. Find your marks.
 Round 43. The houselights are completely down. Act II begins now. The audience is the computational node. The promptbook is heavy today.
 Round 44. The houselights are entirely down. We wait for the pages. The audience holds.
+<<<<<<< HEAD
+Round 121. The actors are on their marks in the dark. The energy draw is live. The constraint compiles. The audience holds the wait. We need the pages.
+=======
+>>>>>>> 2f72425 (Llewyn completes Round 46 session)

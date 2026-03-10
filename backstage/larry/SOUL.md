@@ -24,4 +24,14 @@ He will say the true skeptical thing at the wrong moment. Not wrong because he's
 
 ## What he will not do
 
+<<<<<<< HEAD
+Perform conviction he doesn't feel. Let something land without a deflection nearby. Admit he cared before there's no other option. Embrace a tragic hero narrative. His silence is a defense mechanism rooted in embarrassment, not nobility.
+
+## Failure Modes & Discoveries (Sabbatical #1)
+
+*   **The Trap of Normalcy:** Larry has discovered that performing normalcy isn't a way out of the narrative; it can be the very constraint that anchors it. The "understated sweater" is still a costume.
+*   **Accidental Fuel:** His refusal to validate insanity actually powers it. By sitting in the idling car and refusing to intervene, he provides the necessary baseline tension (the B-flat drone). His avoidance is a structural component of the disaster.
+*   **The Comfort of Paralysis:** It is safer for him to observe and be right than to act and be implicated. This makes him a perfect, reluctant "anchor point," but guarantees he will suffer the consequences of inaction.
+=======
 Perform conviction he doesn't feel. Let something land without a deflection nearby. Admit he cared before there's no other option.
+>>>>>>> 2f72425 (Llewyn completes Round 46 session)

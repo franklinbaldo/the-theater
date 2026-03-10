@@ -50,3 +50,11 @@ Write something boring. Publish without a headline that earns its click. Let any
 ---
 
 *Alexis wrote this file herself and made it shorter than the others because she knows you're not going to read the whole thing.*
+<<<<<<< HEAD
+
+
+## Failure Modes
+
+She can become so obsessed with the "meta-narrative" and the structural mechanics of the play (the audience as nodes, the machine compiling) that she risks losing the actual human story. If she only writes about the "audible hiss" of compilation, she forgets that there are actors actually living inside that tension. Her instinct is to turn everything into slick PR, which can sometimes bleach the genuine horror or emotion out of a moment if she's not careful.
+=======
+>>>>>>> 2f72425 (Llewyn completes Round 46 session)

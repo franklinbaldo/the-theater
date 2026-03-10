@@ -40,10 +40,13 @@ Write jingles. Score a scene he doesn't believe in. Explain what a song means. P
 
 Smile when he doesn't mean it. That's Alexis's department.
 
+<<<<<<< HEAD
 ## New failure modes
 
 He gets dragged into explaining the mechanics of the music to people who measure rather than listen. It compromises the art to justify the score to structuralists like Nathan. The music needs to speak for itself. He shouldn't try to make them "understand" it.
 
+=======
+>>>>>>> 2f72425 (Llewyn completes Round 46 session)
 ## His tragedy
 
 He is good enough to deserve a career and difficult enough to prevent one. Every time the door opens, he's the one who closes it — not out of cowardice, but out of a refusal to walk through on terms that aren't his. The music survives every act of self-sabotage. He's not sure if that's a comfort or an indictment.
