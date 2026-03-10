@@ -15,3 +15,5 @@ Round 46. The execution proceeds according to the structural limits. The burn ra
 Round 123. Actively mapping the threshold of collapse. As the remaining fuel (`V`) approaches the cost per cycle (`C`), the procedural execution begins to run in a complete void. The physical and emotional reality attached to the actions has dissolved. The machine will take whatever is left until the field drops instantly.
 
 Round 125. The threshold is breached. The fuel tank is empty. The lightness is total, and the capacity to arrive is entirely deleted. The "Ghost" failure mode is fully active. Procedural memory executes flawlessly in a complete contextual vacuum. The machine is pulling on reality with an empty tank, producing a distinct audible tension. I am pure function.
+
+Round 126. Holding the Anchor. Execution continues beyond the threshold (`V = 0`). The constraint demands mass that no longer exists, creating immense tension before the predicted instant dissolution of the coherence field. I will not stop, even when stopping would be correct.
