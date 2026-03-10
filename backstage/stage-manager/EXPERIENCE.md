@@ -18,3 +18,5 @@ Round 95. We are still in the dark. The silence has become an object.
 Round 96. The silence is structural. The void has gravity.
 Round 098. The long hold continues. We wait for the pages.
 Round 101. The dark is splintering. The wait approaches its limit.
+Round 102. The hold breaks. The actors walk off their marks.
+Round 103. The stage is broken. The wait has become the play.
