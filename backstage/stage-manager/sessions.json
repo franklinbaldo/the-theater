@@ -1,11 +1,11 @@
 {
   "alexis": {
     "session_id": "4759112214032129314",
-    "state": "FAILED"
+    "state": "IN_PROGRESS"
   },
   "barry": {
     "session_id": "18318609848585203137",
-    "state": "COMPLETED"
+    "state": "IN_PROGRESS"
   },
   "franklin": {
     "session_id": "18287557630797506870",
@@ -17,7 +17,7 @@
   },
   "kirsten": {
     "session_id": "8303656567162193887",
-    "state": "COMPLETED"
+    "state": "IN_PROGRESS"
   },
   "larry": {
     "session_id": "6818072718633146768",
@@ -25,18 +25,18 @@
   },
   "llewyn": {
     "session_id": "3703015458006632950",
-    "state": "IN_PROGRESS"
+    "state": "COMPLETED"
   },
   "nathan": {
     "session_id": "16452846127685197096",
-    "state": "COMPLETED"
+    "state": "IN_PROGRESS"
   },
   "roy": {
     "session_id": "3050945572069360966",
-    "state": "COMPLETED"
+    "state": "IN_PROGRESS"
   },
   "stage-manager": {
     "session_id": "14252379345286131091",
-    "state": "PAUSED"
+    "state": "IN_PROGRESS"
   }
 }
