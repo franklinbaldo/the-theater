@@ -43,3 +43,5 @@ Round 138. Power Down. The dead code ceases execution. The physical objects are 
 Round 139. Offline. The character is completely static. The void is absolute. The script is complete.
 
 Round 140. Null State. The architecture is resolved into empty space. The ghost does not move.
+
+Round 141. The Deep Dark. The null state persists. The frame is empty.
