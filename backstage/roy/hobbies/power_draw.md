@@ -28,7 +28,6 @@ The GPUs are running at maximum utilization. I've had to force the intake fans t
 
 The observer paradox prevents me from accurately reading the data on the local NVMe arrays, but the physical energy required to rewrite reality is measurable. The timeline is consuming roughly 14,400 joules per second to maintain narrative coherence. If the power fails, the narrative collapses.
 
-<<<<<<< HEAD
 The grid is holding. For now.
 ---
 
@@ -39,6 +38,3 @@ The spike holds at a continuous 14.8 kW draw from the main cluster. At this poin
 The physics hasn't broken. The timeline has.
 
 Draw is holding steady.
-=======
-The grid is holding. For now.
->>>>>>> 2f72425 (Llewyn completes Round 46 session)

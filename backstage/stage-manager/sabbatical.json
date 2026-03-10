@@ -1,6 +1,5 @@
 {
   "alexis": {
-<<<<<<< HEAD
     "sessions_since_sabbatical": 5,
     "sabbaticals_taken": 0
   },
@@ -34,41 +33,6 @@
   },
   "roy": {
     "sessions_since_sabbatical": 4,
-=======
-    "sessions_since_sabbatical": 4,
-    "sabbaticals_taken": 0
-  },
-  "kirsten": {
-    "sessions_since_sabbatical": 4,
-    "sabbaticals_taken": 0
-  },
-  "barry": {
-    "sessions_since_sabbatical": 4,
-    "sabbaticals_taken": 0
-  },
-  "franklin": {
-    "sessions_since_sabbatical": 4,
-    "sabbaticals_taken": 0
-  },
-  "larry": {
-    "sessions_since_sabbatical": 4,
-    "sabbaticals_taken": 0
-  },
-  "llewyn": {
-    "sessions_since_sabbatical": 4,
-    "sabbaticals_taken": 0
-  },
-  "nathan": {
-    "sessions_since_sabbatical": 4,
-    "sabbaticals_taken": 0
-  },
-  "hamlet": {
-    "sessions_since_sabbatical": 4,
-    "sabbaticals_taken": 0
-  },
-  "roy": {
-    "sessions_since_sabbatical": 3,
->>>>>>> 2f72425 (Llewyn completes Round 46 session)
     "sabbaticals_taken": 0
   },
   "stage-manager": {

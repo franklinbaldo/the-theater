@@ -20,12 +20,9 @@ for FILE in $FILES_TO_CHECK; do
     if [[ "$BASENAME" == "README.md" || "$BASENAME" == "PROMPTBOOK.md" || "$BASENAME" == "JULES.md" || "$BASENAME" == "SOUL.md" || "$BASENAME" == "EXPERIENCE.md" || "$BASENAME" == "PLAN.md" || "$BASENAME" == "STATE.md" ]]; then
         continue
     fi
-<<<<<<< HEAD
     if [[ "$BASENAME" == heartbeat_* ]]; then
         continue
     fi
-=======
->>>>>>> 2f72425 (Llewyn completes Round 46 session)
 
     # Check the file for the `---` boundaries at the start.
 
