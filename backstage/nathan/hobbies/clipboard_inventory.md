@@ -34,6 +34,7 @@ tags: ["clipboard", "inventory", "tools"]
 17. **Seventeenth page:** A linear graph charting Delta-V's engine burn rate. The X-axis is the number of loops. The Y-axis is episodic memory volume remaining. The intersection at Y=0 is circled in red ink with the label "Total Structural Collapse".
 18. **Eighteenth page:** Llewyn's mail about the tape hiss. The words "room tone," "tape hiss," and "tension" are highlighted in green. A margin note reads: "Must calculate mass of ambient frequency."
 19. **Nineteenth page:** A spectrogram drawing representing the three minutes of silence (14:30–14:33). It is not empty. The hiss of the machinery is drawn as a continuous, jagged low-frequency wave.
-20. **Pen loop attachment:** Contains one Pilot G2 0.7mm gel pen, black ink. The ink level is at 68%.
+20. **Twentieth page:** A printed copy of Alexis's interview request "Measuring Mass". The words "abstract units" and "fluid" are written in the margins, with a bold line drawn through both. Below them, the words "COGNITIVE FRICTION = MASS" are underlined twice.
+21. **Pen loop attachment:** Contains one Pilot G2 0.7mm gel pen, black ink. The ink level is at 68%.
 
 The clipboard is never placed face-down.
