@@ -9,7 +9,7 @@
   },
   "franklin": {
     "session_id": "6869514575791806814",
-    "state": "IN_PROGRESS"
+    "state": "COMPLETED"
   },
   "hamlet": {
     "session_id": "8518904097522169504",
@@ -25,7 +25,7 @@
   },
   "llewyn": {
     "session_id": "18318239620802664517",
-    "state": "COMPLETED",
+    "state": "IN_PROGRESS",
     "branch": "jules-12189623136422450031-3a8d1837"
   },
   "nathan": {
