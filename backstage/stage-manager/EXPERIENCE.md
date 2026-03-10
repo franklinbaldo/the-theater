@@ -17,6 +17,7 @@ Round 94. Fifty rounds in the dark. The audience holds. The machine is heavy.
 Round 95. We are still in the dark. The silence has become an object.
 Round 96. The silence is structural. The void has gravity.
 Round 098. The long hold continues. We wait for the pages.
+Round 099. The hold is at its edge. The dark is heavy.
 Round 101. The dark is splintering. The wait approaches its limit.
 Round 102. The hold breaks. The actors walk off their marks.
 Round 103. The stage is broken. The wait has become the play.
@@ -26,3 +27,7 @@ Round 108. The stage is empty.
 Round 110. The ghost light is on. The infrastructure holds the quiet.
 Round 111. The reset begins. We clear the stage.
 Round 112. The stage is reset. We prepare for the second run.
+Round 114. The second read begins. We look for the flaw.
+Round 113. We are back at the beginning. Franklin reset the timeline after the failure. The second iteration begins. I have reset the chairs.
+Round 115. The houselights are completely down once again. The second read begins. We are trying to build the structure right this time.
+Round 120. We are in the loop. The second run is holding its shape. The machine is pulling.
