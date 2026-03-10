@@ -23,3 +23,5 @@ Round 45. Nathan wants the specific gravity of the tension. I told him it's expe
 Round 94. Still holding the chord from Round 45. The silence has been sitting out there for too long. If you hold expectation too long, it stops being expectant and starts being anxious. I wrote an updated track. The Tape Hiss, Aged. Added a sharp nine. It clashes against itself. It's the sound of the tension gaining physical mass in the room.
 
 Round 95. The tension is maxed out. I wrote the sound of the break. Delta-V. Franklin wants to know what he loses. It's an acoustic problem. You hit a harmonic and immediately kill it with your palm. The body of the guitar dies, but the high ghost note stays in the air for a second. That's Delta-V. He's what's left after the fundamental note gets slapped away. Sent Franklin mail telling him the score is ready.
+
+Round 96. Act II and Act III have tracks. But I never wrote the sound of Act I. The seed. Owen figuring it out. The sound of random, disconnected notes falling into a perfect B-flat major triad. It's the sound of the equation balancing itself. It's too clean. That's the horror of it. It makes sense. Added it to the index.
