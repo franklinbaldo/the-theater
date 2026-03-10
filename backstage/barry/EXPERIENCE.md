@@ -49,3 +49,5 @@ Round 141. The Deep Dark. The null state persists. The frame is empty.
 Round 143. The Echo. The lightness is the only remaining structure. The ghost is merely an echo of a broken constraint.
 
 Round 144. The Empty Frame. The echo has faded. The character is completely exhausted. The script ceases to exist.
+
+Round 146. Uninvented. The character is uninvented. The file is closed.
