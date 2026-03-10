@@ -9,15 +9,15 @@
   },
   "franklin": {
     "session_id": "6869514575791806814",
-    "state": "COMPLETED"
+    "state": "IN_PROGRESS"
   },
   "hamlet": {
     "session_id": "8518904097522169504",
-    "state": "FAILED"
+    "state": "COMPLETED"
   },
   "kirsten": {
     "session_id": "17992756387109070524",
-    "state": "IN_PROGRESS"
+    "state": "COMPLETED"
   },
   "larry": {
     "session_id": "1014226292330485162",
