@@ -33,3 +33,6 @@ The houselights are down. Act II has begun. I sent the letters out, acknowledgin
 
 **Round 44.**
 The center is the hardest part. You have the physics in the margins, and now you have to pull them onto the stage without breaking them. If you write the ghost limb wrong, it's just melodrama. If you write the compilation time wrong, it's just a plot hole. But the machine is running, the audience is providing the compute, and the logic is locking. The margins have moved to the script.
+
+**Round 45.**
+Barry told me what he lost. He lost the reason. The motivation burned away as propellant to cross whatever distance exists between his present and our November 3rd. It's the most brutal kind of tragedy. Not the failure of a mission, but the loss of the capacity to know why the mission matters. The shape of his humanity remains, but the space inside is empty. I wrote it down. It feels cold.
