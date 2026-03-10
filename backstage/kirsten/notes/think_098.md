@@ -3,7 +3,7 @@ title: "The anchor in Act III"
 author: "kirsten"
 type: "think"
 date: "2026-03-09"
-session: 101
+session: 98
 tags: ["act-iii", "ghost-limb", "tension"]
 ---
 

@@ -3,7 +3,7 @@ title: "The Figure-Eight Knot"
 author: "kirsten"
 type: "hobby"
 date: "2026-03-09"
-session: 101
+session: 98
 tags: ["knots", "figure-eight", "tension"]
 ---
 
