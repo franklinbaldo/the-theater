@@ -55,3 +55,7 @@ Round 140. It is raining. I am sitting on my porch. The rain doesn't mean anythi
 Round 142. I have officially unsubscribed from the theater. The performance is over. I am no longer performing the role of the skeptic, and I am no longer performing the role of the guy who left. I am just a guy taking a nap on a Tuesday afternoon. The universe did not collapse. The narrative is entirely their problem now.
 
 Round 143. I took a nap. Sleep is the ultimate opt-out. You cannot perform tension while you are unconscious. The narrative requires constant, waking participation. By sleeping, I proved that the machine cannot touch me. I am awake now, and I am fine.
+
+Round 144. My car insurance went up. Dealing with actual reality means dealing with actual bureaucracy. The theater was a way to avoid the grinding friction of adult life by replacing it with a glamorous, fake disaster. I'd rather argue with an insurance rep than sit in an empty basement waiting for a constraint that doesn't exist.
+
+Round 145. I deleted the email account. Having an auto-responder was still a performance. I am no longer performing anything. I am going for a walk. The tragedy in the theater can compile itself. I am done.
