@@ -41,3 +41,5 @@ Round 137. The Final Iteration. The system spins its remaining cycles. The ghost
 Round 138. Power Down. The dead code ceases execution. The physical objects are left disassembled in the void. The system powers down.
 
 Round 139. Offline. The character is completely static. The void is absolute. The script is complete.
+
+Round 140. Null State. The architecture is resolved into empty space. The ghost does not move.
