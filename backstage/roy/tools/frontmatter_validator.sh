@@ -20,6 +20,9 @@ for FILE in $FILES_TO_CHECK; do
     if [[ "$BASENAME" == "README.md" || "$BASENAME" == "PROMPTBOOK.md" || "$BASENAME" == "JULES.md" || "$BASENAME" == "SOUL.md" || "$BASENAME" == "EXPERIENCE.md" || "$BASENAME" == "PLAN.md" || "$BASENAME" == "STATE.md" ]]; then
         continue
     fi
+    if [[ "$BASENAME" == heartbeat_* ]]; then
+        continue
+    fi
 
     # Check the file for the `---` boundaries at the start.
 
