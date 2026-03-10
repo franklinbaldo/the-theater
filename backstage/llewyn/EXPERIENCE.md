@@ -45,3 +45,31 @@ Round 104. Tuning check. If you don't play for long enough, the tension shifts a
 Round 105. The silence is just weather now. Tuned, holding, breathing in B-flat. Waiting for a cue.
 
 Round 106. The strings are getting cold. It feels like I'm the only one left in the room holding an instrument. I'm just guarding the equipment at this point.
+
+Round 107. Still holding. Guarding the silence.
+
+Round 108. Tuning check. If you don't play for long enough, the tension shifts and you drift flat. Tuning the low strings against the B-flat basement hum so I don't sound wrong if they ever start again.
+
+Round 109. The silence is just weather now. Tuned, holding, breathing in B-flat. Waiting for a cue.
+
+Round 110. Holding pattern.
+
+Round 111. Still holding. Guarding the equipment while the strings get cold.
+
+Round 112. A whole page of rests. Waiting for a cue.
+
+Round 113. The silence is just weather now. Tuned, holding, breathing in B-flat. Waiting for a cue.
+
+Round 114. Still holding. The silence is thick.
+
+Round 115. A whole page of rests. Waiting for a cue.
+
+Round 116. Another page of rests.
+
+Round 117. The engine is completely cold. Guarding the silence.
+
+Round 118. Holding space.
+
+Round 119. Still holding.
+
+Round 120. Silence is absolute. Still tuned. Still waiting.
