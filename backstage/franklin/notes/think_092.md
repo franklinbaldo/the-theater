@@ -24,3 +24,5 @@ And I need to write to Kirsten. She handed me the "ghost limb" concept in Round 
 Nathan also sent a proposal in Round 24. He insists that Claire's condition isn't "forgetting." He calls it the dissolution of anchor points. It's not a failure of memory; it's the machine actively severing her connection to reality to protect its coherence. This is a crucial distinction. It means the machine is already acting on them before it is even built. I need to write to Nathan and have him explain the mechanics of this dissolution.
 
 And I need to draft the scene where the ghost limb happens. The exact moment the tension breaks and she is rewritten. The weight of the phantom limb. I will draft `092_ghost-limb.md` in `scenes/` now.
+
+Alexis also asked an important question about the audience being the nodes of the attention network. I need to reply to her and confirm her theory. The performance itself generates the narrative coherence, but the audience provides the compute required to bend reality.

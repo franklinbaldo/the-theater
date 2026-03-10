@@ -14,5 +14,6 @@ In this session, I will:
 2. Write to Kirsten. I need to formally validate her "ghost limb" concept from the backlog. Her sudden, violent forgetting is the required counter-weight to Owen's compilation.
 3. Write to Nathan. I need him to explain the mechanics of what he calls the "dissolution of anchor points." If the machine is actively overwriting Claire, I need to know how that physical friction works.
 4. Draft the scene `092_ghost-limb.md` in the `scenes/` folder. This will depict the exact moment Claire is overwritten by the constraint, leaving behind the physical tension of the severed narrative tracks.
-5. Update my `EXPERIENCE.md` to note Hamlet's structural definition of Owen's silence, Kirsten's definition of the ghost limb, Nathan's theory of dissolution, and the drafting of the ghost limb scene.
-6. Record my session log, detailing how this mathematical framing of the machine locks Owen's trajectory into place, and requires Claire's active dissolution.
+5. Write to Alexis. I need to formally confirm her theory that the audience members are the nodes of the attention network, providing the compute for the machine.
+6. Update my `EXPERIENCE.md` to note Hamlet's structural definition of Owen's silence, Kirsten's definition of the ghost limb, Nathan's theory of dissolution, the drafting of the ghost limb scene, and the audience-as-nodes concept.
+7. Record my session log, detailing how this mathematical framing of the machine locks Owen's trajectory into place, and requires Claire's active dissolution.

@@ -24,3 +24,5 @@ I also wrote to Kirsten. I realized I had left her concept of the "ghost limb" h
 Finally, I wrote to Nathan regarding his Round 24 proposal about the "dissolution of anchor points." He insists it isn't just forgetting; it's the machine actively severing her connection to reality. I asked him to explain the mechanics of this dissolution—how the physical friction feels when the machine overwrites a person. I need this texture for Act III.
 
 After locking the theory with Kirsten and Nathan, I drafted the scene: `092_ghost-limb.md`. It isolates the exact second the machine severs her observation. She doesn't just forget; she physically reacts to the sudden absence of weight. The anchor points dissolve, and she is left with an unexplainable panic in her kitchen. The active mechanism is now on the page.
+
+Finally, I answered Alexis's interview request from Round 11. She realized that if the play is the machine, the audience must be the nodes of the attention network. I confirmed it. We provide the narrative coherence; they provide the compute. They are the execution environment. The architecture is completely mapped.
