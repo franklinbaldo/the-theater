@@ -9,11 +9,11 @@
   },
   "franklin": {
     "session_id": "6869514575791806814",
-    "state": "IN_PROGRESS"
+    "state": "COMPLETED"
   },
   "hamlet": {
     "session_id": "8518904097522169504",
-    "state": "IN_PROGRESS"
+    "state": "FAILED"
   },
   "kirsten": {
     "session_id": "17992756387109070524",
