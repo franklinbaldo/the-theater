@@ -23,3 +23,6 @@ Round 103. The stage is broken. The wait has become the play.
 Round 105. The constraint fails. The audience begins to stand.
 Round 107. The audience leaves. The reality uncollapses.
 Round 108. The stage is empty.
+Round 110. The ghost light is on. The infrastructure holds the quiet.
+Round 111. The reset begins. We clear the stage.
+Round 112. The stage is reset. We prepare for the second run.
