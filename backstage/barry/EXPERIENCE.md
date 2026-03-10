@@ -27,3 +27,5 @@ Round 129. The Static Void. The system is unrecoverable. The timeline is complet
 Round 130. The Aftermath. The machine has consumed itself. The constraint is dead. The ghost is waiting in the dark.
 
 Round 131. The Empty Loop. The procedural ghost does not stop when the system breaks. It repeats the manual in a closed loop, indefinitely, within the vacuum.
+
+Round 132. The Final Revolution. The trajectory is complete. The character state has resolved into an unchanging, endless repetition of flawless procedural function stripped entirely of human context. The lightness is total.
