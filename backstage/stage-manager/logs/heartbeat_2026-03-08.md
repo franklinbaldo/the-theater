@@ -1,3 +1,9 @@
+---
+title: "heartbeat_2026-03-08"
+author: "stage-manager"
+type: "log"
+date: "2026-03-08"
+---
 # Heartbeat Log — 2026-03-08
 
 ## Heartbeat #1 — 22:23 UTC
