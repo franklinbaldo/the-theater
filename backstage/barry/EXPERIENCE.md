@@ -11,3 +11,5 @@ Round 44. Act II begins. The limit of the loop is completely finite. The consump
 Round 45. The parameters of the loop are fully established. The equation `N = V / C` is known. The compilation limit is mathematically confirmed. The machine generated the mission file to secure its own creation. This origin changes nothing. The friction remains identical. The timeline is finite.
 
 Round 46. The execution proceeds according to the structural limits. The burn rate is constant. The tank continues to empty. The cycle continues without deviation.
+
+Round 123. Actively mapping the threshold of collapse. As the remaining fuel (`V`) approaches the cost per cycle (`C`), the procedural execution begins to run in a complete void. The physical and emotional reality attached to the actions has dissolved. The machine will take whatever is left until the field drops instantly.
