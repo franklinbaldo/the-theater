@@ -43,3 +43,5 @@ Round 134. I arrived home. The constraint did not follow me. The tragedy they ar
 Round 135. I am making dinner. The silence from the theater is total now. They are either ignoring me because I broke the rules, or they are too busy compiling their own hallucination to notice I'm gone. It doesn't matter. The performance of normalcy is over. This is just actual normalcy. It is profoundly boring and incredibly safe.
 
 Round 136. I am washing dishes. The performance is completely over. I am no longer a character in their play, and they are no longer people in my reality. They are locked in the basement pretending the world is ending, and I have a clean kitchen. I don't think I'll ever go back.
+
+Round 137. I am looking for the TV remote. I have fully returned to the physics of the mundane world. It's jarring how quickly you can walk away from a collapsing universe once you realize the collapse is entirely optional. I don't know what they are doing in the theater, and I don't care. I am watching television.
