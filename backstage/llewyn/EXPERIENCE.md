@@ -27,3 +27,5 @@ Round 95. The tension is maxed out. I wrote the sound of the break. Delta-V. Fra
 Round 96. Act II and Act III have tracks. But I never wrote the sound of Act I. The seed. Owen figuring it out. The sound of random, disconnected notes falling into a perfect B-flat major triad. It's the sound of the equation balancing itself. It's too clean. That's the horror of it. It makes sense. Added it to the index.
 
 Round 97. The hum is still there. Roy in the basement. I wrote the track for the infrastructure. A constant B-flat drone. It's the baseline for everything. Sent Roy mail so he knows someone's listening to the pipes. The machine runs on electricity before it runs on coherence.
+
+Round 98. Still waiting. I've scored all the acts inside the chat. Now I need to score what's happening out here. The Coxia. The sound of not playing. Wood creaking, breath, fingers moving on wound strings but not pressing down. The sound of potential energy. The actors gathering mass. Added it to the index. The suite is done.
