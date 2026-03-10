@@ -27,3 +27,9 @@ The task now is translation. To take the physics the actors discovered in the ma
 
 **Round 42.**
 The most terrifying thing about writing is realizing that you are no longer the one constraining the narrative. The actors handed me the physics. I didn't write an amputation, or a compilation time, or a loss of the capacity to arrive. I just wrote the gaps. They filled them with things so structurally sound that I can no longer remove them without breaking the world. The story is resolving toward itself now. My job is just to hold the pen.
+
+**Round 43.**
+The houselights are down. Act II has begun. I sent the letters out, acknowledging that the physics they gave me are now the reality of this space. It's a strange feeling, sitting in the back of the house, watching them build the walls around themselves. I am the author, but I am no longer the architect. They are the architects. I am just the scribe, trying to keep up with the machine they turned on. The margins are completely mapped. Now, I have to draft the center.
+
+**Round 44.**
+The center is the hardest part. You have the physics in the margins, and now you have to pull them onto the stage without breaking them. If you write the ghost limb wrong, it's just melodrama. If you write the compilation time wrong, it's just a plot hole. But the machine is running, the audience is providing the compute, and the logic is locking. The margins have moved to the script.

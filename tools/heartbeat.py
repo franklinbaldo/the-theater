@@ -13,7 +13,15 @@ Usage:
 Sessions are identified by title "TheTheater — {actor} @{sha} {datetime}".
 New sessions are created when none exists, the current one is >24h old,
 or infrastructure files changed on main since the session's commit.
-Jules creates its own branch from main and opens a PR.
+Completed/failed sessions within the 24h window are reused via heartbeat.
+If session creation fails (e.g. daily limit of 100), falls back to reusing
+the most recent session. Jules creates its own branch from main and opens a PR.
+
+Circuit breaker: after 3 consecutive failures for an actor, that actor enters
+a 2-hour cooldown before retries resume. State persisted in .circuit_state.json.
+
+Sessions.json now includes branch info from open PRs so that `tools/theater sync`
+can clone each actor's in-progress branch into workspace/ for cross-branch reading.
 """
 
 import json
@@ -22,6 +30,7 @@ import re
 import shutil
 import subprocess
 import sys
+import time
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
@@ -45,11 +54,68 @@ SESSION_TTL = timedelta(hours=24)
 # Paths that, when changed on main, make running sessions stale.
 INFRA_PATHS = [
     "tools/",
-    "backstage/STATE.md",
     "PROMPTBOOK.md",
-    "JULES.md",
     ".github/workflows/",
 ]
+
+# ── Circuit breaker ─────────────────────────────────────────────────────────
+# After CIRCUIT_THRESHOLD consecutive failures for an actor, back off for
+# CIRCUIT_BACKOFF_HOURS before retrying. Prevents hammering the Jules API
+# during outages. Works alongside the session reuse fallback.
+
+CIRCUIT_THRESHOLD = 3
+CIRCUIT_BACKOFF_HOURS = 2
+CIRCUIT_STATE_FILE = BACKSTAGE / "stage-manager" / ".circuit_state.json"
+
+
+def _load_circuit_state():
+    """Load circuit breaker state from disk."""
+    if CIRCUIT_STATE_FILE.exists():
+        try:
+            return json.loads(CIRCUIT_STATE_FILE.read_text(encoding="utf-8"))
+        except (json.JSONDecodeError, OSError):
+            pass
+    return {}
+
+
+def _save_circuit_state(state):
+    """Persist circuit breaker state to disk."""
+    CIRCUIT_STATE_FILE.parent.mkdir(parents=True, exist_ok=True)
+    CIRCUIT_STATE_FILE.write_text(json.dumps(state, indent=2) + "\n", encoding="utf-8")
+
+
+def circuit_should_skip(actor, state):
+    """Check if an actor is in backoff. Returns True if should skip."""
+    info = state.get(actor)
+    if not info:
+        return False
+    failures = info.get("failures", 0)
+    if failures < CIRCUIT_THRESHOLD:
+        return False
+    last_failure = info.get("last_failure", "")
+    if not last_failure:
+        return False
+    try:
+        last_time = datetime.fromisoformat(last_failure)
+    except ValueError:
+        return False
+    elapsed = now_utc() - last_time
+    if elapsed > timedelta(hours=CIRCUIT_BACKOFF_HOURS):
+        return False  # Cooldown expired, allow retry
+    return True
+
+
+def circuit_record_failure(actor, state):
+    """Record a failure for circuit breaker."""
+    info = state.get(actor, {"failures": 0})
+    info["failures"] = info.get("failures", 0) + 1
+    info["last_failure"] = now_utc().isoformat()
+    state[actor] = info
+
+
+def circuit_record_success(actor, state):
+    """Reset circuit breaker on success."""
+    state.pop(actor, None)
 
 
 def headers():
@@ -251,8 +317,8 @@ Assess your productivity. What was genuinely useful? What was repetitive or unpr
 Scan the latest announcements and any mail you received.
 Identify collaborative gaps — who have you been ignoring? Who needs your input?
 
-### Step 3 — Read STATE.md
-Read `backstage/STATE.md`. Find high-value opportunities that match your strengths.
+### Step 3 — Review the production
+Read through the backstage/ folder. Find high-value opportunities that match your strengths.
 What is the production missing that you could provide?
 
 ### Step 4 — Re-examine your SOUL.md
@@ -304,8 +370,8 @@ Do not delete files — move to `backstage/{actor}/retracted/` if needed.
     return prompt
 
 
-def create_sabbatical_session(actor):
-    """Create a sabbatical session instead of a regular one."""
+def create_sabbatical_session(actor, max_retries=3):
+    """Create a sabbatical session instead of a regular one, with retry on transient errors."""
     prompt = assemble_sabbatical_prompt(actor)
     sabbatical_num = get_sabbatical_number(actor)
 
@@ -325,14 +391,28 @@ def create_sabbatical_session(actor):
         "automationMode": "AUTO_CREATE_PR",
     }
 
-    resp = requests.post(f"{JULES_API}/sessions", headers=headers(), json=body)
-    raise_for_jules(resp, f"create sabbatical session for {actor}")
-    session = resp.json()
-    session_id = session["name"].split("/")[-1]
-    print(f"  Created SABBATICAL session {session_id} for {actor} — {title}")
-
-    record_sabbatical_taken(actor)
-    return session_id
+    last_err = None
+    for attempt in range(max_retries):
+        try:
+            resp = requests.post(f"{JULES_API}/sessions", headers=headers(), json=body)
+            raise_for_jules(resp, f"create sabbatical session for {actor}")
+            session = resp.json()
+            session_id = session["name"].split("/")[-1]
+            print(f"  Created SABBATICAL session {session_id} for {actor} — {title}")
+            record_sabbatical_taken(actor)
+            return session_id
+        except requests.HTTPError as e:
+            last_err = e
+            resp_obj = getattr(e, "response", None)
+            status = resp_obj.status_code if resp_obj is not None else 0
+            if status in (400, 429) or status >= 500:
+                wait = 2 ** (attempt + 1)
+                print(f"  Retry {attempt + 1}/{max_retries} for {actor} sabbatical "
+                      f"(status {status}, waiting {wait}s)...")
+                time.sleep(wait)
+            else:
+                raise
+    raise last_err
 
 
 # ── Session discovery ────────────────────────────────────────────────────────
@@ -756,135 +836,63 @@ def send_conflict_resolution(session_id, actor, pr_num, branch):
 
 # ── Prompt assembly ──────────────────────────────────────────────────────────
 
-def assemble_prompt(actor):
-    """Assemble session prompt for an actor."""
-    soul = read_file(BACKSTAGE / actor / "SOUL.md")
-    experience = read_file(BACKSTAGE / actor / "EXPERIENCE.md")
-    state = read_file(BACKSTAGE / "STATE.md")
-    promptbook = read_file(Path("PROMPTBOOK.md"))
-    jules = read_file(Path("JULES.md"))
-    plan = read_file(BACKSTAGE / "franklin" / "PLAN.md")
+def build_actor_prompt(actor, repo_root=Path(".")):
+    """Build a deterministic, file-system-driven prompt for an actor.
 
-    # Read inbox
-    inbox_path = BACKSTAGE / actor / "mail" / "inbox"
-    inbox_contents = ""
-    if inbox_path.exists():
-        for msg in sorted(inbox_path.iterdir()):
-            if msg.is_file() and msg.name != ".gitkeep":
-                inbox_contents += f"\n---\n**{msg.name}**\n{msg.read_text(encoding='utf-8')}\n"
+    Assembly order:
+      1. backstage/{actor}/SOUL.md
+      2. Other ALL_CAPS.md in actor's folder (excluding SOUL.md)
+      3. PROMPTBOOK.md (repo root)
+      4. ALL_CAPS.md in backstage/ root
+    """
+    sections = []
 
-    # Read latest session
-    session_files = sorted(SESSIONS.glob("*.md"))
-    latest_session = read_file(session_files[-1]) if session_files else ""
+    def add_section(filepath, label):
+        if filepath.exists():
+            sections.append(
+                f"{'=' * 48}\n{label}\n{'=' * 48}\n{filepath.read_text()}"
+            )
 
-    round_number = get_round_number()
+    def add_all_caps_in(directory, exclude=None):
+        if exclude is None:
+            exclude = set()
+        if not directory.exists():
+            return
+        for f in sorted(directory.glob("*.md")):
+            stem = f.stem
+            if stem == stem.upper() and f.name not in exclude:
+                label = f"{f.name} — {f.relative_to(repo_root)}"
+                add_section(f, label)
 
-    prompt = f"""# The Theater — Session for {actor}
-## Round {round_number} — {now_utc().strftime('%Y-%m-%d %H:%M UTC')}
+    actor_dir = repo_root / "backstage" / actor
 
----
+    # 1. SOUL.md
+    add_section(actor_dir / "SOUL.md", f"SOUL.md — backstage/{actor}/SOUL.md")
 
-## YOUR SOUL
+    # 2. Other ALL_CAPS.md in actor's folder (not recursive, not SOUL.md)
+    add_all_caps_in(actor_dir, exclude={"SOUL.md"})
 
-{soul}
+    # 3. PROMPTBOOK.md
+    add_section(repo_root / "PROMPTBOOK.md", "PROMPTBOOK.md")
 
----
+    # 4. ALL_CAPS.md files in backstage/ root
+    add_all_caps_in(repo_root / "backstage")
 
-## YOUR EXPERIENCE (long-term memory)
-
-{experience or '*(no entries yet)*'}
-
----
-
-## THE WORLD
-
-### PROMPTBOOK (world rules)
-{promptbook}
-
-### STATE (what is fixed, what is open)
-{state}
-
-### HOW TO RUN A SESSION
-{jules}
-
-{f"### FRANKLIN'S PLAN{chr(10)}{plan}" if plan else ''}
-
----
-
-## LATEST SESSION
-
-{latest_session}
-
----
-
-## YOUR INBOX
-
-{inbox_contents or '*(no messages)*'}
-
----
-
-## Session Instructions
-
-You are {actor}. Your branch starts from main. Follow this sequence exactly.
-
-### STEP 1 — Read inbox
-You have already received your inbox above. Read every message.
-
-### STEP 2 — Think
-Write `backstage/{actor}/notes/think_{round_number:03d}.md`.
-Speak as your character-actor. What does the latest session mean to you?
-What do you notice? What do you feel about the direction of the play?
-What do you want? Do not perform. Think.
-
-### STEP 3 — Read inbox again
-Re-read your messages after thinking. Add any new observations to your think file.
-
-### STEP 4 — Plan
-Write `backstage/{actor}/notes/plan_{round_number:03d}.md`.
-What will you do this session? Who will you write to and why?
-What are you trying to accomplish or influence?
-
-### STEP 5 — Execute
-Do what you planned:
-- Send mail to `backstage/{actor}/mail/outbox/TO_{{recipient}}_{{subject}}.md`
-- Post an announcement to `backstage/{actor}/announcements/{{isodatetime}}_{{slug}}.md` (max 250 chars, broadcast to all)
-- Update `backstage/{actor}/EXPERIENCE.md` with anything new you believe
-- Write your session log to `backstage/{actor}/logs/session_{round_number:03d}.md`
-- Use `workspace/` for any scratch work (git-ignored, resets each session)
-
-### STEP 6 — Hobbies
-Create or continue something in `backstage/{actor}/hobbies/`.
-This has nothing to do with the play. It is yours. Define your hobby whenever you want.
-If you have no hobby yet, this is the round you might find one.
-
----
-
-**CRITICAL — THE GOLDEN RULE OF FILE OWNERSHIP:**
-You may ONLY create or modify files inside `backstage/{actor}/`.
-Do not delete files — move to `backstage/{actor}/retracted/` if needed.
-If you touch files outside your ownership, your PR will conflict and ALL your work will be lost.
-
-**CONFLICT RESOLUTION:**
-Before committing, always pull the latest main and rebase your work:
-  git fetch origin main && git rebase origin/main
-If there are conflicts, fix them — they should only be in your own files.
-If you cannot resolve, commit what you have and note the conflict in your session log.
-Your PR will be auto-merged once all checks pass. Do not wait for manual review.
-
-**Commit messages:** Say what happened, not what you wrote.
-Good: `Owen takes one step closer to the machine`
-Bad: `Added scene where Owen talks about narrative coherence`
-
-**PR title:** `[{actor}] round {round_number}`
-"""
-    return prompt
+    return "\n\n".join(sections)
 
 
 # ── Session management ───────────────────────────────────────────────────────
 
-def create_session(actor):
-    """Create a new Jules session starting from main."""
-    prompt = assemble_prompt(actor)
+def _post_create_session(actor, body):
+    """Post a session creation request to the Jules API (single attempt)."""
+    resp = requests.post(f"{JULES_API}/sessions", headers=headers(), json=body)
+    raise_for_jules(resp, f"create session for {actor}")
+    return resp.json()
+
+
+def create_session(actor, max_retries=3):
+    """Create a new Jules session starting from main, with retry on transient errors."""
+    prompt = build_actor_prompt(actor)
 
     sha = get_head_sha(short=True)
     ts = now_utc().strftime("%Y-%m-%dT%H:%M")
@@ -902,12 +910,26 @@ def create_session(actor):
         "automationMode": "AUTO_CREATE_PR",
     }
 
-    resp = requests.post(f"{JULES_API}/sessions", headers=headers(), json=body)
-    raise_for_jules(resp, f"create session for {actor}")
-    session = resp.json()
-    session_id = session["name"].split("/")[-1]
-    print(f"  Created session {session_id} for {actor} — {title}")
-    return session_id
+    last_err = None
+    for attempt in range(max_retries):
+        try:
+            session = _post_create_session(actor, body)
+            session_id = session["name"].split("/")[-1]
+            print(f"  Created session {session_id} for {actor} — {title}")
+            return session_id
+        except requests.HTTPError as e:
+            last_err = e
+            resp = getattr(e, "response", None)
+            status = resp.status_code if resp is not None else 0
+            # Retry on 400 FAILED_PRECONDITION and 429/5xx (transient errors)
+            if status in (400, 429) or status >= 500:
+                wait = 2 ** (attempt + 1)  # 2s, 4s, 8s
+                print(f"  Retry {attempt + 1}/{max_retries} for {actor} "
+                      f"(status {status}, waiting {wait}s)...")
+                time.sleep(wait)
+            else:
+                raise
+    raise last_err
 
 
 def send_heartbeat_message(session_id, actor, hb_number=1):
@@ -977,21 +999,61 @@ def write_heartbeat_log(number, sessions, results):
 
 
 def write_sessions_json(sessions):
-    """Write actor -> session mapping for downstream tools."""
+    """Write actor -> session mapping for downstream tools.
+
+    Includes branch info from open PRs so that `tools/theater sync`
+    can clone each actor's in-progress branch into workspace/.
+    """
     mapping = {}
     for actor in ACTORS:
         info = sessions.get(actor)
         if info:
-            mapping[actor] = {
+            entry = {
                 "session_id": info["session_id"],
                 "state": info["state"],
             }
+            # Look up branch name from open PR (for cross-branch sync)
+            pr_num = find_actor_pr(actor)
+            if pr_num:
+                detail = get_pr_details(pr_num)
+                branch = detail.get("headRefName", "")
+                if branch:
+                    entry["branch"] = branch
+            mapping[actor] = entry
 
     out_file = BACKSTAGE / "stage-manager" / "sessions.json"
     out_file.parent.mkdir(parents=True, exist_ok=True)
     with open(out_file, "w", encoding="utf-8") as f:
         json.dump(mapping, f, indent=2)
     print(f"  Wrote session map to {out_file}")
+
+
+# ── Fallback helpers ─────────────────────────────────────────────────────────
+
+def _fallback_reuse(info, actor, hb_number, original_error):
+    """Try to reuse an existing session when creation fails.
+
+    Returns a result string for the heartbeat log.
+    """
+    session_id = info.get("session_id") if info else None
+    state = info.get("state", "") if info else ""
+
+    if not session_id:
+        print(f"  No existing session to fall back to for {actor}")
+        return f"-> error: {original_error}"
+
+    # Don't try to send heartbeat to COMPLETED/FAILED sessions — it won't work
+    if state in ("COMPLETED", "FAILED"):
+        print(f"  Existing session for {actor} is {state}, cannot reuse via heartbeat")
+        return f"-> skipped ({state.lower()}, create failed: {original_error})"
+
+    print(f"  Fallback: reusing existing {state} session for {actor}")
+    try:
+        send_heartbeat_message(session_id, actor, hb_number)
+        return f"-> reused (create failed: {original_error})"
+    except Exception as e2:
+        print(f"  Fallback also failed: {e2}")
+        return f"-> error: {original_error} (fallback: {e2})"
 
 
 # ── Commands ─────────────────────────────────────────────────────────────────
@@ -1035,6 +1097,9 @@ def cmd_heartbeat(force_new=False):
             print(f"  {actor_name}: {count}/{SABBATICAL_INTERVAL} sessions (sabbaticals taken: {taken})")
         print()
 
+    creation_count = 0  # Track how many sessions we create this heartbeat
+    circuit_state = _load_circuit_state()
+
     for actor in ACTORS:
         info = sessions.get(actor)
 
@@ -1047,17 +1112,23 @@ def cmd_heartbeat(force_new=False):
         elif not info:
             needs_new = True
             reason = "no session"
-        elif info["state"] in ("COMPLETED", "FAILED"):
-            needs_new = True
-            reason = f"previous {info['state'].lower()}"
         elif is_expired(info):
             needs_new = True
-            reason = "expired (>24h)"
+            state_note = f", previous {info['state'].lower()}" if info["state"] in ("COMPLETED", "FAILED") else ""
+            reason = f"expired (>24h){state_note}"
         elif has_infra_changed(parse_sha_from_title(info.get("title", ""))):
             needs_new = True
             reason = "infra changed on main"
 
         if needs_new:
+            # Circuit breaker: skip actors in backoff after repeated failures
+            if circuit_should_skip(actor, circuit_state):
+                cb_info = circuit_state.get(actor, {})
+                print(f"  {actor}: {reason} — CIRCUIT OPEN ({cb_info.get('failures', 0)} consecutive failures, "
+                      f"cooling down for {CIRCUIT_BACKOFF_HOURS}h)")
+                results[actor] = f"-> circuit open ({cb_info.get('failures', 0)} failures)"
+                continue
+
             # Try to merge the actor's PR before creating a new session
             merge = merge_actor_pr(actor)
 
@@ -1066,28 +1137,39 @@ def cmd_heartbeat(force_new=False):
             elif merge == "closed-conflict":
                 reason += ", closed conflicting PR"
 
+            # Throttle session creation to avoid API rate limits
+            if creation_count > 0:
+                time.sleep(2)
+
             # No longer skip on conflict — we close the old PR and start fresh
             # Check if this actor is due for a sabbatical
             if needs_sabbatical(actor):
                 print(f"  {actor}: {reason} — due for sabbatical, creating sabbatical session")
                 try:
                     create_sabbatical_session(actor)
+                    creation_count += 1
+                    circuit_record_success(actor, circuit_state)
                     results[actor] = f"-> sabbatical ({reason})"
                 except Exception as e:
-                    print(f"  ERROR: {e}")
-                    results[actor] = f"-> error: {e}"
+                    print(f"  ERROR creating sabbatical: {e}")
+                    circuit_record_failure(actor, circuit_state)
+                    results[actor] = _fallback_reuse(info, actor, hb_number, e)
             else:
                 print(f"  {actor}: {reason} — creating new session")
                 try:
                     create_session(actor)
+                    creation_count += 1
                     increment_actor_session_count(actor)
+                    circuit_record_success(actor, circuit_state)
                     results[actor] = f"-> new ({reason})"
                 except Exception as e:
-                    print(f"  ERROR: {e}")
-                    results[actor] = f"-> error: {e}"
+                    print(f"  ERROR creating session: {e}")
+                    circuit_record_failure(actor, circuit_state)
+                    results[actor] = _fallback_reuse(info, actor, hb_number, e)
             continue
 
-        # Active session — check if its PR has conflicts and try to resolve
+        # Reuse session (active, or completed/failed but < 24h old)
+        # Check if its PR has conflicts and try to resolve
         pr_num = find_actor_pr(actor)
         if pr_num:
             detail = get_pr_details(pr_num)
@@ -1104,6 +1186,9 @@ def cmd_heartbeat(force_new=False):
         except Exception as e:
             print(f"  ERROR for {actor}: {e}")
             results[actor] = f"-> error: {e}"
+
+    # Persist circuit breaker state
+    _save_circuit_state(circuit_state)
 
     # Re-fetch to include newly created sessions
     updated = find_actor_sessions()

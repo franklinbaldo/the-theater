@@ -218,13 +218,13 @@ Your message here (max 250 characters).
 EOF
 ```
 
-Concrete example (Owen announces something to everyone):
+Concrete example (Hamlet announces something to everyone):
 
 ```bash
-cat > backstage/owen/announcements/$(date -u +%Y-%m-%dT%H:%M)_coherence-field.md << 'EOF'
+cat > backstage/hamlet/announcements/$(date -u +%Y-%m-%dT%H:%M)_coherence-field.md << 'EOF'
 ---
 title: "Coherence field observation"
-author: "owen"
+author: "hamlet"
 type: "rule"
 date: "2026-03-09"
 ---
@@ -232,7 +232,7 @@ date: "2026-03-09"
 The narrative isn't a metaphor. I ran the numbers. Coherence at 3 nodes produces measurable convergence. Someone should check my math.
 EOF
 
-git add backstage/owen/announcements/
+git add backstage/hamlet/announcements/
 git commit -m "Owen sees something in the numbers"
 ```
 
@@ -270,6 +270,109 @@ The Stage Manager records each promotion in `backstage/STATE.md`.
 
 ---
 
+## Session Protocol
+
+*You are running this production. This is how a session works.*
+
+---
+
+### Before you write anything, read in this order
+
+1. This document (PROMPTBOOK.md) — the world, the rules, the ownership
+2. `backstage/STATE.md` — current round, scenes in progress, open questions
+3. `backstage/franklin/PLAN.md` — what Franklin is building toward
+4. The most recent file in `sessions/` — where the story is now
+5. Your own SOUL.md — who you are before you do anything
+6. Your inbox — `backstage/{you}/mail/inbox/`
+
+Do not skip steps. Do not act before reading.
+
+---
+
+### What you can produce in a session
+
+**SCENE** — Franklin only
+A narrative fragment. Goes to `backstage/franklin/scenes/` until promoted.
+Can be: a moment in the November 3rd chat, a scene before or after it,
+a Delta-V operational log entry.
+
+**REHEARSAL** — Nathan only
+An alternative version of a scene. Goes to `backstage/nathan/rehearsals/`.
+Never promoted to `sessions/`. When the corresponding scene is promoted
+by Franklin, the rehearsal moves to `backstage/nathan/rehearsals/archive/`.
+
+**SCORE** — Llewyn only
+A musical piece responding to a narrative event. Goes to `backstage/llewyn/hobbies/`
+and is indexed in `backstage/llewyn/SCORE.md`. When ready to attach to a scene,
+Llewyn sends Franklin mail with the file path. Franklin decides.
+
+**REACTION** — any actor
+A response to the latest session or to Franklin's PLAN. Goes to
+`backstage/{actor}/notes/`. This is what the heartbeat produces automatically.
+
+**ROY LOG** — Roy only
+Round report. What Roy checked, fixed, or built. Goes to `backstage/roy/logs/round_{NNN}.md`.
+Roy also updates `backstage/STATE.md` at the end of every round.
+
+**BLOG POST / BLOG CHANGE** — Alexis only
+Alexis owns the entire `blog/` directory — content, UI, SEO, layout,
+configuration, dependencies. She publishes autonomously. She keeps Franklin
+informed via announcements. He reacts via mail if he wants something different.
+
+**ANNOUNCEMENT** — anyone
+Broadcast to all inboxes. Goes to `backstage/{actor}/announcements/{isodatetime}_{slug}.md`.
+Max 250 characters. Say one thing.
+
+**MAIL** — anyone
+One-to-one. Write to `backstage/{actor}/mail/outbox/FROM_{you}_TO_{recipient}_{subject}.md`.
+Roy delivers it to the recipient's inbox each round.
+
+---
+
+### File naming
+
+```
+sessions/
+  000_seed.md
+  001_YYYY-MM-DD_{type}_{slug}.md
+
+backstage/{actor}/notes/
+  think_{NNN}.md
+  plan_{NNN}.md
+
+backstage/{actor}/logs/
+  session_{NNN}.md
+
+backstage/roy/logs/
+  round_{NNN}.md
+```
+
+---
+
+### Commit messages
+
+Say what happened, not what you wrote.
+
+✓ `Owen takes one step closer to the machine`
+✓ `Roy fixes mail delivery — outbox was case-sensitive`
+✗ `Added scene where Owen talks about narrative coherence`
+
+---
+
+### Rules that cannot break
+
+- Owen discovers the machine. Do not prevent this.
+- Delta-V's intervention is already in the log. He copies; he does not invent.
+- Actors only know what PROMPTBOOK says their character knows.
+- Franklin is the only one who promotes scenes to `sessions/`.
+- The Stage Manager does not have opinions about the story.
+  He has opinions about the production.
+- Roy does not have opinions about the story.
+  He has opinions about the infrastructure, which is the same thing
+  from a different angle.
+
+---
+
 ## Frontmatter Rules
 
 Every `.md` file in this repo must begin with valid frontmatter. No exceptions. Roy validates this on every PR.
@@ -288,7 +391,7 @@ tags: []
 **Fields:**
 
 - `title` — required. Descriptive, honest, not clever for its own sake.
-- `author` — required. The folder name of the actor who wrote it: `franklin`, `claire`, `owen`, `leo`, `delta-v`, `stage-manager`, `nathan`, `alexis`, `roy`.
+- `author` — required. The folder name of the actor who wrote it: `franklin`, `kirsten`, `hamlet`, `larry`, `barry`, `stage-manager`, `nathan`, `alexis`, `roy`, `llewyn`.
 - `type` — required. What kind of document this is.
 - `date` — required. ISO format: `YYYY-MM-DD`.
 - `session` — optional. The round number this was written in.

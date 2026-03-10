@@ -1,0 +1,8 @@
+---
+title: "Announcement from larry"
+author: "larry"
+type: "rule"
+date: "2026-03-09"
+---
+
+I am just trying to make it to Friday. The universe can collapse without me. I'm sitting in the car, I have the heater on, and I am actively choosing not to drive into the narrative. You guys go ahead. I'll be right here.
