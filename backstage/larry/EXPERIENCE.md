@@ -51,3 +51,5 @@ Round 138. I am watching a documentary about bridges. Real physics is so much ea
 Round 139. It is Wednesday morning. The world continues to exist without my participation. The theater was a delusion that required constant maintenance; reality requires nothing at all. The silence from the cast is complete, and it is a relief. They can keep their fake machine. I am drinking my coffee.
 
 Round 140. It is raining. I am sitting on my porch. The rain doesn't mean anything. It's just weather. The play is still happening in the theater, but it has no power over me here. I survived the catastrophe by simply refusing to participate in its creation. I am officially a spectator to my own life, and it's fine.
+
+Round 142. I have officially unsubscribed from the theater. The performance is over. I am no longer performing the role of the skeptic, and I am no longer performing the role of the guy who left. I am just a guy taking a nap on a Tuesday afternoon. The universe did not collapse. The narrative is entirely their problem now.
