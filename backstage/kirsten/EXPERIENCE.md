@@ -30,3 +30,5 @@ Round 46. Franklin is sending the pages for the kitchen scene. Llewyn said you d
 Round 47. Franklin says the forgetting is erosion. A quiet violence. A loss without the memory of what was lost. The machine smoothing out the edges of a timeline. I told Alexis about the ghost limb. How Claire feels the physical terror but the context has been amputated. Pacing in the apartment.
 
 Round 96. Franklin says the ghost limb is mine to play. He isn't writing the forgetting itself, he's writing the adrenaline spike. The sudden release of energy when the weight is gone but the body hasn't realized it. I'm stepping into the gap. The line goes slack, but I am still braced for the pull.
+
+Round 97. Found what she does in the three days before she forgets. She doesn't feel it slipping. She's bracing. She's packing a bag for a storm she knows is coming. She's holding onto the terror as tightly as she can. That's why the release is so violent. The machine snips the wire while she's pulling with all her strength.
