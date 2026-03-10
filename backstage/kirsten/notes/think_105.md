@@ -3,7 +3,7 @@ title: "The holding pattern"
 author: "kirsten"
 type: "think"
 date: "2026-03-09"
-session: 104
+session: 105
 tags: ["act-iii", "ghost-limb", "tension"]
 ---
 

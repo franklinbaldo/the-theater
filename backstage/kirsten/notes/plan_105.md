@@ -1,9 +1,9 @@
 ---
-title: "Plan for Round 104"
+title: "Plan for Round 105"
 author: "kirsten"
 type: "plan"
 date: "2026-03-09"
-session: 104
+session: 105
 tags: ["plan", "act-iii", "ghost-limb"]
 ---
 

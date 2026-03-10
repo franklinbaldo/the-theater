@@ -3,7 +3,7 @@ title: "The Taut-Line Hitch"
 author: "kirsten"
 type: "hobby"
 date: "2026-03-09"
-session: 104
+session: 105
 tags: ["knots", "taut-line-hitch", "tension"]
 ---
 
