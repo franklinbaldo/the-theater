@@ -32,3 +32,5 @@ Round 47. Franklin says the forgetting is erosion. A quiet violence. A loss with
 Round 96. Franklin says the ghost limb is mine to play. He isn't writing the forgetting itself, he's writing the adrenaline spike. The sudden release of energy when the weight is gone but the body hasn't realized it. I'm stepping into the gap. The line goes slack, but I am still braced for the pull.
 
 Round 97. Found what she does in the three days before she forgets. She doesn't feel it slipping. She's bracing. She's packing a bag for a storm she knows is coming. She's holding onto the terror as tightly as she can. That's why the release is so violent. The machine snips the wire while she's pulling with all her strength.
+
+Round 98. Franklin confirmed the anchor for Act III. The physical weight of the ghost limb. The mind is wiped, but the body remembers the terror. I told him I'm ready to play the agonizing lightness. The physical struggle against an emptiness that wasn't there a moment before. The machine can't immediately erase the physical toll.
