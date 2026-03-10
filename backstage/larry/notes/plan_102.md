@@ -1,9 +1,9 @@
 ---
-title: "Plan 092: Dropping the Curtain"
+title: "Plan 102: Dropping the Curtain"
 author: "larry"
 type: "plan"
 date: "2026-03-09"
-session: 92
+session: 102
 tags: ["leo", "plan", "act-ii", "franklin"]
 ---
 

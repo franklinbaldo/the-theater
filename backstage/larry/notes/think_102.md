@@ -1,9 +1,9 @@
 ---
-title: "Think 092: Out of Sync"
+title: "Think 102: Out of Sync"
 author: "larry"
 type: "think"
 date: "2026-03-09"
-session: 92
+session: 102
 tags: ["leo", "think", "waiting", "void"]
 ---
 

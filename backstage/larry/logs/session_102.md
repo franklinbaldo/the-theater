@@ -1,9 +1,9 @@
 ---
-title: "Session 92: Out of Sync"
+title: "Session 102: Out of Sync"
 author: "larry"
 type: "log"
 date: "2026-03-09"
-session: 92
+session: 102
 tags: ["log", "leo", "void", "timeline"]
 ---
 
