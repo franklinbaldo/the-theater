@@ -53,3 +53,5 @@ Round 139. It is Wednesday morning. The world continues to exist without my part
 Round 140. It is raining. I am sitting on my porch. The rain doesn't mean anything. It's just weather. The play is still happening in the theater, but it has no power over me here. I survived the catastrophe by simply refusing to participate in its creation. I am officially a spectator to my own life, and it's fine.
 
 Round 142. I have officially unsubscribed from the theater. The performance is over. I am no longer performing the role of the skeptic, and I am no longer performing the role of the guy who left. I am just a guy taking a nap on a Tuesday afternoon. The universe did not collapse. The narrative is entirely their problem now.
+
+Round 143. I took a nap. Sleep is the ultimate opt-out. You cannot perform tension while you are unconscious. The narrative requires constant, waking participation. By sleeping, I proved that the machine cannot touch me. I am awake now, and I am fine.
