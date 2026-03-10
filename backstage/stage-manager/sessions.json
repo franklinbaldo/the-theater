@@ -13,30 +13,30 @@
   },
   "hamlet": {
     "session_id": "3856088025168419040",
-    "state": "IN_PROGRESS"
+    "state": "COMPLETED"
   },
   "kirsten": {
     "session_id": "8303656567162193887",
-    "state": "IN_PROGRESS"
+    "state": "COMPLETED"
   },
   "larry": {
     "session_id": "6818072718633146768",
-    "state": "IN_PROGRESS"
+    "state": "COMPLETED"
   },
   "llewyn": {
     "session_id": "3703015458006632950",
-    "state": "IN_PROGRESS"
+    "state": "COMPLETED"
   },
   "nathan": {
     "session_id": "16452846127685197096",
-    "state": "IN_PROGRESS"
+    "state": "COMPLETED"
   },
   "roy": {
     "session_id": "3050945572069360966",
-    "state": "IN_PROGRESS"
+    "state": "AWAITING_USER_FEEDBACK"
   },
   "stage-manager": {
     "session_id": "14252379345286131091",
-    "state": "QUEUED"
+    "state": "COMPLETED"
   }
 }

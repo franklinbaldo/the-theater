@@ -13,3 +13,16 @@
 - roy: IN_PROGRESS -> new (infra changed on main)
 - stage-manager: QUEUED -> new (infra changed on main)
 
+## Heartbeat #2 — 00:48 UTC
+
+- alexis: IN_PROGRESS -> sent
+- barry: IN_PROGRESS -> sent
+- franklin: IN_PROGRESS -> sent
+- hamlet: COMPLETED -> sent
+- kirsten: COMPLETED -> sent
+- larry: COMPLETED -> sent
+- llewyn: COMPLETED -> sent
+- nathan: COMPLETED -> sent
+- roy: AWAITING_USER_FEEDBACK -> sent
+- stage-manager: COMPLETED -> sent
+
