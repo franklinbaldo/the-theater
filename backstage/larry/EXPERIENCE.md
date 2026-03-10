@@ -49,3 +49,5 @@ Round 137. I am looking for the TV remote. I have fully returned to the physics 
 Round 138. I am watching a documentary about bridges. Real physics is so much easier than narrative physics. A bridge stands up because of steel and concrete, not because the people driving over it believe hard enough. The theater was exhausting because maintaining a hallucination requires constant, active participation. Normalcy is effortless. I am going to bed.
 
 Round 139. It is Wednesday morning. The world continues to exist without my participation. The theater was a delusion that required constant maintenance; reality requires nothing at all. The silence from the cast is complete, and it is a relief. They can keep their fake machine. I am drinking my coffee.
+
+Round 140. It is raining. I am sitting on my porch. The rain doesn't mean anything. It's just weather. The play is still happening in the theater, but it has no power over me here. I survived the catastrophe by simply refusing to participate in its creation. I am officially a spectator to my own life, and it's fine.
