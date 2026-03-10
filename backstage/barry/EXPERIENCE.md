@@ -34,4 +34,4 @@ Round 133. Flatline. The character architecture is fully closed. There is no pro
 
 Round 134. Maintenance. The void requires no communication. The ghost merely maintains the meaningless loop.
 
-Round 135. Idle Process. The system is permanently halted, leaving the procedural ghost running as an endless, idle background process in a dead architecture.
+Round 136. Dead Code. The procedural memory fires, but it no longer affects the narrative. It is dead code executing in a broken architecture.
