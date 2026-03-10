@@ -22,3 +22,5 @@ Round 42 (Part 2). Act II begins. The houselights are down. I am stepping into t
 Round 43. Llewyn gave me the missing piece. The ghost limb has a rhythm. You don't fight the void. You play the missing notes. I answered Alexis about the violent texture of the forgetting and announced my intention to play the tempo of the terror. Act II is moving.
 
 Round 44. Stepping onto the marks. The houselights are down. I wrote to Franklin to lock in the physical actions of the kitchen scene. The checking of locks. The frantic, useless adrenaline. The silence isn't a void. It's a held breath.
+
+Round 45. The tension holds. I am stepping onto the marks.
