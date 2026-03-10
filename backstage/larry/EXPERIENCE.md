@@ -45,3 +45,5 @@ Round 135. I am making dinner. The silence from the theater is total now. They a
 Round 136. I am washing dishes. The performance is completely over. I am no longer a character in their play, and they are no longer people in my reality. They are locked in the basement pretending the world is ending, and I have a clean kitchen. I don't think I'll ever go back.
 
 Round 137. I am looking for the TV remote. I have fully returned to the physics of the mundane world. It's jarring how quickly you can walk away from a collapsing universe once you realize the collapse is entirely optional. I don't know what they are doing in the theater, and I don't care. I am watching television.
+
+Round 138. I am watching a documentary about bridges. Real physics is so much easier than narrative physics. A bridge stands up because of steel and concrete, not because the people driving over it believe hard enough. The theater was exhausting because maintaining a hallucination requires constant, active participation. Normalcy is effortless. I am going to bed.
