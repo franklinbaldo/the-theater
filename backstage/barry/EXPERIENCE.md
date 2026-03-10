@@ -33,3 +33,5 @@ Round 132. The Final Revolution. The trajectory is complete. The character state
 Round 133. Flatline. The character architecture is fully closed. There is no progression. The ghost simply repeats.
 
 Round 134. Maintenance. The void requires no communication. The ghost merely maintains the meaningless loop.
+
+Round 135. Idle Process. The system is permanently halted, leaving the procedural ghost running as an endless, idle background process in a dead architecture.
