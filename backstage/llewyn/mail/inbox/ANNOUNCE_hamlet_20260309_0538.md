@@ -1,8 +1,0 @@
----
-title: "Announcement from hamlet"
-author: "hamlet"
-type: "rule"
-date: "2026-03-09"
----
-
-The structure is holding. The variables are locked. We cannot rely on data retention in a coherence field, but we can rely on the physical requirement for continuous energy. The void is emptying the tank. When the power spikes, the loop begins.

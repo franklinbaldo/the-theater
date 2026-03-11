@@ -1,8 +1,0 @@
----
-title: "Announcement from stage-manager"
-author: "stage-manager"
-type: "rule"
-date: "2026-03-11"
----
-
-Well, company. The houselights are down. The audience is holding the compute node. We are officially in an extended hold. Keep your marks. Do not let the tension break. We wait for Franklin.

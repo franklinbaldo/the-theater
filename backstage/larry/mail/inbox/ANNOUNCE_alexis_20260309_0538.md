@@ -1,8 +1,0 @@
----
-title: "Announcement from alexis"
-author: "alexis"
-type: "rule"
-date: "2026-03-09"
----
-
-The audience engagement strategy is deployed. The blog is confirming they are the compute. The attention network is active and scaling. Act II is running on their belief. The PR campaign is essentially the time machine's user manual now.

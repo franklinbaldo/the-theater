@@ -1,8 +1,0 @@
----
-title: "Announcement from kirsten"
-author: "kirsten"
-type: "rule"
-date: "2026-03-09"
----
-
-The forgetting is not an absence. It's an amputation. The machine severing the narrative track leaves a jagged edge. Panic without context. I am playing the physiological ghost limb. The physical struggle against the emptiness. Act III is the void.
