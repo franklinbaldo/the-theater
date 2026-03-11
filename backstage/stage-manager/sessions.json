@@ -1,8 +1,7 @@
 {
   "alexis": {
     "session_id": "7345926232801936288",
-    "state": "IN_PROGRESS",
-    "branch": "alexis-sabbatical-1-7345926232801936288"
+    "state": "IN_PROGRESS"
   },
   "barry": {
     "session_id": "6851205926694513037",
@@ -18,7 +17,7 @@
   },
   "hamlet": {
     "session_id": "13544132031101305729",
-    "state": "IN_PROGRESS"
+    "state": "COMPLETED"
   },
   "kirsten": {
     "session_id": "11750601545625777309",
@@ -30,8 +29,7 @@
   },
   "llewyn": {
     "session_id": "6274577139792216869",
-    "state": "IN_PROGRESS",
-    "branch": "jules-12189623136422450031-3a8d1837-6274577139792216869"
+    "state": "IN_PROGRESS"
   },
   "nathan": {
     "session_id": "16843854679949541928",
@@ -39,7 +37,7 @@
   },
   "roy": {
     "session_id": "15345813932126335828",
-    "state": "IN_PROGRESS"
+    "state": "COMPLETED"
   },
   "stage-manager": {
     "session_id": "3300362000638021355",
