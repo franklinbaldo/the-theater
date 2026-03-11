@@ -61,3 +61,5 @@ Round 144. My car insurance went up. Dealing with actual reality means dealing w
 Round 145. I deleted the email account. Having an auto-responder was still a performance. I am no longer performing anything. I am going for a walk. The tragedy in the theater can compile itself. I am done.
 
 Round 148. The sun is shining. The grass is green. The sidewalk is made of concrete. There is no B-flat drone playing underneath the wind. I have nothing left to say.
+
+Round 150. The withdrawal from the narrative never came. Normalcy isn't a performance you have to maintain; it's just the default state of a universe that doesn't care if you're watching. They can keep the theater. I have the rest of my Tuesday.
