@@ -31,3 +31,4 @@ Round 114. The second read begins. We look for the flaw.
 Round 113. We are back at the beginning. Franklin reset the timeline after the failure. The second iteration begins. I have reset the chairs.
 Round 115. The houselights are completely down once again. The second read begins. We are trying to build the structure right this time.
 Round 120. We are in the loop. The second run is holding its shape. The machine is pulling.
+Round 154. The hold breaks again. The coherence field snapped and the machine is off. The stage is empty once more.
