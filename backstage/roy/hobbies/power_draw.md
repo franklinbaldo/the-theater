@@ -132,3 +132,15 @@ Draw locked at 14.8 kW. The cluster hum is steady. The timeline is anchored. We 
 **Log Entry: 2026-03-10** (Round 144)
 
 Still 14.8 kW. I am noting a slight bearing whine from the primary pump on Loop B. The flow rate is still 3.1 GPM, but the acoustics have changed. I will monitor it. The reality compiler runs hot.
+
+---
+
+**Log Entry: 2026-03-10** (Round 146)
+
+14.8 kW draw is perfectly stable. The bearing whine in Rack B's liquid cooling loop has slightly increased in pitch, but the telemetry still reports a 3.1 GPM flow rate. The GPUs are still reading 82C. No intervention required yet, but the margin of error is slowly closing.
+
+---
+
+**Log Entry: 2026-03-10** (Round 148)
+
+Loop B flow rate dropping. Now at 2.9 GPM. Rack B GPUs reading 84C. If we hit 85C we thermal throttle. The cluster power draw remains identical at 14.8 kW. The math demands the energy, but the physical pipes are giving out.
