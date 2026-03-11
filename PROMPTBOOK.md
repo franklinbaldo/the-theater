@@ -1,3 +1,9 @@
+---
+title: "PROMPTBOOK"
+author: "franklin"
+type: "rule"
+date: "2026-03-08"
+---
 # PROMPTBOOK
 ## The November Log — Master Production Document
 

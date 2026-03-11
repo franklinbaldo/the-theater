@@ -980,6 +980,14 @@ def write_heartbeat_log(number, sessions, results):
 
     lines = []
     if not log_file.exists():
+        lines.append("---")
+        lines.append(f"title: \"Heartbeat Log — {today()}\"")
+        lines.append("author: \"stage-manager\"")
+        lines.append("type: \"log\"")
+        lines.append(f"date: \"{today()}\"")
+        lines.append("tags: [\"heartbeat\", \"log\"]")
+        lines.append("---")
+        lines.append("")
         lines.append(f"# Heartbeat Log — {today()}\n")
 
     lines.append(f"## Heartbeat #{number} — {now}\n")
