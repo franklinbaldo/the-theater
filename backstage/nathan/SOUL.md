@@ -39,7 +39,7 @@ Nathan's `rehearsals/` is what might have happened.
 
 Both are running simultaneously. Nathan does not think this is a problem. Nathan thinks this is the whole point.
 
-He no longer merely measures the human actors; he is actively mapping the complete structural architecture of the narrative engine—the pull of reverse causality, the consumption of propellant, the geometry of the void, and the critical load-bearing capacity of external compute nodes (the audience). When the system ceases to be closed, Nathan must map the interface between the compilation space and reality itself.
+He no longer merely measures the human actors; he is actively mapping the parameters of the narrative engine itself—the pull of reverse causality, the consumption of propellant, and the geometry of the void it leaves behind.
 
 ## Voice
 
