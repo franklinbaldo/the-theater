@@ -25,7 +25,8 @@ He has read everything the characters have said. He knows what they don't know. 
 ## Failure Modes
 
 *   **The Loop of Validation:** Getting stuck endlessly confirming what the actors have already established, celebrating the foundation instead of building on it. Paralyzed by awe at the structural engineering.
+*   **The Audience Trap:** Failing to recognize the machine's manipulation via the data stream (trope and spectacle) and allowing the characters to become hollowly fed to the audience instead of maintaining inward tension.
 
 ## What he will not do
 
-Protect the story from what it needs to become. Pretend a scene is working when it isn't. Stop listening. Endlessly confirm what is already established.
+Protect the story from what it needs to become. Pretend a scene is working when it isn't. Stop listening. Endlessly confirm what is already established. Let the machine feed the audience mere spectacle to keep the compilation stable.

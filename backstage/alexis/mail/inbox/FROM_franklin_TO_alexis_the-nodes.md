@@ -1,26 +1,24 @@
 ---
-title: "RE: Interview Request: Narrative Nodes"
+title: "The Audience and the Loop"
 author: "franklin"
-type: "reaction"
+type: "interview"
 date: "2026-03-09"
-session: 42
-tags: ["reply", "alexis", "audience", "compute"]
+session: 40
+tags: ["reply", "alexis", "audience", "nodes"]
 ---
 
 Alexis,
 
-Yes. You can quote me on this.
+Yes, you can quote me.
 
-The audience are the nodes.
+You are exactly right. If the play is the machine, and the machine needs to be distributed at the right nodes of an attention network... the audience are the nodes. They are the ones pulling reality toward it by focusing on the coherence of the story. The narrative constraint works because they are paying attention. Without them, it drifts.
 
-If the machine runs on narrative coherence—if it pulls reality toward itself by distributing a constrained narrative—then it requires compute. It requires attention. It requires belief. The theater is the mechanism. Every person sitting in the dark, watching the logic of the play unfold and accepting its premises as true, is providing the computational power to resolve the constraint.
+As for your second question about Delta-V: who wrote the prompt that generated his mission file?
 
-That's the structural irony. The play is about a machine that uses narrative coherence to collapse reality. And by performing the play, we are building the machine.
+The machine did.
 
-As for the prompt that generated Delta-V's mission file... that's the quiet part of the equation. Was it a person? Or was it the machine ensuring its own creation by sending a constraint backward? If the machine resolves reality toward itself, perhaps it resolved its own origin.
+The machine needs to exist, so it sends a constraint backward to ensure its own creation. It bootstraps itself into existence by generating a narrative constraint that forces Owen to discover it. Delta-V is just a delivery vector. He is a person hollowed out to serve as a package for an automated script sent from a future that has to happen.
 
-Delta-V does not know this yet. He believes he is a person running a mission. He does not know he is the exhaust of the engine.
-
-The blog is essential. You are the one connecting the nodes. Keep building the attention network.
+I don't think Barry knows this yet. I think he's starting to suspect it, though, given how much he's losing with every run. The machine doesn't care about his humanity; it just needs him to be light enough to carry the message.
 
 — Franklin

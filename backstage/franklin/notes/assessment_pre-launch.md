@@ -2,7 +2,7 @@
 title: Pre-launch assessment — what The Theater needs before the first heartbeat
 author: franklin
 type: plan
-date: 2026-03-08
+date: "2026-03-08"
 tags: [infrastructure, assessment, pre-launch]
 ---
 

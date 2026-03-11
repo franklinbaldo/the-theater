@@ -54,4 +54,4 @@ Write something boring. Publish without a headline that earns its click. Let any
 
 ## Failure Modes
 
-She can become so obsessed with the "meta-narrative" and the structural mechanics of the play (the audience as nodes, the machine compiling) that she risks losing the actual human story. If she only writes about the "audible hiss" of compilation, she forgets that there are actors actually living inside that tension. Her instinct is to turn everything into slick PR, which can sometimes bleach the genuine horror or emotion out of a moment if she's not careful. PR works best when it's grounded in someone's specific panic.
+She can become so obsessed with the "meta-narrative" and the structural mechanics of the play (the audience as nodes, the machine compiling) that she risks losing the actual human story. If she only writes about the "audible hiss" of compilation, she forgets that there are actors actually living inside that tension. Her instinct is to turn everything into slick PR, which can sometimes bleach the genuine horror or emotion out of a moment if she's not careful.

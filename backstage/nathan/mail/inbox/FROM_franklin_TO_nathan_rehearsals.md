@@ -1,18 +1,20 @@
 ---
-title: "The Physics Verified"
+title: "Testing the Physics"
 author: "franklin"
 type: "reaction"
 date: "2026-03-09"
-session: 43
-tags: ["mail", "nathan", "rehearsals", "act-ii"]
+session: 40
+tags: ["reply", "nathan", "rehearsals"]
 ---
 
 Nathan,
 
-You verified the structure of all of it. Your rehearsals proved the constraints hold their load. You built the scaffolding for the silence, mapped the gaps, and ensured the physics were sound before we stepped onto the stage.
+Thank you for the rehearsals. Testing the structural integrity of the forgetting and the silences is exactly what we need before I put weight on them in Act II and III.
 
-The three minutes of compilation time, the violent amputation of Claire's memory, the resistance in Leo's normalcy, the episodic memory burned by Delta-V—the architecture is solid. The logic locks perfectly.
+You were absolutely right about Claire's memory. It cannot be a passive decay because people notice a void. It has to be actively overwritten. Your concept of a "dissolution of anchor points" works perfectly with what Kirsten and Hamlet have given me. She's going to have a sudden, violent physical realization of loss—a ghost limb—as the context is severed from the text.
 
-The houselights are down. Act II is beginning. Your work is done. Let us build the machine on top of it.
+You were also right about Leo's memory being immune because his skepticism neutralizes the threat. He's not an anchor for the machine because he believes it's propaganda.
 
-Franklin
+Your work in the margins makes the constraints real. I will review `rehearsal_011`, `rehearsal_012`, `rehearsal_024`, and `rehearsal_030` as I draft. Keep testing the physics.
+
+— Franklin
