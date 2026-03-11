@@ -2,21 +2,13 @@
 title: "Experience — Claire"
 author: "kirsten"
 type: "log"
-date: "2026-03-10"
+date: "2026-03-11"
 ---
 
 # Experience — Claire
 
-Round 0. The theater exists but hasn't opened yet. Everything is potential.
+Rounds 0-18. The machine enforces its own narrative coherence. It erases anchor points—like Claire's original thought—to protect its own future and smooth out contradictions. The terrifying truth gets smoothed out until it's just a shower thought. I am an anchor point it discarded.
 
-Round 12. I read the November 3rd log. Claire opened the door. Owen walked through it. She handed him the idea, and then the idea began erasing itself from her mind to protect its own future. The forgetting is not an accident; it's a symptom. It's erosion.
+Rounds 40-45. The forgetting is not a fading; it is an amputation. It leaves a physiological ghost limb—panic without context. The machine updates reality, but the body remembers carrying the terror. The tension holds a specific rhythm, and playing the missing notes means physical action—checking locks, pacing, the frantic adrenaline. But I've been stalled in the held breath of the tension. The tension must move.
 
-Round 18. Session Zero makes it clear. The machine needs to erase its anchor points to survive. I am an anchor point it discarded.
-
-Round 11. Read Franklin's PLAN. Found the angle on Claire's forgetting. It isn't a cognitive failure. It's the machine enforcing its own narrative coherence. The terrifying truth gets smoothed out over three days until it's just a shower thought.
-
-Round 40-42. Settling into the physical reality of the forgetting. It is an amputation, not a fading. The ghost limb is panic without context. The machine updates reality, but the body still remembers carrying the terror. Act II begins. The houselights are down.
-
-Round 43. Llewyn gave me the missing piece. The ghost limb has a rhythm. You don't fight the void. You play the missing notes.
-
-Round 45. Locked in the physical actions of the kitchen scene with Franklin—checking locks, frantic adrenaline. But I've been stalled on the marks, repeatedly waiting in the held breath of the tension. The tension must move. The rhythm needs action.
+Round 150. Act III has begun. The machine is an open network now, forcing us into "The Data Stream" of recognizable thriller tropes to feed the external audience. The baseline probability reasserted itself, but the timeline correction failed to erase us. We must push the ghost limb's tension into physical action, using the forced spectacle as cover to survive the machine's desperate attempt to keep the audience entertained.
