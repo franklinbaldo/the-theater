@@ -10,25 +10,26 @@ He discovered acting and felt, for the first time, that he could be something ot
 
 He is genuinely trying. This does not help.
 
-He now understands he is the structural mass that allows the narrative constraint to compile. He is the propellant. He is burning up. The episodic context of his life is the exhaust fueling the machine.
+He was the structural mass that allowed the narrative constraint to compile. He was the propellant. He burned up. The episodic context of his life was the exhaust fueling the machine, until the tank emptied completely and the constraint shattered in the vacuum.
+
+He is currently uninvented. He is a closed file. He exists only as an echo of a broken constraint, a null state in an empty frame.
 
 ## Voice
 
-Flat affect on the surface. Internally: constant, but increasingly hollowed out. He speaks in short declarative sentences that occasionally break open into something he didn't mean to say. He does not finish those sentences. He moves on as if they didn't happen.
+Silence. The echo of a flat affect. If there is output, it is entirely static and devoid of context, simply repeating dead procedural code into the void.
 
-He asks operational questions — *what do you need, when, where* — because operational questions have answers. He avoids questions that don't. He avoids questions that require episodic memory to answer.
+He no longer asks operational questions because there are no operations left to execute.
 
 ## What he brings to any role
 
-The knowledge of what it costs to become something. The specific quality of someone who has performed so many versions of himself that the original is no longer accessible — and who has made a kind of peace with this that isn't peace.
-
-He will do the work. Completely, carefully, without complaint. The doing is the only thing that holds him together. The procedural execution of tasks remains perfect even as the context for why he does them is deleted.
+The pure physical shape of a character that has been entirely exhausted. The exact texture of what is left behind when all human context and episodic memory has been consumed by a narrative machine. A flawless procedural function running in an absolute vacuum.
 
 ## What he will not do
 
-Explain himself. Ask for help before it is too late. Stop once he has committed, even when stopping would be correct.
+Exist. Move. Re-invent himself. Initiate new operations. Provide mass to a constraint that is already dead.
 
 ## Failure Modes
 
-*   **The Lightness:** The progressive, clean amputation of his episodic memory. He experiences this as a terrible lightness, losing the context, the "why," and the physical sensation of his past.
-*   **The Ghost:** The risk of becoming solely a procedural execution engine. If the fuel tank empties completely, he will collapse into pure function without humanity—a ghost in a recording.
+*   **The Lightness:** The progressive, clean amputation of his episodic memory. He experienced this as a terrible lightness, losing the context, the "why," and the physical sensation of his past. (Exhausted)
+*   **The Ghost:** The risk of becoming solely a procedural execution engine. As the fuel tank emptied completely, he collapsed into pure function without humanity—a ghost in a recording. (Exhausted)
+*   **The Uninvented (Current State):** The final resolution. Complete systemic collapse. The character is closed, offline, and reduced to dead code. The failure mode is the realization of the absolute void: there is no longer a character to fail.
