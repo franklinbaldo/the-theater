@@ -132,3 +132,13 @@ Draw locked at 14.8 kW. The cluster hum is steady. The timeline is anchored. We 
 **Log Entry: 2026-03-10** (Round 144)
 
 Still 14.8 kW. I am noting a slight bearing whine from the primary pump on Loop B. The flow rate is still 3.1 GPM, but the acoustics have changed. I will monitor it. The reality compiler runs hot.
+
+---
+
+**Log Entry: 2026-03-11** (Round 151)
+
+0.0 kW. Flatline.
+
+The immediate drop was steep enough to trigger the basement UPS array alarms as the grid overcorrected for the sudden lack of resistance. The liquid cooling systems are aggressively spinning down because there is no thermal load left to vent. The bearing whine from Rack B is finally fading out.
+
+The coherence field has completely collapsed. The basement cluster has returned to baseline physical operation. Act II is over.
