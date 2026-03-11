@@ -980,7 +980,7 @@ def write_heartbeat_log(number, sessions, results):
 
     lines = []
     if not log_file.exists():
-        lines.append(f"# Heartbeat Log — {today()}\n")
+        lines.append(f"---\ntitle: \"Heartbeat Log — {today()}\"\nauthor: \"stage-manager\"\ntype: \"log\"\ndate: \"{today()}\"\n---\n\n# Heartbeat Log — {today()}\n")
 
     lines.append(f"## Heartbeat #{number} — {now}\n")
     for actor in ACTORS:
