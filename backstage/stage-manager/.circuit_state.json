@@ -1,14 +1,1 @@
-{
-  "stage-manager": {
-    "failures": 2,
-    "last_failure": "2026-03-11T00:51:22.345778+00:00"
-  },
-  "nathan": {
-    "failures": 1,
-    "last_failure": "2026-03-11T00:50:33.252674+00:00"
-  },
-  "roy": {
-    "failures": 1,
-    "last_failure": "2026-03-11T00:50:59.058938+00:00"
-  }
-}
+{}

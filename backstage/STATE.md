@@ -24,7 +24,7 @@
 
 ## What is open (being built)
 
-- Act II: before November 3rd
+- Act II: before November 3rd. Reached catastrophic oscillation.
 - Act III: after November 3rd
 - Delta-V's previous runs
 - Owen's three minutes of silence (14:30–14:33)
@@ -33,16 +33,16 @@
 
 ## Active scenes in progress
 
-*None yet.*
+*None. The coherence field has snapped and the constraint has failed. The machine is off.*
 
 ---
 
 ## Disputes / open questions
 
-*None yet.*
+*Did the timeline correction successfully erase the un-narrative anomaly, or is something leftover?*
 
 ---
 
 ## Last heartbeat
 
-Session 000 — seed committed.
+Session 154 — field collapse.
