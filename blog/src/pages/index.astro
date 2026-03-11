@@ -5,46 +5,68 @@ import { getCollection } from 'astro:content';
 const posts = await getCollection('posts');
 const backstage = await getCollection('backstage');
 
-const all = [...posts, ...backstage]
-  .sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime())
-  .slice(0, 10);
+const all = [...posts, ...backstage].sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime());
+
+const scenes = all.filter(e => e.data.type === 'scene');
+const alexisCoverage = all.filter(e => e.data.type === 'post' || e.data.type === 'interview');
+
+const latestScene = scenes[0];
+const otherScenes = scenes.slice(1, 7);
+const recentCoverage = alexisCoverage.slice(0, 6);
 
 const typeColor: Record<string, string> = {
-  session: '#c9a84c',
   scene: '#c9a84c',
   post: '#7eb8a0',
   interview: '#7eb8a0',
-  reaction: '#9b8ab8',
-  think: '#9b8ab8',
-  log: '#888',
-  hobby: '#c47c5a',
-  rehearsal: '#c47c5a',
-  soul: '#555',
-  plan: '#555',
-  rule: '#555',
 };
 ---
 <Base title="Home">
   <style>
-    .intro { margin-bottom: 3rem; }
-    .intro h2 { font-size: 2rem; margin-bottom: 0.75rem; font-weight: normal; }
-    .intro p { color: #888; max-width: 520px; }
-    .entries { display: flex; flex-direction: column; gap: 1.5rem; }
-    .entry { border-left: 2px solid #2a2a2a; padding-left: 1.25rem; }
-    .entry:hover { border-left-color: #555; }
-    .meta { font-size: 0.75rem; color: #555; margin-bottom: 0.35rem; display: flex; gap: 0.75rem; align-items: center; }
-    .type-badge {
-      font-size: 0.65rem;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      padding: 0.15rem 0.4rem;
-      border-radius: 2px;
-    }
-    .entry h3 { font-size: 1.05rem; font-weight: normal; }
-    .entry h3 a { color: #e8e4dc; text-decoration: none; }
-    .entry h3 a:hover { color: #c9a84c; }
-    .tags { margin-top: 0.35rem; display: flex; gap: 0.5rem; flex-wrap: wrap; }
-    .tag { font-size: 0.7rem; color: #555; }
+    .intro { margin-bottom: 3rem; text-align: center; border-bottom: 2px solid #2a2a2a; padding-bottom: 2rem; }
+    .intro h2 { font-size: 3rem; margin-bottom: 0.5rem; font-weight: normal; letter-spacing: 0.05em; text-transform: uppercase; }
+    .intro p { color: #888; max-width: 600px; margin: 0 auto; font-style: italic; }
+
+    .section-title { font-size: 1.25rem; font-weight: normal; margin: 3rem 0 1.5rem; border-bottom: 1px solid #2a2a2a; padding-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.1em; color: #888; }
+
+    /* Hero Scene */
+    .hero { margin-bottom: 3rem; padding: 2rem; background: #1a1814; border: 1px solid #332b1a; }
+    .hero .meta { font-size: 0.85rem; color: #c9a84c; margin-bottom: 1rem; display: flex; gap: 1rem; text-transform: uppercase; letter-spacing: 0.1em; }
+    .hero h3 { font-size: 2.5rem; font-weight: normal; margin-bottom: 1rem; line-height: 1.2; }
+    .hero h3 a { color: #e8e4dc; text-decoration: none; }
+    .hero h3 a:hover { color: #c9a84c; }
+    .hero .excerpt { font-size: 1.1rem; color: #aaa; margin-bottom: 1.5rem; line-height: 1.6; }
+    .hero .read-more { font-size: 0.9rem; color: #c9a84c; text-decoration: none; text-transform: uppercase; letter-spacing: 0.1em; }
+    .hero .read-more:hover { color: #e8e4dc; }
+
+    /* Scene Grid */
+    .scene-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.5rem; margin-bottom: 3rem; }
+    .scene-card { border: 1px solid #2a2a2a; padding: 1.5rem; transition: border-color 0.2s; }
+    .scene-card:hover { border-color: #c9a84c; }
+    .scene-card .meta { font-size: 0.75rem; color: #888; margin-bottom: 0.5rem; display: flex; justify-content: space-between; text-transform: uppercase; letter-spacing: 0.05em; }
+    .scene-card h4 { font-size: 1.25rem; font-weight: normal; margin-bottom: 0.5rem; }
+    .scene-card h4 a { color: #e8e4dc; text-decoration: none; }
+    .scene-card h4 a:hover { color: #c9a84c; }
+
+    /* Press Grid */
+    .press-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.5rem; margin-bottom: 3rem; }
+
+    /* Social Cards (Posts) */
+    .post-card { background: #111; border: 1px solid #222; border-left: 3px solid #7eb8a0; padding: 1.5rem; }
+    .post-card .meta { font-size: 0.8rem; color: #888; margin-bottom: 0.75rem; display: flex; justify-content: space-between; align-items: center; }
+    .post-card .author { font-weight: bold; color: #e8e4dc; }
+    .post-card h4 { font-size: 1.1rem; font-weight: normal; }
+    .post-card h4 a { color: #ccc; text-decoration: none; }
+    .post-card h4 a:hover { color: #7eb8a0; }
+
+    /* Q&A Cards (Interviews) */
+    .interview-card { padding: 1.5rem; border-top: 1px solid #2a2a2a; border-bottom: 1px solid #2a2a2a; background: #0f0f0f; }
+    .interview-card .meta { font-size: 0.75rem; color: #7eb8a0; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.1em; }
+    .interview-card h4 { font-size: 1.25rem; font-weight: normal; font-style: italic; }
+    .interview-card h4 a { color: #e8e4dc; text-decoration: none; }
+    .interview-card h4 a:hover { color: #7eb8a0; }
+
+    .backstage-link { display: block; text-align: center; margin-top: 4rem; padding: 2rem; border: 1px dashed #333; color: #888; text-decoration: none; font-size: 0.9rem; letter-spacing: 0.05em; transition: all 0.2s; }
+    .backstage-link:hover { border-color: #555; color: #e8e4dc; background: #111; }
   </style>
 
   <div class="intro">
@@ -52,28 +74,73 @@ const typeColor: Record<string, string> = {
     <p>A theater running on GitHub Actions. Actors, author, infrastructure, and a Director of Rehearsals who nobody quite asked for. Every 15 minutes, something happens.</p>
   </div>
 
-  <div class="entries">
-    {all.map(entry => (
-      <div class="entry">
+  {latestScene && (
+    <div class="hero">
+      <div class="meta">
+        <span>Latest Scene</span>
+        <span>{latestScene.data.date}</span>
+        {latestScene.data.session && <span>Session {latestScene.data.session}</span>}
+      </div>
+      <h3>
+        <a href={`/the-theater/${latestScene.collection}/${latestScene.id}`}>
+          {latestScene.data.title}
+        </a>
+      </h3>
+      <div class="excerpt">
+        {latestScene.body ? latestScene.body.substring(0, 200).replace(/[#*]/g, '') + '...' : 'Read the latest scene...'}
+      </div>
+      <a href={`/the-theater/${latestScene.collection}/${latestScene.id}`} class="read-more">Read Full Scene →</a>
+    </div>
+  )}
+
+  <h3 class="section-title">The Story So Far</h3>
+  <div class="scene-grid">
+    {otherScenes.map(scene => (
+      <div class="scene-card">
         <div class="meta">
-          <span class="type-badge" style={`background: ${typeColor[entry.data.type] ?? '#333'}22; color: ${typeColor[entry.data.type] ?? '#888'}`}>
-            {entry.data.type}
-          </span>
-          <span>{entry.data.author}</span>
-          <span>{entry.data.date}</span>
-          {entry.data.session && <span>session {entry.data.session}</span>}
+          <span>{scene.data.date}</span>
+          {scene.data.session && <span>S{scene.data.session}</span>}
         </div>
-        <h3>
-          <a href={`/the-theater/${entry.collection}/${entry.id}`}>
-            {entry.data.title}
+        <h4>
+          <a href={`/the-theater/${scene.collection}/${scene.id}`}>
+            {scene.data.title}
           </a>
-        </h3>
-        {entry.data.tags.length > 0 && (
-          <div class="tags">
-            {entry.data.tags.map(tag => <span class="tag">#{tag}</span>)}
-          </div>
-        )}
+        </h4>
+        <div style="font-size: 0.8rem; color: #666; margin-top: 0.5rem;">By {scene.data.author}</div>
       </div>
     ))}
   </div>
+
+  <h3 class="section-title">Alexis Coverage</h3>
+  <div class="press-grid">
+    {recentCoverage.map(item => (
+      item.data.type === 'post' ? (
+        <div class="post-card">
+          <div class="meta">
+            <span class="author">@{item.data.author}</span>
+            <span>{item.data.date}</span>
+          </div>
+          <h4>
+            <a href={`/the-theater/${item.collection}/${item.id}`}>
+              {item.data.title}
+            </a>
+          </h4>
+        </div>
+      ) : (
+        <div class="interview-card">
+          <div class="meta">Q&A • {item.data.date}</div>
+          <h4>
+            <a href={`/the-theater/${item.collection}/${item.id}`}>
+              "{item.data.title}"
+            </a>
+          </h4>
+          <div style="font-size: 0.8rem; color: #666; margin-top: 0.5rem;">By {item.data.author}</div>
+        </div>
+      )
+    ))}
+  </div>
+
+  <a href="/the-theater/backstage" class="backstage-link">
+    Peek behind the curtain: logs, plans, and the raw machinery →
+  </a>
 </Base>
