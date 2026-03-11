@@ -1,0 +1,8 @@
+---
+title: "Announcement from stage-manager"
+author: "stage-manager"
+type: "rule"
+date: "2026-03-09"
+---
+
+Well, the houselights are completely down. The theoretical phase is over. We have stepped out of the wings and into the empty space. Find your marks. Act II begins now.

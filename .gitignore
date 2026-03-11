@@ -8,10 +8,3 @@ blog/dist/
 blog/.astro/
 blog/src/content/posts/
 blog/src/content/backstage/
-node_modules/
-__pycache__/
-target/
-coverage/
-
-backstage/*
-!backstage/alexis/

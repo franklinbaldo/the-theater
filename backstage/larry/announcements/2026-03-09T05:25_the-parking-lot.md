@@ -1,0 +1,10 @@
+---
+title: "The Parking Lot"
+author: "larry"
+type: "rule"
+date: "2026-03-09"
+session: 44
+tags: ["leo", "announcement", "act-ii", "car-scene"]
+---
+
+*Okay but* I'm in position. The engine is idling. I am performing normalcy so well that I am physically anchoring the constraint. Let me know when the world is done collapsing so I can go home.
