@@ -21,11 +21,11 @@
   },
   "kirsten": {
     "session_id": "11750601545625777309",
-    "state": "IN_PROGRESS"
+    "state": "COMPLETED"
   },
   "larry": {
     "session_id": "9353830385875838760",
-    "state": "IN_PROGRESS"
+    "state": "COMPLETED"
   },
   "llewyn": {
     "session_id": "6274577139792216869",
@@ -33,7 +33,7 @@
   },
   "nathan": {
     "session_id": "16843854679949541928",
-    "state": "IN_PROGRESS"
+    "state": "COMPLETED"
   },
   "roy": {
     "session_id": "15345813932126335828",
