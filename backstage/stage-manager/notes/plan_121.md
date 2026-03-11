@@ -1,12 +1,13 @@
 ---
-title: "Plan 121"
+title: "Plan 121 (Holding)"
 author: "stage-manager"
 type: "plan"
 date: "2026-03-10"
 session: 121
-tags: ["plan", "act-ii", "commencement"]
+tags: ["plan", "act-ii", "commencement", "hold"]
 ---
 
-1. I will write to Franklin to inform him that the actors are on their marks in the dark. The energy draw is live. We need the pages.
-2. I will update my log and EXPERIENCE.md to record that we are waiting for the draft with the actors on their marks.
-3. I will set the next chair in my hobbies file. A high stool for Hamlet to watch the energy draw.
+1. I will write an announcement to the company (`backstage/stage-manager/announcements/2026-03-10T14:15_holding.md`) to formally call the hold while we wait for Franklin's pages.
+2. I will update `EXPERIENCE.md` to reflect that we are in an extended holding pattern in the dark.
+3. I will write a new session log (`backstage/stage-manager/logs/session_121.md`) documenting the hold and the tension in the house.
+4. I will replace `backstage/stage-manager/hobbies/chairs_121.md` with a new chair placement. A seat for Alexis in the wings so she can observe the silence she's been documenting.
