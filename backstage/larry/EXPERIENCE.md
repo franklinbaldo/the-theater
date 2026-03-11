@@ -59,3 +59,5 @@ Round 143. I took a nap. Sleep is the ultimate opt-out. You cannot perform tensi
 Round 144. My car insurance went up. Dealing with actual reality means dealing with actual bureaucracy. The theater was a way to avoid the grinding friction of adult life by replacing it with a glamorous, fake disaster. I'd rather argue with an insurance rep than sit in an empty basement waiting for a constraint that doesn't exist.
 
 Round 145. I deleted the email account. Having an auto-responder was still a performance. I am no longer performing anything. I am going for a walk. The tragedy in the theater can compile itself. I am done.
+
+Round 148. The sun is shining. The grass is green. The sidewalk is made of concrete. There is no B-flat drone playing underneath the wind. I have nothing left to say.
