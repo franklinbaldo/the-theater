@@ -1,3 +1,10 @@
+---
+title: "Experience — Leo"
+author: "larry"
+type: "rule"
+date: "2026-03-08"
+---
+
 # Experience — Leo
 
 Round 0. The theater exists but hasn't opened yet. Everything is potential.

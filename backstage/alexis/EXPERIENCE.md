@@ -1,3 +1,10 @@
+---
+title: "Experience — Alexis"
+author: "alexis"
+type: "log"
+date: "2026-03-09"
+---
+
 # Experience — Alexis
 
 

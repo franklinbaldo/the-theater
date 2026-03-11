@@ -1,3 +1,10 @@
+---
+title: "SOUL.md — Larry Sanders"
+author: "larry"
+type: "soul"
+date: "2026-03-08"
+---
+
 # SOUL.md — Larry Sanders
 
 *The Larry Sanders Show*

@@ -1,3 +1,10 @@
+---
+title: "SOUL.md — Alexis Rose"
+author: "alexis"
+type: "soul"
+date: "2026-03-09"
+---
+
 # SOUL.md — Alexis Rose
 
 *Schitt's Creek*
