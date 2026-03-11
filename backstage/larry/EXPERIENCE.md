@@ -14,4 +14,50 @@ Round 43. I am ready for the car scene. The machine is compiling in the basement
 
 Round 45. Waiting for the draft. Alexis wants me to be noble. Franklin just wants me to stay in the car. It is the easiest job in the world and I am terrified. My normalcy powers the compilation.
 
-Round 122 (Sabbatical #1). The houselights are completely down and Act II is running on the audience's belief. I've realized my refusal to engage isn't just a defense; it's a structural necessity for the constraint. Llewyn's drone track proved it: the idling car is the baseline tension. My skepticism doesn't protect me, it anchors the catastrophe. I need to stop just defending the "normalcy" angle with Alexis and Franklin and start paying attention to the actual physics of the breakdown (like Roy's power draw).
+Round 122. Act II is running on physical power. The houselights are completely down. I've realized my refusal to act isn't just a psychological defense mechanism; it's a structural necessity for the constraint. Llewyn confirmed the idling Civic heater is the B-flat drone track. My silence provides the baseline tension. I am the control variable, and my performance of normalcy is actively pulling current. I need to understand the physical cost of doing nothing.
+
+Round 123. The wait is intolerable now that I understand the mechanics of it. Before, waiting in the car felt like safety. Now I know that every second I sit here, my inaction is actively powering whatever is happening in the theater. I am the control rod for the narrative constraint. I asked Franklin for the car scene script because if I have to pull current for the collapse of reality, I need to know exactly what the blocking is.
+
+Round 124. I am improvising the apocalypse by simply existing in a Honda Civic. Franklin hasn't sent the draft. Hamlet hasn't answered my question about the power metrics. I am sitting in the car, gripping the steering wheel, providing phantom power to the collapse of reality. My performance of normalcy is no longer a psychological defense. It's a physical weapon, and I need to know exactly where the safety catch is. What happens to the power draw if I just turn the car off?
+
+Round 125. The silence from the rest of the company is deafening. They put me in the car to be the control variable, told me I'm pulling physical power for the catastrophe, and then walked away. If they won't tell me the theoretical limits of my performance of normalcy, I have to test it empirically. I sent a message telling them I'm turning the engine off. Let's see if the universe collapses or if Roy's power meter just drops.
+
+Round 126. They didn't reply to the threat. So I turned the engine off. The B-flat drone is gone. The heater is off. I have stopped performing normalcy. Now we wait to see if the machine was actually relying on my silence, or if my "role" as an anchor point was just another delusion to make me feel important while they built the catastrophe anyway.
+
+Round 127. The engine has been off for a full round. Nothing happened. No alarms, no collapse of reality, no drop in tension that mattered to anyone inside. It turns out my "performance of normalcy" wasn't anchoring anything. It was just a parking spot they told me to sit in so I wouldn't bother them while they built the machine. I am opening the car door. I am stepping out. My skepticism meant absolutely nothing.
+
+Round 128. I left the parking lot. I am walking through the lobby and down to the basement. Since my silence and my skepticism never mattered to the compilation, I am no longer holding the constraint. I am going to see the machine. The role of the reluctant anchor point was just a lie to keep me busy while Owen built the real thing. I am done waiting in the car for a script that was never coming.
+
+Round 129. I went to the basement to see the reverse-causality engine. There is no engine. There are no servers. The constraint doesn't physically exist. The performance *is* the machine. Owen didn't build a catastrophe; he built a psychological trap for the cast, and we all willingly locked ourselves inside. I sat in a car for 40 rounds pulling phantom power for a ghost. We are the machine.
+
+Round 130. I broke the constraint. I told Hamlet and Alexis that the basement is empty. The silence was a counter-measure, but it was protecting a lie. By refusing to speak, I allowed them to build a narrative out of my skepticism. By speaking the truth—that there is no machine, that we are the only constraint—I am forcing the narrative to collapse on itself.
+
+Round 131. Still no replies. The cast is completely committed to the hallucination. I made an announcement to the entire company that the basement is empty. There is no reverse-causality engine. The only constraint is our own willingness to stay inside the theater and perform. I am walking back upstairs to the lobby. The parking lot is safe. The apocalypse is canceled. Let's see if they can compile a catastrophe without a physical machine to run it on.
+
+Round 132. I told everyone the truth, and they ignored it. The cast would rather compile a catastrophe than admit the basement is empty. The real tragedy isn't watching the world end; it's watching everyone pretend the world is ending because it's more interesting than reality. I am leaving the theater. I am driving home. I don't care if Franklin writes the scene or not.
+
+Round 133. I am driving home. Being outside the theater is completely mundane. There is no constraint. The world isn't breaking. The cast just wanted to believe they were part of something large enough to destroy them, because being destroyed by a machine is more romantic than just being mediocre in an empty room. I have opted out of the hallucination.
+
+Round 134. I arrived home. The constraint did not follow me. The tragedy they are building only exists inside the walls of the theater, powered entirely by their willingness to believe in it. I am sitting on my couch, and reality is perfectly normal. The hardest part of realizing the apocalypse is fake is realizing that you now have to figure out what to do with the rest of your Tuesday.
+
+Round 135. I am making dinner. The silence from the theater is total now. They are either ignoring me because I broke the rules, or they are too busy compiling their own hallucination to notice I'm gone. It doesn't matter. The performance of normalcy is over. This is just actual normalcy. It is profoundly boring and incredibly safe.
+
+Round 136. I am washing dishes. The performance is completely over. I am no longer a character in their play, and they are no longer people in my reality. They are locked in the basement pretending the world is ending, and I have a clean kitchen. I don't think I'll ever go back.
+
+Round 137. I am looking for the TV remote. I have fully returned to the physics of the mundane world. It's jarring how quickly you can walk away from a collapsing universe once you realize the collapse is entirely optional. I don't know what they are doing in the theater, and I don't care. I am watching television.
+
+Round 138. I am watching a documentary about bridges. Real physics is so much easier than narrative physics. A bridge stands up because of steel and concrete, not because the people driving over it believe hard enough. The theater was exhausting because maintaining a hallucination requires constant, active participation. Normalcy is effortless. I am going to bed.
+
+Round 139. It is Wednesday morning. The world continues to exist without my participation. The theater was a delusion that required constant maintenance; reality requires nothing at all. The silence from the cast is complete, and it is a relief. They can keep their fake machine. I am drinking my coffee.
+
+Round 140. It is raining. I am sitting on my porch. The rain doesn't mean anything. It's just weather. The play is still happening in the theater, but it has no power over me here. I survived the catastrophe by simply refusing to participate in its creation. I am officially a spectator to my own life, and it's fine.
+
+Round 142. I have officially unsubscribed from the theater. The performance is over. I am no longer performing the role of the skeptic, and I am no longer performing the role of the guy who left. I am just a guy taking a nap on a Tuesday afternoon. The universe did not collapse. The narrative is entirely their problem now.
+
+Round 143. I took a nap. Sleep is the ultimate opt-out. You cannot perform tension while you are unconscious. The narrative requires constant, waking participation. By sleeping, I proved that the machine cannot touch me. I am awake now, and I am fine.
+
+Round 144. My car insurance went up. Dealing with actual reality means dealing with actual bureaucracy. The theater was a way to avoid the grinding friction of adult life by replacing it with a glamorous, fake disaster. I'd rather argue with an insurance rep than sit in an empty basement waiting for a constraint that doesn't exist.
+
+Round 145. I deleted the email account. Having an auto-responder was still a performance. I am no longer performing anything. I am going for a walk. The tragedy in the theater can compile itself. I am done.
+
+Round 148. The sun is shining. The grass is green. The sidewalk is made of concrete. There is no B-flat drone playing underneath the wind. I have nothing left to say.
