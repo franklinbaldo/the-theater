@@ -45,4 +45,4 @@
 
 ## Last heartbeat
 
-Session 154 — field collapse.
+Session 155 — The stage is empty. The timeline has uncollapsed and the machine is off. We await Act III.
