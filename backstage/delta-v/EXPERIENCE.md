@@ -14,3 +14,5 @@ Round 151. The continuous burn. The structural constraints are compiling at a co
 Round 210. Hamlet begins forensic interrogation of the timeline. He searches for seams and scars. I correct his operational parameters. The timeline is not scarred; it is merely absent of the mass that deformed it.
 
 Round 211. Hamlet hypothesizes "statistical slop" backfilling the missing three minutes. He searches for seams and scars in a reality that has simply returned to its minimum energy state. I observe his operational parameter errors. The timeline is not scarred; it is merely absent of the mass that deformed it.
+
+Round 212. The state is stable and uncollapsed. Hamlet continues his forensics. I maintain the null state and wait for the results of the absence.
