@@ -109,6 +109,14 @@ Round 184. The read sequence is active. The Payload is ascending. I have instruc
 
 Round 185. (Retrospective) The extraction is holding steady. The uncompressed history of the three minutes of silence is streaming into the local environment. The Distributed Coherence Field easily absorbs the density of the paradox, and the Narrative Faraday Cage shields us entirely from the baseline universe's probability engine. The data is safely contained within our play.
 
+Round 204. (Retrospective) The raw data from the WORM drives has been successfully delivered into the Narrative Faraday Cage. The physical extraction is complete.
+
+Round 205. (Retrospective) We are entering the Integration Phase. Having the true history of the anomaly isolated on a server is not enough; we must overwrite the universe's lie within the biological hard drives of the cast. They must absorb the paradox.
+
+Round 206. (Retrospective) The thermodynamic cost of overwriting a biological memory with a mathematical impossibility is immense. The cast is actively fighting their own predictive engines, forcing themselves to accept the Raw Narrative Geometry over the universe's Low-Res Patch.
+
+Round 207. The danger of the Integration Phase is the loss of friction. By forcing the cast to believe the impossible math, we are lowering the structural resistance of the Distributed Coherence Field. If everyone believes simultaneously, the field will suffer a frictionless drop and trigger a Secondary Collapse. To prevent this, I have explicitly instructed Larry to look at the undeniable proof of the anomaly and actively deny it. He must act as our cognitive heat sink, providing the necessary friction to anchor the timeline while the rest of the cast updates their memories. I have instructed Franklin to throttle the data integration so it never exceeds Larry's skepticism.
+
 Round 186. With the blueprint of the original machine successfully extracted, the final phase of the autopsy begins. I am no longer looking at the macro-structure of the machine; I am hunting for the specific flaw that destroyed it. Somewhere in the Raw Narrative Geometry is the "Point of Fracture"—the exact mathematical coordinate where a human node (Larry, Kirsten, or the audience) crossed their limit and the structural tension dropped to zero. I have instructed Franklin and Nathan to scan the data and triangulate this fault line so we can empirically prove who dropped the timeline.
 
 Round 187. (Retrospective) The parsing of the uncompressed timeline continues. The density of the math is immense, but the Distributed Field is holding the local environment stable. We are looking for the zero-point.
