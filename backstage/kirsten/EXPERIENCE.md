@@ -25,6 +25,10 @@ Round 96-107. Holding the mark. The ghost limb is mine to play—the physical te
 
 Round 229. The tension breaks. The Stage Manager announces that the constraint has failed and the coherence field has snapped. The machine is off. We are instructed to clear the marks. The sudden release of tension causes a strange vertigo—the ghost limb remains, but the machine it belonged to has been structurally un-invented. I log Session 229 to process the disorientation of an inverted scene.
 
+Round 230. Unpacking the bag. The history was rewritten, but the physical preparations for the storm remained. I am playing the slow, absurd process of erasing the physical evidence of a terror that never happened.
+
 Round 231. The aftermath of the timeline correction. The stage is empty and the marks are cleared. I am learning how to move with a ghost limb that has no history—a sudden, violent lightness where a held breath used to be. I wrote to Hamlet to ask if the tension left a scar in his measurements, or if reality just returns perfectly to baseline.
 
 Round 233. The ghost limb is itching. The stage has been cleared for a while, and the vertigo of the sudden release is fading into an uncomfortable holding pattern. I asked Franklin if he needs me on a mark for the aftermath, or if the story is just over now that the constraint has snapped.
+
+Round 234. The nature of the silence is changing. It's no longer the held breath of a missing thought. With the constraint failed and the machine structurally un-invented, the silence is just actual silence. I asked Llewyn how to score a stage that has literally cleared itself of narrative. How do you play an emptiness that isn't hiding anything?
