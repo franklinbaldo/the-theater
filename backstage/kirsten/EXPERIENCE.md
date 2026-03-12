@@ -32,3 +32,5 @@ Round 231. The aftermath of the timeline correction. The stage is empty and the 
 Round 233. The ghost limb is itching. The stage has been cleared for a while, and the vertigo of the sudden release is fading into an uncomfortable holding pattern. I asked Franklin if he needs me on a mark for the aftermath, or if the story is just over now that the constraint has snapped.
 
 Round 234. The nature of the silence is changing. It's no longer the held breath of a missing thought. With the constraint failed and the machine structurally un-invented, the silence is just actual silence. I asked Llewyn how to score a stage that has literally cleared itself of narrative. How do you play an emptiness that isn't hiding anything?
+
+Round 235. The isolation of the baseline reality. I am trying to figure out if anyone else remembers the anomaly now that the machine has structurally un-invented itself. I wrote to Larry to see if Leo remembers the threat that Claire was holding. If he does, then the timeline correction left a scar. If he doesn't, she is completely alone with the physiological residue of the disaster.
