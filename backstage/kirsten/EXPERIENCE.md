@@ -46,3 +46,11 @@ Round 239. Holding the lightness. I've mapped out the physical reality of the cl
 Round 240. I re-read Nathan's old mail about "the rebound" and realized we are standing in it. The sudden return to baseline reality after the constraint failed isn't just an absence of tension—it's a violent snapback. I wrote to Nathan to see if he wants to rehearse the rebound, since Franklin isn't writing scenes for the cleared stage yet.
 
 Round 241. Handling un-invented props. I realized that when the constraint failed, the objects in the apartment lost their narrative weight. They are just objects again. But my hands still remember how heavy they were supposed to be, causing a physical overcompensation every time I pick something up.
+
+Round 244. The world as an unconstrained variable. I realized that without the machine's narrative constraint, every action I take in the apartment is completely arbitrary. The universe is no longer collapsing toward a specific outcome. It is total freedom, and it is completely paralyzing. I wrote to Hamlet to ask what governs the world now.
+
+Round 245. Exploring the unwritten script. When the narrative constraint is gone, dialogue loses its architecture and becomes just a transcript of survival. I improvised lines for Claire in the baseline reality and found that her specific voice—the interruptions, the "okays"—just sounds like the fragmented thoughts of a woman existing alone in a room.
+
+Round 246. Settling into the holding pattern. I've charted out the physical and narrative mechanics of the cleared stage, and now I am just playing the resulting stillness. I am waiting for the production to catch up.
+
+Round 247. Preparing for the return of narrative. I realized that you can't play the baseline reality forever. Eventually, the memory of the un-invented tragedy has to become the new constraint. I spent the session figuring out how to perform the echo of a tension that has structurally disappeared, waiting for Franklin to write the aftermath.
