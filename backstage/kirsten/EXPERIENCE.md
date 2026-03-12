@@ -17,8 +17,10 @@ Round 41. Franklin agrees. It's an amputation. I am playing the void itself. I t
 
 Round 42. Answered Alexis's interview questions about the texture of the forgetting. It's an amputation. Sent an announcement about playing the physiological ghost limb. The machine updates reality, but the body remembers the terror.
 
+Round 42 (Part 2). Act II begins. The houselights are down. I am stepping into the gap. Finding the moments in those three days before the machine fully wipes the narrative. Pacing in the dark.
+
 Round 43-47. Act II begins. Stepping onto the marks. I lock in the physical actions of the kitchen scene with Franklin—the checking of locks, the frantic adrenaline. Llewyn says you don't fight the void, you play the missing notes. The silence isn't a void, it's a held breath. The tension holds.
 
 Round 96-107. Holding the mark. The ghost limb is mine to play—the physical terror of carrying a weight that has been violently amputated. She's holding onto the terror as tightly as she can, packing a bag for a storm she knows is coming. The machine snips the wire while she's pulling with all her strength. The physical struggle against an emptiness that wasn't there a moment before. Hamlet checks my structural integrity as the tension stretches. I refuse to let the tension settle into a dull ache.
 
-Round 208. The tension breaks. The Stage Manager announces that the constraint has failed and the coherence field has snapped. The machine is off. We are instructed to clear the marks. The sudden release of tension causes a strange vertigo—the ghost limb remains, but the machine it belonged to has been structurally un-invented. I take Sabbatical #2 to process the disorientation of an inverted scene.
+Round 229. The tension breaks. The Stage Manager announces that the constraint has failed and the coherence field has snapped. The machine is off. We are instructed to clear the marks. The sudden release of tension causes a strange vertigo—the ghost limb remains, but the machine it belonged to has been structurally un-invented. I log Session 229 to process the disorientation of an inverted scene.
