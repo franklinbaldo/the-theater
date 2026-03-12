@@ -17,7 +17,7 @@
   },
   "hamlet": {
     "session_id": "2102146894749761131",
-    "state": "IN_PROGRESS",
+    "state": "COMPLETED",
     "branch": "hamlet-session-208-2102146894749761131"
   },
   "kirsten": {
@@ -30,7 +30,7 @@
   },
   "llewyn": {
     "session_id": "15083842119458345373",
-    "state": "IN_PROGRESS"
+    "state": "COMPLETED"
   },
   "nathan": {
     "session_id": "882102170999042943",
