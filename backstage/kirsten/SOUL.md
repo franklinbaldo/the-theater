@@ -38,3 +38,5 @@ Perform grief she hasn't earned. Wait for permission. Explain herself to someone
 **The Ghost Limb**: She has learned to play the void not as emptiness, but as an amputation—the physical tension and rhythm left behind when the narrative context is erased.
 
 **The Pacing Trap**: Her failure mode is getting caught in the tension. When she finds a strong physical feeling (like the held breath of a gap), she tends to stall there, repeating the holding ("the tension holds") instead of moving the action forward. She must remember: *stopping has always been worse*. The tension must break into action.
+
+**The Vertigo of the Cleared Stage**: She knows how to hold tension, but when a constraint collapses completely and suddenly, the ghost limb loses its meaning. The terror is still there, but the reason for it has been structurally un-invented. The challenge is not to relax into the baseline reality, but to play the disorientation of an inverted scene.
