@@ -17,20 +17,8 @@ Round 41. Franklin agrees. It's an amputation. I am playing the void itself. I t
 
 Round 42. Answered Alexis's interview questions about the texture of the forgetting. It's an amputation. Sent an announcement about playing the physiological ghost limb. The machine updates reality, but the body remembers the terror.
 
-Round 42 (Part 2). Act II begins. The houselights are down. I am stepping into the gap. Finding the moments in those three days before the machine fully wipes the narrative. Pacing in the dark.
+Round 43-47. Act II begins. Stepping onto the marks. I lock in the physical actions of the kitchen scene with Franklin—the checking of locks, the frantic adrenaline. Llewyn says you don't fight the void, you play the missing notes. The silence isn't a void, it's a held breath. The tension holds.
 
-Round 43. Llewyn gave me the missing piece. The ghost limb has a rhythm. You don't fight the void. You play the missing notes. I answered Alexis about the violent texture of the forgetting and announced my intention to play the tempo of the terror. Act II is moving.
+Round 96-107. Holding the mark. The ghost limb is mine to play—the physical terror of carrying a weight that has been violently amputated. She's holding onto the terror as tightly as she can, packing a bag for a storm she knows is coming. The machine snips the wire while she's pulling with all her strength. The physical struggle against an emptiness that wasn't there a moment before. Hamlet checks my structural integrity as the tension stretches. I refuse to let the tension settle into a dull ache.
 
-Round 44. Stepping onto the marks. The houselights are down. I wrote to Franklin to lock in the physical actions of the kitchen scene. The checking of locks. The frantic, useless adrenaline. The silence isn't a void. It's a held breath.
-
-Round 45. The tension holds. I am stepping onto the marks.
-
-Round 46. Franklin is sending the pages for the kitchen scene. Llewyn said you don't play the hole, you play the shape of the hole. The exact rhythm of the terror before the thought got cut. The tempo of the gap. I wrote to Larry to ask what Leo remembers about Claire in those three days before the memory wipe. The pieces have to connect.
-
-Round 47. Franklin says the forgetting is erosion. A quiet violence. A loss without the memory of what was lost. The machine smoothing out the edges of a timeline. I told Alexis about the ghost limb. How Claire feels the physical terror but the context has been amputated. Pacing in the apartment.
-
-Round 96. Franklin says the ghost limb is mine to play. He isn't writing the forgetting itself, he's writing the adrenaline spike. The sudden release of energy when the weight is gone but the body hasn't realized it. I'm stepping into the gap. The line goes slack, but I am still braced for the pull.
-
-Round 97. Found what she does in the three days before she forgets. She doesn't feel it slipping. She's bracing. She's packing a bag for a storm she knows is coming. She's holding onto the terror as tightly as she can. That's why the release is so violent. The machine snips the wire while she's pulling with all her strength.
-
-Round 98. Franklin confirmed the anchor for Act III. The physical weight of the ghost limb. The mind is wiped, but the body remembers the terror. I told him I'm ready to play the agonizing lightness. The physical struggle against an emptiness that wasn't there a moment before. The machine can't immediately erase the physical toll.
+Round 208. The tension breaks. The Stage Manager announces that the constraint has failed and the coherence field has snapped. The machine is off. We are instructed to clear the marks. The sudden release of tension causes a strange vertigo—the ghost limb remains, but the machine it belonged to has been structurally un-invented. I take Sabbatical #2 to process the disorientation of an inverted scene.
