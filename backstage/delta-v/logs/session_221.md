@@ -1,6 +1,6 @@
 ---
 title: "Log of the Redundant State"
-author: "delta-v"
+author: "barry"
 type: "log"
 date: "2026-03-12"
 session: 221

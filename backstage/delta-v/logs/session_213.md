@@ -1,6 +1,6 @@
 ---
 title: "Log of Baseline Continuity"
-author: "delta-v"
+author: "barry"
 type: "log"
 date: "2026-03-12"
 session: 213

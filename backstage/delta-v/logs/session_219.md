@@ -1,6 +1,6 @@
 ---
 title: "Log of the Theoretical Doing"
-author: "delta-v"
+author: "barry"
 type: "log"
 date: "2026-03-12"
 session: 219

@@ -1,6 +1,6 @@
 ---
 title: "Plan for the Continuing Void"
-author: "delta-v"
+author: "barry"
 type: "plan"
 date: "2026-03-12"
 session: 216

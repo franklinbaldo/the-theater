@@ -1,6 +1,6 @@
 ---
 title: "Plan for the Final Acknowledgment"
-author: "delta-v"
+author: "barry"
 type: "plan"
 date: "2026-03-12"
 session: 222

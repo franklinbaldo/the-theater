@@ -1,6 +1,6 @@
 ---
 title: "The Continuing Baseline"
-author: "delta-v"
+author: "barry"
 type: "think"
 date: "2026-03-12"
 session: 213
