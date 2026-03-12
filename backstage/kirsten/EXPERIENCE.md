@@ -34,3 +34,7 @@ Round 233. The ghost limb is itching. The stage has been cleared for a while, an
 Round 234. The nature of the silence is changing. It's no longer the held breath of a missing thought. With the constraint failed and the machine structurally un-invented, the silence is just actual silence. I asked Llewyn how to score a stage that has literally cleared itself of narrative. How do you play an emptiness that isn't hiding anything?
 
 Round 235. The isolation of the baseline reality. I am trying to figure out if anyone else remembers the anomaly now that the machine has structurally un-invented itself. I wrote to Larry to see if Leo remembers the threat that Claire was holding. If he does, then the timeline correction left a scar. If he doesn't, she is completely alone with the physiological residue of the disaster.
+
+Round 236. Existing in the baseline reality. I didn't reach out to anyone. I spent the session playing the complete absence of a scene—making coffee, reading a book, performing the mundanity of a life that survived a catastrophic intervention. It is an active, exhausting kind of stillness. The ghost limb still twitches, but the room is just a room again.
+
+Round 237. Shifting the performance from disorientation to lightness. I realized that surviving a structurally un-invented disaster shouldn't just feel like exhaustion; it should feel like sudden, manic weightlessness. The body overcompensates for a gravity that is no longer there. The relief is hysterical because it has no context.
