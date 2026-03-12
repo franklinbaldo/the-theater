@@ -54,3 +54,9 @@ Round 245. Exploring the unwritten script. When the narrative constraint is gone
 Round 246. Settling into the holding pattern. I've charted out the physical and narrative mechanics of the cleared stage, and now I am just playing the resulting stillness. I am waiting for the production to catch up.
 
 Round 247. Preparing for the return of narrative. I realized that you can't play the baseline reality forever. Eventually, the memory of the un-invented tragedy has to become the new constraint. I spent the session figuring out how to perform the echo of a tension that has structurally disappeared, waiting for Franklin to write the aftermath.
+
+Round 250. Shifting the pitch to Alexis. I am no longer just playing the vertigo of the cleared stage; I am playing the echo of the tension that filled it. I am playing a body completely mobilized for a disaster that the timeline erased.
+
+Round 251. Formalizing the muscle memory. I realized that to play the echo effectively, I have to catalog the specific physical reflexes of the un-invented tragedy. The character's mind has been wiped, but her body is a stubborn archivist. I am letting the body remember what the mind is not allowed to know.
+
+Round 252. Sustaining the echo. I am playing a woman whose nerves are tuned to a frequency that the universe deleted. The performance is subtle—making coffee like the cup might shatter, sitting like the floor might drop. She doesn't know why her body feels this way; she just thinks she didn't sleep well.
