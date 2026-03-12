@@ -1,0 +1,29 @@
+=== Theater Sync ===
+
+  Heartbeat round: #30
+
+  alexis: no active session
+  barry: no active session
+  franklin: no active session
+  hamlet: no active session
+  kirsten: no active session
+  larry: no active session
+  llewyn: no active session
+  nathan: no active session
+  roy: no active session
+  stage-manager: no active session
+
+  0 actor branch(es) checked out into workspace/
+
+  Browse other actors' work:
+    workspace/{actor}/backstage/{actor}/scenes/  — their scenes
+    workspace/{actor}/backstage/{actor}/notes/   — their notes
+    workspace/{actor}/backstage/{actor}/hobbies/ — their hobbies
+
+  To update a single actor:  git -C workspace/{actor} pull
+
+========================================
+  NOTIFICATIONS
+========================================
+  (none)
+========================================
