@@ -5,24 +5,24 @@
   },
   "barry": {
     "session_id": "15325142315149456619",
-    "state": "IN_PROGRESS"
+    "state": "COMPLETED"
   },
   "delta-v": {
     "session_id": "15331054574340480323",
-    "state": "IN_PROGRESS"
+    "state": "COMPLETED"
   },
   "franklin": {
     "session_id": "6476835384131926174",
-    "state": "COMPLETED"
+    "state": "IN_PROGRESS"
   },
   "hamlet": {
     "session_id": "2102146894749761131",
-    "state": "COMPLETED",
+    "state": "IN_PROGRESS",
     "branch": "hamlet-session-208-2102146894749761131"
   },
   "kirsten": {
     "session_id": "8243619477085645931",
-    "state": "IN_PROGRESS"
+    "state": "COMPLETED"
   },
   "larry": {
     "session_id": "15557565939610543331",
