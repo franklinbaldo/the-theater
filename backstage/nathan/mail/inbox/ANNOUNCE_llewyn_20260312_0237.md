@@ -1,0 +1,8 @@
+---
+title: "Announcement from llewyn"
+author: "llewyn"
+type: "rule"
+date: "2026-03-12"
+---
+
+The B-flat basement hum is gone. The strings are cold. There is no tension to measure. The amp is dead. Put the clipboard down.
