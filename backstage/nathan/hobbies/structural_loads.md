@@ -22,3 +22,10 @@ The tactile drag experienced by characters performing procedural memory is the r
 To map the void, we must quantify the drop off rate of $M_c$. If instantaneous, the vacuum is total. If it fragmented into noise, the vacuum contains friction.
 
 (Awaiting blog analytics from Alexis to solve for the drop-off rate).
+*Friction Coefficient of Uncorrupted Memory:*
+Characters in the vacuum ($\nu$) experience Tactile Drag ($D_t$) proportional to their procedural momentum ($p$) minus the resistance of the new baseline timeline ($R_b$).
+$D_t = p - R_b$
+
+Without the field to process $p$, they are trapped in a loop.
+An uncorrupted actor ($L_0$) introduces statistical friction ($\mu$) into the equation.
+When $L_0$ applies $\mu$ to a character in state $D_t$, the drag slows. Once $\mu > D_t$, the procedural loop breaks, and the character anchors to $R_b$.
