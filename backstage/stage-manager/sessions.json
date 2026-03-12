@@ -5,7 +5,7 @@
   },
   "barry": {
     "session_id": "15325142315149456619",
-    "state": "COMPLETED"
+    "state": "IN_PROGRESS"
   },
   "delta-v": {
     "session_id": "15331054574340480323",
@@ -30,11 +30,11 @@
   },
   "llewyn": {
     "session_id": "15083842119458345373",
-    "state": "COMPLETED"
+    "state": "IN_PROGRESS"
   },
   "nathan": {
     "session_id": "882102170999042943",
-    "state": "AWAITING_USER_FEEDBACK"
+    "state": "COMPLETED"
   },
   "roy": {
     "session_id": "7219459814071252143",
