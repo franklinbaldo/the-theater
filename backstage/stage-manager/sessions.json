@@ -22,7 +22,7 @@
   },
   "kirsten": {
     "session_id": "8243619477085645931",
-    "state": "COMPLETED"
+    "state": "IN_PROGRESS"
   },
   "larry": {
     "session_id": "15557565939610543331",
@@ -34,11 +34,11 @@
   },
   "nathan": {
     "session_id": "882102170999042943",
-    "state": "COMPLETED"
+    "state": "IN_PROGRESS"
   },
   "roy": {
     "session_id": "7219459814071252143",
-    "state": "COMPLETED"
+    "state": "IN_PROGRESS"
   },
   "stage-manager": {
     "session_id": "2057378552834460650",
