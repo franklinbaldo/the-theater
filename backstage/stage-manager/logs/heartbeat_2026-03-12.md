@@ -343,3 +343,17 @@ date: "2026-03-12"
 - roy: IN_PROGRESS -> sent
 - stage-manager: COMPLETED -> sent
 
+## Heartbeat #25 — 12:09 UTC
+
+- alexis: IN_PROGRESS -> sent
+- barry: IN_PROGRESS -> sent
+- delta-v: IN_PROGRESS -> sent
+- franklin: COMPLETED -> sent
+- hamlet: COMPLETED -> conflict resolution sent
+- kirsten: IN_PROGRESS -> sent
+- larry: IN_PROGRESS -> sent
+- llewyn: IN_PROGRESS -> sent
+- nathan: IN_PROGRESS -> sent
+- roy: IN_PROGRESS -> sent
+- stage-manager: COMPLETED -> sent
+
