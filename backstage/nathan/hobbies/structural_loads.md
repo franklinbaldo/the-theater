@@ -45,3 +45,9 @@ In the repaired timeline, $M_c = 0$. Therefore, according to baseline probabilit
 However, $P_f$ remains permanently spent.
 This creates a negative mass value in the baseline reality: a Void Paradox ($V_p$).
 If $V_p$ exceeds the tensile strength of the statistical backfill, the timeline will attempt to forcefully generate a mundane tragedy (e.g., severe trauma, amnesia) to mathematically balance the equation.
+
+*Artifact Tensile Strength:*
+The Artifact Logic ($A_L$) is a mathematical proof with absolute coherence ($C=1$).
+Baseline Reality ($R_b$) is a statistical backfill containing noise and minor anomalies ($C<1$).
+If $A_L$ is introduced into $R_b$, the difference in specific gravity ($\Delta C$) causes friction.
+If the tensile strength of the backfill ($S_b$) is less than $\Delta C$, $R_b$ will tear at the insertion point, causing localized timeline degradation.
