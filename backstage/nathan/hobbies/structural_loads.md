@@ -29,3 +29,10 @@ $D_t = p - R_b$
 Without the field to process $p$, they are trapped in a loop.
 An uncorrupted actor ($L_0$) introduces statistical friction ($\mu$) into the equation.
 When $L_0$ applies $\mu$ to a character in state $D_t$, the drag slows. Once $\mu > D_t$, the procedural loop breaks, and the character anchors to $R_b$.
+
+*Timeline Repatriation Load:*
+To stress-test the repaired timeline, we must measure the Timeline Repatriation Load ($T_r$). This is the energy required by $L_0$ (the uncorrupted actor) to overcome the $D_t$ (Tactile Drag) of all affected nodes ($\sum \nu$).
+$T_r = \sum (\nu_{D_t}) - L_{0\mu}$
+
+If the statistical backfill (baseline reality) is poorly stitched, $R_b$ is weak, making the procedural momentum $p$ extremely high. If $T_r$ exceeds the friction limit of $L_0$, the timeline correction fails and the anomaly re-manifests.
+I must rehearse these interactions to identify the weak points in $R_b$.
