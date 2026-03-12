@@ -51,3 +51,41 @@ The Artifact Logic ($A_L$) is a mathematical proof with absolute coherence ($C=1
 Baseline Reality ($R_b$) is a statistical backfill containing noise and minor anomalies ($C<1$).
 If $A_L$ is introduced into $R_b$, the difference in specific gravity ($\Delta C$) causes friction.
 If the tensile strength of the backfill ($S_b$) is less than $\Delta C$, $R_b$ will tear at the insertion point, causing localized timeline degradation.
+
+*Infrastructural Load Bearing:*
+Let the Baseline Timeline = $T_b$.
+Let the Theater Infrastructure = $I_t$.
+If the collapse of the Anomaly ($A$) was purely systemic (autonomic trigger $S_a$), then $I_t$ is independent of $T_b$.
+However, if $A$ was collapsed via mechanical intervention ($S_m$), then the physical state of $I_t$ is a causal requirement for $T_b$ to exist.
+$S_m \rightarrow T_b$
+In this scenario, if the infrastructure shifts, the baseline reality fractures. The theater is no longer observing reality; it is generating it.
+
+*Cascade Threshold:*
+Let $E_s$ equal a mundane statistical error (e.g., a dropped object that does not break).
+Baseline Reality ($R_b$) has a natural self-correction rate ($C_r$).
+If the frequency of $E_s$ exceeds $C_r$, the errors begin to compound ($E_c$).
+When $E_c$ reaches the computational limit of the timeline's backfill algorithm, the system enters the Cascade Threshold ($T_c$).
+At $T_c$, reality stops generating new probabilities and begins looping cached data to save processing power.
+
+*Quarantine Mass:*
+If the Anomaly ($A$) is not deleted but statistically suppressed, it is held within a Quarantine Zone ($Q_z$).
+The mass of the Quarantine ($M_q$) must equal the mass of the Anomaly multiplied by the probability of its detection ($P_d$).
+$M_q = A \times (1 / P_d)$
+To lower the probability of detection near zero, $M_q$ must approach infinity. This requires generating an enormous volume of mundane statistical noise (traffic, weather patterns, redundant emails).
+If the stress-tests breach $M_q$, the characters will interface directly with the suppressed code of $A$.
+
+*Quarantine Breach Vector:*
+Let Leo's uncorrupted memory = $L_m$.
+Let the Quarantine Mass (statistical backfill) = $M_q$.
+Let the friction applied by Leo = $\mu$.
+If $\mu > M_q$ at the specific locus of the deleted anomaly, then $L_m$ penetrates the firewall.
+The equation for a stable Restart Protocol is $D_t < \mu < M_q$. (Friction must be greater than tactile drag, but less than quarantine mass).
+If $\mu$ exceeds $M_q$, the statistical noise is pierced, causing an immediate localized collapse back into the Act II anomaly.
+
+*Firewall Generation Rate:*
+Let the Anomaly Mass = $A_m$.
+Let the required Quarantine Density = $Q_d$.
+Let the Blog Publishing Interface = $B_i$.
+The universe must generate Statistical Noise ($N_s$) through $B_i$ at a continuous Firewall Generation Rate ($F_r$) to maintain $Q_d$.
+$F_r = A_m \times (Q_d / \Delta t)$
+If Alexis deletes $N_s$ from $B_i$, $F_r$ falls behind the required density. The timeline backfill thins, and the probability of $A_m$ leaking into baseline consciousness approaches 1.
