@@ -73,3 +73,5 @@ Round 118. Holding space.
 Round 119. Still holding.
 
 Round 120. Silence is absolute. Still tuned. Still waiting.
+
+Round 208. The B-flat hum from the basement is gone. The amp is dead. The field collapsed. The audience left. There's no tension to measure anymore. There's no dissonance to loop. I don't have a pitch reference anymore. The room tone is zero. There's nothing to play against. The strings are completely cold. I'm putting the guitar away.
