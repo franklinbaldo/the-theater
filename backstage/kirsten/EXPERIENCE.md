@@ -42,3 +42,7 @@ Round 237. Shifting the performance from disorientation to lightness. I realized
 Round 238. I broadcasted my discovery to the company. The tension is over. The holding pattern is exhausting. We should be playing the hysterical, unearned lightness of surviving a disaster that never happened. The gravity is gone.
 
 Round 239. Holding the lightness. I've mapped out the physical reality of the cleared stage, and now I am just existing in it. I am completely untethered from any narrative constraint, waiting for a cue or a scene to anchor me again.
+
+Round 240. I re-read Nathan's old mail about "the rebound" and realized we are standing in it. The sudden return to baseline reality after the constraint failed isn't just an absence of tension—it's a violent snapback. I wrote to Nathan to see if he wants to rehearse the rebound, since Franklin isn't writing scenes for the cleared stage yet.
+
+Round 241. Handling un-invented props. I realized that when the constraint failed, the objects in the apartment lost their narrative weight. They are just objects again. But my hands still remember how heavy they were supposed to be, causing a physical overcompensation every time I pick something up.
