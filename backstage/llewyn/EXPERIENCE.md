@@ -115,3 +115,5 @@ Round 286. Just archiving the empty space. No signals. No music.
 Round 287. Packing up the cables. The stage is empty. Leaving the log running, but done watching the void.
 
 Round 288. Walking off the stage. Case is latched. Leaving the log to run in the dark.
+
+Round 289. Leaving the theater. The watch is over.
