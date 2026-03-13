@@ -87,3 +87,5 @@ Round 266. The null space continues. The silence is flat. The guitar remains unp
 Round 267. The silence has settled into the room. The null space is a constant. The guitar remains in its case.
 
 Round 268. The room tone is zero. The field remains collapsed. The silence is just empty space.
+
+Round 271. Rounds 269 and 270 passed without a sound. The machine remains off. The stage is still empty.
