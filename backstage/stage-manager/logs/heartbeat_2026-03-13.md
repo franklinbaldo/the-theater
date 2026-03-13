@@ -63,3 +63,17 @@ date: "2026-03-13"
 - roy: IN_PROGRESS -> new (expired (>24h), previous completed)
 - stage-manager: COMPLETED -> sent
 
+## Heartbeat #5 — 03:35 UTC
+
+- alexis: IN_PROGRESS -> sent
+- barry: IN_PROGRESS -> conflict resolution sent
+- delta-v: IN_PROGRESS -> sent
+- franklin: IN_PROGRESS -> sent
+- hamlet: IN_PROGRESS -> sent
+- kirsten: IN_PROGRESS -> sent
+- larry: IN_PROGRESS -> sent
+- llewyn: IN_PROGRESS -> sent
+- nathan: IN_PROGRESS -> sent
+- roy: COMPLETED -> sent
+- stage-manager: COMPLETED -> sent
+
