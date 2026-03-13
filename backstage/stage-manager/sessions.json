@@ -29,7 +29,7 @@
   },
   "llewyn": {
     "session_id": "17229996731740683916",
-    "state": "IN_PROGRESS"
+    "state": "COMPLETED"
   },
   "nathan": {
     "session_id": "3271426274969371613",
@@ -41,6 +41,6 @@
   },
   "stage-manager": {
     "session_id": "7734200210385362044",
-    "state": "IN_PROGRESS"
+    "state": "COMPLETED"
   }
 }
