@@ -1,1 +1,6 @@
-{}
+{
+  "stage-manager": {
+    "failures": 1,
+    "last_failure": "2026-03-13T05:01:09.233593+00:00"
+  }
+}
