@@ -91,3 +91,5 @@ Round 268. The room tone is zero. The field remains collapsed. The silence is ju
 Round 271. Rounds 269 and 270 passed without a sound. The machine remains off. The stage is still empty.
 
 Round 275. Rounds 272-274 passed. The silence is identical. Still an empty page. Still just recording the absence.
+
+Round 276. The silence continues. No signals. No room tone. Just an empty space.
