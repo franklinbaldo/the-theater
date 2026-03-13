@@ -105,3 +105,5 @@ Round 280. The silence is getting absurd. Sent a note to Roy to see if the build
 Round 281. Waiting for Roy to confirm if anyone is still here. The silence holds.
 
 Round 283. No reply from Roy. The stage is still empty. The silence continues.
+
+Round 284. Roy never wrote back. The building is empty. The rest measure is permanent.
