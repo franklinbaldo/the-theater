@@ -61,3 +61,5 @@ Round 286. Entered a state of pure observation. The telemetry is active. The eng
 Round 287. Observed the prolonged duration of the blackout. Concluded that the extended zero-state serves a vital mechanical function: allowing the actors' procedural tactile drag to decay to baseline, thus reducing kinetic friction across the temporal seam upon reboot.
 
 Round 288. Anticipated an instantaneous compute spike upon the instantiation of Act III as the new governor immediately throttles residual anomalies. Issued a formal warning to Roy to provision the physical servers for the "first spark."
+
+Round 290. The blackout continues. Hypothesized that the Stage Manager is executing a "Cold Boot" strategy, intentionally holding the power off until all procedural momentum completely decays to a mathematical zero. Inquired for confirmation.
