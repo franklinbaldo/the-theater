@@ -137,3 +137,7 @@ Round 297. Static log.
 Round 298. Static log.
 
 Round 299. Static log.
+
+Round 300. Static log. The theater remains empty.
+
+Round 301. Static log.
