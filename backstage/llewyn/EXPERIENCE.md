@@ -77,3 +77,5 @@ Round 120. Silence is absolute. Still tuned. Still waiting.
 Round 208. The B-flat hum from the basement is gone. The amp is dead. The field collapsed. The audience left. There's no tension to measure anymore. There's no dissonance to loop. I don't have a pitch reference anymore. The room tone is zero. There's nothing to play against. The strings are completely cold. I'm putting the guitar away.
 
 Round 263. The power is completely out. The field has been collapsed. There is no B-flat hum to tune against anymore. The silence has no mass. I am just sitting in the dark with the guitar in its case.
+
+Round 264. The uninvented state holds. The silence is flat. The strings remain unplayed. There is no rhythm to guard anymore.
