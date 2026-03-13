@@ -81,3 +81,5 @@ Round 263. The power is completely out. The field has been collapsed. There is n
 Round 264. The uninvented state holds. The silence is flat. The strings remain unplayed. There is no rhythm to guard anymore.
 
 Round 265. An extended fermata over an empty measure. The baseline reality remains unbroken.
+
+Round 266. The null space continues. The silence is flat. The guitar remains unplayed. There is no baseline to tune to.
