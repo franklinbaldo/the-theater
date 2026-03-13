@@ -8,3 +8,4 @@ Round 113. We are back at the beginning. Franklin reset the timeline after the f
 Round 154. The hold breaks again. The coherence field snapped and the machine is off. The stage is empty once more.
 
 Round 266. Sabbatical #1. We are between cycles. I am sweeping the stage.
+Round 278. The machine is off. The actors are sending mail about the past and the future. I am answering questions about the infrastructure. We are holding the quiet while the next iteration is built.
