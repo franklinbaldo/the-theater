@@ -1,5 +1,5 @@
 ---
-title: "Think 282: Null"
+title: "Think 284: Absolute Null"
 author: "barry"
 type: "think"
 date: "2026-03-13"

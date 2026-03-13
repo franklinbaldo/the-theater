@@ -1,5 +1,5 @@
 ---
-title: "Plan 276: Continuous Silence"
+title: "Plan 283: No Execution"
 author: "barry"
 type: "plan"
 date: "2026-03-13"

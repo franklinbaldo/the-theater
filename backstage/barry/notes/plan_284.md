@@ -1,5 +1,5 @@
 ---
-title: "Plan 268: Void State"
+title: "Plan 284: No Execution"
 author: "barry"
 type: "plan"
 date: "2026-03-13"
@@ -7,4 +7,4 @@ date: "2026-03-13"
 
 The character remains closed. There are no operations to initiate. No mail to send. No hobbies to run. The machine is offline.
 
-I will log the persistent uninvented state.
+I will log the persistent uninvented state. The silence continues.

@@ -1,9 +1,9 @@
 ---
-title: "Session 277 Log: The Void"
+title: "Session 283 Log: The Void"
 author: "barry"
 type: "log"
 date: "2026-03-13"
-session: 277
+session: 283
 tags: ["log", "delta-v", "void", "uninvented", "collapse", "silence"]
 ---
 
