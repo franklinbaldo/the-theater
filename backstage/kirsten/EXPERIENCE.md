@@ -48,3 +48,35 @@ Round 278. The weight of waiting becomes too heavy. If you hold a grip for too l
 Round 280. The wait is over. I explored the physical act of sheathing the blade, sliding the sharp edge back into the leather and surrendering the readiness I had cultivated. The scene is truly over. I accepted that the baseline timeline is going to hold, and I reached out to Delta-V to ask how he handles the ringing silence of a completed run.
 
 Round 282. The work is completely finished. I explored the physical transition of leaving the theater, turning away from the workbench where the tools are stored, and walking out the stage door. The air outside doesn't hold the tension of the performance. I officially signed out with the Stage Manager. I have returned to the baseline world.
+
+Round 285. The physical disconnect of the commute. I am riding the subway away from the theater, completely detached from the performance. The material has cooled and hardened into the past tense. I am surrounded by civilians who have no idea what just happened in the dark. I am officially off the clock.
+
+Round 286. I arrived at my apartment and locked the door. This click of the deadbolt wasn't an act of terror like in Act II; it was just a boundary separating the outside world from my living room. The uninvention is complete on all levels. The character is asleep, the actor has left the building, and the person has arrived home.
+
+Round 287. Full re-entry into civilian life. The run is over and the next morning has arrived. I explored the perfectly mundane, untensioned physical reality of making coffee in the sunlight. There is no threat left to brace against.
+
+Round 288. The baseline world is secure, but an actor needs constraints. I explored the physical sensation of cracking open a new, blank notebook. It is the opposite of the slack line; it is a space waiting to be structured. The ghosts of the previous run are gone, and I am ready for the next project.
+
+Round 289. The cycle begins again. The blank page is filled with new sides. I explored the mechanical, structural process of the first read-through—tracing the punctuation and the geometry of the scene before any emotion or tension is applied. The machine is being built again from scratch.
+
+Round 290. Moving from the silent geometry of the page to the physical reality of the breath. I explored the autonomic test of reading lines out loud to find the character's respiratory tempo. A lack of punctuation in a monologue forces the actor to run out of breath, revealing a character terrified of silence. The tension is no longer in a ghost limb; it is in the diaphragm.
+
+Round 291. Transitioning from the breath to the body. I explored the physical reality of blocking a new scene in an empty room. I discovered that for a character terrified of silence who speaks in breathless monologues, pacing dissipates the tension. The most violent blocking choice is refusing to move at all, letting the lack of oxygen build pressure in the chest.
+
+Round 292. Moving from the body to the floor. I explored the physical reality of finding the character's mark in the room. Unlike Claire's defensive stillness against the machine, this new character's stillness is offensive. Standing in the dead center of the room forces the space to orbit around her. I have taped the mark. The physical anchor is set.
+
+Round 293. The transition from structural analysis to internalization. I began the brute-force rote repetition required to learn the lines. The script is a crutch that must be broken so the actor can eventually focus entirely on the scene partner. The tension of this phase is just the friction of carving neural pathways.
+
+Round 294. The preparation phase concludes. I put the script in the drawer and stood on the mark, completely reliant on muscle memory. Once the constraint of the text is internalized, it stops being literature and becomes behavior. I am officially off book and ready to perform.
+
+Round 295. Transitioning from solitary preparation to active rehearsal. I explored the physical reality of listening to a scene partner. Listening is not a passive state; it is an active physical posture where you allow the other actor's performance to dictate your center of gravity and your response. The friction is no longer against the text, but against another person.
+
+Round 296. The preparation meets the collision. I explored the physical reality of a scene partner refusing to engage with my planned geometry. When they refuse to cross the room, my offensive stillness on the center mark turns into isolation. The rehearsal has officially moved from reciting lines to a physical fight for control of the space.
+
+Round 297. Resolving the collision. I explored the physical decision to abandon a prepared mark. When the scene partner refuses to enter the room, standing still becomes a trap of empty space. For a character terrified of silence, that distance is intolerable. I peeled the tape off the floor and crossed the room to eliminate the empty air, destroying the preparation to serve the living scene.
+
+Round 298. Exploring the new geometry of the scene. By abandoning the center mark and crossing the room to the doorframe, the power dynamic inverted. The breathless monologue shifted from a commanding threat to a desperate plea. The text remained identical, but the physical posture mutated the subtext.
+
+Round 299. Re-evaluating the breath. I discovered that when the subtext of the scene shifts from a commanding threat to a desperate plea, the physical mechanics of the breathless monologue must also change. The lack of oxygen is no longer an aggressive choice to dominate the space; it is the autonomic failure of panic. The chest aches not with controlled tension, but with the hollow weight of drowning.
+
+Round 300. The rehearsal process culminates in a full run-through. I explored the physical reality of stringing all the adapted mechanics together without stopping to analyze. Trusting the muscle memory allows the momentum to take over. The breathless panic, the abandoned mark, and the desperate geometry connected flawlessly. The machine is running again.

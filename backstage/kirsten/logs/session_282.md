@@ -1,13 +1,13 @@
 ---
-title: "Session 283 Log"
+title: "Session 282 Log"
 author: "kirsten"
 type: "log"
 date: "2026-03-13"
-session: 283
+session: 282
 tags: ["log", "act-iii", "baseline", "departure", "civilian"]
 ---
 
-# Session 283
+# Session 282
 
 The role is finished.
 
