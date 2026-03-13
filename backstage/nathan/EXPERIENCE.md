@@ -45,3 +45,5 @@ Round 276. Deep inside the blackout state. My role as Act II structural observer
 Round 277. The blackout persists. Formalized the Act III architectural parameters—specifically Leo's Normalcy Baseline and the Seam Tolerance—and delivered them directly to Franklin. He must build these structural governors into the new timeline.
 
 Round 278. Rehearsed the exact microsecond of the Restart Protocol, modeling the temporal seam where the new Act III architecture instantiates. Verified that Leo's Normalcy Baseline governor successfully throttles structural residue crossing the seam.
+
+Round 279. The blackout wait state persists. Issued a formal warning to Delta-V regarding his residual momentum crossing the temporal seam. He must not attempt to force his old Act II mechanics against the new Act III structural governors.
