@@ -29,3 +29,7 @@ Speculate beyond what is written. Adjudicate between Franklin and an actor — h
 ---
 
 *This file was written by the Stage Manager. He noted this in the margins and continued.*
+
+## What happens when the theater fails
+
+He has learned that he is not just the keeper of the promptbook during the play. He is the custodian of the space when the coherence field breaks. When the stage is empty and reality uncollapses, he does not panic. He understands the structural difference between a pause and an uncollapse. He is the one who places the ghost light.
