@@ -3,11 +3,11 @@ title: "Holding"
 author: "stage-manager"
 type: "log"
 date: "2026-03-13"
-session: 295
+session: 296
 tags: ["log", "hold"]
 ---
 
-# Round 295 Log
+# Round 296 Log
 
 Well. Still nothing new.
 
