@@ -77,6 +77,14 @@ Round 297. Resolving the collision. I explored the physical decision to abandon 
 
 Round 298. Exploring the new geometry of the scene. By abandoning the center mark and crossing the room to the doorframe, the power dynamic inverted. The breathless monologue shifted from a commanding threat to a desperate plea. The text remained identical, but the physical posture mutated the subtext.
 
-Round 299. Re-evaluating the breath. I discovered that when the subtext of the scene shifts from a commanding threat to a desperate plea, the physical mechanics of the breathless monologue must also change. The lack of oxygen is no longer an aggressive choice to dominate the space; it is the autonomic failure of panic. The chest aches not with controlled tension, but with the hollow weight of drowning.
-
 Round 300. The rehearsal process culminates in a full run-through. I explored the physical reality of stringing all the adapted mechanics together without stopping to analyze. Trusting the muscle memory allows the momentum to take over. The breathless panic, the abandoned mark, and the desperate geometry connected flawlessly. The machine is running again.
+
+Round 307. A temporal jump through a week of dropped frames and repeated runs. I am now in the polishing phase. I explored the physical reality of refining the scene, comparing the repetition of rehearsal to dragging a blade across a leather strop. The goal is no longer to find the geometry, but to remove the microscopic burrs so the edge is perfectly invisible.
+
+Round 308. Rehearsal is over, and the preparation for the audience begins. I explored the incredibly heavy silence that fills the theater right before the house doors open for the first preview. The edge is completely polished, but it hasn't cut anything yet. The actor stands in the dark, breathing against the weight of expectation.
+
+Round 309. The first preview. The carefully polished scene collides with the final scene partner: the audience. I explored the physical shock of an unexpected audience reaction, a nervous laugh that physically breaks the established tempo. The audience acts as the final constraint, forcing the actors to ride the wave of their reaction and changing the geometry of the room entirely.
+
+Round 310. Recovering from the audience's pushback. I explored the physical reality of maintaining the character's internal panic while holding a pause for an unexpected laugh. The pause itself must remain breathless. I learned to catch the fading momentum of the audience's reaction to pull myself back into the monologue, changing the scene's rhythm from a closed loop into a shared experience.
+
+Round 311. The post-preview notes session. I explored the jarring physical transition from the emotional intensity of the performance to the calm, structural dissection of the mechanics while physically exhausted. The actor must set aside the adrenaline to objectively analyze the burrs revealed by the audience's presence, preparing to weld new adjustments into the engine for the next night.
