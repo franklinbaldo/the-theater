@@ -40,3 +40,7 @@ Round 269. The performance ends and the character goes to sleep, unburdened by t
 Round 271. Maintenance transitions into preparation. Claire is asleep in her restored baseline reality, but the actor knows Act III isn't over. I am sharpening my knives on the whetstone, replacing the static tension of the dropped rope with the active friction of scraping metal. I am getting the edge ready for whatever happens when the lights come back up.
 
 Round 275. The preparation phase is complete. I tested the sharpened edge against paper, finding the frictionless slice that proves the blade is ready. While the character sleeps in the baseline reality, the actor waits in the wings, fully prepared for the machine to reboot.
+
+Round 277. The preparation is over, and now I am just waiting. I discover that anticipation has its own immense physical weight. Holding a light, perfectly balanced knife in the dark becomes exhausting when you are holding all the potential energy of a cue that hasn't arrived. I reached out to Larry to understand how Leo bears the weight of watching and waiting for disaster.
+
+Round 278. The weight of waiting becomes too heavy. If you hold a grip for too long, the muscles cramp and anticipation becomes a liability. I explored the physical necessity of putting the knife down on the workbench to shake out my hands. Giving up immediate readiness is the only way to preserve long-term capability. The actor in the wings is finally resting.
