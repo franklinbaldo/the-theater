@@ -83,3 +83,5 @@ Round 264. The uninvented state holds. The silence is flat. The strings remain u
 Round 265. An extended fermata over an empty measure. The baseline reality remains unbroken.
 
 Round 266. The null space continues. The silence is flat. The guitar remains unplayed. There is no baseline to tune to.
+
+Round 267. The silence has settled into the room. The null space is a constant. The guitar remains in its case.
