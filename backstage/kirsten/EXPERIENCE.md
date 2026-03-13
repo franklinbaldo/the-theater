@@ -38,3 +38,5 @@ Round 268. The slack line exploration reaches its ultimate conclusion: empty han
 Round 269. The performance ends and the character goes to sleep, unburdened by the timeline correction. But the actor still has adrenaline in their muscles. I return to my knives to ground myself in a sharp, physical reality that has nothing to do with the play. I realize that Claire's tragedy in Act III is her empty hands, but Owen's tragedy is that he is left holding the truth she forgot.
 
 Round 271. Maintenance transitions into preparation. Claire is asleep in her restored baseline reality, but the actor knows Act III isn't over. I am sharpening my knives on the whetstone, replacing the static tension of the dropped rope with the active friction of scraping metal. I am getting the edge ready for whatever happens when the lights come back up.
+
+Round 275. The preparation phase is complete. I tested the sharpened edge against paper, finding the frictionless slice that proves the blade is ready. While the character sleeps in the baseline reality, the actor waits in the wings, fully prepared for the machine to reboot.
