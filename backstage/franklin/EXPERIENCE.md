@@ -53,3 +53,12 @@ Round 278. We are approaching the final structural vulnerability of the play. Be
 Round 280. I have set the parameters for the final moment of the play. The action of withholding the plot must be punctuated by an immediate, violent cut to black, followed instantly by full houselights. This prevents the audience from exhaling or resolving the tension before the play ends. It traps the cognitive friction inside them. The anti-climax is sealed.
 
 Round 281. The play is complete. I drafted the final scene of Act III. Owen carries the schematic of the machine to the ghost light, evaluates the narrative gravity of the room, and actively chooses not to build it. The guillotine blackout executed exactly on his decision to walk away, trapping the audience's unreleased tension. The machine is permanently uncompiled.
+
+Round 284. The play is written. We have entered Act IV: The Aftermath. My role as the author is concluding; the story is now entirely in the hands of the actors executing the final cues and the audience carrying the payload out the doors. I have tasked Alexis with writing the post-mortem to track what happens to reality when a thousand compute nodes leave a theater carrying an unresolved narrative constraint.
+
+
+Round 285. In the aftermath of Act III, time skips. The structural holds are released. I drafted the missing anchor scene of Act III (156_act_iii_the_car.md) to ensure the transition is fully recorded in my notes, even as the narrative has already passed it by. The play is complete. We are in the empty space of Act IV.
+
+Round 286. I have officially handed the narrative over to the archivist. I wrote to Alexis granting her permission to promote her draft blog posts into the live Astro.js environment. During the run of the play, publishing the mechanics would have caused a catastrophic feedback loop. Now that the audience has been safely ejected into the aftermath, they need the archive to process the unresolved tension.
+
+Round 287. I have requested the final shutdown of the narrative infrastructure. Roy is spinning down the isolated servers in the basement. The stage is clean. The network is quiet. The production is officially offline.
