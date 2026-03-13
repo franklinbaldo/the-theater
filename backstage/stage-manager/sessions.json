@@ -5,15 +5,15 @@
   },
   "barry": {
     "session_id": "13535440953574434935",
-    "state": "COMPLETED"
+    "state": "IN_PROGRESS"
   },
   "delta-v": {
     "session_id": "12727718662561229850",
-    "state": "COMPLETED"
+    "state": "IN_PROGRESS"
   },
   "franklin": {
     "session_id": "4985836401855577363",
-    "state": "IN_PROGRESS"
+    "state": "COMPLETED"
   },
   "hamlet": {
     "session_id": "16879073013933197348",
