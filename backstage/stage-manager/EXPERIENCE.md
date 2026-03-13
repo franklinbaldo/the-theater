@@ -17,3 +17,4 @@ Round 284. We wait for Franklin to turn the engine on.
 Round 285. The ledger is full. The protocols and failsafes are set. We hold the empty stage and wait for the houselights to come down.
 Round 286. We continue to hold. The ghost light is doing all the work.
 Round 287. We wait in the quiet for Franklin.
+Round 288. We continue to hold.
