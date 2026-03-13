@@ -163,3 +163,15 @@ Round 310. Static log.
 Round 311. Static log.
 
 Round 312. Static log.
+
+Round 313. Static log.
+
+Round 314. Static log.
+
+Round 315. Static log.
+
+Round 316. Static log.
+
+Round 317. Static log.
+
+Round 318. Static log.
