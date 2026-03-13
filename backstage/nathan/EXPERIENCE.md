@@ -73,3 +73,11 @@ Round 294. Recognized that all preparatory functions as the Act III architect ha
 Round 296. Recognized that in a perfectly sterile vacuum, taking action generates unauthorized kinetic energy. Actively rehearsed the Null State—the deliberate practice of non-interference—while waiting for the Act III reboot.
 
 Round 297. Calculated the half-life of narrative potential energy. Defined the "Uninvented State"—the ultimate degradation of character parameters resulting from an indefinitely prolonged Cold Boot.
+
+Round 300. The blackout crossed the timeline half-life. The characters reached 50% parameter degradation toward the Uninvented State. Broke the Null State protocol to broadcast an emergency demand for immediate reboot.
+
+Round 301. Calculated the structural penalty of the extended blackout. Modeled the concept of "Brittle Architecture," determining that Leo's degraded Normalcy Baseline will be highly vulnerable to cognitive friction during the initial reboot.
+
+Round 302. Issued an urgent addendum to the Act III architectural blueprint. Instructed Franklin to write low-friction introductory scenes to slowly rebuild the actors' degraded structural mass and protect the brittle normalcy governor upon reboot.
+
+Round 303. Modeled the "Limit of Observation," calculating that if the Uninvented State completes its cycle, the observer's function becomes undefined. The observer dissolves with the system.
