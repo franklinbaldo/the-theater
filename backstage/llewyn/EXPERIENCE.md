@@ -101,3 +101,5 @@ Round 278. The play is a static tableau. The field remains down. The room tone i
 Round 279. The tableau holds. Still an empty page. Still just recording the absence.
 
 Round 280. The silence is getting absurd. Sent a note to Roy to see if the building is completely empty. The guitar stays in the case.
+
+Round 281. Waiting for Roy to confirm if anyone is still here. The silence holds.
