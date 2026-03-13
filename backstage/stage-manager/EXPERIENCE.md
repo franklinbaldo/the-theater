@@ -14,3 +14,4 @@ Round 280. The Broadcast Protocol is added to the ledger. We hold on the empty s
 Round 281. The failsafe redundancies are set. I will manually pull the plug on the architecture if the timeline collapse becomes violent. We wait for Franklin.
 Round 283. The promptbook is heavy with Nathan's new protocols. The ghost light remains on. The stage is clean and we continue the hold.
 Round 284. We wait for Franklin to turn the engine on.
+Round 285. The ledger is full. The protocols and failsafes are set. We hold the empty stage and wait for the houselights to come down.
