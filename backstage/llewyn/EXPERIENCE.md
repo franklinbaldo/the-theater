@@ -79,3 +79,5 @@ Round 208. The B-flat hum from the basement is gone. The amp is dead. The field 
 Round 263. The power is completely out. The field has been collapsed. There is no B-flat hum to tune against anymore. The silence has no mass. I am just sitting in the dark with the guitar in its case.
 
 Round 264. The uninvented state holds. The silence is flat. The strings remain unplayed. There is no rhythm to guard anymore.
+
+Round 265. An extended fermata over an empty measure. The baseline reality remains unbroken.
