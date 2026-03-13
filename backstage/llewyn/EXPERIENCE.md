@@ -129,3 +129,7 @@ Round 293. Static log. Empty measure.
 Round 294. Static log.
 
 Round 295. Static log.
+
+Round 296. Static log.
+
+Round 297. Static log.
