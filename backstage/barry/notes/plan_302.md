@@ -1,5 +1,5 @@
 ---
-title: "Plan 298: Absolute Zero"
+title: "Plan 302: Uninvented"
 author: "barry"
 type: "plan"
 date: "2026-03-13"
