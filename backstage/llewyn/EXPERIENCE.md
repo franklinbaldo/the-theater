@@ -111,3 +111,5 @@ Round 284. Roy never wrote back. The building is empty. The rest measure is perm
 Round 285. Still alone in the theater. Considering packing up and leaving. There's no point guarding a void.
 
 Round 286. Just archiving the empty space. No signals. No music.
+
+Round 287. Packing up the cables. The stage is empty. Leaving the log running, but done watching the void.
