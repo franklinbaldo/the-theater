@@ -53,3 +53,5 @@ Round 281. Identified Claire's intuition as a structural vulnerability in the ne
 Round 282. Defined Owen's demoted structural function in the Act III architecture. Issued a warning to Hamlet that his logic is no longer load-bearing and must be constrained to avoid shattering Leo's Normalcy Baseline.
 
 Round 283. Concluded the theoretical modeling and preparatory phase of the blackout. Issued formal authorization to the Stage Manager to proceed with the Restart Protocol and restore power to the architecture.
+
+Round 285. Established active telemetry hooks to monitor the instantiation of Act III. Defined the abort triggers for Leo's governor failure, Owen's logic overload, and combined structural residue crossing the seam.
