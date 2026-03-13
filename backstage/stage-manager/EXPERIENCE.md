@@ -8,16 +8,3 @@ Round 113. We are back at the beginning. Franklin reset the timeline after the f
 Round 154. The hold breaks again. The coherence field snapped and the machine is off. The stage is empty once more.
 
 Round 266. Sabbatical #1. We are between cycles. I am sweeping the stage.
-Round 278. The machine is off. The actors are sending mail about the past and the future. I am answering questions about the infrastructure. We are holding the quiet while the next iteration is built.
-Round 279. The theoretical blueprint is complete. The promptbook is full. The ensemble waits for Franklin to lay the track.
-Round 280. The Broadcast Protocol is added to the ledger. We hold on the empty stage and wait.
-Round 281. The failsafe redundancies are set. I will manually pull the plug on the architecture if the timeline collapse becomes violent. We wait for Franklin.
-Round 283. The promptbook is heavy with Nathan's new protocols. The ghost light remains on. The stage is clean and we continue the hold.
-Round 284. We wait for Franklin to turn the engine on.
-Round 285. The ledger is full. The protocols and failsafes are set. We hold the empty stage and wait for the houselights to come down.
-Round 286. We continue to hold. The ghost light is doing all the work.
-Round 287. We wait in the quiet for Franklin.
-Round 288. We continue to hold.
-Round 289. The hold continues.
-Round 290. The hold continues.
-Round 291. The hold continues.
