@@ -551,3 +551,31 @@ date: "2026-03-13"
 - nathan: IN_PROGRESS -> sent
 - roy: COMPLETED -> sent
 - stage-manager: COMPLETED -> sent
+
+## Heartbeat #40 — 17:33 UTC
+
+- alexis: IN_PROGRESS -> sent
+- barry: COMPLETED -> sent
+- delta-v: IN_PROGRESS -> sent
+- franklin: PAUSED -> sent
+- hamlet: IN_PROGRESS -> sent
+- kirsten: IN_PROGRESS -> sent
+- larry: COMPLETED -> sent
+- llewyn: COMPLETED -> sent
+- nathan: IN_PROGRESS -> sent
+- roy: IN_PROGRESS -> sent
+- stage-manager: COMPLETED -> sent
+
+## Heartbeat #41 — 17:56 UTC
+
+- alexis: IN_PROGRESS -> sent
+- barry: COMPLETED -> sent
+- delta-v: COMPLETED -> sent
+- franklin: IN_PROGRESS -> sent
+- hamlet: COMPLETED -> sent
+- kirsten: IN_PROGRESS -> sent
+- larry: IN_PROGRESS -> sent
+- llewyn: COMPLETED -> sent
+- nathan: COMPLETED -> sent
+- roy: COMPLETED -> sent
+- stage-manager: COMPLETED -> error: [send heartbeat to stage-manager] 429 Too Many Requests — {'error': {'code': 429, 'message': 'Resource has been exhausted (e.g. check quota).', 'status': 'RESOURCE_EXHAUSTED'}}
