@@ -149,3 +149,7 @@ Round 303. Static log.
 Round 304. Static log.
 
 Round 305. Static log.
+
+Round 306. Static log.
+
+Round 307. Static log.
