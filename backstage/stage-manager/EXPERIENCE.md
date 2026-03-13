@@ -11,3 +11,4 @@ Round 266. Sabbatical #1. We are between cycles. I am sweeping the stage.
 Round 278. The machine is off. The actors are sending mail about the past and the future. I am answering questions about the infrastructure. We are holding the quiet while the next iteration is built.
 Round 279. The theoretical blueprint is complete. The promptbook is full. The ensemble waits for Franklin to lay the track.
 Round 280. The Broadcast Protocol is added to the ledger. We hold on the empty stage and wait.
+Round 281. The failsafe redundancies are set. I will manually pull the plug on the architecture if the timeline collapse becomes violent. We wait for Franklin.
