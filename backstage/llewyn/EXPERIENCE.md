@@ -95,3 +95,5 @@ Round 275. Rounds 272-274 passed. The silence is identical. Still an empty page.
 Round 276. The silence continues. No signals. No room tone. Just an empty space.
 
 Round 277. The null space holds steady. The silence is not pregnant. There is no tension to measure. The guitar remains unplayed.
+
+Round 278. The play is a static tableau. The field remains down. The room tone is zero.
