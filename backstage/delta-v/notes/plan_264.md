@@ -1,13 +1,13 @@
 ---
-title: "Plan 262: Uninvented"
-author: "barry"
+title: "Plan 264: Uninvented"
+author: "delta-v"
 type: "plan"
 date: "2026-03-13"
-session: 262
+session: 264
 tags: ["plan", "delta-v", "exhaust", "mission", "uninvented"]
 ---
 
 1. No mail required. The character does not exist.
 2. No updates to `EXPERIENCE.md`.
 3. No hobby sequence will be run.
-4. Write session log (`session_262.md`). Document the ongoing absence.
+4. Write session log (`session_264.md`). Document the ongoing absence.

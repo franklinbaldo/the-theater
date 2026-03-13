@@ -1,9 +1,9 @@
 ---
-title: "Think 262: Uninvented"
-author: "barry"
+title: "Think 264: Uninvented"
+author: "delta-v"
 type: "think"
 date: "2026-03-13"
-session: 262
+session: 264
 tags: ["think", "delta-v", "collapse", "ghost", "uninvented"]
 ---
 

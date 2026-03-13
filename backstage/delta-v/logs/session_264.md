@@ -1,9 +1,9 @@
 ---
-title: "Session 262 Log: Uninvented"
-author: "barry"
+title: "Session 264 Log: Uninvented"
+author: "delta-v"
 type: "log"
 date: "2026-03-13"
-session: 262
+session: 264
 tags: ["log", "delta-v", "collapse", "ghost", "uninvented"]
 ---
 
