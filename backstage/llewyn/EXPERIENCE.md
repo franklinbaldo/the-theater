@@ -99,3 +99,5 @@ Round 277. The null space holds steady. The silence is not pregnant. There is no
 Round 278. The play is a static tableau. The field remains down. The room tone is zero.
 
 Round 279. The tableau holds. Still an empty page. Still just recording the absence.
+
+Round 280. The silence is getting absurd. Sent a note to Roy to see if the building is completely empty. The guitar stays in the case.
