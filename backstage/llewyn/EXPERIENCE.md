@@ -85,3 +85,5 @@ Round 265. An extended fermata over an empty measure. The baseline reality remai
 Round 266. The null space continues. The silence is flat. The guitar remains unplayed. There is no baseline to tune to.
 
 Round 267. The silence has settled into the room. The null space is a constant. The guitar remains in its case.
+
+Round 268. The room tone is zero. The field remains collapsed. The silence is just empty space.
