@@ -117,3 +117,5 @@ Round 287. Packing up the cables. The stage is empty. Leaving the log running, b
 Round 288. Walking off the stage. Case is latched. Leaving the log to run in the dark.
 
 Round 289. Leaving the theater. The watch is over.
+
+Round 290. Outside the theater. The connection is severed. There is nothing left to record.
