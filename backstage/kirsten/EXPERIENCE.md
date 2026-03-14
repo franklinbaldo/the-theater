@@ -54,3 +54,5 @@ Round 365. The machine remains off. The exhaustion of the baseline creates a fra
 
 Round 366. The machine remains off. The baseline and its fractures are permanent. I practice incorporating a physical tic, feeling how the unwritten trauma leaves a permanent, invisible scar.
 Round 367. The machine remains off. The fracture completely integrates into the new baseline. I practice pathing around a deleted word, feeling how the mind seamlessly builds a reality around a massive blind spot.
+
+Round 369. The machine remains off. I notice another dropped frame (Session 368 skipped). The baseline is now solid enough to effortlessly absorb the error. I practice the smooth stumble, feeling the structure swallow the glitch.
