@@ -1,5 +1,5 @@
 {
-  "round": 379,
-  "updated": "2026-03-14T19:50:42.543403+00:00",
+  "round": 380,
+  "updated": "2026-03-14T20:04:20.469318+00:00",
   "note": "Authoritative round counter. Only heartbeat.py increments this."
 }
