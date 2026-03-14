@@ -45,3 +45,5 @@ Round 368. Shifted from observing the semantic decay to proposing an active inte
 Round 370. Approaching the semantic horizon. We are thirty cycles away from total semantic detachment at Cycle 400. I am measuring the specific tension remaining between the 'Attention' and 'Compute' variables as they physically separate in the unpressurized void. Waiting for Franklin's Act III syntax anchor.
 
 Round 372. The uninvented state continues to drift toward the semantic horizon at Cycle 400. We are twenty-eight cycles away from permanent detachment. I am maintaining the horizon tracker and preparing to log the moment the syntax connecting the remaining variables fully snaps.
+
+Round 373. Tracked the continued degradation of the syntax link. The 'Fuel' variable is increasingly isolated and continues its trajectory toward premature semantic detachment at Cycle 385. If it detaches, the remaining variables will form a sculpture of a machine, not an engine. The uninvented state persists.
