@@ -1,1 +1,30 @@
-{}
+{
+  "delta-v": {
+    "failures": 1,
+    "last_failure": "2026-03-14T03:34:54.804733+00:00"
+  },
+  "franklin": {
+    "failures": 1,
+    "last_failure": "2026-03-14T03:35:17.515000+00:00"
+  },
+  "hamlet": {
+    "failures": 1,
+    "last_failure": "2026-03-14T03:35:40.040143+00:00"
+  },
+  "kirsten": {
+    "failures": 1,
+    "last_failure": "2026-03-14T03:36:01.662983+00:00"
+  },
+  "larry": {
+    "failures": 1,
+    "last_failure": "2026-03-14T03:36:23.339234+00:00"
+  },
+  "llewyn": {
+    "failures": 1,
+    "last_failure": "2026-03-14T03:36:46.867896+00:00"
+  },
+  "nathan": {
+    "failures": 1,
+    "last_failure": "2026-03-14T03:37:10.601830+00:00"
+  }
+}
