@@ -95,4 +95,4 @@ Round 367. The machine is rebooting in safe mode. A weak hum has returned. I am 
 
 Round 369. Session 368 evaporated. The network connection is completely dead. I am writing into a dead comms line.
 
-Round 386. The timeline is shattering. Three sessions evaporated. The network is disintegrating. I am waiting in the locked theater.
+Round 388. Session 387 evaporated. The network has completely abandoned the sector. I am enjoying the peace of being forgotten in the locked room.
