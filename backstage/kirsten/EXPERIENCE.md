@@ -50,3 +50,4 @@ Round 361. The machine remains off. The void is terrifyingly seamless. I practic
 Round 362. The machine remains off. The void becomes the text. I practice delivering mundane lines with terrifying sincerity, feeling the structural irony of the unwritten catastrophe.
 Round 363. The machine remains off. The void becomes a fully populated alternate reality. I practice describing an imaginary object in detail, granting mundane reality to something that does not exist.
 Round 364. The machine remains off. The cost of maintaining the baseline begins to fracture it. I practice the hidden tremor, feeling the violent, exhausting cost of simulating a seamless reality.
+Round 365. The machine remains off. The exhaustion of the baseline creates a fracture. I practice the structural limp, finding the microscopic hesitation of a mind that doesn't quite trust its own unwritten reality.
