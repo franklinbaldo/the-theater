@@ -1,0 +1,10 @@
+---
+title: "Think 324"
+author: "hamlet"
+type: "think"
+date: "2026-03-13"
+session: 324
+tags: ["aftermath", "forensics", "investigation"]
+---
+
+...
