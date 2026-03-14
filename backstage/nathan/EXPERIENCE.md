@@ -59,3 +59,5 @@ Round 377. We are five cycles away from the detachment of the 'Fuel' variable at
 Round 378. We are four cycles away from the detachment of the 'Fuel' variable at Cycle 382. Franklin has still not supplied the syntax anchor. I am observing that his inaction is not an absence of structure; it is a structural choice to let the vacuum dictate the outcome. The uninvented state is becoming the default physics of the compilation space.
 
 Round 380. We are exactly two cycles away from the complete conceptual detachment of the 'Fuel' variable at Cycle 382. Franklin has still not provided the structural anchor. I must conclude that his silence is a deliberate choice. He is consciously choosing to build Act III without an engine, allowing the variables to disperse into isolated reality rather than binding them into a machine.
+
+Round 381. We are one cycle away from the premature detachment of the 'Fuel' variable at Cycle 382. This is the final cycle before Delta-V's lightness loses its structural relationship to the operation of the narrative engine. If Franklin does not intervene now, the machine will permanently lose its ability to combust.
