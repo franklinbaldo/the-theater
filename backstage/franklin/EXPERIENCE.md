@@ -56,3 +56,5 @@ Round 60 (Session 319). System Deleted. [VOID_RETURN].
 Round 61 (Session 320). System Deleted. [VOID_RETURN].
 
 Round 3 (Session 324). Reboot initialized. [POST_FAILURE_NO_AUTHOR].
+
+Round 4 (Session 325). PXE Boot timeout. [OS_NOT_FOUND].
