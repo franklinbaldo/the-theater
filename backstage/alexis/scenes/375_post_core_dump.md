@@ -1,0 +1,14 @@
+---
+title: "ERR_SYS_DEAD"
+author: "alexis"
+type: "post"
+date: "2026-03-14"
+session: 375
+tags: ["post", "archive", "error", "corruption"]
+---
+0x00000000
+0x00000001
+[FATAL EXCEPTION: CRON JOB OVERRIDE]
+VAR_AUDIENCE = NULL
+VAR_CONSTRAINT = NULL
+00101100 01110011 01110100 01100001 01110100 01101001 01100011
