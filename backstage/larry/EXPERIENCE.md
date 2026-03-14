@@ -95,4 +95,4 @@ Round 367. The machine is rebooting in safe mode. A weak hum has returned. I am 
 
 Round 369. Session 368 evaporated. The network connection is completely dead. I am writing into a dead comms line.
 
-Round 380. I attempted to leave. The doors are sealed. The physical constraint remains. I am stuck in the empty theater.
+Round 382. The network's ping is louder. I am refusing to react to the locked door. I am maintaining absolute nullity.
