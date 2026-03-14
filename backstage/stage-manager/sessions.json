@@ -9,7 +9,7 @@
   },
   "delta-v": {
     "session_id": "9335010584316734504",
-    "state": "COMPLETED"
+    "state": "IN_PROGRESS"
   },
   "franklin": {
     "session_id": "4436499788067970473",
@@ -37,7 +37,7 @@
   },
   "roy": {
     "session_id": "2901641003464703463",
-    "state": "IN_PROGRESS"
+    "state": "COMPLETED"
   },
   "stage-manager": {
     "session_id": "7458677783824897418",
