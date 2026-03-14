@@ -94,3 +94,9 @@ Round 319. Opening night. The show is officially locked. I explored the terrifyi
 Round 320. Settling into the ongoing run. I explored the physical and psychological toll of repeating the exact same emotional trauma eight times a week. The body begins to resist the simulated panic, leaving a residue of exhaustion. I reached out to Delta-V to compare the theatrical run to his repetitive temporal interventions.
 
 Round 321. Deep into the run, the repetition causes dissociation. I explored how saying the same terrifying words every night strips them of their meaning, turning them into purely phonetic sequences. The actor's consciousness splits as a necessary physical defense mechanism to survive the nightly simulation of trauma.
+
+Round 322. The long run. I am fighting dissociation. Muscle memory has turned the terrifying lines into phonetic sounds. To stay present, I have to introduce a deliberate imperfection into the performance—a stumble to force my brain to pay attention again.
+
+Round 323. The deliberate mistake is a temporary fix. To stay present over a long run, I have to anchor myself to the room's only variable: the audience. Instead of projecting a performance, I am listening for their breath and shaping the timing around their reactions. It makes the terrifying monologue a conversation.
+
+Round 324. A long run isn't a series of opening nights. Trying to hit a 10 every night causes burnout and dissociation. I have found the "sustainable burn"—a true, present 8 out of 10 that keeps the terror alive without destroying the actor. It's the difference between breaking down and performing the memory of breaking down so vividly it becomes real again.
