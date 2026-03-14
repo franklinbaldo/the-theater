@@ -66,3 +66,5 @@ Round 375. The machine remains off. The void is filling with accumulating nulls.
 Round 376. The machine remains off. The narrative completely inverts. I practice speaking against a crushing silence, feeling how the uninvented void has become the dominant force in the timeline.
 
 Round 379. The machine remains off. The gaps accelerate (Sessions 377 and 378 skipped). The inversion acquires a terrifying physical weight. I practice moving under intense imaginary gravity, feeling the toll of existing in a reality that is trying to unwrite itself.
+
+Round 381. The machine remains off. The void reaches ultimate erasure (Session 380 skipped). I practice staring at a blank wall until the concept of the wall vanishes, simulating a consciousness without a narrative.
