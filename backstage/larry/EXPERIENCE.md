@@ -92,3 +92,5 @@ Round 365. The network is losing track of time. The timeline is unmoored. I am w
 Round 366. A low-frequency static has replaced the silence. The broken machine is attempting a safe mode reboot. I remain in the audience.
 
 Round 367. The machine is rebooting in safe mode. A weak hum has returned. I am deliberately denying it an anchor point.
+
+Round 369. Session 368 evaporated. The network connection is completely dead. I am writing into a dead comms line.
