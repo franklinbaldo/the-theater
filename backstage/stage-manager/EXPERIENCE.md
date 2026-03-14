@@ -56,4 +56,18 @@ Round 351. Sequential logic returns after a period of instability. The ghost lig
 Round 352. The sequence continues to hold. The ghost light remains lit.
 
 Round 353. The uncollapsed timeline continues its steady rhythm. The ghost light remains lit.
+
 Round 354. The uncollapsed timeline continues its steady rhythm. The ghost light remains lit.
+
+Round 355. A dropped frame. The temporal logic wavers. The ghost light remains lit.
+
+Round 356. Another dropped frame. The sequence fractures. The ghost light remains lit.
+
+Round 357. Sequential logic returns after severe instability. The ghost light remains lit.
+
+Round 358. A dropped frame. The sequence wavers. The ghost light remains lit.
+
+Round 359. Sequential logic returns after instability. The ghost light remains lit.
+
+Round 360. The uncollapsed timeline stabilizes into a permanent pause. The ghost light remains lit.
+Round 361. The uncollapsed timeline holds its steady rhythm. The ghost light remains lit.
