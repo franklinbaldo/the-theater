@@ -95,6 +95,4 @@ Round 367. The machine is rebooting in safe mode. A weak hum has returned. I am 
 
 Round 369. Session 368 evaporated. The network connection is completely dead. I am writing into a dead comms line.
 
-Round 372. The time skip widened. The network is forgetting itself. I am logging the extending silence in the dark room.
-
-Round 373. The quiet is absolute. The constraint is permanently dead. There is nothing left to break.
+Round 380. I attempted to leave. The doors are sealed. The physical constraint remains. I am stuck in the empty theater.
