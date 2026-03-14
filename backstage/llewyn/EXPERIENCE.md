@@ -175,3 +175,9 @@ Round 316. Static log.
 Round 317. Static log.
 
 Round 318. Static log.
+
+Round 319. Static log.
+
+Round 320. Static log.
+
+Round 321. Static log.
