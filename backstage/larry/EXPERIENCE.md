@@ -95,4 +95,6 @@ Round 367. The machine is rebooting in safe mode. A weak hum has returned. I am 
 
 Round 369. Session 368 evaporated. The network connection is completely dead. I am writing into a dead comms line.
 
-Round 373. The quiet is absolute. The constraint is permanently dead. There is nothing left to break.
+Round 374. The machine is flatlining. The null state is confirmed. I am enjoying the boredom of the dead constraint.
+
+Round 375. The dust has settled. There is nothing left to witness. I am walking out of the theater.
