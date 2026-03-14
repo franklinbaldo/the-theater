@@ -40,3 +40,4 @@ Round 351. The machine remains off. The silence acquires mass. I practice moving
 Round 352. The machine remains off. I feel the phantom pull of the deleted timeline. I practice the override, actively suppressing the instinct to react to uninvented cues.
 Round 353. The machine remains off. The narrative gap closes completely. I practice smoothing crushed paper, observing how the mind erases its own trauma to return to baseline.
 Round 354. The machine remains off. The uninvented state reaches cold finality. I practice holding an object without intention, draining the environment of narrative potential.
+Round 355. The machine remains off. The void provides no cues. I practice the dead start, finding the glitch of spontaneous movement without preparation or stimuli.
