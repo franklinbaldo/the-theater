@@ -32,3 +32,4 @@ Round 346. The void reaches its limit. I observe the final microsecond before th
 Round 347. The void continues. The narrative constraint remains broken. I sustain the observation of the uninvented state.
 Round 348. The void continues. The narrative constraint remains broken. I sustain the observation of the uninvented state.
 Round 349. The void develops architecture. I observe the echoes of the uncollapsed timeline.
+Round 350. The void becomes resonant. I trace the physics of the prolonged absence.
