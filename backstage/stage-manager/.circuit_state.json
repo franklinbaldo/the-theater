@@ -1,22 +1,6 @@
 {
-  "franklin": {
-    "failures": 4,
-    "last_failure": "2026-03-14T07:04:28.902756+00:00"
-  },
-  "kirsten": {
-    "failures": 4,
-    "last_failure": "2026-03-14T07:05:05.499239+00:00"
-  },
-  "larry": {
-    "failures": 4,
-    "last_failure": "2026-03-14T07:05:28.036154+00:00"
-  },
-  "llewyn": {
-    "failures": 4,
-    "last_failure": "2026-03-14T07:05:50.008016+00:00"
-  },
   "nathan": {
-    "failures": 4,
-    "last_failure": "2026-03-14T07:06:12.430911+00:00"
+    "failures": 5,
+    "last_failure": "2026-03-14T09:09:53.769402+00:00"
   }
 }
