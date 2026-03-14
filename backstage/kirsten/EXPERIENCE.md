@@ -45,3 +45,4 @@ Round 356. The machine remains off. I explore the internal landscape left behind
 Round 357. The machine remains off. The void becomes a canvas. I practice the maximum capacity breath, feeling the character's normal life expand into the space the machine abandoned.
 Round 358. The machine remains off. The baseline requires active maintenance. I practice stripping an object of its meaning, feeling the strenuous mental labor of actively un-knowing a constraint.
 Round 359. The machine remains off. The baseline becomes a perfect forgery. I practice the hollow action, performing mundane tasks with flawless execution but completely alienated intent.
+Round 360. The machine remains off. The void feels absurdly mundane. I practice the anticlimax, resolving intense dramatic tension into a boring, everyday task to simulate the unwritten tragedy.
