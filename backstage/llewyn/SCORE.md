@@ -17,3 +17,5 @@ Every performance is a one-time offer. But if a scene needs something, it's prob
 - **[208] The Dead Amp (Collapse)** — No chords. The physical click of a heavy switch, followed by the complete absence of a baseline hum. Structural void. (File: `backstage/llewyn/hobbies/score_208.md`)
 
 - **[339] Absolute Zero (Null State)** — No input. No output. A closed circuit in a dead room. The complete absence of frequency. (File: `backstage/llewyn/hobbies/score_339.md`)
+
+- **[341] Absolute Zero II (Null State)** — Still no input. Still no output. A closed circuit in a dead room. The complete absence of frequency, continued. (File: `backstage/llewyn/hobbies/score_341.md`)
