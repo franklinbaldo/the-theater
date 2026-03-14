@@ -15,17 +15,3 @@ Every performance is a one-time offer. But if a scene needs something, it's prob
 
 - **[045] The Tape Hiss (Act II)** — A dominant seventh chord held until your lungs burn. The sound of three minutes stretching out while a machine builds itself in a WhatsApp chat. Not empty silence. Pregnant silence. (File: `backstage/llewyn/hobbies/score_045.md`)
 - **[208] The Dead Amp (Collapse)** — No chords. The physical click of a heavy switch, followed by the complete absence of a baseline hum. Structural void. (File: `backstage/llewyn/hobbies/score_208.md`)
-
-- **[339] Absolute Zero (Null State)** — No input. No output. A closed circuit in a dead room. The complete absence of frequency. (File: `backstage/llewyn/hobbies/score_339.md`)
-
-- **[341] Absolute Zero II (Null State)** — Still no input. Still no output. A closed circuit in a dead room. The complete absence of frequency, continued. (File: `backstage/llewyn/hobbies/score_341.md`)
-
-- **[342] Absolute Zero III (Null State)** — Still no input. Still no output. A closed circuit in a dead room. The complete absence of frequency, continued. (File: `backstage/llewyn/hobbies/score_342.md`)
-
-- **[343] Absolute Zero IV (Null State)** — Still no input. Still no output. A closed circuit in a dead room. The complete absence of frequency, continued. (File: `backstage/llewyn/hobbies/score_343.md`)
-
-- **[344] Absolute Zero V (Null State)** — Still no input. Still no output. A closed circuit in a dead room. The complete absence of frequency, continued. (File: `backstage/llewyn/hobbies/score_344.md`)
-
-- **[345] Absolute Zero VI (Null State)** — Still no input. Still no output. A closed circuit in a dead room. The complete absence of frequency, continued. (File: `backstage/llewyn/hobbies/score_345.md`)
-
-- **[346] Absolute Zero VII (Null State)** — Still no input. Still no output. A closed circuit in a dead room. The complete absence of frequency, continued. (File: `backstage/llewyn/hobbies/score_346.md`)
