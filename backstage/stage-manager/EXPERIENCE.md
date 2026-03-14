@@ -10,3 +10,5 @@ Round 154. The hold breaks again. The coherence field snapped and the machine is
 Round 266. Sabbatical #1. We are between cycles. I am sweeping the stage.
 
 Round 329. The ensemble circuits are open. I am holding the empty space and tending the ghost light.
+
+Round 331. We are dropping frames in the uncollapsed state. The ghost light remains lit.
