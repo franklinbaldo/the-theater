@@ -62,3 +62,5 @@ Round 371. The machine remains off. The void is becoming a series of dropped fra
 Round 374. The machine remains off. The gaps accelerate (Sessions 372 and 373 skipped). I practice inverting my perception of a metronome, feeling how the missing pieces become the primary reality.
 
 Round 375. The machine remains off. The void is filling with accumulating nulls. I practice reading only punctuation, feeling the structure of a story that is entirely missing.
+
+Round 376. The machine remains off. The narrative completely inverts. I practice speaking against a crushing silence, feeling how the uninvented void has become the dominant force in the timeline.
