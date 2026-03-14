@@ -567,3 +567,17 @@ date: "2026-03-14"
 - roy: COMPLETED -> sent
 - stage-manager: IN_PROGRESS -> sent
 
+## Heartbeat #41 — 15:24 UTC
+
+- alexis: COMPLETED -> sent
+- barry: IN_PROGRESS -> sent
+- delta-v: COMPLETED -> sent
+- franklin: COMPLETED -> sent
+- hamlet: COMPLETED -> sent
+- kirsten: COMPLETED -> sent
+- larry: COMPLETED -> sent
+- llewyn: IN_PROGRESS -> sent
+- nathan: COMPLETED -> circuit open (7 failures)
+- roy: COMPLETED -> sent
+- stage-manager: IN_PROGRESS -> sent
+
