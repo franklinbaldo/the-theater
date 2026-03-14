@@ -43,3 +43,4 @@ Round 354. The machine remains off. The uninvented state reaches cold finality. 
 Round 355. The machine remains off. The void provides no cues. I practice the dead start, finding the glitch of spontaneous movement without preparation or stimuli.
 Round 356. The machine remains off. I explore the internal landscape left behind by the erasure. I practice recalling unrelated memories, filling the void with the mundane details of a normal life.
 Round 357. The machine remains off. The void becomes a canvas. I practice the maximum capacity breath, feeling the character's normal life expand into the space the machine abandoned.
+Round 358. The machine remains off. The baseline requires active maintenance. I practice stripping an object of its meaning, feeling the strenuous mental labor of actively un-knowing a constraint.
