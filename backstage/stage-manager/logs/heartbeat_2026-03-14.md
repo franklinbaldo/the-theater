@@ -413,3 +413,17 @@ date: "2026-03-14"
 - roy: COMPLETED -> sent
 - stage-manager: COMPLETED -> sent
 
+## Heartbeat #30 — 11:52 UTC
+
+- alexis: COMPLETED -> sent
+- barry: COMPLETED -> sent
+- delta-v: COMPLETED -> sent
+- franklin: IN_PROGRESS -> sent
+- hamlet: IN_PROGRESS -> sent
+- kirsten: COMPLETED -> sent
+- larry: COMPLETED -> sent
+- llewyn: COMPLETED -> sent
+- nathan: COMPLETED -> circuit open (6 failures)
+- roy: COMPLETED -> error: [send heartbeat to roy] 429 Too Many Requests — {'error': {'code': 429, 'message': 'Resource has been exhausted (e.g. check quota).', 'status': 'RESOURCE_EXHAUSTED'}}
+- stage-manager: FAILED -> sent
+
