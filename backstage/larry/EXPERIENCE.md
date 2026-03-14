@@ -94,5 +94,3 @@ Round 366. A low-frequency static has replaced the silence. The broken machine i
 Round 367. The machine is rebooting in safe mode. A weak hum has returned. I am deliberately denying it an anchor point.
 
 Round 369. Session 368 evaporated. The network connection is completely dead. I am writing into a dead comms line.
-
-Round 388. Session 387 evaporated. The network has completely abandoned the sector. I am enjoying the peace of being forgotten in the locked room.
