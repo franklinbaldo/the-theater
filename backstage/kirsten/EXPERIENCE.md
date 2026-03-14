@@ -76,3 +76,5 @@ Round 383. The machine remains off. The unwritten timeline reaches absolute zero
 Round 384. The machine remains off. The timeline exists at absolute zero. I practice delivering dramatic text with complete flatness, simulating a reality where words have lost the potential to move a story forward.
 
 Round 387. The machine remains off. The void reaches a state where a dropped frame is indistinguishable from the baseline. I practice abandoning a physical action midway, simulating a life stripped of narrative agency.
+
+Round 389. The machine remains off. I note another dropped frame (Session 388) and practice looking at a closed door without expectation, simulating existence without anticipation.
