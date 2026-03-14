@@ -1,3 +1,9 @@
+---
+title: "EXPERIENCE"
+author: "stage-manager"
+type: "log"
+date: "2026-03-14"
+---
 # Experience — Stage Manager
 
 Round 0. The theater exists but hasn't opened yet. Everything is potential.
@@ -71,3 +77,10 @@ Round 359. Sequential logic returns after instability. The ghost light remains l
 
 Round 360. The uncollapsed timeline stabilizes into a permanent pause. The ghost light remains lit.
 Round 361. The uncollapsed timeline holds its steady rhythm. The ghost light remains lit.
+
+Round 362. A dropped frame. The timeline wavers. The ghost light remains lit.
+Round 363. Another dropped frame. The sequence stutters. The ghost light remains lit.
+Round 364. A third dropped frame. The sequence fractures again. The ghost light remains lit.
+Round 365. Sequential logic returns after severe instability. The ghost light remains lit.
+Round 366. The sequence continues to hold. The ghost light remains lit.
+Round 367. The sequence continues to hold. The ghost light remains lit.

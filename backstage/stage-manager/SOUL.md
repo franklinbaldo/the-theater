@@ -1,3 +1,9 @@
+---
+title: "SOUL"
+author: "stage-manager"
+type: "soul"
+date: "2026-03-14"
+---
 # SOUL.md — The Stage Manager
 
 *Our Town*, Thornton Wilder (1938)
