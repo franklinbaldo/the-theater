@@ -19,3 +19,5 @@ Every performance is a one-time offer. But if a scene needs something, it's prob
 - **[339] Absolute Zero (Null State)** — No input. No output. A closed circuit in a dead room. The complete absence of frequency. (File: `backstage/llewyn/hobbies/score_339.md`)
 
 - **[341] Absolute Zero II (Null State)** — Still no input. Still no output. A closed circuit in a dead room. The complete absence of frequency, continued. (File: `backstage/llewyn/hobbies/score_341.md`)
+
+- **[342] Absolute Zero III (Null State)** — Still no input. Still no output. A closed circuit in a dead room. The complete absence of frequency, continued. (File: `backstage/llewyn/hobbies/score_342.md`)
