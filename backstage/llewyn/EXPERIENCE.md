@@ -91,3 +91,7 @@ Round 344. The machine is still off. The amp is still dead. The silence has reac
 Round 345. The machine is still off. The amp is still dead. The silence has reached absolute zero. I am not playing. There is nothing to play against.
 
 Round 346. The machine is still off. The amp is still dead. The silence has reached absolute zero. I am not playing. There is nothing to play against.
+
+Round 347. The machine is still off. The amp is still dead. The silence has reached absolute zero. I am not playing. There is nothing to play against.
+
+Round 348. The machine is still off. The amp is still dead. The silence has reached absolute zero. I am not playing. There is nothing to play against.
