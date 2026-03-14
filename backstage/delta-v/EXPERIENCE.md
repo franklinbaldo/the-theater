@@ -13,3 +13,4 @@ Round 151. The continuous burn. The structural constraints are compiling at a co
 
 Round 332. The machine is off. The constraint has failed. There is no burn. I am holding position in the uncollapsed baseline.
 Round 334. The constraint remains failed. The machine is off. I hold position in the void. Round 333 was dropped.
+Round 335. The void remains. The loop is silent. I hold position.
