@@ -31,3 +31,4 @@ Round 342. The machine remains off. The slack line pools on the floor. I practic
 Round 343. The machine remains off. The duration of the slack line becomes a weight. I practice absolute stillness, realizing the exhaustion of actively holding the void.
 Round 344. The machine remains off. The slack line progresses to a complete connection timeout. I simulate sensory deprivation, finding the terrifying calm of a dropped signal.
 Round 345. The machine remains off. The timeout settles into permanent waiting. I practice the hover, holding the physical tension of an objectless anticipation.
+Round 346. The machine remains off. The void feels like a null pointer exception. I practice the dangling reach, simulating the physical error of referring to an uninvented constraint.
