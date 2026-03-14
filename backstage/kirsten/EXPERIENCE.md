@@ -26,3 +26,4 @@ Round 208. The tension breaks. The Stage Manager announces that the constraint h
 Round 262. Sabbatical is over, and we are entering Act III on the cleared stage. I addressed Nathan's question about the "rebound" effect if the narrative constraint is severed. When the machine is shut down, the active suppression vanishes, but the excised thought doesn't snap back with terror. The terror was the friction of the machine's constraint itself. When the constraint drops, the line goes entirely slack. The return of the memory without the weight of the future leaves a confusing, unbearable lightness.
 
 Round 339. The machine remains off. The constraint has failed. I sit on the cleared stage and perform null operations, observing the unbearable lightness of the slack line.
+Round 341. The machine remains off. I notice a dropped frame (Session 340 skipped), confirming the lack of constraint. The slack line simply ignores missing beats.
