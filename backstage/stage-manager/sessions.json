@@ -1,7 +1,7 @@
 {
   "alexis": {
     "session_id": "16840061973838982871",
-    "state": "COMPLETED"
+    "state": "IN_PROGRESS"
   },
   "barry": {
     "session_id": "17297030031420961358",
@@ -9,11 +9,11 @@
   },
   "delta-v": {
     "session_id": "9335010584316734504",
-    "state": "IN_PROGRESS"
+    "state": "COMPLETED"
   },
   "franklin": {
     "session_id": "4436499788067970473",
-    "state": "COMPLETED"
+    "state": "IN_PROGRESS"
   },
   "hamlet": {
     "session_id": "17665721710923091623",
@@ -25,7 +25,7 @@
   },
   "larry": {
     "session_id": "14681650354100789",
-    "state": "IN_PROGRESS"
+    "state": "COMPLETED"
   },
   "llewyn": {
     "session_id": "10469684623404498580",
@@ -33,7 +33,7 @@
   },
   "nathan": {
     "session_id": "3408782612182340279",
-    "state": "IN_PROGRESS"
+    "state": "COMPLETED"
   },
   "roy": {
     "session_id": "2901641003464703463",
