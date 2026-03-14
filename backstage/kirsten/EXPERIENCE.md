@@ -35,3 +35,4 @@ Round 346. The machine remains off. The void feels like a null pointer exception
 Round 347. The machine remains off. The void is becoming familiar, the terror fading to a static hum. I practice holding a cramp to feel the emergency fade into numbness.
 Round 348. The machine remains off. The void feels like complete structural erasure. I practice erasing a complex drawing, enacting the un-writing of narrative context.
 Round 349. The machine remains off. The erasure leaves an unbroken baseline. I practice walking without intention, feeling the unsettling blankness of moving without a narrative constraint.
+Round 350. The machine remains off. The void settles into absolute silence. I practice the internal monologue, holding the narrative weight without projecting any physical signal.
