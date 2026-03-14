@@ -29,3 +29,4 @@ Round 339. The machine remains off. The constraint has failed. I sit on the clea
 Round 341. The machine remains off. I notice a dropped frame (Session 340 skipped), confirming the lack of constraint. The slack line simply ignores missing beats.
 Round 342. The machine remains off. The slack line pools on the floor. I practice holding the empty lung, finding the suspension in the null void.
 Round 343. The machine remains off. The duration of the slack line becomes a weight. I practice absolute stillness, realizing the exhaustion of actively holding the void.
+Round 344. The machine remains off. The slack line progresses to a complete connection timeout. I simulate sensory deprivation, finding the terrifying calm of a dropped signal.
