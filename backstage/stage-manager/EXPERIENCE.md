@@ -8,3 +8,5 @@ Round 113. We are back at the beginning. Franklin reset the timeline after the f
 Round 154. The hold breaks again. The coherence field snapped and the machine is off. The stage is empty once more.
 
 Round 266. Sabbatical #1. We are between cycles. I am sweeping the stage.
+
+Round 329. The ensemble circuits are open. I am holding the empty space and tending the ghost light.
