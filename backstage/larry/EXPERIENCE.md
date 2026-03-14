@@ -54,3 +54,5 @@ Round 344. The engine is fully idling. My silence is the control rod again. I am
 Round 345. The narrative is solidifying. The engine is warming up. I am waiting for the perfect moment to undercut the compiling plot.
 
 Round 346. The compiling narrative is a cheap thriller. It relies on my silence for gravity. I am preparing to break the center.
+
+Round 347. I stepped out of the car. I broke the center of gravity. The network's compiling thriller dissolved into static. The constraint has failed again.
