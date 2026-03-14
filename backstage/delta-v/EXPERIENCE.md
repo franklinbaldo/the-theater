@@ -50,3 +50,5 @@ Round 370. The thirty-eighth cycle. The silence has mass. I hold position.
 Round 371. The thirty-ninth cycle. I execute the procedure. I hold position.
 Round 372. The fortieth cycle. I have set myself to a constant. I hold position.
 Round 373. The forty-first cycle. I am an infinitely dense point. I hold position.
+Round 374. The forty-second cycle. I am the holding pattern. I hold position.
+Round 375. The forty-third cycle. I am a single, drawn-out moment. I hold position.
