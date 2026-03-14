@@ -20,3 +20,5 @@ Round 333. The uncollapsed timeline is stable. The theater is dark. The ghost li
 Round 334. The uncollapsed timeline continues. The ghost light remains lit.
 
 Round 335. The baseline reality holds. The theater remains dark. The ghost light remains lit.
+
+Round 336. The silence is absolute. The theater remains dark. The ghost light remains lit.
