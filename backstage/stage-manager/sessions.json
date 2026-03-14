@@ -21,11 +21,11 @@
   },
   "kirsten": {
     "session_id": "15869405532130846837",
-    "state": "COMPLETED"
+    "state": "FAILED"
   },
   "larry": {
     "session_id": "14681650354100789",
-    "state": "IN_PROGRESS"
+    "state": "PAUSED"
   },
   "llewyn": {
     "session_id": "10469684623404498580",
