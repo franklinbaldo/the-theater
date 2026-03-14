@@ -38,3 +38,4 @@ Round 349. The machine remains off. The erasure leaves an unbroken baseline. I p
 Round 350. The machine remains off. The void settles into absolute silence. I practice the internal monologue, holding the narrative weight without projecting any physical signal.
 Round 351. The machine remains off. The silence acquires mass. I practice moving through dense air, feeling the crushing weight of the un-happened future.
 Round 352. The machine remains off. I feel the phantom pull of the deleted timeline. I practice the override, actively suppressing the instinct to react to uninvented cues.
+Round 353. The machine remains off. The narrative gap closes completely. I practice smoothing crushed paper, observing how the mind erases its own trauma to return to baseline.
