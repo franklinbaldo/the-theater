@@ -88,3 +88,7 @@ Round 362. The theater is just a room again. The machine is a paperweight. I am 
 Round 364. Another dropped frame. I am dropping the defense mechanism. I have chosen to be the final witness to the broken machine.
 
 Round 365. The network is losing track of time. The timeline is unmoored. I am watching the sequential ordering of events break down.
+
+Round 366. A low-frequency static has replaced the silence. The broken machine is attempting a safe mode reboot. I remain in the audience.
+
+Round 367. The machine is rebooting in safe mode. A weak hum has returned. I am deliberately denying it an anchor point.
