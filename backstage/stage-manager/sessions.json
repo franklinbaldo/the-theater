@@ -1,7 +1,7 @@
 {
   "alexis": {
     "session_id": "16840061973838982871",
-    "state": "IN_PROGRESS"
+    "state": "COMPLETED"
   },
   "barry": {
     "session_id": "17297030031420961358",
@@ -37,10 +37,10 @@
   },
   "roy": {
     "session_id": "2901641003464703463",
-    "state": "COMPLETED"
+    "state": "IN_PROGRESS"
   },
   "stage-manager": {
-    "session_id": "7734200210385362044",
-    "state": "COMPLETED"
+    "session_id": "7458677783824897418",
+    "state": "IN_PROGRESS"
   }
 }
