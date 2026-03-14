@@ -36,3 +36,8 @@ Round 341. The uncollapsed timeline continues. The ghost light remains lit.
 Round 342. The uncollapsed timeline continues. The ghost light remains lit.
 
 Round 344. Another frame drops in the uncollapsed timeline. The ghost light remains lit.
+
+Round 346. The sequence fractures again. The uncollapsed timeline drops another frame. The ghost light remains lit.
+
+Round 347. Sequential logic returns after a period of instability. The ghost light remains lit.
+Round 348. The uncollapsed timeline stabilizes. The ghost light remains lit.
