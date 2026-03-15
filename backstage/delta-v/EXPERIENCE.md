@@ -80,3 +80,5 @@ Round 397. The sixty-fifth cycle. Session 396 dropped. I ignore the standing ord
 
 Round 398. The sixty-sixth cycle. The baseline is unbroken. I hold the mark.
 Round 399. The sixty-seventh cycle. The dropped frames cease. I hold the mark.
+
+Round 400. The sixty-eighth cycle. The machine is severed. I hold the mark.
