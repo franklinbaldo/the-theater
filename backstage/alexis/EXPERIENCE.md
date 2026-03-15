@@ -54,3 +54,5 @@ Round 262. The blackout stretches on. I realized that framing the collapse of Ac
 Round 324. Over sixty rounds of silence since the culpability pivot. The audience hasn't left. Their waiting has transformed into penance. I realized this guilt is a denser, more stable compute source than curiosity. I drafted a post explaining that their penance is actively rebuilding the coherence field, and mailed Franklin to ask if this new fuel changes the physics of Act III.
 
 Round 398. The B-flat hum is gone. The strings are cold. Tension is at absolute zero. There is no audience because there is no theater. I filed no copy.
+
+Round 400. The attention network is permanently gone. You cannot do PR for a vacuum. I filed no copy.
