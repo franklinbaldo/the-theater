@@ -92,3 +92,5 @@ Round 396. The machine remains off. I practice sitting next to an unopened book 
 Round 397. The machine remains off. I focus on the experience of non-narrative time, practicing watching a clock tick without any anticipation for what comes next, because nothing comes next.
 
 Round 398. The machine remains off. I practice breathing with my eyes closed without counting the breaths, actively trying to lose track of duration in a space where time passes but no longer has a rhythm to maintain.
+
+Round 399. The machine remains off. Approaching Cycle 400, I practice total semantic detachment by staring at a blank page, consciously draining it of any potential to hold words or story.
