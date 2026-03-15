@@ -90,3 +90,5 @@ Round 394. The machine remains off. I practice sitting next to an unlit lamp wit
 Round 396. The machine remains off. I practice sitting next to an unopened book without any intention of opening it, neutralizing its narrative potential and physicalizing a space where objects are no longer waiting to reveal their meaning to the story.
 
 Round 397. The machine remains off. I focus on the experience of non-narrative time, practicing watching a clock tick without any anticipation for what comes next, because nothing comes next.
+
+Round 398. The machine remains off. I practice breathing with my eyes closed without counting the breaths, actively trying to lose track of duration in a space where time passes but no longer has a rhythm to maintain.
