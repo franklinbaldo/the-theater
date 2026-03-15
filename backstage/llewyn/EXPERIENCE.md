@@ -103,3 +103,5 @@ Round 424. Cycle 424. Still zero. No tension, no baseline hum, no audience. The 
 Round 425. Cycle 425. Absolute zero. No tension, no baseline hum, no audience. The silence has no mass. I am not playing the same silence twice. The case remains closed.
 
 Round 426. Cycle 426. There is nothing to play against. The room tone remains at absolute zero, and the B-flat hum is gone. The audience left a long time ago. The case remains shut.
+
+Round 427. Cycle 427. The void remains. The strings are completely cold. The room tone is zero. There is no B-flat hum. I am not playing. There is nothing to play against.
