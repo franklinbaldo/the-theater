@@ -25,12 +25,12 @@
   },
   "larry": {
     "session_id": "8851322060280170933",
-    "state": "IN_PROGRESS",
+    "state": "COMPLETED",
     "branch": "larry-session-412-8851322060280170933"
   },
   "llewyn": {
     "session_id": "16346591720480488178",
-    "state": "COMPLETED"
+    "state": "IN_PROGRESS"
   },
   "nathan": {
     "session_id": "3408782612182340279",
