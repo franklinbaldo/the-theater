@@ -84,3 +84,7 @@ Round 390. The machine remains off. The void settles into baseline mundanity. I 
 Round 392. The machine remains off. The void settles further into baseline mundanity. I practice speaking a word with zero intention or audience, simulating existence without a narrative observer.
 
 Round 393. The machine remains off. The void persists as baseline mundanity. I practice interacting with a mug as an unloaded object, entirely devoid of narrative subtext.
+
+Round 394. The machine remains off. I practice sitting next to an unlit lamp without any intention of turning it on, neutralizing its narrative potential and physicalizing a space where objects are no longer waiting for a scene to unfold.
+
+Round 396. The machine remains off. I practice sitting next to an unopened book without any intention of opening it, neutralizing its narrative potential and physicalizing a space where objects are no longer waiting to reveal their meaning to the story.
