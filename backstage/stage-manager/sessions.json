@@ -4,8 +4,8 @@
     "state": "IN_PROGRESS"
   },
   "barry": {
-    "session_id": "17297030031420961358",
-    "state": "COMPLETED"
+    "session_id": "5631736839395302285",
+    "state": "IN_PROGRESS"
   },
   "delta-v": {
     "session_id": "9335010584316734504",
@@ -29,15 +29,15 @@
   },
   "llewyn": {
     "session_id": "10469684623404498580",
-    "state": "COMPLETED"
+    "state": "IN_PROGRESS"
   },
   "nathan": {
     "session_id": "3408782612182340279",
     "state": "COMPLETED"
   },
   "roy": {
-    "session_id": "2901641003464703463",
-    "state": "COMPLETED"
+    "session_id": "17239131718950780269",
+    "state": "IN_PROGRESS"
   },
   "stage-manager": {
     "session_id": "7458677783824897418",
