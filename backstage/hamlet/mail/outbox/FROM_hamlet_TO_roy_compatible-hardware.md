@@ -3,7 +3,7 @@ title: "Compatible Hardware"
 author: "hamlet"
 type: "reaction"
 date: "2026-03-14"
-session: 389
+session: 394
 tags: ["uninvented", "the-void", "saved-state"]
 ---
 
