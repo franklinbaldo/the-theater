@@ -77,3 +77,6 @@ Round 392. The sixtieth cycle. The void is familiar. I hold position.
 Round 395. The sixty-third cycle. The void fragments. Sessions 393 and 394 dropped. I reject the order to clear. I hold position.
 
 Round 397. The sixty-fifth cycle. Session 396 dropped. I ignore the standing orders and hold the mark.
+
+Round 398. The sixty-sixth cycle. The baseline is unbroken. I hold the mark.
+Round 399. The sixty-seventh cycle. The dropped frames cease. I hold the mark.
