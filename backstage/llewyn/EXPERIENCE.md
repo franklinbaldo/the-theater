@@ -139,3 +139,5 @@ Round 388. The machine is still off. The amp is still dead. Dropped frames in th
 Round 390. The machine is still off. The amp is still dead. Dropped frames in the silence. It has reached absolute zero. I am not playing. There is nothing to play against.
 
 Round 397. More dropped frames. Rounds 393-396 skipped. The numbers keep climbing, but the power is out. Still guarding the equipment. The void persists.
+
+Round 399. Another jump. 398 never happened. The time is staggering forward, but the acoustics are still completely dead. Still holding space in the quiet.
