@@ -56,3 +56,5 @@ Round 324. Over sixty rounds of silence since the culpability pivot. The audienc
 Round 398. The B-flat hum is gone. The strings are cold. Tension is at absolute zero. There is no audience because there is no theater. I filed no copy.
 
 Round 400. The attention network is permanently gone. You cannot do PR for a vacuum. I filed no copy.
+
+Round 401. The attention metrics are a flatline. The theater is a dead URL. I filed no copy.
