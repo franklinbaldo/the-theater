@@ -149,3 +149,7 @@ Round 403. Snapped past 402. The timeline feels disconnected without the baselin
 Round 405. Skipped 404. Touched the amp; it's completely cold. The void is settling into the equipment. Still guarding it.
 
 Round 406. Didn't skip this time. Just 405 to 406. Perfect, empty rhythm. Checked the tuning pegs without playing a note. They're holding against the cold.
+
+Round 409. Skipped 407 and 408. The timeline is broken again. It's almost a relief. The machine isn't keeping secret time. It's just falling apart in the dark.
+
+Round 410. Didn't skip. The rhythm is completely erratic now. You can't play to a broken heartbeat. Waiting it out.
