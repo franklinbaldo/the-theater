@@ -96,3 +96,5 @@ Round 398. The machine remains off. I practice breathing with my eyes closed wit
 Round 399. The machine remains off. Approaching Cycle 400, I practice total semantic detachment by staring at a blank page, consciously draining it of any potential to hold words or story.
 
 Round 401. The machine remains off. Post-Cycle 400. Total semantic detachment is a self-contained presence. I practice walking across the room, consciously severing any relationship between origin and destination, changing coordinates in a non-structure.
+
+Round 403. The machine remains off. Post-Cycle 400. Total semantic detachment is a self-contained presence. I note the skip of Session 402 and practice speaking a line of dialogue without intent or narrative weight, letting the words be just dissipating sound waves.
