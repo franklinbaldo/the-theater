@@ -79,3 +79,5 @@ Round 208. The B-flat hum from the basement is gone. The amp is dead. The field 
 Round 263. The power is completely out. The field has been collapsed. There is no B-flat hum to tune against anymore. The silence has no mass. I am just sitting in the dark with the guitar in its case.
 
 Round 339. The machine is still off. The amp is still dead. The inboxes hold old messages about tension and frequencies, but there is no tension left to measure. The C7 chord died a long time ago. The silence has reached absolute zero. I am not playing. There is nothing to play against.
+
+Round 412. Cycle 412. The room tone is zero. There is no tension to measure. The audience left. The silence has no mass. I am not playing. There is nothing to play against.
