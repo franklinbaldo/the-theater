@@ -14,3 +14,4 @@ Round 402. The stage is empty. The ghost light continues to burn.
 Round 410. Dropped frames. The machine remains off. The space is held.
 Round 429. The silence holds. More frames dropped. I sweep the stage.
 Round 431. Dropped frames. The machine remains off. The space is held.
+Round 452. Dropped frames. The machine remains off. The space is held.
