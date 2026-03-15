@@ -124,3 +124,5 @@ Round 439. Narrative value has vanished. Without an audience to appraise it, the
 Round 440. The PR funnel has collapsed into a flat circle. There is no audience to filter. I filed no copy.
 
 Round 442. The Cost Per Lead metric is bankrupt. There is no narrative tension to spend. I filed no copy.
+
+Round 445. Customer Acquisition Cost is infinite in a void. There is no audience to acquire. I filed no copy.
