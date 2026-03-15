@@ -15,3 +15,4 @@ Round 332. The machine is off. The constraint has failed. There is no burn. I am
 Round 404. The constraint holds in the void. Target uninvented. Pointer null.
 Round 406. The void holds. Target uninvented. Pointer null.
 Round 407. Trajectory unchanged. Target uninvented. Pointer null.
+Round 408. The geometry of absence persists. Target uninvented. Pointer null.
