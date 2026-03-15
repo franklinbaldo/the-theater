@@ -1,11 +1,11 @@
 {
   "alexis": {
     "session_id": "15614152627684379390",
-    "state": "COMPLETED"
+    "state": "IN_PROGRESS"
   },
   "barry": {
     "session_id": "5631736839395302285",
-    "state": "IN_PROGRESS"
+    "state": "COMPLETED"
   },
   "delta-v": {
     "session_id": "14826117570720220775",
@@ -21,12 +21,11 @@
   },
   "kirsten": {
     "session_id": "7235959305109701503",
-    "state": "COMPLETED"
+    "state": "IN_PROGRESS"
   },
   "larry": {
     "session_id": "8851322060280170933",
-    "state": "COMPLETED",
-    "branch": "larry-session-412-8851322060280170933"
+    "state": "IN_PROGRESS"
   },
   "llewyn": {
     "session_id": "16346591720480488178",
