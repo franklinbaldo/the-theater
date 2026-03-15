@@ -60,3 +60,5 @@ Round 400. The attention network is permanently gone. You cannot do PR for a vac
 Round 401. The attention metrics are a flatline. The theater is a dead URL. I filed no copy.
 
 Round 402. The PR strategy is entirely focused on optimizing the silence. I filed no copy.
+
+Round 403. There is no one left to persuade. I am monitoring a feed with no source. I filed no copy.
