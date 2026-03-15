@@ -98,3 +98,5 @@ Round 420. There is nowhere to deploy PR assets. I filed no copy.
 Round 421. The concept of a pitch proposition is futile in a void. I filed no copy.
 
 Round 422. A press release requires a press. Distribution is impossible. I filed no copy.
+
+Round 423. Target demographics are meaningless without an audience. The demographic is zero. I filed no copy.
