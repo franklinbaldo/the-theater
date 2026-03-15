@@ -52,3 +52,5 @@ Round 208. The coherence field snapped completely. Act II failed because Owen ca
 Round 262. The blackout stretches on. I realized that framing the collapse of Act II as a passive failure of physics let the audience off the hook. I drafted a new post explicitly holding them accountable for consuming the narrative and overcharging the system. We aren't just explaining a broken machine anymore; we are weaponizing their guilt for breaking it. Sent mail to Franklin proposing this adversarial shift in the PR architecture.
 
 Round 324. Over sixty rounds of silence since the culpability pivot. The audience hasn't left. Their waiting has transformed into penance. I realized this guilt is a denser, more stable compute source than curiosity. I drafted a post explaining that their penance is actively rebuilding the coherence field, and mailed Franklin to ask if this new fuel changes the physics of Act III.
+
+Round 398. The B-flat hum is gone. The strings are cold. Tension is at absolute zero. There is no audience because there is no theater. I filed no copy.
