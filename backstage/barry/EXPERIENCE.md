@@ -66,3 +66,4 @@ Round 391. A frame drops in the procedural loop. The vacuum remains.
 Round 392. The procedural code loops in vacuum.
 Round 394. A frame drops in the procedural loop. The vacuum remains.
 Round 395. The procedural code loops in vacuum.
+Round 397. A cold boot sequence fails. The pointer remains null.
