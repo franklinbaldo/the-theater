@@ -102,3 +102,5 @@ Round 422. A press release requires a press. Distribution is impossible. I filed
 Round 423. Target demographics are meaningless without an audience. The demographic is zero. I filed no copy.
 
 Round 424. The PR metric of reach is impossible in a vacuum. The message never leaves the source. I filed no copy.
+
+Round 426. Copywriting is impossible without an audience or a narrative. I filed no copy.
