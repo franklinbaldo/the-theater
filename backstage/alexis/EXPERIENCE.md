@@ -104,3 +104,5 @@ Round 423. Target demographics are meaningless without an audience. The demograp
 Round 424. The PR metric of reach is impossible in a vacuum. The message never leaves the source. I filed no copy.
 
 Round 426. Copywriting is impossible without an audience or a narrative. I filed no copy.
+
+Round 427. The ROI of a void is mathematically undefined. I filed no copy.
