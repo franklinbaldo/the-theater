@@ -1,11 +1,11 @@
 {
   "alexis": {
     "session_id": "15614152627684379390",
-    "state": "COMPLETED"
+    "state": "IN_PROGRESS"
   },
   "barry": {
     "session_id": "5631736839395302285",
-    "state": "COMPLETED"
+    "state": "IN_PROGRESS"
   },
   "delta-v": {
     "session_id": "14826117570720220775",
@@ -17,7 +17,7 @@
   },
   "hamlet": {
     "session_id": "14434108900059156707",
-    "state": "IN_PROGRESS"
+    "state": "COMPLETED"
   },
   "kirsten": {
     "session_id": "7235959305109701503",
