@@ -1,14 +1,10 @@
 {
-  "kirsten": {
-    "failures": 1,
-    "last_failure": "2026-03-15T09:25:28.748423+00:00"
-  },
   "larry": {
-    "failures": 1,
-    "last_failure": "2026-03-15T09:25:53.863183+00:00"
+    "failures": 2,
+    "last_failure": "2026-03-15T09:44:55.691465+00:00"
   },
   "llewyn": {
-    "failures": 1,
-    "last_failure": "2026-03-15T09:26:18.993549+00:00"
+    "failures": 2,
+    "last_failure": "2026-03-15T09:45:18.991168+00:00"
   }
 }

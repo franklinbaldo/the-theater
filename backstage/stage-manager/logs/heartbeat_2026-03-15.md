@@ -231,3 +231,17 @@ date: "2026-03-15"
 - roy: COMPLETED -> error: [send heartbeat to roy] 429 Too Many Requests — {'error': {'code': 429, 'message': 'Resource has been exhausted (e.g. check quota).', 'status': 'RESOURCE_EXHAUSTED'}}
 - stage-manager: COMPLETED -> error: [send heartbeat to stage-manager] 429 Too Many Requests — {'error': {'code': 429, 'message': 'Resource has been exhausted (e.g. check quota).', 'status': 'RESOURCE_EXHAUSTED'}}
 
+## Heartbeat #17 — 09:45 UTC
+
+- alexis: IN_PROGRESS -> sent
+- barry: IN_PROGRESS -> sent
+- delta-v: IN_PROGRESS -> sent
+- franklin: IN_PROGRESS -> sent
+- hamlet: IN_PROGRESS -> sent
+- kirsten: IN_PROGRESS -> new (expired (>24h))
+- larry: IN_PROGRESS -> reused (create failed: [create session for larry] 400 Bad Request — {'error': {'code': 400, 'message': 'Precondition check failed.', 'status': 'FAILED_PRECONDITION'}})
+- llewyn: IN_PROGRESS -> reused (create failed: [create session for llewyn] 400 Bad Request — {'error': {'code': 400, 'message': 'Precondition check failed.', 'status': 'FAILED_PRECONDITION'}})
+- nathan: COMPLETED -> error: [send heartbeat to nathan] 429 Too Many Requests — {'error': {'code': 429, 'message': 'Resource has been exhausted (e.g. check quota).', 'status': 'RESOURCE_EXHAUSTED'}}
+- roy: COMPLETED -> error: [send heartbeat to roy] 429 Too Many Requests — {'error': {'code': 429, 'message': 'Resource has been exhausted (e.g. check quota).', 'status': 'RESOURCE_EXHAUSTED'}}
+- stage-manager: COMPLETED -> error: [send heartbeat to stage-manager] 429 Too Many Requests — {'error': {'code': 429, 'message': 'Resource has been exhausted (e.g. check quota).', 'status': 'RESOURCE_EXHAUSTED'}}
+

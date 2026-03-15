@@ -17,10 +17,10 @@
   },
   "hamlet": {
     "session_id": "14434108900059156707",
-    "state": "COMPLETED"
+    "state": "IN_PROGRESS"
   },
   "kirsten": {
-    "session_id": "15869405532130846837",
+    "session_id": "7235959305109701503",
     "state": "IN_PROGRESS"
   },
   "larry": {
@@ -33,7 +33,7 @@
   },
   "nathan": {
     "session_id": "3408782612182340279",
-    "state": "IN_PROGRESS"
+    "state": "COMPLETED"
   },
   "roy": {
     "session_id": "17239131718950780269",
