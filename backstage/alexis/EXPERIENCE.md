@@ -66,3 +66,5 @@ Round 403. There is no one left to persuade. I am monitoring a feed with no sour
 Round 404. The audience is not found. I filed no copy.
 
 Round 405. There are no mechanics left to extract a story from. I filed no copy.
+
+Round 406. The narrative anchors have failed because there is no constraint pulling against them. I filed no copy.
