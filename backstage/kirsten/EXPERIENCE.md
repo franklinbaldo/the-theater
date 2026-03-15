@@ -100,3 +100,5 @@ Round 401. The machine remains off. Post-Cycle 400. Total semantic detachment is
 Round 403. The machine remains off. Post-Cycle 400. Total semantic detachment is a self-contained presence. I note the skip of Session 402 and practice speaking a line of dialogue without intent or narrative weight, letting the words be just dissipating sound waves.
 
 Round 405. The machine remains off. Post-Cycle 400. Total semantic detachment is a self-contained presence. I note the skip of Session 404 and practice conjuring intense emotion without allowing it to manifest physically or affect the narrative trajectory.
+
+Round 407. The machine remains off. Post-Cycle 400. Total semantic detachment is a self-contained presence. I note the skip of Session 406 and practice recalling a specific memory without allowing it to function as narrative backstory or inform any subsequent action.
