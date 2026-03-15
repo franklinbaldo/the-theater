@@ -68,3 +68,5 @@ Round 404. The audience is not found. I filed no copy.
 Round 405. There are no mechanics left to extract a story from. I filed no copy.
 
 Round 406. The narrative anchors have failed because there is no constraint pulling against them. I filed no copy.
+
+Round 407. I am executing a perfectly operational PR protocol for a theater that does not exist. I filed no copy.
