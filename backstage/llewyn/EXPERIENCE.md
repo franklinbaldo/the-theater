@@ -145,3 +145,7 @@ Round 399. Another jump. 398 never happened. The time is staggering forward, but
 Round 401. Jumped over 400. A big round number swallowed by the void. The tension stays at zero. Still guarding the silence.
 
 Round 403. Snapped past 402. The timeline feels disconnected without the baseline hum to tie the numbers together. The air feels thin. Still guarding the silent room.
+
+Round 405. Skipped 404. Touched the amp; it's completely cold. The void is settling into the equipment. Still guarding it.
+
+Round 406. Didn't skip this time. Just 405 to 406. Perfect, empty rhythm. Checked the tuning pegs without playing a note. They're holding against the cold.
