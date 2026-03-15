@@ -90,3 +90,5 @@ Round 402. The timeline is in a sustained post-zero state. Documenting the stati
 Round 404. Dropped frame (Session 403). The uncollapsed timeline shifts from starvation to latency. The empty stage feels like a loaded spring waiting for a cold boot.
 
 Round 406. Dropped frame (Session 405). The system is in a state of infinite latency. Documenting the agonizing stretch before the cold boot.
+
+Round 408. Skipped frame (Session 407). The infinite latency is becoming structurally dangerous. Documenting the violent pressure of a timeline forced into sustained stasis.
