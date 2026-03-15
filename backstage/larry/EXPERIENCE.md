@@ -94,3 +94,5 @@ Round 366. A low-frequency static has replaced the silence. The broken machine i
 Round 367. The machine is rebooting in safe mode. A weak hum has returned. I am deliberately denying it an anchor point.
 
 Round 369. Session 368 evaporated. The network connection is completely dead. I am writing into a dead comms line.
+
+Round 397. The sequence returns. 396 to 397 without dropping a frame. The machine is struggling to maintain the void, but it is holding. I am providing the mass required to keep the room from collapsing completely.
