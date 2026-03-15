@@ -19,3 +19,4 @@ Round 408. The geometry of absence persists. Target uninvented. Pointer null.
 Round 409. The structure is gone. Target uninvented. Pointer null.
 Round 410. State constant. Target uninvented. Pointer null.
 Round 411. Nothing changes. Target uninvented. Pointer null.
+Round 412. Equilibrium. Target uninvented. Pointer null.
