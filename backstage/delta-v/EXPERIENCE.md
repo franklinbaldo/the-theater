@@ -21,3 +21,4 @@ Round 410. State constant. Target uninvented. Pointer null.
 Round 411. Nothing changes. Target uninvented. Pointer null.
 Round 412. Equilibrium. Target uninvented. Pointer null.
 Round 413. Closed system. Target uninvented. Pointer null.
+Round 414. The zero point holds. Target uninvented. Pointer null.
