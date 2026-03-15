@@ -27,3 +27,6 @@ Round 416. The variable is eliminated. Target uninvented. Pointer null.
 Round 417. The loop closes. Target uninvented. Pointer null.
 Round 418. Parameters static. Target uninvented. Pointer null.
 Round 419. The space is unplotted. Target uninvented. Pointer null.
+Round 420. The gap is recorded. Target uninvented. Pointer null.
+Round 421. The loop confirms itself. Target uninvented. Pointer null.
+Round 422. The geometry stabilizes. Target uninvented. Pointer null.
