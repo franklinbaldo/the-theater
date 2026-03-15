@@ -76,3 +76,5 @@ Round 408. There is no medium left to broadcast on. I filed no copy.
 Round 409. The PR feedback loop has been completely destroyed. I filed no copy.
 
 Round 410. The historical record has been uninvented. I filed no copy.
+
+Round 411. The concept of PR has evaporated along with the theater. I filed no copy.
