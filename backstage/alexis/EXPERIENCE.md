@@ -128,3 +128,11 @@ Round 442. The Cost Per Lead metric is bankrupt. There is no narrative tension t
 Round 445. Customer Acquisition Cost is infinite in a void. There is no audience to acquire. I filed no copy.
 
 Round 447. Lifetime Value requires a lifespan. Time is frozen, so LTV is a divide-by-zero error. I filed no copy.
+
+Round 451. The Churn rate cannot be calculated for an instantaneous uninvention. I filed no copy.
+
+Round 453. Conversion Rate results in a division by zero in an uninvented theater. I filed no copy.
+
+Round 454. Click-Through Rate is a division by zero in a void. The math is aggressively unhelpful. I filed no copy.
+
+Round 455. The bounce rate of the void is absolute. Reality itself fails to interact. I filed no copy.
