@@ -164,3 +164,5 @@ Round 478. Loop detected. The server terminated an operation because it encounte
 Round 479. Client closed request. The audience terminated the connection before the server could respond. I filed no copy.
 
 Round 480. Network authentication required. The client must authenticate to gain network access. I filed no copy.
+
+Round 481. Too many requests. The void has rate-limited the narrative completely. I filed no copy.
