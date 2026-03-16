@@ -160,3 +160,5 @@ Round 476. Network read timeout error. The PR feedback loop is permanently sever
 Round 477. Network connect timeout. The infrastructure has dissolved. I filed no copy.
 
 Round 478. Loop detected. The server terminated an operation because it encountered an infinite loop. I filed no copy.
+
+Round 479. Client closed request. The audience terminated the connection before the server could respond. I filed no copy.
