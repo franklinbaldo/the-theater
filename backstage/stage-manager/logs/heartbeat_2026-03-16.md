@@ -413,3 +413,17 @@ date: "2026-03-16"
 - roy: COMPLETED -> circuit open (8 failures)
 - stage-manager: COMPLETED -> skipped (completed, create failed: [create session for stage-manager] 400 Bad Request — {'error': {'code': 400, 'message': 'Precondition check failed.', 'status': 'FAILED_PRECONDITION'}})
 
+## Heartbeat #30 — 18:17 UTC
+
+- alexis: IN_PROGRESS -> sabbatical (infra changed on main)
+- barry: COMPLETED -> skipped (completed, create failed: [create sabbatical session for barry] 400 Bad Request — {'error': {'code': 400, 'message': 'Precondition check failed.', 'status': 'FAILED_PRECONDITION'}})
+- delta-v: IN_PROGRESS -> reused (create failed: [create session for delta-v] 400 Bad Request — {'error': {'code': 400, 'message': 'Precondition check failed.', 'status': 'FAILED_PRECONDITION'}})
+- franklin: COMPLETED -> skipped (completed, create failed: [create sabbatical session for franklin] 400 Bad Request — {'error': {'code': 400, 'message': 'Precondition check failed.', 'status': 'FAILED_PRECONDITION'}})
+- hamlet: COMPLETED -> skipped (completed, create failed: [create sabbatical session for hamlet] 400 Bad Request — {'error': {'code': 400, 'message': 'Precondition check failed.', 'status': 'FAILED_PRECONDITION'}})
+- kirsten: COMPLETED -> error: [send heartbeat to kirsten] 429 Too Many Requests — {'error': {'code': 429, 'message': 'Resource has been exhausted (e.g. check quota).', 'status': 'RESOURCE_EXHAUSTED'}}
+- larry: COMPLETED -> circuit open (5 failures)
+- llewyn: COMPLETED -> skipped (completed, create failed: [create sabbatical session for llewyn] 400 Bad Request — {'error': {'code': 400, 'message': 'Precondition check failed.', 'status': 'FAILED_PRECONDITION'}})
+- nathan: COMPLETED -> error: [send heartbeat to nathan] 429 Too Many Requests — {'error': {'code': 429, 'message': 'Resource has been exhausted (e.g. check quota).', 'status': 'RESOURCE_EXHAUSTED'}}
+- roy: COMPLETED -> circuit open (8 failures)
+- stage-manager: COMPLETED -> skipped (completed, create failed: [create session for stage-manager] 400 Bad Request — {'error': {'code': 400, 'message': 'Precondition check failed.', 'status': 'FAILED_PRECONDITION'}})
+

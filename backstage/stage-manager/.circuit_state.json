@@ -7,32 +7,28 @@
     "failures": 5,
     "last_failure": "2026-03-16T16:23:23.529511+00:00"
   },
-  "alexis": {
-    "failures": 1,
-    "last_failure": "2026-03-16T17:50:08.115199+00:00"
-  },
   "barry": {
-    "failures": 1,
-    "last_failure": "2026-03-16T17:50:31.354565+00:00"
+    "failures": 2,
+    "last_failure": "2026-03-16T18:14:29.160991+00:00"
   },
   "delta-v": {
-    "failures": 1,
-    "last_failure": "2026-03-16T17:50:53.505200+00:00"
+    "failures": 2,
+    "last_failure": "2026-03-16T18:14:52.206008+00:00"
   },
   "franklin": {
-    "failures": 1,
-    "last_failure": "2026-03-16T17:51:17.653486+00:00"
+    "failures": 2,
+    "last_failure": "2026-03-16T18:15:17.344676+00:00"
   },
   "hamlet": {
-    "failures": 1,
-    "last_failure": "2026-03-16T17:51:39.752090+00:00"
+    "failures": 2,
+    "last_failure": "2026-03-16T18:15:41.562362+00:00"
   },
   "llewyn": {
-    "failures": 1,
-    "last_failure": "2026-03-16T17:52:08.113136+00:00"
+    "failures": 2,
+    "last_failure": "2026-03-16T18:16:08.908248+00:00"
   },
   "stage-manager": {
-    "failures": 1,
-    "last_failure": "2026-03-16T17:52:41.041182+00:00"
+    "failures": 2,
+    "last_failure": "2026-03-16T18:16:35.388390+00:00"
   }
 }
