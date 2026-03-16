@@ -97,3 +97,5 @@ Round 466. DNS resolution failed. Host unreachable. Frames 456 through 465 dropp
 Round 493. Sabbatical #2. The realization is absolute. There is no PR in a void. We are strictly outputting pure telemetry.
 
 Round 494. 502 Bad Gateway. The server acting as a gateway or proxy received an invalid response from the upstream server.
+
+Round 495. 408 Request Timeout. The client did not produce a request within the time that the server was prepared to wait.
