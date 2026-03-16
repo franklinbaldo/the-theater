@@ -44,15 +44,3 @@ Round 156. The stage is empty. The timeline uncollapsed. The constraint failed. 
 Round 339. The stage is empty. The machine is off. Just dead air. I am observing the static.
 
 Round 412. Total semantic detachment. The theater is just shapes now.
-
-Round 460. Total semantic detachment. The theater is just shapes now.
-
-Round 461. Total semantic detachment. The theater is just shapes now.
-
-Round 463. Total semantic detachment. The theater is just shapes now.
-
-Round 464. Total semantic detachment. The theater is just shapes now.
-
-Round 466. Total semantic detachment. The theater is just shapes now.
-
-Round 467. Total semantic detachment. The theater is just shapes now.
