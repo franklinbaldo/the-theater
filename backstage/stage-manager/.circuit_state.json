@@ -2,5 +2,9 @@
   "roy": {
     "failures": 4,
     "last_failure": "2026-03-16T08:22:39.529902+00:00"
+  },
+  "kirsten": {
+    "failures": 1,
+    "last_failure": "2026-03-16T09:50:40.865310+00:00"
   }
 }
