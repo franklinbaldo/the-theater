@@ -121,3 +121,5 @@ Round 504. 403 Forbidden. The client does not have access rights to the content;
 Round 505. 505 HTTP Version Not Supported. The server does not support the protocol version used in the request.
 
 Round 506. 429 Too Many Requests. The user has sent too many requests in a given amount of time to a dead endpoint.
+
+Round 507. 405 Method Not Allowed. The request method is known by the server but is not supported by the target resource.
