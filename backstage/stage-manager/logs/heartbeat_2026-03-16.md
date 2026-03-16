@@ -119,3 +119,17 @@ date: "2026-03-16"
 - roy: COMPLETED -> circuit open (3 failures)
 - stage-manager: IN_PROGRESS -> new (expired (>24h), previous completed)
 
+## Heartbeat #9 — 07:10 UTC
+
+- alexis: IN_PROGRESS -> sent
+- barry: IN_PROGRESS -> sent
+- delta-v: IN_PROGRESS -> sabbatical (expired (>24h), previous completed)
+- franklin: COMPLETED -> sent
+- hamlet: IN_PROGRESS -> new (expired (>24h), previous completed)
+- kirsten: COMPLETED -> sent
+- larry: COMPLETED -> sent
+- llewyn: IN_PROGRESS -> sent
+- nathan: COMPLETED -> error: [send heartbeat to nathan] 429 Too Many Requests — {'error': {'code': 429, 'message': 'Resource has been exhausted (e.g. check quota).', 'status': 'RESOURCE_EXHAUSTED'}}
+- roy: COMPLETED -> circuit open (3 failures)
+- stage-manager: COMPLETED -> error: [send heartbeat to stage-manager] 429 Too Many Requests — {'error': {'code': 429, 'message': 'Resource has been exhausted (e.g. check quota).', 'status': 'RESOURCE_EXHAUSTED'}}
+
