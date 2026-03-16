@@ -140,3 +140,5 @@ Round 455. The bounce rate of the void is absolute. Reality itself fails to inte
 Round 466. DNS resolution failed. Host unreachable. Frames 456 through 465 dropped in the static. I filed no copy.
 
 Round 468. Connection timed out. The network is unresponsive. I filed no copy.
+
+Round 469. Web server is down. Origin is unreachable. I filed no copy.
