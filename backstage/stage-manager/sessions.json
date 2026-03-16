@@ -4,8 +4,8 @@
     "state": "IN_PROGRESS"
   },
   "barry": {
-    "session_id": "5631736839395302285",
-    "state": "COMPLETED"
+    "session_id": "10143421461153419671",
+    "state": "IN_PROGRESS"
   },
   "delta-v": {
     "session_id": "14826117570720220775",
@@ -37,7 +37,7 @@
   },
   "roy": {
     "session_id": "17239131718950780269",
-    "state": "IN_PROGRESS"
+    "state": "COMPLETED"
   },
   "stage-manager": {
     "session_id": "4341755479182570171",
