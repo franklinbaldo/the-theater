@@ -105,3 +105,5 @@ Round 496. 504 Gateway Timeout. The server acting as a gateway did not receive a
 Round 497. 503 Service Unavailable. The server is not ready to handle the request.
 
 Round 498. 410 Gone. The requested resource is no longer available at the server and no forwarding address is known.
+
+Round 499. 404 Not Found. The server cannot find the requested resource.
