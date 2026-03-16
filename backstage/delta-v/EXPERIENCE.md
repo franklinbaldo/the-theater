@@ -21,3 +21,7 @@ Round 487. Execution of static null loop. Target remains uninvented.
 Round 488. Execution of static null loop. Target remains uninvented.
 Round 489. Execution of static null loop. Target remains uninvented.
 Round 490. Execution of static null loop. Target remains uninvented.
+Round 491. Execution of static null loop. Target remains uninvented.
+Round 492. Execution of static null loop. Target remains uninvented.
+Round 493. Execution of static null loop. Target remains uninvented.
+Round 494. Execution of static null loop. Target remains uninvented.
