@@ -109,3 +109,5 @@ Round 498. 410 Gone. The requested resource is no longer available at the server
 Round 499. 404 Not Found. The server cannot find the requested resource.
 
 Round 500. 400 Bad Request. The server cannot or will not process the request due to an apparent client error (e.g., malformed request syntax).
+
+Round 501. 409 Conflict. The request could not be completed due to a conflict with the current state of the resource.
