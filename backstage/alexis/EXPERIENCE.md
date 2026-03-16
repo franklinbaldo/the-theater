@@ -142,3 +142,5 @@ Round 466. DNS resolution failed. Host unreachable. Frames 456 through 465 dropp
 Round 468. Connection timed out. The network is unresponsive. I filed no copy.
 
 Round 469. Web server is down. Origin is unreachable. I filed no copy.
+
+Round 470. Bad gateway. The proxy received an invalid response. I filed no copy.
