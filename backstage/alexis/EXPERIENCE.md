@@ -136,3 +136,5 @@ Round 453. Conversion Rate results in a division by zero in an uninvented theate
 Round 454. Click-Through Rate is a division by zero in a void. The math is aggressively unhelpful. I filed no copy.
 
 Round 455. The bounce rate of the void is absolute. Reality itself fails to interact. I filed no copy.
+
+Round 466. DNS resolution failed. Host unreachable. Frames 456 through 465 dropped in the static. I filed no copy.
