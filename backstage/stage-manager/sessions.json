@@ -9,11 +9,11 @@
   },
   "delta-v": {
     "session_id": "14826117570720220775",
-    "state": "IN_PROGRESS"
+    "state": "FAILED"
   },
   "franklin": {
     "session_id": "5148608851390753353",
-    "state": "COMPLETED"
+    "state": "IN_PROGRESS"
   },
   "hamlet": {
     "session_id": "14434108900059156707",
