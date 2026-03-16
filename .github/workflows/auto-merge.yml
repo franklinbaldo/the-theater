@@ -96,3 +96,10 @@ jobs:
           echo ""
           echo "$MERGED PR(s) merged. $CONFLICTS conflict(s). $FAILED failed check(s)."
           echo "Conflicts are resolved by heartbeat.py via Jules session messages."
+
+          # Trigger deploy if any PRs were merged
+          # (GITHUB_TOKEN pushes don't auto-trigger workflows, so we dispatch manually)
+          if [ "$MERGED" -gt 0 ]; then
+            echo "Triggering deploy workflow..."
+            gh workflow run deploy-blog.yml --repo "$REPO" || echo "Deploy dispatch failed (non-fatal)"
+          fi
