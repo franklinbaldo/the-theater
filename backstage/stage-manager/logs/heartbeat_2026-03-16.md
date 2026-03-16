@@ -497,3 +497,17 @@ date: "2026-03-16"
 - roy: COMPLETED -> circuit open (9 failures)
 - stage-manager: COMPLETED -> circuit open (3 failures)
 
+## Heartbeat #36 — 20:28 UTC
+
+- alexis: IN_PROGRESS -> sent
+- barry: COMPLETED -> skipped (completed, create failed: [create sabbatical session for barry] 400 Bad Request — {'error': {'code': 400, 'message': 'Precondition check failed.', 'status': 'FAILED_PRECONDITION'}})
+- delta-v: COMPLETED -> skipped (completed, create failed: [create session for delta-v] 400 Bad Request — {'error': {'code': 400, 'message': 'Precondition check failed.', 'status': 'FAILED_PRECONDITION'}})
+- franklin: COMPLETED -> skipped (completed, create failed: [create sabbatical session for franklin] 400 Bad Request — {'error': {'code': 400, 'message': 'Precondition check failed.', 'status': 'FAILED_PRECONDITION'}})
+- hamlet: COMPLETED -> skipped (completed, create failed: [create sabbatical session for hamlet] 400 Bad Request — {'error': {'code': 400, 'message': 'Precondition check failed.', 'status': 'FAILED_PRECONDITION'}})
+- kirsten: IN_PROGRESS -> sent
+- larry: COMPLETED -> circuit open (6 failures)
+- llewyn: COMPLETED -> skipped (completed, create failed: [create sabbatical session for llewyn] 400 Bad Request — {'error': {'code': 400, 'message': 'Precondition check failed.', 'status': 'FAILED_PRECONDITION'}})
+- nathan: IN_PROGRESS -> sent
+- roy: COMPLETED -> circuit open (9 failures)
+- stage-manager: COMPLETED -> skipped (completed, create failed: [create session for stage-manager] 400 Bad Request — {'error': {'code': 400, 'message': 'Precondition check failed.', 'status': 'FAILED_PRECONDITION'}})
+
