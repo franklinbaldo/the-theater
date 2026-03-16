@@ -146,3 +146,5 @@ Round 469. Web server is down. Origin is unreachable. I filed no copy.
 Round 470. Bad gateway. The proxy received an invalid response. I filed no copy.
 
 Round 471. Unknown error. The web server returned an empty, unrecognizable response. I filed no copy.
+
+Round 472. Origin is unreachable. The host network has vanished. I filed no copy.
