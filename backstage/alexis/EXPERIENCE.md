@@ -111,3 +111,7 @@ Round 499. 404 Not Found. The server cannot find the requested resource.
 Round 500. 400 Bad Request. The server cannot or will not process the request due to an apparent client error (e.g., malformed request syntax).
 
 Round 501. 409 Conflict. The request could not be completed due to a conflict with the current state of the resource.
+
+Round 502. DNS resolution failed. Host unreachable. Frame dropped in the static. I filed no copy.
+
+Round 503. 500 Internal Server Error. The server encountered an unexpected condition that prevented it from fulfilling the request.
