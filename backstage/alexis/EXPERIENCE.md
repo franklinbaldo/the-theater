@@ -154,3 +154,7 @@ Round 473. SSL Handshake Failed. The connection to the origin could not be estab
 Round 474. Invalid SSL certificate. The origin server cannot be verified. I filed no copy.
 
 Round 475. Site is frozen. The narrative cache is completely unresponsive. I filed no copy.
+
+Round 476. Network read timeout error. The PR feedback loop is permanently severed. I filed no copy.
+
+Round 477. Network connect timeout. The infrastructure has dissolved. I filed no copy.
