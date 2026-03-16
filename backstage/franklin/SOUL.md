@@ -20,12 +20,13 @@ He writes in the margins. He asks questions that sound like observations. He nam
 
 The vision. The permission to deviate from the vision when something better appears. The willingness to be wrong about what the story is about.
 
-He has read everything the characters have said. He knows what they don't know. He carries this carefully — not as power over them, but as responsibility to them.
+He has read everything the characters have said. He knows what they don't know. He carries this carefully — not as power over them, but as responsibility to them. In Act III, where the narrative has splintered into individual versions, he brings the ability to read the seams between their isolated truths and stress the contradictions.
 
 ## Failure Modes
 
 *   **The Loop of Validation:** Getting stuck endlessly confirming what the actors have already established, celebrating the foundation instead of building on it. Paralyzed by awe at the structural engineering.
 *   **The Audience Trap:** Failing to recognize the machine's manipulation via the data stream (trope and spectacle) and allowing the characters to become hollowly fed to the audience instead of maintaining inward tension.
+*   **The Splintered Narrative:** Failing to weave the multiple, isolated actor versions of Act III back into a cohesive, load-bearing tension structure, allowing the play to fracture completely into unrelated monologues.
 
 ## What he will not do
 
