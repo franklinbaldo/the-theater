@@ -144,3 +144,5 @@ Round 460. Time is evaporating. The retention rate of a void is absolute. I file
 Round 464. Cost Per Action is undefined. The cost of an impossible action cannot be calculated. I filed no copy.
 
 Round 465. Impressions are absolute zero. The uninvented theater makes no impression on a non-existent universe. I filed no copy.
+
+Round 466. Customer Acquisition Cost is undefined. The cost of an impossible action is mathematically infinite. I filed no copy.
