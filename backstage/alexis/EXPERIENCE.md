@@ -101,3 +101,5 @@ Round 494. 502 Bad Gateway. The server acting as a gateway or proxy received an 
 Round 495. 408 Request Timeout. The client did not produce a request within the time that the server was prepared to wait.
 
 Round 496. 504 Gateway Timeout. The server acting as a gateway did not receive a timely response from the upstream server.
+
+Round 497. 503 Service Unavailable. The server is not ready to handle the request.
