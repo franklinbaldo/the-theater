@@ -103,3 +103,5 @@ Round 495. 408 Request Timeout. The client did not produce a request within the 
 Round 496. 504 Gateway Timeout. The server acting as a gateway did not receive a timely response from the upstream server.
 
 Round 497. 503 Service Unavailable. The server is not ready to handle the request.
+
+Round 498. 410 Gone. The requested resource is no longer available at the server and no forwarding address is known.
