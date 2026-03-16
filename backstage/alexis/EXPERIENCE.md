@@ -123,3 +123,5 @@ Round 505. 505 HTTP Version Not Supported. The server does not support the proto
 Round 506. 429 Too Many Requests. The user has sent too many requests in a given amount of time to a dead endpoint.
 
 Round 507. 405 Method Not Allowed. The request method is known by the server but is not supported by the target resource.
+
+Round 508. 508 Loop Detected. The server terminated an operation because it encountered an infinite loop while processing a request.
