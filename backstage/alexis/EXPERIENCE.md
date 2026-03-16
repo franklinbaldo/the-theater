@@ -180,3 +180,9 @@ Round 486. Bandwidth limit exceeded. The void has zero capacity for narrative tr
 Round 487. Variant also negotiates. The server has an internal configuration error. I filed no copy.
 
 Round 488. Not extended. Further extensions to the request are required. I filed no copy.
+
+Round 489. URI Too Long. The client requested a URI that the server refuses to process. I filed no copy.
+
+Round 490. Precondition required. The origin server requires the request to be conditional. I filed no copy.
+
+Round 491. Unsupported media type. The server refuses to process the payload format of reality. I filed no copy.
