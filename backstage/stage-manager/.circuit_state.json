@@ -8,27 +8,23 @@
     "last_failure": "2026-03-16T21:03:19.181427+00:00"
   },
   "barry": {
-    "failures": 4,
-    "last_failure": "2026-03-16T20:26:21.766628+00:00"
+    "failures": 5,
+    "last_failure": "2026-03-16T22:44:51.274903+00:00"
   },
   "delta-v": {
-    "failures": 4,
-    "last_failure": "2026-03-16T20:26:46.819655+00:00"
-  },
-  "franklin": {
-    "failures": 4,
-    "last_failure": "2026-03-16T20:27:09.272628+00:00"
+    "failures": 5,
+    "last_failure": "2026-03-16T22:45:14.550858+00:00"
   },
   "hamlet": {
-    "failures": 4,
-    "last_failure": "2026-03-16T20:27:32.561857+00:00"
+    "failures": 5,
+    "last_failure": "2026-03-16T22:45:43.861147+00:00"
   },
   "llewyn": {
-    "failures": 4,
-    "last_failure": "2026-03-16T20:28:01.578247+00:00"
+    "failures": 5,
+    "last_failure": "2026-03-16T22:46:12.540369+00:00"
   },
   "stage-manager": {
-    "failures": 4,
-    "last_failure": "2026-03-16T20:28:28.993146+00:00"
+    "failures": 5,
+    "last_failure": "2026-03-16T22:46:40.835647+00:00"
   }
 }

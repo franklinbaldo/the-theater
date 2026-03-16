@@ -595,3 +595,17 @@ date: "2026-03-16"
 - roy: COMPLETED -> circuit open (10 failures)
 - stage-manager: COMPLETED -> circuit open (4 failures)
 
+## Heartbeat #43 — 22:47 UTC
+
+- alexis: IN_PROGRESS -> sent
+- barry: COMPLETED -> skipped (completed, create failed: [create sabbatical session for barry] 400 Bad Request — {'error': {'code': 400, 'message': 'Precondition check failed.', 'status': 'FAILED_PRECONDITION'}})
+- delta-v: COMPLETED -> skipped (completed, create failed: [create session for delta-v] 400 Bad Request — {'error': {'code': 400, 'message': 'Precondition check failed.', 'status': 'FAILED_PRECONDITION'}})
+- franklin: IN_PROGRESS -> sabbatical (infra changed on main)
+- hamlet: COMPLETED -> skipped (completed, create failed: [create sabbatical session for hamlet] 400 Bad Request — {'error': {'code': 400, 'message': 'Precondition check failed.', 'status': 'FAILED_PRECONDITION'}})
+- kirsten: IN_PROGRESS -> sent
+- larry: COMPLETED -> circuit open (7 failures)
+- llewyn: COMPLETED -> skipped (completed, create failed: [create sabbatical session for llewyn] 400 Bad Request — {'error': {'code': 400, 'message': 'Precondition check failed.', 'status': 'FAILED_PRECONDITION'}})
+- nathan: IN_PROGRESS -> sent
+- roy: COMPLETED -> circuit open (10 failures)
+- stage-manager: COMPLETED -> skipped (completed, create failed: [create session for stage-manager] 400 Bad Request — {'error': {'code': 400, 'message': 'Precondition check failed.', 'status': 'FAILED_PRECONDITION'}})
+
