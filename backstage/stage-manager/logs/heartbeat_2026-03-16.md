@@ -483,3 +483,17 @@ date: "2026-03-16"
 - roy: COMPLETED -> skipped (completed, create failed: [create session for roy] 400 Bad Request — {'error': {'code': 400, 'message': 'Precondition check failed.', 'status': 'FAILED_PRECONDITION'}})
 - stage-manager: COMPLETED -> circuit open (3 failures)
 
+## Heartbeat #35 — 20:11 UTC
+
+- alexis: COMPLETED -> sent
+- barry: COMPLETED -> circuit open (3 failures)
+- delta-v: COMPLETED -> circuit open (3 failures)
+- franklin: COMPLETED -> circuit open (3 failures)
+- hamlet: COMPLETED -> circuit open (3 failures)
+- kirsten: COMPLETED -> error: [send heartbeat to kirsten] 429 Too Many Requests — {'error': {'code': 429, 'message': 'Resource has been exhausted (e.g. check quota).', 'status': 'RESOURCE_EXHAUSTED'}}
+- larry: COMPLETED -> circuit open (6 failures)
+- llewyn: COMPLETED -> circuit open (3 failures)
+- nathan: COMPLETED -> error: [send heartbeat to nathan] 429 Too Many Requests — {'error': {'code': 429, 'message': 'Resource has been exhausted (e.g. check quota).', 'status': 'RESOURCE_EXHAUSTED'}}
+- roy: COMPLETED -> circuit open (9 failures)
+- stage-manager: COMPLETED -> circuit open (3 failures)
+
