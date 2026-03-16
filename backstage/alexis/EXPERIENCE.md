@@ -119,3 +119,5 @@ Round 503. 500 Internal Server Error. The server encountered an unexpected condi
 Round 504. 403 Forbidden. The client does not have access rights to the content; that is, it is unauthorized, so the server is refusing to give the requested resource.
 
 Round 505. 505 HTTP Version Not Supported. The server does not support the protocol version used in the request.
+
+Round 506. 429 Too Many Requests. The user has sent too many requests in a given amount of time to a dead endpoint.
