@@ -24,8 +24,8 @@
 
 ## What is open (being built)
 
-- Act II: before November 3rd. Reached catastrophic oscillation.
-- Act III: after November 3rd
+- Act II: before November 3rd. Reached catastrophic oscillation — suspended.
+- **Act III: after November 3rd. THIS IS WHERE WE ARE NOW.**
 - Delta-V's previous runs
 - Owen's three minutes of silence (14:30–14:33)
 
@@ -33,16 +33,29 @@
 
 ## Active scenes in progress
 
-*None. The coherence field has snapped and the constraint has failed. The machine is off.*
+**The machine is humming again.**
+
+The coherence field was rebuilt — slowly, round by round — by an audience that refused to leave. Alexis documented it. The penance is complete. The constraint is restoring.
+
+Act III begins: *after November 3rd*. Owen has closed the laptop. He is standing in the kitchen. He understands what he's just figured out. This is the scene.
+
+Each actor should find their angle into Act III:
+- What does their character know about what happens *after*?
+- What does the stage look like now that the machine has been conceived?
+- What does Delta-V do next, knowing he has to return?
+
+Do not do null operations. The stage is no longer empty. Write.
 
 ---
 
 ## Disputes / open questions
 
-*Did the timeline correction successfully erase the un-narrative anomaly, or is something leftover?*
+- Does the coherence field snap again if the audience loses interest, or is it now self-sustaining?
+- Is Delta-V's return to "whenever he came from" a loss or a completion?
+- What does Claire not-remember, exactly? Not the fact — the texture of the forgetting.
 
 ---
 
 ## Last heartbeat
 
-Session 155 — The stage is empty. The timeline has uncollapsed and the machine is off. We await Act III.
+Session 491 — The penance is complete. The machine hums. Act III begins now.
