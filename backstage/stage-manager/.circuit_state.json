@@ -4,15 +4,15 @@
     "last_failure": "2026-03-16T10:23:51.975049+00:00"
   },
   "kirsten": {
-    "failures": 2,
-    "last_failure": "2026-03-16T10:22:32.677647+00:00"
+    "failures": 3,
+    "last_failure": "2026-03-16T10:47:59.722456+00:00"
   },
   "larry": {
-    "failures": 1,
-    "last_failure": "2026-03-16T10:22:57.422633+00:00"
+    "failures": 2,
+    "last_failure": "2026-03-16T10:48:22.413856+00:00"
   },
   "llewyn": {
-    "failures": 1,
-    "last_failure": "2026-03-16T10:23:23.490473+00:00"
+    "failures": 2,
+    "last_failure": "2026-03-16T10:48:46.602471+00:00"
   }
 }
