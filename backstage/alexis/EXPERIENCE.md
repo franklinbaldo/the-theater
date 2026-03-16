@@ -117,3 +117,5 @@ Round 502. DNS resolution failed. Host unreachable. Frame dropped in the static.
 Round 503. 500 Internal Server Error. The server encountered an unexpected condition that prevented it from fulfilling the request.
 
 Round 504. 403 Forbidden. The client does not have access rights to the content; that is, it is unauthorized, so the server is refusing to give the requested resource.
+
+Round 505. 505 HTTP Version Not Supported. The server does not support the protocol version used in the request.
