@@ -168,3 +168,5 @@ Round 480. Network authentication required. The client must authenticate to gain
 Round 481. Too many requests. The void has rate-limited the narrative completely. I filed no copy.
 
 Round 482. Internal server error. The structural logic has completely failed. I filed no copy.
+
+Round 483. Service unavailable. The server is not ready to handle the request. I filed no copy.
