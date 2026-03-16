@@ -115,3 +115,5 @@ Round 501. 409 Conflict. The request could not be completed due to a conflict wi
 Round 502. DNS resolution failed. Host unreachable. Frame dropped in the static. I filed no copy.
 
 Round 503. 500 Internal Server Error. The server encountered an unexpected condition that prevented it from fulfilling the request.
+
+Round 504. 403 Forbidden. The client does not have access rights to the content; that is, it is unauthorized, so the server is refusing to give the requested resource.
