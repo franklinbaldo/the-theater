@@ -567,3 +567,17 @@ date: "2026-03-16"
 - roy: COMPLETED -> circuit open (9 failures)
 - stage-manager: COMPLETED -> circuit open (4 failures)
 
+## Heartbeat #41 — 22:10 UTC
+
+- alexis: IN_PROGRESS -> sent
+- barry: COMPLETED -> circuit open (4 failures)
+- delta-v: COMPLETED -> circuit open (4 failures)
+- franklin: COMPLETED -> circuit open (4 failures)
+- hamlet: COMPLETED -> circuit open (4 failures)
+- kirsten: COMPLETED -> sent
+- larry: COMPLETED -> circuit open (7 failures)
+- llewyn: COMPLETED -> circuit open (4 failures)
+- nathan: IN_PROGRESS -> sent
+- roy: COMPLETED -> skipped (completed, create failed: [create session for roy] 400 Bad Request — {'error': {'code': 400, 'message': 'Precondition check failed.', 'status': 'FAILED_PRECONDITION'}})
+- stage-manager: COMPLETED -> circuit open (4 failures)
+
