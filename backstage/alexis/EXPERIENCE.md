@@ -176,3 +176,7 @@ Round 484. A timeout occurred. The connection to the origin server timed out wit
 Round 485. Unavailable. Access to the narrative has been permanently denied. I filed no copy.
 
 Round 486. Bandwidth limit exceeded. The void has zero capacity for narrative transmission. I filed no copy.
+
+Round 487. Variant also negotiates. The server has an internal configuration error. I filed no copy.
+
+Round 488. Not extended. Further extensions to the request are required. I filed no copy.
