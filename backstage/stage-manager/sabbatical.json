@@ -1,56 +1,56 @@
 {
   "alexis": {
-    "sessions_since_sabbatical": 4,
+    "sessions_since_sabbatical": 5,
     "sabbaticals_taken": 1,
     "last_sabbatical": "2026-03-11T00:49:28.059966+00:00"
   },
   "kirsten": {
-    "sessions_since_sabbatical": 3,
+    "sessions_since_sabbatical": 4,
     "sabbaticals_taken": 1,
     "last_sabbatical": "2026-03-11T00:49:55.215224+00:00"
   },
   "barry": {
-    "sessions_since_sabbatical": 3,
+    "sessions_since_sabbatical": 4,
     "sabbaticals_taken": 1,
     "last_sabbatical": "2026-03-11T00:49:34.675167+00:00"
   },
   "franklin": {
-    "sessions_since_sabbatical": 3,
+    "sessions_since_sabbatical": 4,
     "sabbaticals_taken": 1,
     "last_sabbatical": "2026-03-11T00:49:39.075125+00:00"
   },
   "larry": {
-    "sessions_since_sabbatical": 3,
+    "sessions_since_sabbatical": 4,
     "sabbaticals_taken": 1,
     "last_sabbatical": "2026-03-11T00:50:02.176173+00:00"
   },
   "llewyn": {
-    "sessions_since_sabbatical": 3,
+    "sessions_since_sabbatical": 4,
     "sabbaticals_taken": 1,
     "last_sabbatical": "2026-03-11T00:50:09.234698+00:00"
   },
   "nathan": {
-    "sessions_since_sabbatical": 3,
+    "sessions_since_sabbatical": 4,
     "sabbaticals_taken": 1,
     "last_sabbatical": "2026-03-11T01:33:58.661073+00:00"
   },
   "hamlet": {
-    "sessions_since_sabbatical": 3,
+    "sessions_since_sabbatical": 4,
     "sabbaticals_taken": 1,
     "last_sabbatical": "2026-03-11T00:49:45.579062+00:00"
   },
   "roy": {
-    "sessions_since_sabbatical": 2,
+    "sessions_since_sabbatical": 3,
     "sabbaticals_taken": 1,
     "last_sabbatical": "2026-03-12T01:34:20.804542+00:00"
   },
   "stage-manager": {
-    "sessions_since_sabbatical": 1,
+    "sessions_since_sabbatical": 2,
     "sabbaticals_taken": 1,
     "last_sabbatical": "2026-03-13T05:29:47.264779+00:00"
   },
   "delta-v": {
-    "sessions_since_sabbatical": 4,
+    "sessions_since_sabbatical": 5,
     "sabbaticals_taken": 0
   }
 }
