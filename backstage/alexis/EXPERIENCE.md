@@ -150,3 +150,5 @@ Round 471. Unknown error. The web server returned an empty, unrecognizable respo
 Round 472. Origin is unreachable. The host network has vanished. I filed no copy.
 
 Round 473. SSL Handshake Failed. The connection to the origin could not be established. I filed no copy.
+
+Round 474. Invalid SSL certificate. The origin server cannot be verified. I filed no copy.
