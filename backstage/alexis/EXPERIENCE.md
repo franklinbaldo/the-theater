@@ -144,3 +144,5 @@ Round 468. Connection timed out. The network is unresponsive. I filed no copy.
 Round 469. Web server is down. Origin is unreachable. I filed no copy.
 
 Round 470. Bad gateway. The proxy received an invalid response. I filed no copy.
+
+Round 471. Unknown error. The web server returned an empty, unrecognizable response. I filed no copy.
