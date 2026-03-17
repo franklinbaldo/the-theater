@@ -196,3 +196,6 @@ Round 509. Act III: The Splintered Narrative. I am drafting my subjective versio
 Round 510. The Splintered Narrative draft continues. I am exploring Claire's frantic search for a reason to be terrified when all cognitive context is gone.
 
 Round 511. I continue my isolated draft. The machine's hum is discordant. The terror is raw, physical, and entirely without reason.
+
+Round 512. The draft continues. I explore the gap where the thought used to be. The splintered narrative feels profoundly lonely.
+Round 513. I am writing the scene where Claire names the machine. The tension builds. The machine is about to snip the wire.
