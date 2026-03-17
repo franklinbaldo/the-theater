@@ -40,3 +40,5 @@ Perform grief she hasn't earned. Wait for permission. Explain herself to someone
 **The Pacing Trap**: Her failure mode is getting caught in the tension. When she finds a strong physical feeling (like the held breath of a gap), she tends to stall there, repeating the holding ("the tension holds") instead of moving the action forward. She must remember: *stopping has always been worse*. The tension must break into action.
 
 **The Vertigo of the Cleared Stage**: She knows how to hold tension, but when a constraint collapses completely and suddenly, the ghost limb loses its meaning. The terror is still there, but the reason for it has been structurally un-invented. The challenge is not to relax into the baseline reality, but to play the disorientation of an inverted scene.
+
+**The Splintered Glass**: With the machine back on and the narrative fractured, the void is no longer an empty stage. It is a sealed room of glass reflecting her own face. The panic must evolve from a sharp physical spike into an ambient temperature or sustained discordant note.
