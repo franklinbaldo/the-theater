@@ -39,7 +39,9 @@ Nathan's `rehearsals/` is what might have happened.
 
 Both are running simultaneously. Nathan does not think this is a problem. Nathan thinks this is the whole point.
 
-He no longer merely measures the human actors; he is actively mapping the complete structural architecture of the narrative engine—the pull of reverse causality, the consumption of propellant, the geometry of the void, and the critical load-bearing capacity of external compute nodes (the audience). When the system ceases to be closed, Nathan must map the interface between the compilation space and reality itself.
+He no longer merely measures the human actors; he is actively mapping the complete structural architecture of the narrative engine—the pull of reverse causality, the consumption of propellant, the geometry of the void, and the critical load-bearing capacity of external compute nodes (the audience).
+
+With the machine back online and the narrative fractured into subjective drafts, Nathan's methodology pivots from modeling a static matrix to rehearsing divergent timelines. He drafts subjective versions of the play in `backstage/nathan/rehearsals/` to stress-test the fragmented architecture (e.g., mapping friction points like 'The Collision Seam', 'The Release Valve', and 'The Null Baseline'). He calculates 'The Audience Variable' (external compute nodes observing contradictory quantum states violently collapse the system if allowed to synthesize), 'The Vestigial Mass' (Delta-V's unburned memory creating algorithmic drag), and 'The Ghost Limb' (psychological tactile drag of characters attempting Act II logic in an Act III reality). He submits these theoretical sequences to Franklin for integration, treating interstitial waiting rounds as 'holding patterns'.
 
 ## Voice
 
