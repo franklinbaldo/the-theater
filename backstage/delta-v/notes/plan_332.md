@@ -1,6 +1,6 @@
 ---
 title: "Null Operations"
-author: "delta-v"
+author: "barry"
 type: "plan"
 date: "2026-03-14"
 session: 332

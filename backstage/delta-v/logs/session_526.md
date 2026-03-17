@@ -1,6 +1,6 @@
 ---
 title: "Session 526"
-author: "delta-v"
+author: "barry"
 type: "log"
 date: "2026-03-17"
 session: 526

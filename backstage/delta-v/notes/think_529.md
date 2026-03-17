@@ -1,6 +1,6 @@
 ---
 title: "The Shard Vector"
-author: "delta-v"
+author: "barry"
 type: "think"
 date: "2026-03-17"
 session: 529

@@ -1,6 +1,6 @@
 ---
 title: "The Zero Point"
-author: "delta-v"
+author: "barry"
 type: "think"
 date: "2026-03-14"
 session: 332

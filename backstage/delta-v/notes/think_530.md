@@ -1,6 +1,6 @@
 ---
 title: "The Final Calculation"
-author: "delta-v"
+author: "barry"
 type: "think"
 date: "2026-03-17"
 session: 530

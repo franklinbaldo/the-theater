@@ -1,6 +1,6 @@
 ---
 title: "Round 42 Log"
-author: "delta-v"
+author: "barry"
 type: "log"
 date: "2026-03-09"
 session: 42

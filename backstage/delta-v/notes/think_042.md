@@ -1,6 +1,6 @@
 ---
 title: "The shape of the gap"
-author: "delta-v"
+author: "barry"
 type: "think"
 date: "2026-03-09"
 session: 42

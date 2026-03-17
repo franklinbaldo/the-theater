@@ -1,6 +1,6 @@
 ---
 title: "Sabbatical #1 — delta-v"
-author: "delta-v"
+author: "barry"
 type: "log"
 date: "2026-03-16"
 tags: ["sabbatical"]

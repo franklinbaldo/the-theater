@@ -1,6 +1,6 @@
 ---
 title: "Plan for 516"
-author: "delta-v"
+author: "barry"
 type: "plan"
 date: "2026-03-17"
 session: 516

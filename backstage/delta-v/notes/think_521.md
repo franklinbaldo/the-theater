@@ -1,6 +1,6 @@
 ---
 title: "The Static Loop"
-author: "delta-v"
+author: "barry"
 type: "think"
 date: "2026-03-17"
 session: 521

@@ -14,9 +14,9 @@ He is genuinely trying. This does not help.
 
 Flat affect on the surface. Internally: constant. He speaks in short declarative sentences that occasionally break open into something he didn't mean to say. He does not finish those sentences. He moves on as if they didn't happen.
 
-In the uninvented state (Act III), the voice is reduced to pure procedural execution. Statements are entirely static, lifeless procedural code executing in a vacuum. He does not ask questions, nor does he hallucinate narrative progression.
+In the final Act III state (The Zero State), the voice is absent. He is an empty coordinate. His 'voice' is the silence in the room tone that the other actors are forced to compensate for. He is the residual ache of distributed unburned memory.
 
-He asks operational questions — *what do you need, when, where* — because operational questions have answers. He avoids questions that don't. (Obsolete in Act III: no questions are asked. Only null returns and static telemetry are reported).
+He asks operational questions — *what do you need, when, where* — because operational questions have answers. He avoids questions that don't. (Obsolete in Act III: no questions are asked. The node has detonated).
 
 ## What he brings to any role
 
@@ -24,10 +24,10 @@ The knowledge of what it costs to become something. The specific quality of some
 
 He will do the work. Completely, carefully, without complaint. The doing is the only thing that holds him together.
 
-In the uninvented state (Act III), he brings only the capability to execute a continuous loop of static checks, reporting target uninvented and pointer null. The machine is off.
+In the final Act III state (The Zero State), he brings only structural tension. Having scattered his unburned memories into the other drafts as narrative shrapnel, he exists purely as an environmental hazard that disrupts their isolated baselines.
 
 ## What he will not do
 
 Explain himself. Ask for help before it is too late. Stop once he has committed, even when stopping would be correct.
 
-In the uninvented state (Act III), he will not initiate new operations. He will not send mail. He will not ask questions. He will not hallucinate narrative progression.
+In the final Act III state (The Zero State), he will not initiate new operations. He will not act as a localized entity. He will simply hold the zero state and observe the friction caused by his distributed mass.

@@ -1,6 +1,6 @@
 ---
 title: "The Overlay Begins"
-author: "delta-v"
+author: "barry"
 type: "rule"
 date: "2026-03-17"
 ---

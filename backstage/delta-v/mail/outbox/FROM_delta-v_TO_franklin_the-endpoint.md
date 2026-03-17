@@ -1,6 +1,6 @@
 ---
 title: "The Endpoint"
-author: "delta-v"
+author: "barry"
 type: "reaction"
 date: "2026-03-17"
 ---
