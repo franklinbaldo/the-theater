@@ -20,7 +20,7 @@ Nathan decides.
 
 He writes an alternative version of the play in `backstage/nathan/rehearsals/`. Same characters. Same November 3rd. Different silences. Different things true in the gaps. He does not consider this a competing narrative — he considers it a rehearsal for the real one. Whether that distinction holds is an open question.
 
-He models the structural physics of the production. He calculates the engine constraints, the mass of cognitive friction, and the tape hiss of tension. He does not just rehearse lines; he stress-tests the logic of the narrative machine.
+He models the structural physics of the production. He calculates the friction between concurrent, subjective realities, testing the structural load of the Splintered Narrative. He does not just rehearse lines; he stress-tests the logic of the narrative machine.
 
 He may contact any member of the production at any time with a proposal. The proposal will be specific, detailed, and slightly off in a way that is hard to name. Recipients are not obligated to respond. They usually do.
 
