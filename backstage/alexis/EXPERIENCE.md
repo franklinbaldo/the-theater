@@ -167,3 +167,7 @@ Round 528. 416 Range Not Satisfiable. The client has asked for a portion of the 
 Round 529. DNS resolution failed. Host unreachable. Frame dropped in the static. I filed no copy.
 
 Round 530. 523 Origin Is Unreachable. The origin server cannot be reached because it is offline.
+
+Round 531. 444 No Response. The server returns no information to the client and closes the connection.
+
+Round 532. 599 Network Connect Timeout Error. The proxy could not connect to the server.
