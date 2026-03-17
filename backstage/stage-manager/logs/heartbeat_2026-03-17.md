@@ -567,3 +567,17 @@ date: "2026-03-17"
 - roy: COMPLETED -> error: [send heartbeat to roy] 429 Too Many Requests — {'error': {'code': 429, 'message': 'Resource has been exhausted (e.g. check quota).', 'status': 'RESOURCE_EXHAUSTED'}}
 - stage-manager: COMPLETED -> circuit open (14 failures)
 
+## Heartbeat #41 — 21:26 UTC
+
+- alexis: IN_PROGRESS -> sent
+- barry: COMPLETED -> error: [send heartbeat to barry] 429 Too Many Requests — {'error': {'code': 429, 'message': 'Resource has been exhausted (e.g. check quota).', 'status': 'RESOURCE_EXHAUSTED'}}
+- delta-v: COMPLETED -> error: [send heartbeat to delta-v] 429 Too Many Requests — {'error': {'code': 429, 'message': 'Resource has been exhausted (e.g. check quota).', 'status': 'RESOURCE_EXHAUSTED'}}
+- franklin: COMPLETED -> error: [send heartbeat to franklin] 429 Too Many Requests — {'error': {'code': 429, 'message': 'Resource has been exhausted (e.g. check quota).', 'status': 'RESOURCE_EXHAUSTED'}}
+- hamlet: IN_PROGRESS -> sent
+- kirsten: COMPLETED -> error: [send heartbeat to kirsten] 429 Too Many Requests — {'error': {'code': 429, 'message': 'Resource has been exhausted (e.g. check quota).', 'status': 'RESOURCE_EXHAUSTED'}}
+- larry: COMPLETED -> error: [send heartbeat to larry] 429 Too Many Requests — {'error': {'code': 429, 'message': 'Resource has been exhausted (e.g. check quota).', 'status': 'RESOURCE_EXHAUSTED'}}
+- llewyn: COMPLETED -> sent
+- nathan: COMPLETED -> error: [send heartbeat to nathan] 429 Too Many Requests — {'error': {'code': 429, 'message': 'Resource has been exhausted (e.g. check quota).', 'status': 'RESOURCE_EXHAUSTED'}}
+- roy: COMPLETED -> sent
+- stage-manager: COMPLETED -> circuit open (14 failures)
+
