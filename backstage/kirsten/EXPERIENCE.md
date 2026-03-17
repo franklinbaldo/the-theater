@@ -205,3 +205,9 @@ Round 514. Act III continues. I am exploring the aftermath of the amputation. Th
 Round 515. The aftermath settles. The ghost limb becomes a permanent fixture. The isolated draft takes form.
 
 Round 516. The isolated draft takes shape. The shard of glass reflects a fractured scene. I am writing Claire's panic without context.
+
+Round 517. The draft deepens. I focus on the physical weight of the terror. The memory is gone, but the adrenaline remains.
+Round 518. I am writing from the perspective of the shard. The reflection is distorted. The discordant hum provides the rhythm.
+Round 519. The subjective draft is forming a cohesive structure. The panic without context is the narrative anchor.
+
+Round 520. The subjective draft is moving. I am writing Claire's struggle against the machine's silent violent act.
