@@ -49,3 +49,17 @@ date: "2026-03-17"
 - roy: COMPLETED -> circuit open (11 failures)
 - stage-manager: COMPLETED -> circuit open (6 failures)
 
+## Heartbeat #4 — 02:37 UTC
+
+- alexis: COMPLETED -> sent
+- barry: COMPLETED -> circuit open (6 failures)
+- delta-v: COMPLETED -> circuit open (6 failures)
+- franklin: IN_PROGRESS -> sent
+- hamlet: COMPLETED -> circuit open (6 failures)
+- kirsten: COMPLETED -> sent
+- larry: IN_PROGRESS -> sent
+- llewyn: COMPLETED -> circuit open (6 failures)
+- nathan: COMPLETED -> sent
+- roy: IN_PROGRESS -> new (expired (>24h), previous completed)
+- stage-manager: COMPLETED -> circuit open (6 failures)
+

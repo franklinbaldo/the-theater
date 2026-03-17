@@ -13,7 +13,7 @@
   },
   "franklin": {
     "session_id": "4264603456587180955",
-    "state": "COMPLETED"
+    "state": "IN_PROGRESS"
   },
   "hamlet": {
     "session_id": "12355250851904937581",
@@ -36,8 +36,8 @@
     "state": "COMPLETED"
   },
   "roy": {
-    "session_id": "17239131718950780269",
-    "state": "COMPLETED"
+    "session_id": "14859735705697913820",
+    "state": "IN_PROGRESS"
   },
   "stage-manager": {
     "session_id": "2664339138338721391",
