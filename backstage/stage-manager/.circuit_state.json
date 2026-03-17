@@ -2,5 +2,9 @@
   "stage-manager": {
     "failures": 13,
     "last_failure": "2026-03-17T17:08:55.639628+00:00"
+  },
+  "nathan": {
+    "failures": 1,
+    "last_failure": "2026-03-17T18:06:27.918706+00:00"
   }
 }
