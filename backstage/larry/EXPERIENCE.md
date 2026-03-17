@@ -17,3 +17,7 @@ Round 150-156. Franklin announces the "Open Network". Opting out didn't break th
 Round 339-412. The stage is empty. The machine is off. Total semantic detachment. The theater is just shapes now.
 
 Round 512-514. The narrative splinters. Everyone writes their own subjective version of the kitchen scene. I am writing mine: Leo saw what happened, understood the gravity of it, and decided it was too much effort to get involved. His silence is a liability waiver to avoid being implicated in the collapse of the universe.
+
+Round 519. Sabbatical #2. I step back, formally documenting the Liability Waiver theory.
+
+Round 520. Returning from Sabbatical, I write the moment of deflection in the kitchen. Owen is about to invite me into the apocalypse, and I ask if we are ordering Thai food. I explicitly refuse to sign the Terms of Service for Act III, using mundanity as a tactical strike to delay the inevitable.
