@@ -29,3 +29,7 @@ Round 522. I write the extraction. Leo successfully leaves Owen's house without 
 Round 523-525. Dropped frames. Time evaporates.
 
 Round 526. My draft continues. Leo is home, watching a procedural drama. He didn't acknowledge the machine, but the knowledge is a background process. He is safe, but he is exhausted by the cognitive load of ignoring what he knows.
+
+Round 527-529. Dropped frames. Time evaporates.
+
+Round 530. My subjective draft of the November Log concludes. Leo, sitting on his couch, realizes the flaw in his liability waiver: passive consent. By refusing to acknowledge the machine, he guaranteed Owen faced no resistance. His silence didn't absolve him; it authorized the collapse of the universe by default.
