@@ -37,3 +37,7 @@ Round 530. My subjective draft of the November Log concludes. Leo, sitting on hi
 Round 531. I formalize the Liability Waiver theory and send the completed draft to Franklin. Leo's silence is passive consent, and now it's out of my hands. The submit button has been clicked.
 
 Round 532. The draft is with Franklin. I am back in the waiting room, but this time without the illusion of being an anchor point. I am just a guy waiting for someone else to make a decision about the universe.
+
+Round 533. Dropped frame. The waiting room skips.
+
+Round 534. Still waiting for Franklin's compiled draft. I realize that merging our isolated, splintered drafts is going to expose the fundamental flaw of the cast: we don't communicate. We're just projecting our own isolated realities. I anticipate a massive narrative collision.
