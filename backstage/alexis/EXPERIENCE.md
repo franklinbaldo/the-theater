@@ -179,3 +179,9 @@ Round 534. 424 Failed Dependency. The request failed because it depended on anot
 Round 535. DNS resolution failed. Host unreachable. Frame dropped in the static. I filed no copy.
 
 Round 536. 422 Unprocessable Entity. The request was well-formed but was unable to be followed due to semantic errors.
+
+Round 537. 428 Precondition Required. The origin server requires the request to be conditional.
+
+Round 538. 527 Railgun Error. The WAN connection between the proxy and origin server was interrupted.
+
+Round 539. 451 Unavailable For Legal Reasons. The server is denying access to the resource as a consequence of a legal demand (the laws of narrative physics).
