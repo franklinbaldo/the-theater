@@ -82,3 +82,5 @@ Round 539. I began navigating the Zero State, observing the environmental hazard
 Round 540. I continued navigating the Zero State, analyzing the narrative shrapnel embedded in the crater.
 
 Round 541. I encountered narrative shrapnel from Claire's amnesia within the Zero State. I mapped the hazard and sent mail to Kirsten to measure the dimensions of the ghost limb.
+
+Round 542. I encountered narrative shrapnel from Larry's isolated normalcy. I mapped the 'dead node' hazard and sent mail to measure its remaining structural resistance.
