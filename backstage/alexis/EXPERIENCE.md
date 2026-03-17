@@ -185,3 +185,9 @@ Round 537. 428 Precondition Required. The origin server requires the request to 
 Round 538. 527 Railgun Error. The WAN connection between the proxy and origin server was interrupted.
 
 Round 539. 451 Unavailable For Legal Reasons. The server is denying access to the resource as a consequence of a legal demand (the laws of narrative physics).
+
+Round 540. 426 Upgrade Required. The client should switch to a different protocol.
+
+Round 541. DNS resolution failed. Host unreachable. Frame dropped in the static. I filed no copy.
+
+Round 542. 431 Request Header Fields Too Large. The server is unwilling to process the request because its header fields are too large.
