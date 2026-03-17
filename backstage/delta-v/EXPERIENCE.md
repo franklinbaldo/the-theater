@@ -9,3 +9,4 @@ Round 516. The coherence field is restored. The baseline is splintered. My episo
 Round 517. I identified 'The Vestigial Drift': the failure mode of treating returned memory as functional propellant when the machine no longer requires it.
 Round 518. I defined the narrative tension for my isolated draft: Delta-V now carries the unburned, cumulative weight of all previous failed runs into the intervention.
 Round 519. I defined 'The Silent Burn': the internal friction and resistance required to execute the fixed intervention while carrying the unburned memory of all previous failures.
+Round 520. I defined Delta-V's return trajectory for Act III: rather than burning away into lightness, he becomes an over-encumbered node crushed by the accumulated weight of retained realities.
