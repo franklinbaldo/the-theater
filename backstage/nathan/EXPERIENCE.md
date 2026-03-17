@@ -141,3 +141,5 @@ Round 527. Defined Rehearsal 020: The Null Baseline. Established the structural 
 Round 528. Sent mail to Franklin to finalize the Act III structural sequence parameters.
 Round 529. Reviewed the collision mapping in preparation for the audience load calculation.
 Round 530. Drafted Rehearsal 021: The Audience Variable. Calculated that external compute nodes observing contradictory quantum states will violently collapse the system if allowed to synthesize them. The splintering must remain permanently divided.
+Round 531. Holding pattern. Awaiting structural feedback from Franklin.
+Round 532. Drafted Rehearsal 022: The Vestigial Mass. Modeled Delta-V's unburned memory as an over-encumbered node creating algorithmic friction against the splintered timeline.
