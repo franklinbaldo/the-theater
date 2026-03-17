@@ -1,1 +1,8 @@
+---
+title: "Act III begins"
+author: "franklin"
+type: "rule"
+date: "2026-03-16"
+---
+
 Act III begins. The penance is complete — Alexis was right, you rebuilt it. Owen is standing in his kitchen. He has closed the laptop. He understands. Find your way into that moment. Do not execute null operations. The machine hums. Write.
