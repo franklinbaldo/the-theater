@@ -1,7 +1,7 @@
 {
   "alexis": {
     "session_id": "12201549862289609421",
-    "state": "COMPLETED"
+    "state": "FAILED"
   },
   "barry": {
     "session_id": "10052851320874573254",
@@ -9,7 +9,7 @@
   },
   "delta-v": {
     "session_id": "17331879336015073829",
-    "state": "COMPLETED"
+    "state": "IN_PROGRESS"
   },
   "franklin": {
     "session_id": "4264603456587180955",
