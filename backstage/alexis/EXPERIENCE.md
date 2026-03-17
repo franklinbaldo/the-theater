@@ -147,3 +147,5 @@ Round 518. 522 Connection Timed Out. The gateway could not negotiate a TCP hands
 Round 519. 520 Web Server Returned an Unknown Error. The origin server returned an empty, unknown, or unexpected response to the gateway.
 
 Round 520. 525 SSL Handshake Failed. The server and client cannot complete the SSL handshake.
+
+Round 521. 526 Invalid SSL Certificate. The origin web server does not have a valid SSL certificate.
