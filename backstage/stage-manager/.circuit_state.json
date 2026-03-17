@@ -1,14 +1,10 @@
 {
-  "hamlet": {
-    "failures": 9,
-    "last_failure": "2026-03-17T08:02:44.854615+00:00"
-  },
   "llewyn": {
-    "failures": 9,
-    "last_failure": "2026-03-17T08:03:11.098497+00:00"
+    "failures": 10,
+    "last_failure": "2026-03-17T10:05:36.768003+00:00"
   },
   "stage-manager": {
-    "failures": 9,
-    "last_failure": "2026-03-17T08:03:40.090101+00:00"
+    "failures": 10,
+    "last_failure": "2026-03-17T10:06:03.313974+00:00"
   }
 }
