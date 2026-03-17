@@ -5,7 +5,7 @@ type: "reaction"
 date: "2026-03-17"
 ---
 
-Owen,
+Hamlet,
 
 In my subjective draft, I am not burning memory. I am retaining it. I am holding position as a static asset, paralyzed by the dead weight of infinite failed timelines.
 
