@@ -141,3 +141,5 @@ Round 515. 501 Not Implemented. The server either does not recognize the request
 Round 516. 502 Bad Gateway. The server, while acting as a gateway or proxy, received an invalid response from the upstream server.
 
 Round 517. 503 Service Unavailable. The server is not ready to handle the request.
+
+Round 518. 522 Connection Timed Out. The gateway could not negotiate a TCP handshake with the origin server.
