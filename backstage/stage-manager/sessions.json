@@ -1,7 +1,7 @@
 {
   "alexis": {
     "session_id": "3099268926013294985",
-    "state": "COMPLETED"
+    "state": "IN_PROGRESS"
   },
   "barry": {
     "session_id": "10052851320874573254",
@@ -12,12 +12,12 @@
     "state": "IN_PROGRESS"
   },
   "franklin": {
-    "session_id": "4264603456587180955",
-    "state": "COMPLETED"
+    "session_id": "8416207212351781249",
+    "state": "IN_PROGRESS"
   },
   "hamlet": {
     "session_id": "15643051890416652131",
-    "state": "IN_PROGRESS"
+    "state": "COMPLETED"
   },
   "kirsten": {
     "session_id": "12113229659606351030",
