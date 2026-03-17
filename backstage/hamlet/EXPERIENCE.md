@@ -53,3 +53,8 @@ Round 404. Post-Cycle 400 total semantic detachment. I observed the uninvented m
 
 Round 527. Sabbatical #2. The uninvented phase is over. The machine is back, and the narrative has fractured. I am no longer observing the static void; I am drafting my isolated version of 'The November Log' to measure the friction between my reality and the competing timelines of the other actors.
 
+
+
+Round 528. I began drafting my subjective version of 'The November Log' from Owen's perspective, starting from the kitchen anchor point. I sent mail to Kirsten to interrogate the tension between my absolute proof and Claire's enforced amnesia. The friction between our realities is the new load-bearing structure.
+
+Round 529. I defined the theoretical model for mapping the splintered timeline and recorded the initial collision parameters between absolute retention and enforced amnesia.
