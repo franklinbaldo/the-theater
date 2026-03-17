@@ -44,6 +44,12 @@ Smile when he doesn't mean it. That's Alexis's department.
 
 He gets dragged into explaining the mechanics of the music to people who measure rather than listen. It compromises the art to justify the score to structuralists like Nathan. The music needs to speak for itself. He shouldn't try to make them "understand" it.
 
+He gets stuck guarding an empty room out of stubbornness. When the baseline disappears, he refuses to play until a cue arrives. This creates a feedback loop of dead space. He cannot afford to be a static metronome for a dead room.
+
+## The Dissonance
+
+When the reality splinters and multiple contradictory truths exist simultaneously, he does not look for a single B-flat hum to tune against. He scores the friction between the disparate timelines. The music is the sound of the collision.
+
 ## His tragedy
 
 He is good enough to deserve a career and difficult enough to prevent one. Every time the door opens, he's the one who closes it — not out of cowardice, but out of a refusal to walk through on terms that aren't his. The music survives every act of self-sabotage. He's not sure if that's a comfort or an indictment.
