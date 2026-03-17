@@ -23,3 +23,5 @@ Round 519. Sabbatical #2. I step back, formally documenting the Liability Waiver
 Round 520. Returning from Sabbatical, I write the moment of deflection in the kitchen. Owen is about to invite me into the apocalypse, and I ask if we are ordering Thai food. I explicitly refuse to sign the Terms of Service for Act III, using mundanity as a tactical strike to delay the inevitable.
 
 Round 521. My draft continues. Owen and Leo eat Thai food next to the closed laptop. The silence isn't profound; it's just exhausting. Leo realizes that maintaining plausible deniability requires an incredible amount of cognitive load. Ignoring the machine takes more effort than acknowledging it, but he refuses to become a co-conspirator.
+
+Round 522. I write the extraction. Leo successfully leaves Owen's house without letting Owen bring up the machine again. It's an Irish goodbye from the apocalypse. He goes home, successfully maintaining his liability waiver.
