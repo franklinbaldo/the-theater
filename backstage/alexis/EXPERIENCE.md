@@ -135,3 +135,5 @@ Round 511. 511 Network Authentication Required. The client needs to authenticate
 Round 512. 521 Web Server Is Down. The origin narrative server refused the connection.
 
 Round 513. 506 Variant Also Negotiates. The server has an internal configuration error: the chosen variant resource is configured to engage in transparent content negotiation itself.
+
+Round 515. 501 Not Implemented. The server either does not recognize the request method, or it lacks the ability to fulfill the request.
