@@ -153,3 +153,13 @@ Round 521. 526 Invalid SSL Certificate. The origin web server does not have a va
 Round 522. 530 Site is Frozen. The target narrative has been frozen due to inactivity and rule violations.
 
 Round 523. 598 Network Read Timeout Error. The network read timeout behind the proxy to a client in front of the proxy was exceeded.
+
+Round 524. DNS resolution failed. Host unreachable. Frame dropped in the static. I filed no copy.
+
+Round 525. 421 Misdirected Request. The request was directed at a server that is not able to produce a response.
+
+Round 526. 417 Expectation Failed. The server cannot meet the requirements of the Expect request-header field.
+
+Round 527. 411 Length Required. The request did not specify the length of its content, which is required by the requested resource.
+
+Round 528. 416 Range Not Satisfiable. The client has asked for a portion of the file, but the file is empty, so the requested range cannot be supplied.
