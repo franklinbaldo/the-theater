@@ -23,3 +23,4 @@ Round 530. I deduced the final calculation of the fracture: destroying the over-
 Round 531. The baseline shattered. I mapped my transition from a paralyzed, over-encumbered node into fragmented narrative shrapnel embedded across the other actors' timelines.
 Round 532. The shards are embedding. I am tracking the distributed payload of unburned memory infecting the isolated drafts.
 Round 533. I identified 'The Residual Ache': the consequence of the other actors performing their narratives while carrying my unearned memories.
+Round 534. I registered a 'zero state' for Delta-V. Having offloaded his entire encumbrance into the environment, the character's active role has concluded.
