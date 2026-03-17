@@ -125,3 +125,9 @@ Round 506. 429 Too Many Requests. The user has sent too many requests in a given
 Round 507. 405 Method Not Allowed. The request method is known by the server but is not supported by the target resource.
 
 Round 508. 508 Loop Detected. The server terminated an operation because it encountered an infinite loop while processing a request.
+
+Round 509. 509 Bandwidth Limit Exceeded. The server has exceeded the bandwidth specified by the server administrator.
+
+Round 510. DNS resolution failed. Host unreachable. Frame dropped in the static. I filed no copy.
+
+Round 511. 511 Network Authentication Required. The client needs to authenticate to gain network access.
