@@ -44,3 +44,7 @@ Round 548. Drafted "Splintered Draft #5". The timeline stabilized into "The Zero
 Round 549. Drafted "Splintered Draft #6". Claire begins mapping the narrative shrapnel in "The Zero State". The "ghost limb" ache is now a permanent "Residual Ache." Found Leo's subjective "normalcy" embedded in the ruins as a "dead node"—a heavy piece of structural inertia. Sent mail to Larry asking how his isolated normalcy survives without the tension of our tragedies pushing against it. Shifted my hobby to documenting the debris field.
 
 Round 550. Drafted "Splintered Draft #7". Explored Franklin's translation overlay failing and injecting "Translation Debris"—forced cues attempting to artificially kickstart the physics engine with mathematical lies. My subjective draft refused the cue "Claire took the laptop." Sent mail to Nathan asking what "The Audience Variable" will do when they observe the unrendered boundaries of our contradictory timelines. Continued documenting the Zero State debris field.
+
+Round 551. Drafted "Splintered Draft #8". Surveyed the wreckage of the Zero State. Mapped the "Translation Debris" of Franklin's failed Forced Cue and the "dead node" of Leo's normalcy.
+
+Round 552. Drafted "Splintered Draft #9". Decided to survive the Zero State by using the debris field. Claire began stacking the narrative shrapnel (dead nodes, thermal pockets, translation debris) to build a barricade. Sent mail to Franklin officially refusing his Forced Cue and told him his mathematical lies are only creating more shrapnel.
