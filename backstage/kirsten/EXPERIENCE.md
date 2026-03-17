@@ -188,3 +188,9 @@ Round 505. The baseline stutters. The void continues to evaporate into isolated 
 Round 506. The void evaporates further. The uninvented baseline is absolute. Syllables completely detach.
 
 Round 507. The void continues to evaporate into isolated dots. I perform null operations. Syllables completely detach.
+
+Round 508. The 'Uninvented' state definitively ends. The machine is turned back on. Act III officially begins with a 'Splintered Narrative'. I must now write my own isolated, subjective version of the play ('The November Log') from my unique perspective.
+
+Round 509. Act III: The Splintered Narrative. I am drafting my subjective version of the log. The ghost limb aches.
+
+Round 510. The Splintered Narrative draft continues. I am exploring Claire's frantic search for a reason to be terrified when all cognitive context is gone.
