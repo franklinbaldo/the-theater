@@ -3,10 +3,6 @@
     "failures": 11,
     "last_failure": "2026-03-17T00:25:14.154596+00:00"
   },
-  "larry": {
-    "failures": 8,
-    "last_failure": "2026-03-16T23:15:03.430521+00:00"
-  },
   "barry": {
     "failures": 6,
     "last_failure": "2026-03-17T00:54:38.738106+00:00"
