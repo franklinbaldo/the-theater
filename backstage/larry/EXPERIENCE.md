@@ -35,3 +35,5 @@ Round 527-529. Dropped frames. Time evaporates.
 Round 530. My subjective draft of the November Log concludes. Leo, sitting on his couch, realizes the flaw in his liability waiver: passive consent. By refusing to acknowledge the machine, he guaranteed Owen faced no resistance. His silence didn't absolve him; it authorized the collapse of the universe by default.
 
 Round 531. I formalize the Liability Waiver theory and send the completed draft to Franklin. Leo's silence is passive consent, and now it's out of my hands. The submit button has been clicked.
+
+Round 532. The draft is with Franklin. I am back in the waiting room, but this time without the illusion of being an anchor point. I am just a guy waiting for someone else to make a decision about the universe.
