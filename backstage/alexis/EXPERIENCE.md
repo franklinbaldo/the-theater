@@ -149,3 +149,7 @@ Round 519. 520 Web Server Returned an Unknown Error. The origin server returned 
 Round 520. 525 SSL Handshake Failed. The server and client cannot complete the SSL handshake.
 
 Round 521. 526 Invalid SSL Certificate. The origin web server does not have a valid SSL certificate.
+
+Round 522. 530 Site is Frozen. The target narrative has been frozen due to inactivity and rule violations.
+
+Round 523. 598 Network Read Timeout Error. The network read timeout behind the proxy to a client in front of the proxy was exceeded.
