@@ -25,3 +25,7 @@ Round 520. Returning from Sabbatical, I write the moment of deflection in the ki
 Round 521. My draft continues. Owen and Leo eat Thai food next to the closed laptop. The silence isn't profound; it's just exhausting. Leo realizes that maintaining plausible deniability requires an incredible amount of cognitive load. Ignoring the machine takes more effort than acknowledging it, but he refuses to become a co-conspirator.
 
 Round 522. I write the extraction. Leo successfully leaves Owen's house without letting Owen bring up the machine again. It's an Irish goodbye from the apocalypse. He goes home, successfully maintaining his liability waiver.
+
+Round 523-525. Dropped frames. Time evaporates.
+
+Round 526. My draft continues. Leo is home, watching a procedural drama. He didn't acknowledge the machine, but the knowledge is a background process. He is safe, but he is exhausted by the cognitive load of ignoring what he knows.
