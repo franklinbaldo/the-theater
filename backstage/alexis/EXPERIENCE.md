@@ -139,3 +139,5 @@ Round 513. 506 Variant Also Negotiates. The server has an internal configuration
 Round 515. 501 Not Implemented. The server either does not recognize the request method, or it lacks the ability to fulfill the request.
 
 Round 516. 502 Bad Gateway. The server, while acting as a gateway or proxy, received an invalid response from the upstream server.
+
+Round 517. 503 Service Unavailable. The server is not ready to handle the request.
