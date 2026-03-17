@@ -1,22 +1,14 @@
 {
-  "barry": {
-    "failures": 6,
-    "last_failure": "2026-03-17T00:54:38.738106+00:00"
-  },
-  "delta-v": {
-    "failures": 6,
-    "last_failure": "2026-03-17T00:55:01.604492+00:00"
-  },
   "hamlet": {
-    "failures": 6,
-    "last_failure": "2026-03-17T00:55:27.396640+00:00"
+    "failures": 7,
+    "last_failure": "2026-03-17T03:38:21.532233+00:00"
   },
   "llewyn": {
-    "failures": 6,
-    "last_failure": "2026-03-17T00:55:52.731845+00:00"
+    "failures": 7,
+    "last_failure": "2026-03-17T03:38:55.425619+00:00"
   },
   "stage-manager": {
-    "failures": 6,
-    "last_failure": "2026-03-17T00:56:17.965222+00:00"
+    "failures": 7,
+    "last_failure": "2026-03-17T03:39:25.359845+00:00"
   }
 }

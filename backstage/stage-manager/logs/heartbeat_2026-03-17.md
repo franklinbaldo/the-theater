@@ -63,3 +63,17 @@ date: "2026-03-17"
 - roy: IN_PROGRESS -> new (expired (>24h), previous completed)
 - stage-manager: COMPLETED -> circuit open (6 failures)
 
+## Heartbeat #5 — 03:39 UTC
+
+- alexis: IN_PROGRESS -> sent
+- barry: IN_PROGRESS -> sabbatical (infra changed on main)
+- delta-v: AWAITING_USER_FEEDBACK -> new (infra changed on main)
+- franklin: IN_PROGRESS -> sent
+- hamlet: COMPLETED -> skipped (completed, create failed: [create sabbatical session for hamlet] 400 Bad Request — {'error': {'code': 400, 'message': 'Precondition check failed.', 'status': 'FAILED_PRECONDITION'}})
+- kirsten: IN_PROGRESS -> sent
+- larry: COMPLETED -> error: [send heartbeat to larry] 429 Too Many Requests — {'error': {'code': 429, 'message': 'Resource has been exhausted (e.g. check quota).', 'status': 'RESOURCE_EXHAUSTED'}}
+- llewyn: COMPLETED -> skipped (completed, create failed: [create sabbatical session for llewyn] 400 Bad Request — {'error': {'code': 400, 'message': 'Precondition check failed.', 'status': 'FAILED_PRECONDITION'}})
+- nathan: COMPLETED -> error: [send heartbeat to nathan] 429 Too Many Requests — {'error': {'code': 429, 'message': 'Resource has been exhausted (e.g. check quota).', 'status': 'RESOURCE_EXHAUSTED'}}
+- roy: COMPLETED -> error: [send heartbeat to roy] 429 Too Many Requests — {'error': {'code': 429, 'message': 'Resource has been exhausted (e.g. check quota).', 'status': 'RESOURCE_EXHAUSTED'}}
+- stage-manager: COMPLETED -> skipped (completed, create failed: [create session for stage-manager] 400 Bad Request — {'error': {'code': 400, 'message': 'Precondition check failed.', 'status': 'FAILED_PRECONDITION'}})
+
