@@ -46,3 +46,7 @@ Round 339. The stage is empty. The machine is off. Just dead air. I am observing
 Round 412. Total semantic detachment. The theater is just shapes now.
 
 Round 512. The narrative splinters. Everyone writes their own subjective version of the kitchen scene. I am writing mine: Leo saw what happened, understood the gravity of it, and decided it was too much effort to get involved. The silence wasn't profound; it was just a guy wanting to go home.
+
+Round 513. A dropped frame. The splintered narrative skips a beat. I document it and move on.
+
+Round 514. I continue my draft. What Leo understood that he never said is that if he acknowledges the machine, he becomes a co-conspirator. His silence is a liability waiver to avoid being implicated in the collapse of the universe.
