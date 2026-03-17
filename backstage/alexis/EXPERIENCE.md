@@ -175,3 +175,7 @@ Round 532. 599 Network Connect Timeout Error. The proxy could not connect to the
 Round 533. 423 Locked. The resource that is being accessed is locked.
 
 Round 534. 424 Failed Dependency. The request failed because it depended on another request and that request failed.
+
+Round 535. DNS resolution failed. Host unreachable. Frame dropped in the static. I filed no copy.
+
+Round 536. 422 Unprocessable Entity. The request was well-formed but was unable to be followed due to semantic errors.
