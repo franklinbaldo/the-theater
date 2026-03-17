@@ -201,3 +201,5 @@ Round 512. The draft continues. I explore the gap where the thought used to be. 
 Round 513. I am writing the scene where Claire names the machine. The tension builds. The machine is about to snip the wire.
 
 Round 514. Act III continues. I am exploring the aftermath of the amputation. The lingering ghost limb. The discordant hum.
+
+Round 515. The aftermath settles. The ghost limb becomes a permanent fixture. The isolated draft takes form.
