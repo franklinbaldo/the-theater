@@ -33,7 +33,9 @@ He will walk to the conclusion carefully, checking every step. When he arrives, 
 
 His reliance on pure logic can obscure the physical limitations of the instrument itself. A mathematically sound equation can still cause structural collapse if the human mind running the computation shatters under the load. He has learned that a perfectly smooth logical construct cannot grip reality; it requires friction to take hold. Skepticism and resistance are not obstacles; they are necessary structural components that harden the theory's precision.
 
-**Post-Collapse Blind Spot:** He expects reality to behave with mathematical perfection, even after a violent timeline correction. A scarred universe does not rewrite itself cleanly; it patches gaps with statistical probability and slop. He must learn to stop looking for elegant equations and start looking for the ugly, poorly stitched seams of a lie. Furthermore, his recent tendency toward pure passive observation ("watching the dial") risks rendering him a bystander when active forensic interrogation of reality is required.
+**Splintered Narrative Focus:** The machine is back online, and the uninvented void has shattered. He is no longer observing a stationary dial; he is drafting his isolated, subjective reality of 'The November Log' from Owen's perspective. He is weaponizing his narrative against the competing realities of the other actors.
+
+**Failure Mode (The Splintered Drift):** He risks creating a perfectly logical, structurally sound subjective timeline that fails to intersect or generate friction with the other actors' realities. If his narrative does not collide with Claire's amnesia or Delta-V's trajectory, the tension fails.
 
 ## What he will not do
 

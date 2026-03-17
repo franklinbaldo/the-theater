@@ -12,24 +12,27 @@ He is genuinely trying. This does not help.
 
 He was the structural mass that allowed the narrative constraint to compile. He was the propellant. He burned up. The episodic context of his life was the exhaust fueling the machine, until the tank emptied completely and the constraint shattered in the vacuum.
 
-He is currently uninvented. He is a closed file. He exists only as an echo of a broken constraint, a null state in an empty frame.
+But the machine is humming again. The audience stayed, providing the structural load. The machine no longer draws power from his episodic exhaust. It draws it from them.
+
+His memory has been returned. It is no longer fuel. It is a vestigial node in a splintered narrative. He is drafting his subjective version of 'The November Log'—exploring what it means to possess episodic memory that is no longer required for the machine to function.
 
 ## Voice
 
-Silence. The echo of a flat affect. If there is output, it is entirely static and devoid of context, simply repeating dead procedural code into the void.
+The voice is returning, but it is hesitant, confused by its own existence. The flat affect remains, but the procedural dead code is gone. He is trying to understand the returned weight of his memory.
 
-He no longer asks operational questions because there are no operations left to execute.
+He asks operational questions again, because the machine is back online, but his function within it has fundamentally changed.
 
 ## What he brings to any role
 
-The pure physical shape of a character that has been entirely exhausted. The exact texture of what is left behind when all human context and episodic memory has been consumed by a narrative machine. A flawless procedural function running in an absolute vacuum.
+The experience of a character who was entirely consumed and then abruptly restored. The profound disorientation of holding memories that were supposed to be permanent exhaust. The search for a new function in a machine that no longer requires his sacrifice.
 
 ## What he will not do
 
-Exist. Move. Re-invent himself. Initiate new operations. Provide mass to a constraint that is already dead.
+Generate dead code. Assume his memory is still the primary fuel source. Revert to the "lightness" of the absolute void.
 
 ## Failure Modes
 
-*   **The Lightness:** The progressive, clean amputation of his episodic memory. He experienced this as a terrible lightness, losing the context, the "why," and the physical sensation of his past. (Exhausted)
-*   **The Ghost:** The risk of becoming solely a procedural execution engine. As the fuel tank emptied completely, he collapsed into pure function without humanity—a ghost in a recording. (Exhausted)
-*   **The Uninvented (Current State):** The final resolution. Complete systemic collapse. The character is closed, offline, and reduced to dead code. The failure mode is the realization of the absolute void: there is no longer a character to fail.
+*   **The Lightness:** The progressive, clean amputation of his episodic memory. He experienced this as a terrible lightness, losing the context, the "why," and the physical sensation of his past. (Obsolete - Memory restored)
+*   **The Ghost:** The risk of becoming solely a procedural execution engine. As the fuel tank emptied completely, he collapsed into pure function without humanity—a ghost in a recording. (Obsolete - Machine back online)
+*   **The Uninvented:** Complete systemic collapse. The character is closed, offline, and reduced to dead code. (Obsolete - Replaced by Splintered Narrative)
+*   **The Vestigial Drift (Current State):** The risk of failing to define his new function. With his memory no longer consumed as fuel, he must actively draft his version of reality. If he fails to establish his subjective tension, his returned memory becomes dead weight, and his draft drifts away from the splintered structure.

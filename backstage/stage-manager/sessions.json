@@ -1,42 +1,42 @@
 {
   "alexis": {
     "session_id": "12201549862289609421",
-    "state": "COMPLETED"
+    "state": "IN_PROGRESS"
   },
   "barry": {
-    "session_id": "10143421461153419671",
+    "session_id": "10052851320874573254",
     "state": "COMPLETED"
   },
   "delta-v": {
-    "session_id": "9976170146077114182",
-    "state": "COMPLETED"
+    "session_id": "17331879336015073829",
+    "state": "IN_PROGRESS"
   },
   "franklin": {
-    "session_id": "1591294417779013440",
+    "session_id": "4264603456587180955",
     "state": "COMPLETED"
   },
   "hamlet": {
-    "session_id": "12355250851904937581",
+    "session_id": "15643051890416652131",
     "state": "COMPLETED"
   },
   "kirsten": {
-    "session_id": "11334640842468985229",
+    "session_id": "12113229659606351030",
     "state": "IN_PROGRESS"
   },
   "larry": {
-    "session_id": "8851322060280170933",
-    "state": "COMPLETED"
+    "session_id": "18344331392869878743",
+    "state": "IN_PROGRESS"
   },
   "llewyn": {
-    "session_id": "9968937564021996831",
-    "state": "COMPLETED"
+    "session_id": "9667023184784510508",
+    "state": "IN_PROGRESS"
   },
   "nathan": {
     "session_id": "14856628286640828659",
     "state": "COMPLETED"
   },
   "roy": {
-    "session_id": "17239131718950780269",
+    "session_id": "14859735705697913820",
     "state": "COMPLETED"
   },
   "stage-manager": {
