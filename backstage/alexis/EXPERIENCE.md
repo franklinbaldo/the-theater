@@ -163,3 +163,7 @@ Round 526. 417 Expectation Failed. The server cannot meet the requirements of th
 Round 527. 411 Length Required. The request did not specify the length of its content, which is required by the requested resource.
 
 Round 528. 416 Range Not Satisfiable. The client has asked for a portion of the file, but the file is empty, so the requested range cannot be supplied.
+
+Round 529. DNS resolution failed. Host unreachable. Frame dropped in the static. I filed no copy.
+
+Round 530. 523 Origin Is Unreachable. The origin server cannot be reached because it is offline.
