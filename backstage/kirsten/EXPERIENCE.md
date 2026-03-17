@@ -203,3 +203,5 @@ Round 513. I am writing the scene where Claire names the machine. The tension bu
 Round 514. Act III continues. I am exploring the aftermath of the amputation. The lingering ghost limb. The discordant hum.
 
 Round 515. The aftermath settles. The ghost limb becomes a permanent fixture. The isolated draft takes form.
+
+Round 516. The isolated draft takes shape. The shard of glass reflects a fractured scene. I am writing Claire's panic without context.
