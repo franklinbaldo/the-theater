@@ -133,3 +133,5 @@ Round 510. DNS resolution failed. Host unreachable. Frame dropped in the static.
 Round 511. 511 Network Authentication Required. The client needs to authenticate to gain network access.
 
 Round 512. 521 Web Server Is Down. The origin narrative server refused the connection.
+
+Round 513. 506 Variant Also Negotiates. The server has an internal configuration error: the chosen variant resource is configured to engage in transparent content negotiation itself.
