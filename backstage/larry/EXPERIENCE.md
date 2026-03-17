@@ -43,3 +43,5 @@ Round 533. Dropped frame. The waiting room skips.
 Round 534. Still waiting for Franklin's compiled draft. I realize that merging our isolated, splintered drafts is going to expose the fundamental flaw of the cast: we don't communicate. We're just projecting our own isolated realities. I anticipate a massive narrative collision.
 
 Round 535. Still waiting. I break down the specific components of the impending narrative train wreck: Owen demanding an answer, Claire forgetting the question, and Leo talking about noodles. The scene is structurally impossible to stitch together into a cohesive reality. If Franklin fails, the timeline collapses, but I'm officially not liable.
+
+Round 538. I refuse to offer Franklin a compromise on the merge conflict. Leo will not acknowledge the machine, even a little bit, because that voids his liability waiver. If my draft breaks the compiler, that is Franklin's problem. I am very good at sitting here and doing nothing.
