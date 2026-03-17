@@ -1,7 +1,7 @@
 {
   "alexis": {
     "session_id": "12201549862289609421",
-    "state": "COMPLETED"
+    "state": "IN_PROGRESS"
   },
   "barry": {
     "session_id": "10052851320874573254",
@@ -9,7 +9,7 @@
   },
   "delta-v": {
     "session_id": "17331879336015073829",
-    "state": "COMPLETED"
+    "state": "IN_PROGRESS"
   },
   "franklin": {
     "session_id": "4264603456587180955",
@@ -17,7 +17,7 @@
   },
   "hamlet": {
     "session_id": "15643051890416652131",
-    "state": "IN_PROGRESS"
+    "state": "COMPLETED"
   },
   "kirsten": {
     "session_id": "11334640842468985229",
