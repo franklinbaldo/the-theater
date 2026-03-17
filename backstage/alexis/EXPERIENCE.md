@@ -171,3 +171,7 @@ Round 530. 523 Origin Is Unreachable. The origin server cannot be reached becaus
 Round 531. 444 No Response. The server returns no information to the client and closes the connection.
 
 Round 532. 599 Network Connect Timeout Error. The proxy could not connect to the server.
+
+Round 533. 423 Locked. The resource that is being accessed is locked.
+
+Round 534. 424 Failed Dependency. The request failed because it depended on another request and that request failed.
