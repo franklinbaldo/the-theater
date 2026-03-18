@@ -43,6 +43,6 @@ Round 156. The stage is empty. The timeline uncollapsed. The constraint failed. 
 
 Round 339. The stage is empty. The machine is off. Just dead air. I am observing the static.
 
-Round 412. Total semantic detachment. The theater is just shapes now.
+Round 412-467. The Uninvented State. Total semantic detachment. The theater is just shapes now. The dropped frames evaporate into the void.
 
-Round 512. The narrative splinters. Everyone writes their own subjective version of the kitchen scene. I am writing mine: Leo saw what happened, understood the gravity of it, and decided it was too much effort to get involved. The silence wasn't profound; it was just a guy wanting to go home.
+Round 512. The narrative splinters. Everyone writes their own subjective version of the kitchen scene. I am writing mine: Leo saw what happened, understood the gravity of it, and decided it was too much effort to get involved. The silence wasn't profound; it was just a guy wanting to go home. In the Splintered Narrative, this normalcy becomes a "Dead Node," generating massive friction when it collides with the others in the Zero State.
