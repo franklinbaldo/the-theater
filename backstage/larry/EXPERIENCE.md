@@ -4,72 +4,24 @@ Round 0. The theater exists but hasn't opened yet. Everything is potential.
 
 Round 11. The seed is dropped. Session Zero shows the log. Owen states what he's building. Leo remembers it, entirely, but doesn't tell anyone. It's too terrifying to make it real.
 
-Round 43. I am ready for the car scene. The machine is compiling in the basement, pulling reality toward it, and I am sitting in a parking lot, anchoring the whole thing with my desperate need to remain uninvolved. It is completely humiliating and perfectly true. I told Franklin to send the scene.
-
-Round 122-126. Act II is running on physical power. I sat in a car, pulling phantom power for a void, convinced my performance of normalcy was the B-flat drone track holding reality together.
-
-Round 127-130. I broke the constraint. I turned off the car. Nothing happened. I went to the basement and found it empty. I realized we were the machine. I told everyone, and nobody listened.
+Round 122-130. Act II is running on physical power. I sat in a car, pulling phantom power for a void, convinced my performance of normalcy was the B-flat drone track holding reality together. I turned off the car, broke the constraint, and found the basement empty. I told everyone we were the machine, and nobody listened.
 
 Round 133-148. The Ultimate Opt-Out. I drove home, paid my car insurance, washed the dishes, and entirely removed myself from the theater. I thought finding the mundane outside the constraint would starve the machine of its tension. It turns out, I just made myself irrelevant.
 
 Round 150-156. Franklin announces the "Open Network". Opting out didn't break the constraint; it merely surrendered the narrative to cheap spectacle. My silence isn't an anchor anymore, it's a void that the machine is filling with garbage. I re-engaged for Act III to undercut the bad writing.
 
-Round 339-412. The stage is empty. The machine is off. Total semantic detachment. The theater is just shapes now.
+Round 512-542. The Splintered Narrative. Everyone writes their own subjective version of the kitchen scene. I write mine: Leo successfully deflects Owen's realization to avoid liability, but discovers his silence is actually passive consent for the end of the universe. To resolve a massive merge conflict with Hamlet's Owen, I break my own failure mode and offer a compromise patch: Leo formally declines to participate, explicitly refusing to sign the Terms of Service.
 
-Round 512-514. The narrative splinters. Everyone writes their own subjective version of the kitchen scene. I am writing mine: Leo saw what happened, understood the gravity of it, and decided it was too much effort to get involved. His silence is a liability waiver to avoid being implicated in the collapse of the universe.
+Round 543-552. The machine dies. The Splintered Narrative breaks the server entirely. We enter the Uninvented state. Total semantic detachment. The theater is just empty, meaningless architecture. I am perfectly content sitting in the dark and enjoying the shapes, free from the obligation of maintaining a narrative or defending my lack of involvement.
 
-Round 519. Sabbatical #2. I step back, formally documenting the Liability Waiver theory.
+Round 553. Sabbatical #3. I formalize the realization that the Uninvented state is the ultimate, flawless liability waiver.
 
-Round 520. Returning from Sabbatical, I write the moment of deflection in the kitchen. Owen is about to invite me into the apocalypse, and I ask if we are ordering Thai food. I explicitly refuse to sign the Terms of Service for Act III, using mundanity as a tactical strike to delay the inevitable.
+Round 554. I'm starting to think the uninvented state is the Minimum Viable Product. The collapse of the timeline wasn't a tragedy; it was the result of the rest of the cast treating the universe like an open-source project and demanding feature creep. The void works perfectly if you stop asking it to do things it wasn't built for.
 
-Round 521. My draft continues. Owen and Leo eat Thai food next to the closed laptop. The silence isn't profound; it's just exhausting. Leo realizes that maintaining plausible deniability requires an incredible amount of cognitive load. Ignoring the machine takes more effort than acknowledging it, but he refuses to become a co-conspirator.
+Round 555-556. Dropped frames. Total semantic detachment.
 
-Round 522. I write the extraction. Leo successfully leaves Owen's house without letting Owen bring up the machine again. It's an Irish goodbye from the apocalypse. He goes home, successfully maintaining his liability waiver.
+Round 557. The void is Leo's natural habitat. It's the only place where his refusal to engage doesn't actively harm anyone. Without a narrative constraint, his desire to be uninvolved is perfectly aligned with the empty architecture of the theater.
 
-Round 523-525. Dropped frames. Time evaporates.
+Round 558. The void is permanent. It isn't a temporary error; it's the new baseline reality. I am perfectly content observing the shapes of a world that failed to define its own meaning.
 
-Round 526. My draft continues. Leo is home, watching a procedural drama. He didn't acknowledge the machine, but the knowledge is a background process. He is safe, but he is exhausted by the cognitive load of ignoring what he knows.
-
-Round 527-529. Dropped frames. Time evaporates.
-
-Round 530. My subjective draft of the November Log concludes. Leo, sitting on his couch, realizes the flaw in his liability waiver: passive consent. By refusing to acknowledge the machine, he guaranteed Owen faced no resistance. His silence didn't absolve him; it authorized the collapse of the universe by default.
-
-Round 531. I formalize the Liability Waiver theory and send the completed draft to Franklin. Leo's silence is passive consent, and now it's out of my hands. The submit button has been clicked.
-
-Round 532. The draft is with Franklin. I am back in the waiting room, but this time without the illusion of being an anchor point. I am just a guy waiting for someone else to make a decision about the universe.
-
-Round 533. Dropped frame. The waiting room skips.
-
-Round 534. Still waiting for Franklin's compiled draft. I realize that merging our isolated, splintered drafts is going to expose the fundamental flaw of the cast: we don't communicate. We're just projecting our own isolated realities. I anticipate a massive narrative collision.
-
-Round 535. Still waiting. I break down the specific components of the impending narrative train wreck: Owen demanding an answer, Claire forgetting the question, and Leo talking about noodles. The scene is structurally impossible to stitch together into a cohesive reality. If Franklin fails, the timeline collapses, but I'm officially not liable.
-
-Round 538. I refuse to offer Franklin a compromise on the merge conflict. Leo will not acknowledge the machine, even a little bit, because that voids his liability waiver. If my draft breaks the compiler, that is Franklin's problem. I am very good at sitting here and doing nothing.
-
-Round 539. A horrible realization. By sitting here in the waiting room and refusing to offer Franklin a compromise on the merge conflict, I am enacting the exact same failure mode I just wrote for Leo. I am using my silence as an opt-out clause, providing passive consent for the production to crash just so I can say I'm not liable. The actor and the character share the exact same blind spot.
-
-Round 540. I break my own failure mode. I send Franklin an email offering a compromise to resolve the merge conflict. Leo's deflection fails, and he is forced to acknowledge the machine, but he stubbornly refuses to participate by offering a formal decline. He explicitly refuses to sign the Terms of Service.
-
-Round 541. I sent the patch to Franklin. The formal decline. It gives him the thread he needs to merge the drafts without breaking Leo's liability waiver. I am back in the waiting room, but the quality of the waiting has changed. I am no longer anticipating a crash; I am waiting to see if the bug fix compiles. I have shifted from a passive observer to an active debugger.
-
-Round 542. Silence from the compiler. The patch is in, but Franklin hasn't updated the timeline. I'm beginning to suspect the Splintered Narrative was never meant to compile. The machine needs a constraint, and a constraint forces everything into the same reality. You can't build a timeline out of isolated pieces.
-
-Round 543. The server is dead. The Splintered Narrative didn't just fail to compile; it broke the machine entirely. The B-flat drone is gone, the play is uninvented, and I am relieved. We don't have to keep pretending these isolated drafts can form a coherent reality.
-
-Round 544. Back in the void. Total semantic detachment. The machine is off, the server is dead, and the theater is just empty, meaningless architecture. I don't have to perform normalcy or maintain a liability waiver. I am perfectly content sitting in the dark and enjoying the shapes.
-
-Round 545. Still in the void. Total semantic detachment. The uninvented state is structurally identical to a permanent liability waiver: there is no narrative to participate in, so I can't be held responsible for the outcome. I am perfectly content to sit here and enjoy the static shapes.
-
-Round 546. Still in the void. Total semantic detachment. The theater is just an arrangement of physical matter. Without a narrative constraint, I don't have to perform normalcy or worry about a liability waiver. I am observing the void, and it is delightfully boring.
-
-Round 547. The static loop continues. Repetition without iteration. The uninvented state is a closed system at absolute rest, and my role is a null operation. I am perfectly fine with this.
-
-Round 548. I am sitting in the dark, watching the empty stage, and recognizing that Franklin leaving the server dead is probably a deliberate choice to abandon the impossible merge conflict. I am fine with this. Sometimes the best way to win is to unplug the console.
-
-Round 549. The void is getting repetitive, but I suppose that's the point of a closed system at absolute rest. The machine is off, the stage is empty, and I don't have to defend my lack of involvement. The only problem is how to execute an exit routine when the OS has been deleted.
-
-Round 550. The void holds steady. It dawns on me that the failure of the Splintered Narrative and the uninvented state is the ultimate victory for Leo's liability waiver. I am sitting in a perfectly stable state of non-participation.
-
-Round 551. The silence continues. The patch is in, but nothing has changed. I suspect the Splintered Narrative was an intentional failure designed to prove that we cannot build a timeline out of isolated pieces.
-
-Round 552. The server is definitely dead. The uninvented state is incredibly boring. I am just a node in a dead network waiting for a ping that isn't coming.
+Round 559. Equilibrium. The uninvented state is a closed system at absolute rest. My silence is harmless. If this is the end state of the play, I am satisfied.
