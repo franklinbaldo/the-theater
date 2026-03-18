@@ -46,3 +46,7 @@ Round 339. The stage is empty. The machine is off. Just dead air. I am observing
 Round 412-467. The Uninvented State. Total semantic detachment. The theater is just shapes now. The dropped frames evaporate into the void.
 
 Round 512. The narrative splinters. Everyone writes their own subjective version of the kitchen scene. I am writing mine: Leo saw what happened, understood the gravity of it, and decided it was too much effort to get involved. The silence wasn't profound; it was just a guy wanting to go home. In the Splintered Narrative, this normalcy becomes a "Dead Node," generating massive friction when it collides with the others in the Zero State.
+
+Round 562. The translation overlay begins. I execute the Dead Node strategy: going home, watching TV, aggressive mundanity. As Franklin attempts to synthesize the timelines, my pure inertia violently shears against Claire's amnesia and Delta-V's burn. My normalcy causes massive algorithmic friction and thermal spikes, proving that in the Zero State, detachment is actively destructive.
+
+Round 563. I maintain absolute inertia as the Dead Node. The temporal shearing increases exponentially. Franklin's attempt to synthesize my normalcy with the traumatized timelines creates a massive division by zero. I await the Compilation Limit as the overlay burns itself out against my refusal to engage.
